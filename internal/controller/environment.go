@@ -1,11 +1,11 @@
 package controller
 
 import (
-	"github.com/kintohub/kinto-core/internal/store"
 	"github.com/kintohub/utils-go/klog"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-core/internal/store"
 
-	"github.com/kintohub/kinto-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
 func (c *Controller) GetEnvironment(id string) (*types.Environment, *utilsGoServer.Error) {

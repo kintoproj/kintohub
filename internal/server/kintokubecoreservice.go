@@ -7,12 +7,12 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/kintohub/kinto-core/internal/config"
-	"github.com/kintohub/kinto-core/internal/controller"
-	"github.com/kintohub/kinto-core/pkg/types"
 	"github.com/kintohub/utils-go/klog"
 	utilsGoServer "github.com/kintohub/utils-go/server"
 	utilsGoGrpc "github.com/kintohub/utils-go/server/grpc"
+	"github.com/kintoproj/kinto-core/internal/config"
+	"github.com/kintoproj/kinto-core/internal/controller"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog/log"
 	"google.golang.org/grpc"
 )

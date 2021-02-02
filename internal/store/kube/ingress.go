@@ -2,8 +2,8 @@ package kube
 
 import (
 	"context"
-	"github.com/kintohub/kinto-core/pkg/consts"
-	pkgtypes "github.com/kintohub/kinto-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/consts"
+	pkgtypes "github.com/kintoproj/kinto-core/pkg/types"
 	"k8s.io/api/extensions/v1beta1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

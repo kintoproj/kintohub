@@ -2,8 +2,8 @@ package api
 
 import (
 	"context"
-	"github.com/kintohub/kinto-core/pkg/types"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	grpccodes "google.golang.org/grpc/codes"
 	grpcstatus "google.golang.org/grpc/status"
 )

@@ -1,16 +1,16 @@
 package main
 
 import (
-	"github.com/kintohub/kinto-core/internal/build"
-	"github.com/kintohub/kinto-core/internal/build/api"
-	"github.com/kintohub/kinto-core/internal/config"
-	"github.com/kintohub/kinto-core/internal/controller"
-	"github.com/kintohub/kinto-core/internal/server"
-	"github.com/kintohub/kinto-core/internal/store"
-	"github.com/kintohub/kinto-core/internal/store/kube"
-	pkgTypes "github.com/kintohub/kinto-core/pkg/types"
 	"github.com/kintohub/utils-go/klog"
 	utilsGrpc "github.com/kintohub/utils-go/server/grpc"
+	"github.com/kintoproj/kinto-core/internal/build"
+	"github.com/kintoproj/kinto-core/internal/build/api"
+	"github.com/kintoproj/kinto-core/internal/config"
+	"github.com/kintoproj/kinto-core/internal/controller"
+	"github.com/kintoproj/kinto-core/internal/server"
+	"github.com/kintoproj/kinto-core/internal/store"
+	"github.com/kintoproj/kinto-core/internal/store/kube"
+	pkgTypes "github.com/kintoproj/kinto-core/pkg/types"
 )
 
 // container method for all singletons in the project

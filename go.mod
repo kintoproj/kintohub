@@ -1,4 +1,4 @@
-module github.com/kintohub/kinto-core
+module github.com/kintoproj/kinto-core
 
 go 1.13
 

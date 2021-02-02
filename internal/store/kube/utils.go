@@ -3,7 +3,7 @@ package kube
 import (
 	"errors"
 	"fmt"
-	"github.com/kintohub/kinto-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog/log"
 	corev1 "k8s.io/api/core/v1"
 	"regexp"

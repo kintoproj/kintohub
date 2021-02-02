@@ -2,9 +2,9 @@ package api
 
 import (
 	"context"
-	"github.com/kintohub/kinto-core/pkg/types"
 	"github.com/kintohub/utils-go/klog"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog/log"
 )
 

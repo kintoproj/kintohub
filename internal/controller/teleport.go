@@ -2,9 +2,9 @@ package controller
 
 import (
 	"context"
-	"github.com/kintohub/kinto-core/internal/config"
-	"github.com/kintohub/kinto-core/pkg/types"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-core/internal/config"
+	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
 func (c *Controller) StartTeleport(

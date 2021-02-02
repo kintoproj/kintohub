@@ -2,7 +2,7 @@ package mock
 
 import (
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/kintohub/kinto-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/stretchr/testify/mock"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"

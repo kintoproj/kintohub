@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/kintohub/kinto-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

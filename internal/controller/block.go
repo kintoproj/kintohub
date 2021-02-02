@@ -2,10 +2,10 @@ package controller
 
 import (
 	"github.com/google/uuid"
-	"github.com/kintohub/kinto-core/internal/build"
-	"github.com/kintohub/kinto-core/internal/store"
-	"github.com/kintohub/kinto-core/pkg/types"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-core/internal/build"
+	"github.com/kintoproj/kinto-core/internal/store"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog/log"
 	"strings"
 )

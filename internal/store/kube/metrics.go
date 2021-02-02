@@ -6,14 +6,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/kintohub/kinto-core/pkg/consts"
 	"github.com/kintohub/utils-go/klog"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-core/pkg/consts"
 
 	"regexp"
 	"sync"
 
-	"github.com/kintohub/kinto-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog/log"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

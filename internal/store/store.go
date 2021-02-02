@@ -4,7 +4,7 @@ import (
 	"context"
 	utilsGoServer "github.com/kintohub/utils-go/server"
 
-	"github.com/kintohub/kinto-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
 type StoreInterface interface {

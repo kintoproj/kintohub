@@ -4,7 +4,7 @@ import (
 	"context"
 	utilsGoServer "github.com/kintohub/utils-go/server"
 
-	pkgTypes "github.com/kintohub/kinto-core/pkg/types"
+	pkgTypes "github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/stretchr/testify/mock"
 )
 

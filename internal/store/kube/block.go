@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kintohub/kinto-core/pkg/consts"
-	pkgtypes "github.com/kintohub/kinto-core/pkg/types"
 	"github.com/kintohub/utils-go/klog"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-core/pkg/consts"
+	pkgtypes "github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog/log"
 	corev1 "k8s.io/api/core/v1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
