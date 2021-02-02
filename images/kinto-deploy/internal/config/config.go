@@ -2,8 +2,8 @@ package config
 
 import (
 	_ "github.com/joho/godotenv/autoload"
-	"github.com/kintohub/kinto-kube-core/pkg/types"
 	"github.com/kintohub/utils-go/config"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"os"

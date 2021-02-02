@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"fmt"
-	cmd_dockerfile "github.com/kintohub/kinto-cli/cmd-dockerfile"
-	cmd_git "github.com/kintohub/kinto-cli/cmd-git"
-	cmd_release "github.com/kintohub/kinto-cli/cmd-release"
+	cmd_dockerfile "github.com/kintoproj/kinto-cli/cmd-dockerfile"
+	cmd_git "github.com/kintoproj/kinto-cli/cmd-git"
+	cmd_release "github.com/kintoproj/kinto-cli/cmd-release"
 	"github.com/spf13/cobra"
 	"github.com/ttacon/chalk"
 	"os"

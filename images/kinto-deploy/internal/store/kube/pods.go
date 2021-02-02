@@ -11,8 +11,8 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
-	"kinto.io/kinto-kube-deploy/internal/types"
-	"kinto.io/kinto-kube-deploy/internal/utils"
+	"kintoproj/kinto-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/utils"
 	"strings"
 )
 

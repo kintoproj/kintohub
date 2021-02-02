@@ -2,7 +2,7 @@ package cmd_release
 
 import (
 	"fmt"
-	"github.com/kintohub/kinto-kube-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
 func UpdateReleaseCommitSha(kintoCoreHost, envId, blockName, releaseId, commitSha string, kintoCoreOverTls bool) error {

@@ -9,12 +9,12 @@ func Test_genSourceURLWithToken(t *testing.T) {
 	testCases := []struct {
 		repoUrl, token, want string
 	}{
-		{"github.com/kintohub/kinto-kube-core", "", "github.com/kintohub/kinto-kube-core"},
-		{"github.com/kintohub/kinto-kube-core.git", "t0k3n", "t0k3n@github.com/kintohub/kinto-kube-core.git"},
-		{"https://github.com/kintohub/kinto-kube-core", "t0k3n", "https://t0k3n@github.com/kintohub/kinto-kube-core"},
-		{"https://github.com/kintohub/kinto-kube-core.git", "t0k3n", "https://t0k3n@github.com/kintohub/kinto-kube-core.git"},
-		{"https://gitlab.com/kintohub/kinto-kube-core.git", "t0k3n", "https://t0k3n@gitlab.com/kintohub/kinto-kube-core.git"},
-		{"https://bitbucket.org/kintohub/kinto-kube-core.git", "t0k3n", "https://t0k3n@bitbucket.org/kintohub/kinto-kube-core.git"},
+		{"github.com/kintoproj/kinto-core", "", "github.com/kintoproj/kinto-core"},
+		{"github.com/kintoproj/kinto-core.git", "t0k3n", "t0k3n@github.com/kintoproj/kinto-core.git"},
+		{"https://github.com/kintoproj/kinto-core", "t0k3n", "https://t0k3n@github.com/kintoproj/kinto-core"},
+		{"https://github.com/kintoproj/kinto-core.git", "t0k3n", "https://t0k3n@github.com/kintoproj/kinto-core.git"},
+		{"https://gitlab.com/kintoproj/kinto-core.git", "t0k3n", "https://t0k3n@gitlab.com/kintoproj/kinto-core.git"},
+		{"https://bitbucket.org/kintoproj/kinto-core.git", "t0k3n", "https://t0k3n@bitbucket.org/kintoproj/kinto-core.git"},
 	}
 
 	for _, tc := range testCases {

@@ -9,13 +9,13 @@
   * argo controller version `2.8.1` or higher
 
 ## Dependencies
-- [kinto-kube-core](https://github.com/kintohub/kinto-kube-core)
+- [kinto-core](https://github.com/kintoproj/kinto-core)
 - [utils-go](https://github.com/kintohub/utils-go) our own reuseable utils functions
 
 ## Overview
 
-It is called by [kinto-kube-core](https://github.com/kintohub/kinto-kube-core).   
-The API contracts are store under [there](https://github.com/kintohub/kinto-kube-core/blob/master/proto/workflowapi.proto).
+It is called by [kinto-core](https://github.com/kintoproj/kinto-core).   
+The API contracts are store under [there](https://github.com/kintoproj/kinto-core/blob/master/proto/workflowapi.proto).
 
 Kinto-build supports
 - [Argo](https://github.com/argoproj/argo) (current workflow system on KintoHub). Need an access to Kubernetes.

@@ -3,9 +3,9 @@ package argo
 import (
 	"fmt"
 	"github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	"github.com/kintohub/kinto-build/internal/build/utils"
-	"github.com/kintohub/kinto-build/internal/config"
-	"github.com/kintohub/kinto-kube-core/pkg/types"
+	"github.com/kintoproj/kinto-build/internal/build/utils"
+	"github.com/kintoproj/kinto-build/internal/config"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	"k8s.io/utils/pointer"

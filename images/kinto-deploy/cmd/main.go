@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"kinto.io/kinto-kube-deploy/internal/config"
-	"kinto.io/kinto-kube-deploy/internal/kinto"
-	"kinto.io/kinto-kube-deploy/internal/store/kube"
+	"kintoproj/kinto-deploy/internal/config"
+	"kintoproj/kinto-deploy/internal/kinto"
+	"kintoproj/kinto-deploy/internal/store/kube"
 )
 
 func main() {

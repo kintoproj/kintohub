@@ -3,7 +3,7 @@ package kube
 import (
 	"context"
 	"fmt"
-	"github.com/kintohub/kinto-kube-core/pkg/consts"
+	"github.com/kintoproj/kinto-core/pkg/consts"
 	"github.com/stretchr/testify/assert"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
@@ -12,7 +12,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"k8s.io/client-go/kubernetes/fake"
 	"k8s.io/utils/pointer"
-	"kinto.io/kinto-kube-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/types"
 	"testing"
 )
 

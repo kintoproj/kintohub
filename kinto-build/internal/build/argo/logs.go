@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"context"
 	argoLogs "github.com/argoproj/argo/util/logs"
-	"github.com/kintohub/kinto-build/internal/build/utils"
-	"github.com/kintohub/kinto-build/internal/config"
 	"github.com/kintohub/utils-go/klog"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-build/internal/build/utils"
+	"github.com/kintoproj/kinto-build/internal/config"
 	"github.com/minio/minio-go/v6"
 	"sort"
 )

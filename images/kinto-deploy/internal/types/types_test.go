@@ -3,11 +3,11 @@ package types
 import (
 	"fmt"
 	"github.com/google/uuid"
-	"github.com/kintohub/kinto-kube-core/pkg/consts"
-	kintoCore "github.com/kintohub/kinto-kube-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/consts"
+	kintoCore "github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/r3labs/diff"
 	"github.com/stretchr/testify/assert"
-	"kinto.io/kinto-kube-deploy/internal/config"
+	"kintoproj/kinto-deploy/internal/config"
 	"testing"
 )
 

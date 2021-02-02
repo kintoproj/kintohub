@@ -8,7 +8,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"k8s.io/client-go/kubernetes"
-	"kinto.io/kinto-kube-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/types"
 )
 
 func upsertService(kubeClient kubernetes.Interface, release *types.Release) (*corev1.Service, error) {

@@ -7,7 +7,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/utils/pointer"
-	"kinto.io/kinto-kube-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/types"
 )
 
 func upsertHPA(kubeClient kubernetes.Interface, release *types.Release) (*autoscalingv1.HorizontalPodAutoscaler, error) {

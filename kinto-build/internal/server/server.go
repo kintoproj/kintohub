@@ -2,9 +2,9 @@ package server
 
 import (
 	"fmt"
-	"github.com/kintohub/kinto-build/internal/build"
-	"github.com/kintohub/kinto-build/internal/config"
-	"github.com/kintohub/kinto-kube-core/pkg/types"
+	"github.com/kintoproj/kinto-build/internal/build"
+	"github.com/kintoproj/kinto-build/internal/config"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"google.golang.org/grpc"
 	"k8s.io/klog"
 	"log"

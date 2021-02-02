@@ -10,7 +10,7 @@
 * Go version `1.13` or higher
 
 ## Dependencies
-- [kinto-kube-core](https://github.com/kintohub/kinto-kube-core)
+- [kinto-core](https://github.com/kintoproj/kinto-core)
 - [utils-go](https://github.com/kintohub/utils-go) our own reuseable utils functions
 
 ## Development setup

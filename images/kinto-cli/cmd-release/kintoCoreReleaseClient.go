@@ -4,7 +4,7 @@ import (
 	"context"
 	"crypto/x509"
 	"fmt"
-	"github.com/kintohub/kinto-kube-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )

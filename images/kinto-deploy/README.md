@@ -17,7 +17,7 @@ Kinto-deploy retrieves the configmap containing the release information and crea
 
 ## ClusterRole Needed
 
-Check the cluster role in the [kinto-kube-infra repo](https://github.com/kintohub/kinto-kube-infra/blob/master/charts/kinto-worker/templates/kinto-agent-cluster-role.yaml).
+Check the cluster role in the [kinto-helm repo](https://github.com/kintoproj/kinto-helm).
 
 ## Development Setup
 

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/golang/protobuf/ptypes"
-	"github.com/kintohub/kinto-kube-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
 func UpdateReleaseStatus(kintoCoreHost, envId, blockName, releaseId, status string, kintoCoreOverTls bool) error {

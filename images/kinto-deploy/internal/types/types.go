@@ -2,9 +2,9 @@ package types
 
 import (
 	"fmt"
-	"github.com/kintohub/kinto-kube-core/pkg/consts"
-	kintoCoretypes "github.com/kintohub/kinto-kube-core/pkg/types"
-	"kinto.io/kinto-kube-deploy/internal/config"
+	"github.com/kintoproj/kinto-core/pkg/consts"
+	kintoCoretypes "github.com/kintoproj/kinto-core/pkg/types"
+	"kintoproj/kinto-deploy/internal/config"
 	"strconv"
 )
 

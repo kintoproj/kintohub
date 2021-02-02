@@ -9,7 +9,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/utils/pointer"
-	"kinto.io/kinto-kube-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/types"
 	"time"
 )
 

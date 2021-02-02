@@ -2,8 +2,8 @@ package build
 
 import (
 	"context"
-	"github.com/kintohub/kinto-kube-core/pkg/types"
 	utilsGoServer "github.com/kintohub/utils-go/server"
+	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
 type BuildClientInterface interface {

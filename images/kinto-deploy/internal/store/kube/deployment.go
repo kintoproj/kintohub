@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/kintohub/kinto-kube-core/pkg/consts"
+	"github.com/kintoproj/kinto-core/pkg/consts"
 	appsv1 "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -12,7 +12,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/utils/pointer"
 	k8sstrings "k8s.io/utils/strings"
-	"kinto.io/kinto-kube-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/types"
 )
 
 func createDeployment(kubeClient kubernetes.Interface, release *types.Release) (*appsv1.Deployment, error) {

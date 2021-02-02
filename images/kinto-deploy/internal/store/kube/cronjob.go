@@ -12,7 +12,7 @@ import (
 	k8stypes "k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/utils/pointer"
-	"kinto.io/kinto-kube-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/types"
 )
 
 func upsertCronJob(kubeClient kubernetes.Interface, release *types.Release) (*v1beta1.CronJob, error) {

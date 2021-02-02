@@ -7,8 +7,8 @@ import (
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
-	"kinto.io/kinto-kube-deploy/internal/config"
-	"kinto.io/kinto-kube-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/config"
+	"kintoproj/kinto-deploy/internal/types"
 	"strings"
 )
 

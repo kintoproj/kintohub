@@ -1,15 +1,15 @@
 package kube
 
 import (
-	kintoCoretypes "github.com/kintohub/kinto-kube-core/pkg/types"
+	kintoCoretypes "github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog/log"
 	"helm.sh/helm/v3/pkg/action"
 	"helm.sh/helm/v3/pkg/kube"
 	"k8s.io/client-go/kubernetes"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 	"k8s.io/client-go/tools/clientcmd"
-	"kinto.io/kinto-kube-deploy/internal/store"
-	"kinto.io/kinto-kube-deploy/internal/types"
+	"kintoproj/kinto-deploy/internal/store"
+	"kintoproj/kinto-deploy/internal/types"
 	"os"
 )
 

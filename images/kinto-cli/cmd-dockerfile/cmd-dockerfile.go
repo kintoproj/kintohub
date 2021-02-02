@@ -3,7 +3,7 @@ package cmd_dockerfile
 import (
 	"errors"
 	"fmt"
-	"github.com/kintohub/kinto-kube-core/pkg/types"
+	"github.com/kintoproj/kinto-core/pkg/types"
 	"os"
 	"text/template"
 )

@@ -1,7 +1,7 @@
 package argo
 
 import (
-	"github.com/kintohub/kinto-kube-core/pkg/consts"
+	"github.com/kintoproj/kinto-core/pkg/consts"
 	v1 "k8s.io/api/core/v1"
 )
 
