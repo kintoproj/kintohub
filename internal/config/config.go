@@ -1,0 +1,50 @@
+package config
+
+import (
+	_ "github.com/joho/godotenv/autoload"
+	utilsGoConfig "github.com/kintohub/utils-go/config"
+)
+
+var (
+	KubeConfigPath  string
+	GrpcPort        string
+	GrpcWebPort     string
+	CORSAllowedHost string
+
+	KintoDomain  string
+	BuildApiHost string
+
+	ConsoleLogsHistorySeconds  int64
+	ConsoleLogsMaxLinesOnStart int64
+
+	MetricsUpdateTickSeconds int
+	HealthUpdateTickSeconds  int
+
+	CertManagerIssuerEmail  string
+	CertManagerIssuerServer string
+
+	KintoDevProxyEnabled bool
+	ProxlessFQDN         string
+)
+
+func InitConfig() {
+	KubeConfigPath = utilsGoConfig.GetString("KUBE_CONFIG_PATH", "")
+	GrpcPort = utilsGoConfig.GetString("GRPC_PORT", "8080")
+	GrpcWebPort = utilsGoConfig.GetString("GRPC_WEB_PORT", "8090")
+	CORSAllowedHost = utilsGoConfig.GetString("CORS_ALLOWED_HOST", "*")
+
+	ConsoleLogsHistorySeconds = int64(utilsGoConfig.GetInt("CONSOLE_LOGS_HISTORY_SECONDS", 24*60*60))
+	ConsoleLogsMaxLinesOnStart = int64(utilsGoConfig.GetInt("CONSOLE_LOGS_MAX_LINES_ON_START", 1000))
+
+	MetricsUpdateTickSeconds = utilsGoConfig.GetInt("METRICS_UPDATE_TICK_SECONDS", 5)
+	HealthUpdateTickSeconds = utilsGoConfig.GetInt("HEALTH_UPDATE_TICK_SECONDS", 1)
+
+	KintoDomain = utilsGoConfig.GetStringOrDie("KINTO_DOMAIN")
+	BuildApiHost = utilsGoConfig.GetString("BUILD_API_HOST", "kinto-builder:8080")
+
+	CertManagerIssuerEmail = utilsGoConfig.GetStringOrDie("CERT_MANAGER_ISSUER_EMAIL")
+	CertManagerIssuerServer = utilsGoConfig.GetStringOrDie("CERT_MANAGER_ISSUER_SERVER")
+
+	KintoDevProxyEnabled = utilsGoConfig.GetBool("KINTO_DEV_PROXY_ENABLED", true)
+	ProxlessFQDN = utilsGoConfig.GetString("PROXLESS_FQDN", "kinto-proxless.kintohub.svc.cluster.local")
+}

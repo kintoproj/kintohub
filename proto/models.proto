@@ -1,0 +1,310 @@
+syntax = "proto3";
+
+option go_package = "github.com/kintohub/kinto-core/pkg/types";
+
+import "google/protobuf/timestamp.proto";
+
+message Environment {
+    string id = 1;
+    string name = 2;
+}
+
+message Environments {
+    repeated Environment items = 1;
+}
+
+message Block {
+    enum Type {
+        NOT_SET = 0;
+        BACKEND_API = 1;
+        STATIC_SITE = 2;
+        WEB_APP = 3;
+        JAMSTACK = 4;
+        JOB = 5;
+        CRON_JOB = 6;
+        WORKER = 7;
+        CATALOG = 8;
+        HELM = 9;
+    }
+
+    string id = 1;
+    string name = 2;
+    string envId = 3;
+    string displayName = 4;
+    map<string, Release> releases = 5;
+    repeated string customDomains = 6;
+    bool isPublicURL = 7;
+    string parentBlockName = 8;
+    string parentBlockEnvId = 9;
+}
+
+message Blocks {
+    repeated Block items = 1;
+}
+
+message Release {
+    enum Type {
+        NOT_SET = 0;
+        DEPLOY = 1;
+        UNDEPLOY = 2;
+        SUSPEND = 3;
+        ROLLBACK = 4;
+    }
+
+    string id = 1;
+    google.protobuf.Timestamp createdAt = 2;
+    BuildConfig buildConfig = 3;
+    RunConfig runConfig = 4;
+    Status status = 5;
+    google.protobuf.Timestamp startedAt = 6;
+    google.protobuf.Timestamp endedAt = 7;
+    Type type = 8;
+    repeated string tags = 9;
+    string commitSha = 10;
+}
+
+message BuildConfig {
+    enum Language {
+        NOT_SET = 0;
+        DOCKERFILE = 1;
+        GOLANG = 2;
+        NODEJS = 3;
+        PYTHON = 4;
+        JAVA = 5;
+        RUBY = 6;
+        PHP = 7;
+        RUST = 8;
+        ELIXIR = 9;
+    }
+
+    string id = 1;
+    string image = 2;
+    Language language = 3;
+    string languageVersion = 4;
+    string buildCommand = 5;
+    string runCommand = 6;
+    string pathToCode = 7;
+    string pathToStaticOutput = 11;
+    string dockerfileFileName = 8;
+    map<string, string> buildArgs = 9;
+    Repository repository = 10;
+}
+
+message RunConfig {
+    enum Protocol {
+        NOT_SET = 0;
+        HTTP = 1;
+        GRPC = 2;
+    }
+
+    Block.Type type = 1;
+    string port = 2;
+    AutoScaling autoScaling = 3;
+    map<string, string> envVars = 4;
+    Resources resources = 5;
+    int32 timeoutInSec = 6;
+    JobSpec jobSpec = 7;
+    string host = 8;
+    bool costOptimizationEnabled = 9;
+    bool sleepModeEnabled = 10;
+    Protocol protocol = 11;
+    int32 sleepModeTTLSeconds = 12;
+}
+
+message Repository {
+    string url = 1;
+    string accessToken = 2;
+    string branch = 3;
+    string githubInstallationId = 4 [deprecated=true];
+    string githubUserToken = 5;
+}
+
+message JobSpec {
+    string cronPattern = 1;
+    int32  timeoutInSec = 2;
+}
+
+message AutoScaling {
+    int32 min = 1;
+    int32 max = 2;
+    int32 cpuPercent = 3;
+}
+
+message Resources {
+    int32 memoryInMB = 1;
+    float cpuInCore = 2;
+}
+
+message Status {
+    enum State {
+        NOT_SET = 0;
+        FAIL = 1;
+        SUCCESS = 2;
+        RUNNING = 3;
+        PENDING = 4;
+        ABORTED = 5;
+        REVIEW_DEPLOY = 6;
+    }
+
+    State state = 2;
+}
+
+message ReleasesStatus {
+    string blockName = 1;
+    string envId = 2;
+    map<string, Status> releases = 3;
+}
+
+message BuildStatus {
+    enum State {
+        NOT_SET = 0;
+        UNKNOWN = 1;
+        QUEUED = 2;
+        WORKING = 3;
+        SUCCESS = 4;
+        FAILURE = 5;
+        INTERNAL_ERROR = 6;
+        TIMEOUT = 7;
+        CANCELLED = 8;
+        EXPIRED = 9;
+    }
+
+    State state = 1;
+
+    google.protobuf.Timestamp startTime = 2;
+    google.protobuf.Timestamp finishTime = 3;
+}
+
+message ConsoleLog {
+    string instanceName = 1;
+    bytes data = 2;
+}
+
+message BlockStatus {
+    enum State {
+        NOT_SET = 0;
+        HEALTHY = 1;
+        UNHEALTHY = 2;
+        SUSPENDED = 3;
+        SLEEPING = 4;
+    }
+
+    string blockName = 1;
+    string envId = 2;
+    string releaseId = 3;
+    State state = 7;
+}
+
+message BlockStatuses {
+    repeated BlockStatus blockStatuses = 1;
+}
+
+message BlockMetrics {
+    string blockName = 1;
+    string envId = 2;
+    map<string,BlockInstance> instances = 3;
+    map<string,BlockStorage> storages = 5;
+}
+
+message BlockInstance {
+    enum State {
+        NOT_SET = 0;
+        RUNNING = 1;
+        COMPLETED = 2;
+        ERROR = 3;
+        OOM_KILLED = 4;
+    }
+
+    string name = 1;
+    string releaseId = 2;
+    int64 cpuRequests = 3;
+    int64 cpuUsage = 4;
+    int64 memRequests = 5;
+    int64 memUsage = 6;
+    int32 restarts = 7;
+    State state = 8;
+}
+
+// the main difference between mountedCapacityInBytes and capacityInBytes is
+// capacityInBytes will return a neat figure (coz it is the k8s PVC request)
+// while mountedCapacityInBytes will be in bytes format at os level (so it will never be 1GB but sth like 0.98 GB)
+message BlockStorage {
+    string name = 1;
+    int64 capacityInBytes = 2; // this is from the k8s PVC
+    string usagePercent = 3;
+    string mountPath = 4;
+    string instanceId = 5;
+    int64 mountedUsageInBytes = 6;
+    int64 mountedCapacityInBytes = 7; // this is from the `df` command result -> not
+}
+
+message BlocksMetrics {
+    map<string,BlockMetrics> blocks = 1;
+}
+
+message Language {
+    BuildConfig.Language language = 1;
+    string image = 2;
+    map<string,string> versionsTags = 3;
+}
+
+message MemoryOptions {
+    int32 defaultValue = 1;
+    repeated int32 values = 2;
+}
+
+message CPUOptions {
+    float defaultValue = 1;
+    repeated float values = 2;
+}
+
+message TimeoutOptions {
+    int32 defaultValue = 1;
+    repeated int32 values = 2;
+}
+
+message AutoScalingOptions {
+    int32 defaultMinValue = 1;
+    int32 defaultMaxValue = 2;
+    repeated int32 values = 3;
+}
+
+message KintoConfiguration {
+    repeated Language languages = 1;
+    MemoryOptions memoryOptions = 2;
+    CPUOptions cpuOptions = 3;
+    TimeoutOptions timeoutOptions = 4;
+    AutoScalingOptions autoScalingOptions = 5;
+    TimeoutOptions jobTimeoutOptions = 6;
+}
+
+message Logs {
+    bytes data = 1;
+}
+
+message JobStatus {
+    enum State {
+        NOT_SET = 0;
+        PENDING = 1;
+        RUNNING = 2;
+        COMPLETED = 3;
+        DELETED = 4;
+        ERROR = 5;
+        OOM_KILLED = 6;
+    }
+
+    string instanceName = 1;
+    State state = 2;
+    int64 startTimestamp = 3;
+    int64 endTimestamp = 4;
+}
+
+message TeleportServiceData {
+    string host = 1;
+    string credentials = 2;
+}
+
+message ReleaseConfig {
+    BuildConfig buildConfig = 1;
+    RunConfig runConfig = 2;
+}

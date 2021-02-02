@@ -1,0 +1,229 @@
+syntax = "proto3";
+
+option go_package = "github.com/kintohub/kinto-core/pkg/types";
+
+import "google/protobuf/empty.proto";
+import "models.proto";
+
+message EnvironmentQueryRequest {
+    string id = 1;
+}
+
+message CreateEnvironmentRequest {
+    string name = 1;
+}
+
+message UpdateEnvironmentRequest {
+    string id = 1;
+    string name = 2;
+}
+
+message DeleteEnvironmentRequest {
+    string id = 1;
+}
+
+message CreateBlockRequest {
+    string envId = 1;
+    string name = 2;
+    RunConfig runConfig = 3;
+    BuildConfig buildConfig = 4;
+}
+
+message DeployBlockRequest {
+    string envId = 1;
+    string name = 2;
+    RunConfig runConfig = 3;
+    BuildConfig buildConfig = 4;
+    string baseReleaseId = 5;
+}
+
+message TriggerDeployRequest {
+    string envId = 1;
+    string name = 2;
+}
+
+message SuspendBlockRequest {
+    string envId = 1;
+    string name = 2;
+}
+
+message BlockQueryRequest {
+    string envId = 1;
+    string name = 2;
+}
+
+message DeleteBlockRequest {
+    string envId = 1;
+    string name = 2;
+}
+
+message BlockUpdateResponse {
+    string name = 1;
+    string releaseId = 2;
+}
+
+message WatchBuildLogsRequest {
+    string releaseId = 1;
+    string blockName = 2;
+    string envId = 3;
+}
+
+message WatchConsoleLogsRequest {
+    string blockName = 1;
+    string envId = 2;
+}
+
+message UpdateBuildStatusRequest {
+    string blockName = 1;
+    string envId = 2;
+    string releaseId = 3;
+
+    BuildStatus status = 5;
+}
+message UpdateBuildStepRequest {
+    string name = 1;
+
+    BuildStatus status = 2;
+}
+message UpdateBuildStatusResponse {
+    string id = 1;
+}
+
+message UpdateBuildCommitShaRequest {
+    string blockName = 1;
+    string envId = 2;
+    string releaseId = 3;
+    string commitSha = 4;
+}
+
+message KillBlockInstanceRequest {
+    string id = 1;
+    string envId = 2;
+}
+
+message RollbackBlockRequest {
+    string name = 1;
+    string envId = 2;
+    string releaseId = 3;
+}
+
+message CustomDomainNameRequest {
+    string envId = 1;
+    string blockName = 2;
+    string customDomainName = 3;
+    string CNAME = 4;
+    RunConfig.Protocol protocol = 5;
+}
+
+message CheckCustomDomainNameResponse {
+    bool isCNAMEOK = 1;
+    string CNAMEWanted = 2;
+    string CNAMEFound = 3;
+    bool isCertificateReady = 4;
+}
+
+message EnablePublicURLRequest {
+    string blockName = 1;
+    string envId = 2;
+    string releaseId = 3;
+}
+
+message DisablePublicURLRequest {
+    string blockName = 1;
+    string envId = 2;
+}
+
+message AbortBlockReleaseRequest {
+    string blockName = 1;
+    string releaseId = 2;
+    string envId = 3;
+}
+
+message TeleportRequest {
+    string envId = 1;
+    string blockName = 2;
+}
+
+message TeleportResponse {
+    TeleportServiceData data = 1;
+}
+
+message TagReleaseRequest {
+    string blockName = 1;
+    string releaseId = 2;
+    string envId = 3;
+    string tag = 4;
+}
+
+message PromoteReleaseRequest {
+  string envId = 1;
+  string blockName = 2;
+  string tag = 3;
+  string releaseId = 4;
+  string targetEnvId = 5;
+}
+
+message GenReleaseConfigFromKintoFileRepoRequest {
+    Block.Type blockType = 1;
+    string org = 2;
+    string repo = 3;
+    string branch = 4;
+    string envId = 5;
+    string githubUserToken = 6;
+}
+
+message SyncTimeRequest {
+    int64 sendTimeMs = 1;
+}
+
+message SyncTimeResponse {
+    int64 clientTimestampMs = 1;
+    int64 serverTimestampMs = 2;
+}
+
+
+service KintoKubeCoreService {
+    rpc GetEnvironment (EnvironmentQueryRequest) returns (Environment) {}
+    rpc GetEnvironments (google.protobuf.Empty) returns (Environments) {}
+    rpc CreateEnvironment (CreateEnvironmentRequest) returns (Environment) {}
+    rpc UpdateEnvironment (UpdateEnvironmentRequest) returns (Environment) {}
+    rpc DeleteEnvironment (DeleteEnvironmentRequest) returns (google.protobuf.Empty) {}
+
+    rpc CreateBlock (CreateBlockRequest) returns (BlockUpdateResponse) {}
+    rpc DeployBlockUpdate (DeployBlockRequest) returns (BlockUpdateResponse) {}
+    rpc TriggerDeploy (TriggerDeployRequest) returns (BlockUpdateResponse) {}
+    rpc RollbackBlock (RollbackBlockRequest) returns (BlockUpdateResponse) {}
+    rpc GetBlocks (BlockQueryRequest) returns (Blocks) {}
+    rpc GetBlock (BlockQueryRequest) returns (Block) {}
+    rpc DeleteBlock (DeleteBlockRequest) returns (google.protobuf.Empty) {}
+    rpc SuspendBlock (SuspendBlockRequest) returns (BlockUpdateResponse) {}
+    rpc WatchReleasesStatus (BlockQueryRequest) returns (stream ReleasesStatus) {}
+    rpc KillBlockInstance (KillBlockInstanceRequest) returns (google.protobuf.Empty) {}
+    rpc AbortRelease (AbortBlockReleaseRequest) returns (google.protobuf.Empty) {}
+    rpc TagRelease (TagReleaseRequest) returns (google.protobuf.Empty) {}
+    rpc PromoteRelease (PromoteReleaseRequest) returns (google.protobuf.Empty) {}
+
+    rpc GenReleaseConfigFromKintoFile(GenReleaseConfigFromKintoFileRepoRequest) returns (ReleaseConfig) {}
+
+    rpc WatchBuildLogs (WatchBuildLogsRequest) returns (stream Logs) {}
+    rpc UpdateBuildStatus(UpdateBuildStatusRequest) returns (UpdateBuildStatusResponse) {}
+    rpc UpdateBuildCommitSha(UpdateBuildCommitShaRequest) returns (google.protobuf.Empty) {}
+    rpc WatchBlocksHealthStatuses(EnvironmentQueryRequest) returns (stream BlockStatuses) {}
+    rpc WatchJobsStatus(BlockQueryRequest) returns (stream JobStatus) {}
+    rpc WatchBlocksMetrics(BlockQueryRequest) returns (stream BlocksMetrics) {}
+
+    rpc WatchConsoleLogs(WatchConsoleLogsRequest) returns (stream ConsoleLog) {}
+
+    rpc GetKintoConfiguration(google.protobuf.Empty) returns (KintoConfiguration) {}
+
+    rpc CreateCustomDomainName(CustomDomainNameRequest) returns (google.protobuf.Empty) {}
+    rpc DeleteCustomDomainName(CustomDomainNameRequest) returns (google.protobuf.Empty) {}
+    rpc CheckCustomDomainName(CustomDomainNameRequest) returns (CheckCustomDomainNameResponse) {}
+
+    rpc EnablePublicURL(EnablePublicURLRequest) returns (google.protobuf.Empty) {}
+    rpc DisablePublicURL(DisablePublicURLRequest) returns (google.protobuf.Empty) {}
+
+    rpc StartTeleport(TeleportRequest) returns (stream TeleportResponse) {}
+
+    rpc SyncTime (SyncTimeRequest) returns (SyncTimeResponse) {}
+}
