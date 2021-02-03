@@ -1,0 +1,19 @@
+name: Test Build with Docker
+
+on:
+  pull_request:
+    branches:
+      - master
+      - hotfix
+
+jobs:
+
+  build:
+    name: Docker
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Build the Docker image
+        run: docker build -t kinto-frontend:latest .

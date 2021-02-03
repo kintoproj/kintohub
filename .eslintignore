@@ -1,0 +1,8 @@
+build
+node_modules
+public
+/src/types/proto/*
+/src/libraries/vendor/*
+/src/stories/**
+/scripts
+*.config.js

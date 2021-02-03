@@ -1,0 +1,4 @@
+/* Should not add styles into this file unless it is something that cannot be modified via styled-component */
+.grecaptcha-badge {
+  visibility: hidden;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>icon/logos/bitbucket_24px_rounded</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="bitbucket" d="M1.61851565,1.9565865 L22.3838678,1.96037613 C22.5940615,1.95764079 22.7947059,2.04799588 22.9319736,2.20720167 C23.0692414,2.36640745 23.12908,2.57816567 23.0954366,2.78566754 L23.0954366,2.78566754 L20.0749775,21.3275732 C20.018625,21.6755072 19.7160216,21.9297369 19.3635822,21.9253045 L19.3635822,21.9253045 L4.87370648,21.9253045 C4.40408869,21.9213546 4.00506564,21.5808188 3.92740587,21.1176504 L3.92740587,21.1176504 L0.9070336,2.782111 C0.87333586,2.57459735 0.933137354,2.36280463 1.07039219,2.2035609 C1.20764703,2.04431718 1.40830132,1.95392784 1.61851565,1.9565865 L1.61851565,1.9565865 Z M15.4418288,8.66552945 L8.4596558,8.66619417 L9.70882879,15.1935295 L14.3246551,15.1940983 L15.4418288,8.66552945 Z"></path>
+    </defs>
+    <g id="icon/logos/bitbucket_24px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-bitbucket" fill="white">
+            <use xlink:href="#bitbucket"></use>
+        </mask>
+        <g id="icon/toggle/radio_button_unchecked_24px" fill-rule="nonzero"></g>
+        <polygon id="Path" fill-rule="nonzero" mask="url(#mask-bitbucket)" points="9.68267279 15.1905418 14.3191034 15.1905418 15.4382 8.65691246 8.44985362 8.65691246"></polygon>
+        <g id="black" mask="url(#mask-bitbucket)" fill="#000000" fill-opacity="0.54">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

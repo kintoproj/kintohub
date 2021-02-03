@@ -1,0 +1,3 @@
+[submodule "refs/kinto-core"]
+	path = refs/kinto-core
+	url = https://github.com/kintoproj/kinto-core

@@ -1,0 +1,7 @@
+node_modules
+coverage
+Dockerfile
+build
+
+# prevent shipping local development html
+public/index-*.html
