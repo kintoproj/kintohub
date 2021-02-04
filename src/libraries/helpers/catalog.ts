@@ -27,7 +27,7 @@ import CatalogSchema, {
   SliderField,
   Unit,
 } from 'types/catalog';
-import { RunConfig } from 'types/proto/kkc_models_pb';
+import { RunConfig } from 'types/proto/models_pb';
 
 import {
   cpuInCoreToK8sFormat,

@@ -5,7 +5,7 @@ import {
   CPUOptions,
   TimeoutOptions,
   AutoScalingOptions,
-} from 'types/proto/kkc_models_pb';
+} from 'types/proto/models_pb';
 import { LanguageType } from 'types/service';
 
 // This is a shorthand method for the enum

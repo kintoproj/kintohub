@@ -59,7 +59,7 @@ import {
   Release,
   RunConfig,
   Status,
-} from 'types/proto/kkc_models_pb';
+} from 'types/proto/models_pb';
 import { EditServicePageValues, ServiceType } from 'types/service';
 
 import AppBar from '@material-ui/core/AppBar';

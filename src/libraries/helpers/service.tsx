@@ -16,7 +16,7 @@ import {
   BlockStatus,
   BuildConfig,
   BlockInstance,
-} from 'types/proto/kkc_models_pb';
+} from 'types/proto/models_pb';
 import { BlockType, KintoConfig } from 'types';
 import { IconProps } from '@material-ui/core/Icon';
 import {
@@ -28,7 +28,9 @@ import {
 import { FormikErrors, FormikTouched } from 'formik';
 import {
   GitProvider,
-  GIT_PROVIDER_GITHUB, GIT_PROVIDER_GITLAB, GIT_PROVIDER_BITBUCKET
+  GIT_PROVIDER_GITHUB,
+  GIT_PROVIDER_GITLAB,
+  GIT_PROVIDER_BITBUCKET,
 } from 'libraries/constants';
 
 export const getServiceTypeName = (type: BlockType): string => {
@@ -81,7 +83,6 @@ export const getServiceIcon = (
   return AccessTimeIcon;
 };
 
-
 export const getGitProvider = (repoUrl: string): GitProvider | undefined => {
   if (repoUrl.match(/^(git:\/\/|ssh:\/\/|http(s):\/\/)?(git@)?github.com/)) {
     return GIT_PROVIDER_GITHUB;
@@ -117,10 +118,10 @@ export const getGitProviderIcon = (
 };
 
 export type GitRepoMeta = {
-  provider: GitProvider,
-  org: string,
-  repo: string,
-}
+  provider: GitProvider;
+  org: string;
+  repo: string;
+};
 
 export const getGitRepoMeta = (rawUrl: string): GitRepoMeta | null => {
   let url = removeRepoPrefix(rawUrl);
@@ -135,10 +136,10 @@ export const getGitRepoMeta = (rawUrl: string): GitRepoMeta | null => {
     provider,
     org: tokens.length > 0 ? tokens[0] : '',
     repo: tokens.length > 1 ? tokens[1] : '',
-  }
+  };
 
   return meta;
-}
+};
 
 export const removeRepoPrefix = (repoUrl: string) =>
   repoUrl.replace(/^(git:\/\/|ssh:\/\/|http(s):\/\/)?[\w@.]+(:|\/)/, '');
@@ -165,7 +166,8 @@ export const getHttpsRepository = (rawUrl: string, branch?: string): string => {
 };
 
 export const getHttpsRepositoryCommitUrl = (
-  rawUrl: string, commitSha: string
+  rawUrl: string,
+  commitSha: string
 ): string => {
   let url = removeRepoPrefix(rawUrl);
   url = removeGitPostfix(url);
@@ -210,7 +212,7 @@ export const getFullRepositoryWithCommit = (release: Release): string => {
 
 export const formatCommitSha = (commitSha: string): string => {
   return commitSha.substr(0, 7);
-}
+};
 
 export const getServiceHealthState = (
   service: Block.AsObject,
@@ -225,9 +227,9 @@ export const getServiceHealthState = (
 
 /**
  * Get the health state among different releases.
- * If there exists several status (from different releases), 
+ * If there exists several status (from different releases),
  * we return the minimum one (most likely it will he Healthy)
- * @param releaseState 
+ * @param releaseState
  */
 export const getServiceHealthStateFromMap = (
   releaseState: ServiceStateMap
@@ -238,19 +240,17 @@ export const getServiceHealthStateFromMap = (
 };
 
 /**
- * Check if the service is a promoted service or not. 
+ * Check if the service is a promoted service or not.
  * Only promoted service will have the parent block Id
- * @param service 
+ * @param service
  */
-export const isPromotedService = (
-  service: Block | undefined
-): boolean => {
+export const isPromotedService = (service: Block | undefined): boolean => {
   if (!service) {
     return false;
-  };
+  }
 
   return !!service.getParentblockenvid();
-}
+};
 
 export const serviceHealthToString = (state: ServiceStateType): string => {
   switch (state) {

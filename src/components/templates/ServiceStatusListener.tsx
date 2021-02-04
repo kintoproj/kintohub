@@ -1,9 +1,11 @@
 import {
-  useAuthState, useServicesState
+  useAuthState,
+  useServicesState,
 } from 'components/hooks/ReduxStateHook';
 import { watchServiceHealth } from 'libraries/grpc/service';
 import {
-  getServiceHealthStateFromMap, serviceHealthToString
+  getServiceHealthStateFromMap,
+  serviceHealthToString,
 } from 'libraries/helpers/service';
 import _isEqual from 'lodash.isequal';
 /* eslint-disable no-continue */
@@ -11,7 +13,7 @@ import React, { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { enqueueError, enqueueNotification } from 'states/app/actions';
 import { updateServiceStatus } from 'states/services/actions';
-import { BlockStatus } from 'types/proto/kkc_models_pb';
+import { BlockStatus } from 'types/proto/models_pb';
 import { ServiceStateMap } from 'types/service';
 
 import { useGRPCClients } from './GRPCClients';

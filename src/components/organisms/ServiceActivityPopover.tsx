@@ -1,4 +1,4 @@
-import { Block, Release, Status } from 'types/proto/kkc_models_pb';
+import { Block, Release, Status } from 'types/proto/models_pb';
 import { PopoverAction, usePopover } from 'components/templates/PopoverHook';
 import { getReleaseState } from 'libraries/helpers/release';
 import { showPanel } from 'states/sidePanel/actions';

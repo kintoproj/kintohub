@@ -32,7 +32,7 @@ import styled from 'styled-components';
 import { bps } from 'theme';
 import { KINTO_LIGHT_PURPLE } from 'theme/colors';
 import { AccessTemplate } from 'types/catalog';
-import { Block, Release, Status } from 'types/proto/kkc_models_pb';
+import { Block, Release, Status } from 'types/proto/models_pb';
 import { ReleaseStateType } from 'types/release';
 import { Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';

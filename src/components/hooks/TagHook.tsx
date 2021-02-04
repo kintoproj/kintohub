@@ -1,5 +1,5 @@
 import { Environment } from 'types/environment';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 
 import { useAuthState } from './ReduxStateHook';
 

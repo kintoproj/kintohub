@@ -68,7 +68,7 @@ import { updateMetrics } from 'states/services/actions';
 import { showPanel } from 'states/sidePanel/actions';
 import styled from 'styled-components';
 import { bps } from 'theme';
-import { Block, Status } from 'types/proto/kkc_models_pb';
+import { Block, Status } from 'types/proto/models_pb';
 import { ServiceType } from 'types/service';
 
 import {

@@ -6,7 +6,7 @@ import {
   RouteComponentProps,
   useRouteMatch,
 } from 'react-router';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 import ServiceConsoleLog from 'components/organisms/ServiceConsoleLog';
 import ServiceAccess from 'components/organisms/ServiceAccess';
 import ServiceCatalogAccess from 'components/organisms/ServiceCatalogAccess';

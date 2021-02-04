@@ -22,7 +22,7 @@ import {
   Repository,
   Resources,
   RunConfig,
-} from 'types/proto/kkc_models_pb';
+} from 'types/proto/models_pb';
 import { EditServicePageValues, EnvVar, ServiceType } from 'types/service';
 import * as Yup from 'yup';
 

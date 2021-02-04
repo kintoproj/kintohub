@@ -4,7 +4,7 @@ import CopyTextField from 'components/atoms/CopyTextField';
 import { VerticalSpacer } from 'components/atoms/Spacer';
 import React from 'react';
 import styled from 'styled-components';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';

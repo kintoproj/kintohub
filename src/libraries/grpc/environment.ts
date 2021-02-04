@@ -3,9 +3,9 @@ import {
   CreateEnvironmentRequest,
   EnvironmentQueryRequest,
   UpdateEnvironmentRequest,
-} from 'types/proto/kintokubecore_pb';
-import { KintoKubeCoreServiceClient } from 'types/proto/kintokubecore_pb_service';
-import { Environment, Environments } from 'types/proto/kkc_models_pb';
+} from 'types/proto/coreapi_pb';
+import { KintoKubeCoreServiceClient } from 'types/proto/coreapi_pb_service';
+import { Environment, Environments } from 'types/proto/models_pb';
 
 import { invokeGRPC, KKCMethod } from './common';
 

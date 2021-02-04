@@ -3,9 +3,9 @@ import {
   getGitProvider,
   removeRepoPrefix,
   getFullRepositoryWithBranch,
-  getGitRepoMeta
+  getGitRepoMeta,
 } from '../../libraries/helpers/service';
-import { Block } from '../../types/proto/kkc_models_pb';
+import { Block } from '../../types/proto/models_pb';
 import '../../types/proto.extend/block';
 
 describe('getGitProvider', () => {
@@ -28,7 +28,7 @@ describe('getGitProvider', () => {
       'https://nandi0315@bitbucket.org/nandi0315/neuralnetwork.git',
       'bitbucket.org',
       'git@bitbucket.org:nandi0315/neuralnetwork.git',
-      'bitbucket.org'
+      'bitbucket.org',
     ];
     for (let i = 0; i < testCases.length; i += 2) {
       expect(getGitProvider(testCases[i])).toEqual(testCases[i + 1]);
@@ -53,63 +53,69 @@ describe('getGitRepoMeta', () => {
         meta: {
           provider: 'github.com',
           org: 'nandiheath',
-          repo: 'test'
-        }
-      }, {
+          repo: 'test',
+        },
+      },
+      {
         url: 'https://github.com/nandiheath/test/tree/master',
         meta: {
           provider: 'github.com',
           org: 'nandiheath',
-          repo: 'test'
-        }
-      }, {
+          repo: 'test',
+        },
+      },
+      {
         url: 'https://gitlab.com/nandiheath/dashboard/-/tree/master',
         meta: {
           provider: 'gitlab.com',
           org: 'nandiheath',
-          repo: 'dashboard'
-        }
-      }, {
+          repo: 'dashboard',
+        },
+      },
+      {
         url: 'git@gitlab.com:nandiheath/dashboard.git',
         meta: {
           provider: 'gitlab.com',
           org: 'nandiheath',
-          repo: 'dashboard'
-        }
-      }, {
+          repo: 'dashboard',
+        },
+      },
+      {
         url: 'https://gitlab.com/nandiheath/dashboard.git',
         meta: {
           provider: 'gitlab.com',
           org: 'nandiheath',
-          repo: 'dashboard'
-        }
-      }, {
+          repo: 'dashboard',
+        },
+      },
+      {
         url: 'https://bitbucket.org/nandi0315/neuralnetwork/src/master/',
         meta: {
           provider: 'bitbucket.org',
           org: 'nandi0315',
-          repo: 'neuralnetwork'
-        }
-      }, {
+          repo: 'neuralnetwork',
+        },
+      },
+      {
         url: 'https://nandi0315@bitbucket.org/nandi0315/neuralnetwork.git',
         meta: {
           provider: 'bitbucket.org',
           org: 'nandi0315',
-          repo: 'neuralnetwork'
-        }
-      }, {
+          repo: 'neuralnetwork',
+        },
+      },
+      {
         url: 'git@bitbucket.org:nandi0315/neuralnetwork.git',
         meta: {
           provider: 'bitbucket.org',
           org: 'nandi0315',
-          repo: 'neuralnetwork'
-        }
-      }
+          repo: 'neuralnetwork',
+        },
+      },
     ];
     for (let i = 0; i < testCases.length; i += 2) {
       expect(getGitRepoMeta(testCases[i].url)).toEqual(testCases[i].meta);
     }
-
   });
 });
 

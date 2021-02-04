@@ -1,5 +1,5 @@
 import { ServiceStateMap, ServiceMetrics } from 'types/service';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 
 export type ServiceData = {
   // the json object

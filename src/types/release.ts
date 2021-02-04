@@ -1,4 +1,4 @@
-import { Status } from 'types/proto/kkc_models_pb';
+import { Status } from 'types/proto/models_pb';
 
 export type ReleaseStatus = {
   state: ReleaseStateType;

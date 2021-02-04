@@ -1,4 +1,4 @@
-import { KintoConfiguration } from 'types/proto/kkc_models_pb';
+import { KintoConfiguration } from 'types/proto/models_pb';
 import { KintoConfig } from 'types';
 import { setIsDarkMode } from 'libraries/localstorage';
 

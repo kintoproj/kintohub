@@ -4,7 +4,8 @@ import BasicLinkButton from 'components/atoms/BasicLinkButton';
 import { HorizontalSpacer, VerticalSpacer } from 'components/atoms/Spacer';
 import { useServiceNavigate } from 'components/hooks/PathHook';
 import {
-  useAuthState, useServicesState
+  useAuthState,
+  useServicesState,
 } from 'components/hooks/ReduxStateHook';
 import { useCurrentReleaseState } from 'components/hooks/ReleaseHook';
 import AlertDialog from 'components/molecules/AlertDialog';
@@ -15,18 +16,19 @@ import { useGRPCWrapper } from 'components/templates/GRPCWrapper';
 import { PopoverAction, usePopover } from 'components/templates/PopoverHook';
 import { restartPod } from 'libraries/grpc/service';
 import {
-  formatDataUnit, formatK8SCpu, formatK8SMemory, userFriendlyInstanceName
+  formatDataUnit,
+  formatK8SCpu,
+  formatK8SMemory,
+  userFriendlyInstanceName,
 } from 'libraries/helpers';
-import {
-  getServiceOverallMetrics
-} from 'libraries/helpers/service';
+import { getServiceOverallMetrics } from 'libraries/helpers/service';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { enqueueError, setLoading } from 'states/app/actions';
 import { showPanel } from 'states/sidePanel/actions';
 import styled from 'styled-components';
 import { bps } from 'theme';
-import { Block, BlockInstance } from 'types/proto/kkc_models_pb';
+import { Block, BlockInstance } from 'types/proto/models_pb';
 
 import IconButton from '@material-ui/core/IconButton';
 import Paper from '@material-ui/core/Paper';
@@ -127,7 +129,9 @@ const ServiceMetrics = ({ service }: Props) => {
         label: 'View Console',
         onClick: () => {
           navigateToServiceConsoleLogPage(
-            service.getName(), targetInstance.name);
+            service.getName(),
+            targetInstance.name
+          );
         },
       },
       {
@@ -194,13 +198,14 @@ const ServiceMetrics = ({ service }: Props) => {
                 Need dedicated CPU?
               </BasicLinkButton>
             ) : (
-                `${formatK8SCpu(totalCpuRequest)}${totalCpuRequest > 0 ? ' Cores' : ''
-                }`
-              )
+              `${formatK8SCpu(totalCpuRequest)}${
+                totalCpuRequest > 0 ? ' Cores' : ''
+              }`
+            )
           }
           percentage={totalCpuUsage / totalCpuRequest}
         />
-        {serviceType === Block.Type.CATALOG &&
+        {serviceType === Block.Type.CATALOG && (
           <>
             <HorizontalSpacer size={16} />
             <MetricCard
@@ -210,7 +215,8 @@ const ServiceMetrics = ({ service }: Props) => {
               max={formatDataUnit(totalStorageRequest, 0)}
               percentage={totalStorageUsage / totalStorageRequest}
             />
-          </>}
+          </>
+        )}
       </div>
       <VerticalSpacer size={40} />
       <Typography color="textPrimary" variant="h6">
@@ -249,8 +255,9 @@ const ServiceMetrics = ({ service }: Props) => {
 
             {metrics &&
               Object.values(metrics.instances).map((instance) => {
-                const instanceRelease =
-                  service.getReleasesMap().get(instance.releaseid);
+                const instanceRelease = service
+                  .getReleasesMap()
+                  .get(instance.releaseid);
 
                 return (
                   <TableRow key={instance.name} hover={true}>
@@ -262,12 +269,12 @@ const ServiceMetrics = ({ service }: Props) => {
                         {instance.cpurequests === 0 ? (
                           <span>SHARED</span>
                         ) : (
-                            <span>
-                              {`${formatK8SCpu(
-                                instance.cpuusage
-                              )} / ${formatK8SCpu(instance.cpurequests)}`}
-                            </span>
-                          )}
+                          <span>
+                            {`${formatK8SCpu(
+                              instance.cpuusage
+                            )} / ${formatK8SCpu(instance.cpurequests)}`}
+                          </span>
+                        )}
                       </div>
                     </TableCell>
                     <TableCell align="center">
@@ -311,12 +318,12 @@ const ServiceMetrics = ({ service }: Props) => {
           </TableFooter>
         </Table>
       </TableContainer>
-      {serviceType === Block.Type.CATALOG &&
+      {serviceType === Block.Type.CATALOG && (
         <>
           <VerticalSpacer size={40} />
           <Typography color="textPrimary" variant="h6">
             Provision Storage
-      </Typography>
+          </Typography>
           <VerticalSpacer size={16} />
           <TableContainer component={Paper} className="table-wrapper">
             <Table className="table" aria-label="simple table">
@@ -333,8 +340,8 @@ const ServiceMetrics = ({ service }: Props) => {
               <TableBody>
                 {(!metrics ||
                   Object.values(metrics.instances).length === 0) && (
-                    <EmptyTableRow text="No storage" colSpan={5} />
-                  )}
+                  <EmptyTableRow text="No storage" colSpan={5} />
+                )}
                 {metrics &&
                   Object.values(metrics.storages).map((storage) => {
                     return (
@@ -345,7 +352,10 @@ const ServiceMetrics = ({ service }: Props) => {
                         <TableCell align="center">
                           <div className="rows">
                             <span>
-                              {`${formatDataUnit(storage.mountedusageinbytes, 0)}`}
+                              {`${formatDataUnit(
+                                storage.mountedusageinbytes,
+                                0
+                              )}`}
                               {` / `}
                               {`${formatDataUnit(storage.capacityinbytes, 0)}`}
                             </span>
@@ -362,7 +372,8 @@ const ServiceMetrics = ({ service }: Props) => {
               </TableFooter>
             </Table>
           </TableContainer>
-        </>}
+        </>
+      )}
 
       {popover}
       <AlertDialog

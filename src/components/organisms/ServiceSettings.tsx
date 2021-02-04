@@ -20,7 +20,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { enqueueError, setLoading } from 'states/app/actions';
 import styled from 'styled-components';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 
 import { Divider, Typography } from '@material-ui/core';
 import Switch from '@material-ui/core/Switch';
@@ -65,9 +65,8 @@ const ServiceActivity = ({ service }: Props) => {
   const {
     navigateToServices,
     navigateToServiceReleasePage,
-    navigateToServiceAccessPage
+    navigateToServiceAccessPage,
   } = useServiceNavigate();
-
 
   const dispatch = useDispatch();
   const grpcWrapper = useGRPCWrapper();
@@ -107,7 +106,6 @@ const ServiceActivity = ({ service }: Props) => {
   const serviceType =
     latestLiveRelease?.getRunconfig()?.getType() || Block.Type.NOT_SET;
 
-
   // catalog shouldn't show CI/CD
   // and hide it if there is no release yet
   const shouldShowCICD =
@@ -128,7 +126,7 @@ const ServiceActivity = ({ service }: Props) => {
         initialValues={{
           autoDeploy: true,
         }}
-        onSubmit={async (values, actions) => { }}
+        onSubmit={async (values, actions) => {}}
       >
         {(formikProps: FormikProps<any>) => (
           <>
@@ -218,7 +216,7 @@ const ServiceActivity = ({ service }: Props) => {
               {/* 
               FIXME: once BE fixed suspend for catalog, we can remove this 
               */}
-              {serviceType !== Block.Type.CATALOG &&
+              {serviceType !== Block.Type.CATALOG && (
                 <>
                   <ResponsiveWrapper
                     title="Suspend Service"
@@ -238,7 +236,7 @@ const ServiceActivity = ({ service }: Props) => {
                   <VerticalSpacer size={32} />
                   <Divider />
                 </>
-              }
+              )}
 
               <VerticalSpacer size={32} />
               <ResponsiveWrapper

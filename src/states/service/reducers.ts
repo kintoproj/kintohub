@@ -1,4 +1,4 @@
-import { JobStatus } from 'types/proto/kkc_models_pb';
+import { JobStatus } from 'types/proto/models_pb';
 import {
   ServiceActionTypes,
   ACTION_SET_SERVICE,

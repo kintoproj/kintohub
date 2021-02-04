@@ -5,19 +5,27 @@ import { useCurrentReleaseState } from 'components/hooks/ReleaseHook';
 import { useGRPCStream } from 'components/templates/GRPCWrapper';
 import { watchJobStatus } from 'libraries/grpc/service';
 import {
-  getJobStateIcon, getJobStateTypeName
+  getJobStateIcon,
+  getJobStateTypeName,
 } from 'libraries/helpers/release';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { enqueueError } from 'states/app/actions';
 import { updateJobStatus } from 'states/service/actions';
 import styled from 'styled-components';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 import { JobStatus } from 'types/service';
 
 import {
-  IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableFooter,
-  TableHead, TableRow
+  IconButton,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableFooter,
+  TableHead,
+  TableRow,
 } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import RightIcon from '@material-ui/icons/ChevronRightRounded';
@@ -67,7 +75,6 @@ const ServiceJobActivity = ({ service }: Props) => {
   const { envId } = useAuthState();
   const { navigateToServiceConsoleLogPage } = useServiceNavigate();
   const { jobStatusMap } = useServiceState();
-
 
   const { latestDeploymentRelease: release } = useCurrentReleaseState(service);
   const dispatch = useDispatch();
@@ -134,7 +141,9 @@ const ServiceJobActivity = ({ service }: Props) => {
                   hover={true}
                   onClick={() => {
                     navigateToServiceConsoleLogPage(
-                      service.getName(), history.name);
+                      service.getName(),
+                      history.name
+                    );
                   }}
                 >
                   <TableCell>

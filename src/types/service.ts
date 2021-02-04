@@ -5,7 +5,7 @@ import {
   Block,
   BuildConfig,
   JobStatus as JobStatusModel,
-} from 'types/proto/kkc_models_pb';
+} from 'types/proto/models_pb';
 import { Moment } from 'moment';
 
 export interface CreateServiceState {

@@ -1,7 +1,7 @@
 import {
   KintoKubeCoreServiceClient,
   ServiceError,
-} from 'types/proto/kintokubecore_pb_service';
+} from 'types/proto/coreapi_pb_service';
 import { grpc } from '@improbable-eng/grpc-web';
 
 export interface WatchStream<T, P> {

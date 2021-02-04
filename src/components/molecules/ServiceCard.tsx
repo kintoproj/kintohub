@@ -7,13 +7,16 @@ import PromotedTooltip from 'components/molecules/PromotedTooltip';
 import { toTimeElapsed } from 'libraries/helpers/date';
 import { getTagFromPromotedRelease } from 'libraries/helpers/release';
 import {
-  getLanguageNameByType, getServiceIcon, getServiceTypeName, isPromotedService
+  getLanguageNameByType,
+  getServiceIcon,
+  getServiceTypeName,
+  isPromotedService,
 } from 'libraries/helpers/service';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { showPanel } from 'states/sidePanel/actions';
 import styled from 'styled-components';
-import { Block, BlockInstance, BlockStatus } from 'types/proto/kkc_models_pb';
+import { Block, BlockInstance, BlockStatus } from 'types/proto/models_pb';
 import { PodStateType, ServiceStateType } from 'types/service';
 
 import Card from '@material-ui/core/Card';

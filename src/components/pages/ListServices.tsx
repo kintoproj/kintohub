@@ -23,7 +23,7 @@ import { showPanel } from 'states/sidePanel/actions';
 import styled from 'styled-components';
 import { bps, darkTheme } from 'theme';
 import { KINTO_FONT_WHITE } from 'theme/colors';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 import { IconButton, MuiThemeProvider } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/AddRounded';

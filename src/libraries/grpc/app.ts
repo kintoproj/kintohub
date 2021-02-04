@@ -1,10 +1,7 @@
-import { KintoKubeCoreServiceClient } from 'types/proto/kintokubecore_pb_service';
+import { KintoKubeCoreServiceClient } from 'types/proto/coreapi_pb_service';
 import { Empty } from 'google-protobuf/google/protobuf/empty_pb';
-import { KintoConfiguration } from 'types/proto/kkc_models_pb';
-import {
-  SyncTimeRequest,
-  SyncTimeResponse,
-} from 'types/proto/kintokubecore_pb';
+import { KintoConfiguration } from 'types/proto/models_pb';
+import { SyncTimeRequest, SyncTimeResponse } from 'types/proto/coreapi_pb';
 import { invokeGRPC, KKCMethod } from './common';
 
 export const getKintoConfig: KKCMethod<KintoConfiguration, {}> = (

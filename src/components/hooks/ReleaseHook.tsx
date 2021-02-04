@@ -2,7 +2,7 @@ import { getReleaseState } from 'libraries/helpers/release';
 import { useSelector } from 'react-redux';
 import { ReleasesState } from 'states/releases/types';
 import { RootState } from 'states/types';
-import { Block, Status, Release } from 'types/proto/kkc_models_pb';
+import { Block, Status, Release } from 'types/proto/models_pb';
 
 interface CurrentReleaseState {
   // true when there is one running release
@@ -59,8 +59,9 @@ export const useCurrentReleaseState = (
   const latestReleaseType = latestRelease.getType();
   rs.latestRelease = latestRelease;
   // a failed suspend -> is not a suspend
-  rs.isSuspended = latestReleaseType === Release.Type.SUSPEND
-    && getReleaseState(latestRelease, statusMap) !== Status.State.FAIL;
+  rs.isSuspended =
+    latestReleaseType === Release.Type.SUSPEND &&
+    getReleaseState(latestRelease, statusMap) !== Status.State.FAIL;
 
   rs.isUndeployed = latestReleaseType === Release.Type.UNDEPLOY;
 

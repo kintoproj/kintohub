@@ -5,7 +5,7 @@ import {
   SidePanelActionDataTypes,
   ViewReleaseLogData,
 } from 'states/sidePanel/types';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 
 import BuildLog from './BuildLog';
 import CreateDomain from './CreateDomain';

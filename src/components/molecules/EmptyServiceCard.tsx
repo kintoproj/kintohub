@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BlockStatus, Block } from 'types/proto/kkc_models_pb';
+import { BlockStatus, Block } from 'types/proto/models_pb';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import { VerticalSpacer } from 'components/atoms/Spacer';

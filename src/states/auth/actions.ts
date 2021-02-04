@@ -8,7 +8,7 @@ import {
 } from 'states/app/actions';
 import { RootState } from 'states/types';
 import { Environment } from 'types/environment';
-import { KintoKubeCoreServiceClient } from 'types/proto/kintokubecore_pb_service';
+import { KintoKubeCoreServiceClient } from 'types/proto/coreapi_pb_service';
 import { push } from 'connected-react-router';
 import { PATH_CREATE_ENV, PATH_MAINTENANCE } from 'libraries/constants';
 import { getEnvironments } from 'libraries/grpc/environment';

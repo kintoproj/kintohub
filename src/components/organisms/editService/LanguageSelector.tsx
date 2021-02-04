@@ -6,7 +6,7 @@ import { VerticalSpacer } from 'components/atoms/Spacer';
 import 'types/proto.extend/block';
 import FormikSelect, { InputProps } from 'components/atoms/FormikSelect';
 import 'types/yup';
-import { BuildConfig } from 'types/proto/kkc_models_pb';
+import { BuildConfig } from 'types/proto/models_pb';
 import {
   getLanguageNameByType,
   getBuildCmdPlaceholderByLang,

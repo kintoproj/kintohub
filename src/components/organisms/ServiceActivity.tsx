@@ -32,7 +32,7 @@ import { showPanel } from 'states/sidePanel/actions';
 import styled from 'styled-components';
 import { Environment } from 'types/environment';
 import { ListServicePageState } from 'types/pageState';
-import { Block, Release, Status } from 'types/proto/kkc_models_pb';
+import { Block, Release, Status } from 'types/proto/models_pb';
 import { FixItState } from 'types/service';
 import IconButton from '@material-ui/core/IconButton';
 import Paper from '@material-ui/core/Paper';

@@ -4,7 +4,7 @@ import DeployedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import FailedIcon from '@material-ui/icons/ErrorOutlineRounded';
 import AbortedIcon from '@material-ui/icons/HighlightOffRounded';
 
-import { Status, Release, JobStatus } from 'types/proto/kkc_models_pb';
+import { Status, Release, JobStatus } from 'types/proto/models_pb';
 import {
   ReleaseStateType,
   ReleaseStatusMap,
@@ -37,8 +37,8 @@ export const getSuspendStateTypeName = (state: ReleaseStateType): string => {
     case Status.State.FAIL:
       return 'Failed';
     case Status.State.PENDING:
-      return 'Pending'
-    case Status.State.ABORTED: // not possible?    
+      return 'Pending';
+    case Status.State.ABORTED: // not possible?
     case Status.State.REVIEW_DEPLOY: // not possible?
     case Status.State.SUCCESS:
       return 'Suspended';

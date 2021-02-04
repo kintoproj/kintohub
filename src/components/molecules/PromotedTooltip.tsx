@@ -3,7 +3,7 @@ import { HorizontalSpacer } from 'components/atoms/Spacer';
 import { usePromotedFromService } from 'components/hooks/TagHook';
 import React from 'react';
 import styled from 'styled-components';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';

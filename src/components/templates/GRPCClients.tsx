@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { REACT_APP_SERVER_URL } from 'libraries/envVars';
-import { KintoKubeCoreServiceClient } from 'types/proto/kintokubecore_pb_service';
+import { KintoKubeCoreServiceClient } from 'types/proto/coreapi_pb_service';
 
 export type GRPCClients = {
   kkcClient: KintoKubeCoreServiceClient;

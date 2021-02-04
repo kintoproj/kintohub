@@ -21,7 +21,7 @@ import { showPanel } from 'states/sidePanel/actions';
 import { CreateDomainData } from 'states/sidePanel/types';
 import { RootState } from 'states/types';
 import styled from 'styled-components';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 import * as Yup from 'yup';
 
 import { Card, List, ListItem, Popover } from '@material-ui/core';

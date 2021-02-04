@@ -10,7 +10,7 @@ import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { enqueueError, setLoading } from 'states/app/actions';
 import { showPanel } from 'states/sidePanel/actions';
 import { RootState } from 'states/types';
-import { Block, BlocksMetrics, Status } from 'types/proto/kkc_models_pb';
+import { Block, BlocksMetrics, Status } from 'types/proto/models_pb';
 import { ServiceMetrics, ServiceStateType } from 'types/service';
 
 import { ServiceData } from './types';
@@ -117,90 +117,86 @@ export const setIsFetchServices = (
  * Thunk actions
  */
 type FecthServicesOption = {
-  promotedServiceName?: string
+  promotedServiceName?: string;
 };
 
 /**
  * Used on ListServices page. will check also for promoted service if the state exists
- * @param grpcWrapper 
- * @param envId 
- * @param options 
+ * @param grpcWrapper
+ * @param envId
+ * @param options
  */
 export const doFetchServices = (
   grpcWrapper: <T, P>(grpc: KKCMethod<T, P>, params: P) => Promise<T>,
   envId: string,
-  options: FecthServicesOption,
+  options: FecthServicesOption
 ): ThunkAction<Promise<void>, RootState, {}, AnyAction> => async (
   dispatch: ThunkDispatch<{}, {}, AnyAction>,
   getState: () => RootState
 ): Promise<void> => {
-    dispatch(setIsFetchServices(true));
-    try {
-      await grpcWrapper(getOrCreateEnvironment, { envId });
-      const srvs = await grpcWrapper(getServices, { envId });
-      dispatch(updateServices(srvs.getItemsList()));
+  dispatch(setIsFetchServices(true));
+  try {
+    await grpcWrapper(getOrCreateEnvironment, { envId });
+    const srvs = await grpcWrapper(getServices, { envId });
+    dispatch(updateServices(srvs.getItemsList()));
 
-      if (options.promotedServiceName) {
-        const promotedService =
-          srvs
-            .getItemsList()
-            .find(s => s.getName() === options.promotedServiceName);
+    if (options.promotedServiceName) {
+      const promotedService = srvs
+        .getItemsList()
+        .find((s) => s.getName() === options.promotedServiceName);
 
-        if (isPromotedService(promotedService)) {
-          const releases = promotedService?.getSortedReleases() || [];
+      if (isPromotedService(promotedService)) {
+        const releases = promotedService?.getSortedReleases() || [];
 
-          if (releases.length === 0) {
-            return;
-          }
+        if (releases.length === 0) {
+          return;
+        }
 
-          // we cannot use the statusMap here coz it is not yet updated
-          const pendingConfigRelease =
-            releases.find(r =>
-              r.getStatus()?.getState() ===
-              Status.State.REVIEW_DEPLOY);
+        // we cannot use the statusMap here coz it is not yet updated
+        const pendingConfigRelease = releases.find(
+          (r) => r.getStatus()?.getState() === Status.State.REVIEW_DEPLOY
+        );
 
-          if (pendingConfigRelease === undefined) {
-            // there is no pending config release
-            return;
-          }
+        if (pendingConfigRelease === undefined) {
+          // there is no pending config release
+          return;
+        }
 
-          if (releases.length === 1) {
-            // this is the first promotion
+        if (releases.length === 1) {
+          // this is the first promotion
+          dispatch(
+            showPanel({
+              type: 'EDIT_RELEASE',
+              release: pendingConfigRelease,
+              service: promotedService!,
+            })
+          );
+        } else {
+          // if there is more than 1 release we go to the service page
+          dispatch(
+            push(getServiceOverviewPageUrl(envId, options.promotedServiceName))
+          );
+
+          setTimeout(() => {
             dispatch(
               showPanel({
                 type: 'EDIT_RELEASE',
                 release: pendingConfigRelease,
                 service: promotedService!,
+                tabIndex: 2,
               })
             );
-
-          } else {
-            // if there is more than 1 release we go to the service page
-            dispatch(
-              push(
-                getServiceOverviewPageUrl(envId, options.promotedServiceName)))
-
-            setTimeout(() => {
-              dispatch(
-                showPanel({
-                  type: 'EDIT_RELEASE',
-                  release: pendingConfigRelease,
-                  service: promotedService!,
-                  tabIndex: 2,
-                })
-              );
-            }, 300);
-          }
-
+          }, 300);
         }
       }
-    } catch (error) {
-      trackError('FETCH_SERVICES', error);
-      dispatch(enqueueError('fetch-services', error));
-    } finally {
-      dispatch(setIsFetchServices(false));
     }
-  };
+  } catch (error) {
+    trackError('FETCH_SERVICES', error);
+    dispatch(enqueueError('fetch-services', error));
+  } finally {
+    dispatch(setIsFetchServices(false));
+  }
+};
 
 export const doDeleteService = (
   grpcWrapper: <T, P>(grpc: KKCMethod<T, P>, params: P) => Promise<T>,
@@ -210,21 +206,21 @@ export const doDeleteService = (
   dispatch: ThunkDispatch<{}, {}, AnyAction>,
   getState: () => RootState
 ): Promise<void> => {
-    // use global loading
-    dispatch(setLoading(true));
-    try {
-      await grpcWrapper(deleteService, { envId, serviceName });
-      dispatch({
-        type: ACTION_DELETE_SERVICE,
-        serviceName,
-      });
-    } catch (error) {
-      trackError('DELETE_SERVICE', error);
-      dispatch(enqueueError('delete-service', error));
-    } finally {
-      dispatch(setLoading(false));
-    }
-  };
+  // use global loading
+  dispatch(setLoading(true));
+  try {
+    await grpcWrapper(deleteService, { envId, serviceName });
+    dispatch({
+      type: ACTION_DELETE_SERVICE,
+      serviceName,
+    });
+  } catch (error) {
+    trackError('DELETE_SERVICE', error);
+    dispatch(enqueueError('delete-service', error));
+  } finally {
+    dispatch(setLoading(false));
+  }
+};
 
 export type ServicesActionTypes =
   | UpdateServiceFetchingAction

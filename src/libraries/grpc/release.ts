@@ -1,7 +1,7 @@
 import {
   KintoKubeCoreServiceClient,
   Status as PBStatus,
-} from 'types/proto/kintokubecore_pb_service';
+} from 'types/proto/coreapi_pb_service';
 import {
   WatchBuildLogsRequest,
   BlockQueryRequest,
@@ -12,9 +12,9 @@ import {
   CustomDomainNameRequest,
   CheckCustomDomainNameResponse,
   AbortBlockReleaseRequest,
-} from 'types/proto/kintokubecore_pb';
+} from 'types/proto/coreapi_pb';
 
-import { ReleasesStatus, Status, Logs } from 'types/proto/kkc_models_pb';
+import { ReleasesStatus, Status, Logs } from 'types/proto/models_pb';
 
 import { grpc } from '@improbable-eng/grpc-web';
 import { Empty } from 'google-protobuf/google/protobuf/empty_pb';

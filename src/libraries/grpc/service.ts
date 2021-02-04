@@ -13,12 +13,12 @@ import {
   KillBlockInstanceRequest,
   SuspendBlockRequest,
   WatchConsoleLogsRequest,
-} from 'types/proto/kintokubecore_pb';
+} from 'types/proto/coreapi_pb';
 /* eslint-disable max-len */
 import {
   KintoKubeCoreServiceClient,
   Status,
-} from 'types/proto/kintokubecore_pb_service';
+} from 'types/proto/coreapi_pb_service';
 import {
   Block,
   Blocks,
@@ -29,7 +29,7 @@ import {
   JobStatus,
   ReleaseConfig,
   RunConfig,
-} from 'types/proto/kkc_models_pb';
+} from 'types/proto/models_pb';
 
 import { grpc } from '@improbable-eng/grpc-web';
 

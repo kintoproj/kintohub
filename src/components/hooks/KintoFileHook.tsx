@@ -3,7 +3,7 @@ import { GIT_PROVIDER_GITHUB } from 'libraries/constants';
 import { genReleaseConfigFromRepo } from 'libraries/grpc/service';
 import { getGitRepoMeta } from 'libraries/helpers/service';
 import React, { useEffect } from 'react';
-import { BuildConfig, Release, RunConfig } from 'types/proto/kkc_models_pb';
+import { BuildConfig, Release, RunConfig } from 'types/proto/models_pb';
 import { ServiceType } from 'types/service';
 import { trackError } from 'libraries/helpers';
 import { useEnvironment } from './ReduxStateHook';

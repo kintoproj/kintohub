@@ -1,9 +1,4 @@
-import {
-  Block,
-  Release,
-  BuildConfig,
-  RunConfig,
-} from 'types/proto/kkc_models_pb';
+import { Block, Release, BuildConfig, RunConfig } from 'types/proto/models_pb';
 import { BlockType } from 'types';
 
 export interface SidePanelState {

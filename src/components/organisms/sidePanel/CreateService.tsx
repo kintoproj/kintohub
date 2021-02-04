@@ -25,7 +25,7 @@ import { doHidePanel, showPanel } from 'states/sidePanel/actions';
 import { CreateReleaseData } from 'states/sidePanel/types';
 import styled from 'styled-components';
 import { BlockType } from 'types';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 
 import AppBar from '@material-ui/core/AppBar';
 import Divider from '@material-ui/core/Divider';

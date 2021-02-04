@@ -6,10 +6,10 @@ import {
   RunConfig,
   Resources,
   JobSpec,
-} from 'types/proto/kkc_models_pb';
+} from 'types/proto/models_pb';
 import { BlockType, KintoConfig } from 'types';
 
-declare module 'types/proto/kkc_models_pb' {
+declare module 'types/proto/models_pb' {
   export interface Block {
     getLatestRelease(): Release | null;
     getSortedReleases(): Release[];

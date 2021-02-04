@@ -13,7 +13,7 @@ import { AuthState } from 'states/auth/types';
 import { ServicesState } from 'states/services/types';
 import { RootState } from 'states/types';
 import styled from 'styled-components';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 import { useCurrentReleaseState } from 'components/hooks/ReleaseHook';
 import OutlinedSelect from 'components/atoms/OutlinedSelect';
 import CopyToClipboard from 'react-copy-to-clipboard';

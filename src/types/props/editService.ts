@@ -1,4 +1,4 @@
-import { Block, Release } from 'types/proto/kkc_models_pb';
+import { Block, Release } from 'types/proto/models_pb';
 
 // Separating into this file is to avoid dependency cycle
 export interface EditServiceTabProps {

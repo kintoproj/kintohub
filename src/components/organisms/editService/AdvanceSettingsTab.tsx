@@ -16,7 +16,7 @@ import { EditServiceTabProps } from 'types/props/editService';
 import { EditServicePageValues } from 'types/service';
 import { Collapse, Divider, Typography } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 
 const StyledDiv = styled.div`
   padding: 36px 28px;

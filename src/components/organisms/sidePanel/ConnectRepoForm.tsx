@@ -18,7 +18,7 @@ import { doHidePanel, showPanel } from 'states/sidePanel/actions';
 import { CreateReleaseData } from 'states/sidePanel/types';
 import { RootState } from 'states/types';
 import { BlockType } from 'types';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 import * as Yup from 'yup';
 import {
   getFieldTooShortMessage,

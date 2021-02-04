@@ -5,7 +5,7 @@ import {
   CPUOptions,
   MemoryOptions,
   TimeoutOptions,
-} from 'types/proto/kkc_models_pb';
+} from 'types/proto/models_pb';
 
 import {
   ACTION_DISMISS_NOTIFICATION,

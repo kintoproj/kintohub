@@ -10,7 +10,7 @@ import {
 import Button from 'components/atoms/Button';
 import { doHidePanel, showPanel } from 'states/sidePanel/actions';
 import { FixItState } from 'types/service';
-import { Block } from 'types/proto/kkc_models_pb';
+import { Block } from 'types/proto/models_pb';
 import { useAppState } from 'components/hooks/ReduxStateHook';
 import { useServiceNavigate } from 'components/hooks/PathHook';
 
@@ -135,7 +135,7 @@ const Notifier = () => {
     // display snackbar using notistack
     enqueueSnackbar(message, {
       key,
-      onClose: (event, k: string) => { },
+      onClose: (event, k: string) => {},
       variant: type,
       persist: option?.persist,
       action,
