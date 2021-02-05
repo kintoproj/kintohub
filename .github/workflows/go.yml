@@ -1,0 +1,66 @@
+name: Go
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  kinto-builder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go 1.13
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.13
+        id: go
+
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+
+      - name: Build
+        working-directory: kinto-build
+        run: go build -v ./...
+
+      - name: Test
+        working-directory: kinto-build
+        run: go test -v ./...
+
+  kinto-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go 1.13
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.13
+        id: go
+
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+
+      - name: Build
+        working-directory: images/kinto-deploy
+        run: go build -v ./...
+
+      - name: Test
+        working-directory: images/kinto-deploy
+        run: go test -v ./...
+
+  kinto-cli:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go 1.13
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.13
+        id: go
+
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+
+      - name: Build
+        working-directory: images/kinto-cli
+        run: go build -v ./...
+
+      - name: Test
+        working-directory: images/kinto-cli
+        run: go test -v ./...
