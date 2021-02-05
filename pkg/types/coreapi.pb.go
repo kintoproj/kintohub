@@ -1691,104 +1691,103 @@ func init() {
 }
 
 var fileDescriptor_567dc07f2147c6c0 = []byte{
-	// 1541 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xcc, 0x57, 0xdd, 0x4e, 0xdc, 0xc6,
-	0x17, 0xdf, 0xe5, 0xeb, 0x0f, 0x67, 0x61, 0xd9, 0x1d, 0x96, 0x65, 0xd9, 0x90, 0x08, 0x8d, 0x72,
-	0x41, 0xf2, 0x6f, 0x86, 0x86, 0xa8, 0x52, 0x15, 0x11, 0x9a, 0xb0, 0x7c, 0x84, 0x00, 0x69, 0x6a,
-	0x88, 0x22, 0x55, 0x55, 0x25, 0xdb, 0x7b, 0xb2, 0xb8, 0x78, 0x3d, 0xae, 0x3d, 0xa6, 0xe2, 0x21,
-	0x7a, 0xd3, 0xab, 0xde, 0xf4, 0x19, 0xfa, 0x06, 0x55, 0xdf, 0xa1, 0x97, 0x7d, 0x99, 0xca, 0x63,
-	0x7b, 0xed, 0xf5, 0x97, 0x28, 0x49, 0xa4, 0xde, 0xcd, 0x9c, 0x39, 0xdf, 0x73, 0xe6, 0xcc, 0xf9,
-	0xc1, 0x82, 0xce, 0x1d, 0x54, 0x6d, 0x83, 0xd9, 0x0e, 0x17, 0xbc, 0x7b, 0x67, 0xc0, 0xf9, 0xc0,
-	0xc4, 0x4d, 0xb9, 0xd3, 0xbc, 0xf7, 0x9b, 0x38, 0xb4, 0xc5, 0x75, 0x78, 0x38, 0x3f, 0xe4, 0x7d,
-	0x34, 0xdd, 0x60, 0x47, 0x1f, 0xc0, 0xca, 0xbe, 0x75, 0x65, 0x38, 0xdc, 0x1a, 0xa2, 0x25, 0xbe,
-	0xf1, 0xd0, 0xb9, 0x56, 0xf0, 0x47, 0x0f, 0x5d, 0x41, 0xea, 0x30, 0x61, 0xf4, 0x3b, 0xd5, 0xf5,
-	0xea, 0xc6, 0x9c, 0x32, 0x61, 0xf4, 0x29, 0x83, 0x4e, 0xcf, 0x41, 0x55, 0x60, 0x42, 0x20, 0xe2,
-	0x25, 0x30, 0x65, 0xa9, 0x43, 0x0c, 0xb9, 0xe5, 0x9a, 0xee, 0x40, 0xe7, 0xad, 0xdd, 0xcf, 0xe7,
-	0x4f, 0xe9, 0x1e, 0xc9, 0x4f, 0x24, 0xe4, 0x1f, 0x42, 0x67, 0x0f, 0x4d, 0xbc, 0x89, 0x3c, 0xfd,
-	0xb5, 0x0a, 0x24, 0x70, 0x6e, 0xd7, 0xe4, 0xfa, 0x65, 0xc4, 0xd6, 0x82, 0x69, 0xb4, 0xae, 0x8e,
-	0x22, 0xce, 0x60, 0x93, 0x67, 0x8c, 0x6c, 0xc0, 0x9c, 0xe3, 0x59, 0x3d, 0x6e, 0xbd, 0x37, 0x06,
-	0x9d, 0xc9, 0xf5, 0xea, 0x46, 0x6d, 0x0b, 0x98, 0x12, 0x51, 0x94, 0xf8, 0x90, 0x30, 0xa8, 0x69,
-	0x9e, 0x61, 0xf6, 0x43, 0xde, 0x29, 0xc9, 0x3b, 0xcf, 0x76, 0x63, 0x9a, 0x92, 0x64, 0xa0, 0x7f,
-	0x54, 0x81, 0xec, 0xa1, 0x6d, 0xf2, 0xeb, 0xff, 0x9a, 0x6b, 0xe4, 0x3e, 0x2c, 0x68, 0xaa, 0x8b,
-	0x0a, 0x9a, 0xa8, 0xba, 0x78, 0xd4, 0xef, 0x4c, 0x4b, 0xb3, 0xe3, 0x44, 0xfa, 0x1c, 0x5a, 0xe7,
-	0x8e, 0x31, 0x18, 0xa0, 0x13, 0x84, 0xf1, 0xaf, 0x23, 0xa0, 0x5f, 0xc1, 0xd2, 0x99, 0xe7, 0xda,
-	0x68, 0xf5, 0x6f, 0x97, 0x02, 0xfa, 0x0c, 0x9a, 0x52, 0x72, 0xac, 0x3e, 0x6f, 0x2e, 0xbe, 0xe3,
-	0xdf, 0x80, 0x5f, 0x49, 0xb7, 0x34, 0x7f, 0x08, 0x4b, 0x52, 0x32, 0x28, 0x67, 0x05, 0x5d, 0x9b,
-	0x5b, 0x2e, 0xe6, 0x15, 0x3d, 0x59, 0x83, 0x39, 0x67, 0x94, 0xce, 0x40, 0x47, 0x4c, 0xa0, 0x06,
-	0x2c, 0xbf, 0x53, 0x85, 0x7e, 0x21, 0x6f, 0xe4, 0x84, 0x0f, 0xdc, 0xc8, 0x97, 0x31, 0xb1, 0x6a,
-	0x4a, 0xcc, 0x3f, 0xd5, 0x7c, 0xfb, 0xaf, 0x63, 0xc7, 0x62, 0x42, 0x1c, 0xc7, 0x64, 0x22, 0x0e,
-	0x7a, 0x0a, 0x2b, 0xd2, 0x54, 0x8f, 0x5b, 0x2e, 0x37, 0x31, 0x65, 0x2c, 0x56, 0x57, 0x2d, 0x54,
-	0x37, 0x91, 0x54, 0xf7, 0x4b, 0x35, 0x7a, 0xcd, 0xd2, 0xf7, 0x33, 0xa1, 0x0a, 0xef, 0x43, 0x14,
-	0x8e, 0x47, 0x3c, 0x99, 0x8e, 0xf8, 0x3e, 0xcc, 0xb8, 0xd2, 0x84, 0x2c, 0xc9, 0x51, 0x11, 0x87,
-	0x66, 0xc3, 0x33, 0xaa, 0x40, 0x7b, 0xcc, 0x27, 0xb4, 0x4b, 0xfa, 0x51, 0x42, 0xe7, 0x44, 0x89,
-	0xce, 0xff, 0xc3, 0x6a, 0x4e, 0x9c, 0xe1, 0x8d, 0xa7, 0xdb, 0xce, 0xcf, 0x55, 0xb8, 0x93, 0xe0,
-	0xee, 0xf1, 0xe1, 0xd0, 0x10, 0x67, 0x17, 0xea, 0xa7, 0x4b, 0xcc, 0x1a, 0xcc, 0xe9, 0x91, 0x15,
-	0xf9, 0xc0, 0xe7, 0x94, 0x98, 0x40, 0x9f, 0x43, 0xe7, 0xd8, 0x30, 0x4d, 0x59, 0xac, 0x47, 0x96,
-	0x2b, 0x54, 0x4b, 0xc7, 0xa2, 0x96, 0x9b, 0x7f, 0xcf, 0xdf, 0x43, 0x4b, 0xe1, 0xa6, 0xa9, 0xa9,
-	0xfa, 0xe5, 0xd8, 0x63, 0xc9, 0x4b, 0xe8, 0x2d, 0xfc, 0xa7, 0x7f, 0x56, 0x61, 0xa5, 0xe7, 0xb9,
-	0x82, 0x0f, 0xf7, 0xf8, 0x50, 0x35, 0x2c, 0x3f, 0x11, 0xe5, 0x0f, 0xb2, 0xbc, 0xf8, 0x1f, 0x42,
-	0x43, 0x4f, 0xa9, 0x0b, 0x8d, 0x66, 0xe8, 0xbe, 0xfe, 0xde, 0xeb, 0x17, 0xa7, 0xfb, 0x61, 0xde,
-	0x82, 0x0d, 0xd9, 0x84, 0x59, 0xf9, 0x15, 0xea, 0xdc, 0x94, 0xc5, 0x56, 0xdf, 0x5a, 0x8a, 0xbb,
-	0x2b, 0x7b, 0x13, 0x1e, 0x29, 0x23, 0x26, 0xfa, 0x7b, 0x15, 0xee, 0xf6, 0x2e, 0x50, 0xbf, 0xcc,
-	0xc6, 0x11, 0x96, 0xc9, 0x1a, 0xcc, 0x19, 0xae, 0xd4, 0xfe, 0xf5, 0xb1, 0x0c, 0x66, 0x56, 0x89,
-	0x09, 0x64, 0x1d, 0x6a, 0x72, 0xf9, 0x4e, 0xb5, 0x04, 0x46, 0xc9, 0x4b, 0x92, 0xc8, 0x3d, 0x00,
-	0xb9, 0x3d, 0xe0, 0x9e, 0x15, 0xe5, 0x30, 0x41, 0x21, 0x0c, 0x88, 0xe1, 0xf6, 0xd0, 0x11, 0xc6,
-	0x7b, 0x43, 0x97, 0x1d, 0x49, 0xed, 0x5f, 0xcb, 0xa8, 0x66, 0x95, 0x9c, 0x13, 0xfa, 0x03, 0xb4,
-	0xf7, 0x2d, 0x55, 0x33, 0xf1, 0x8d, 0xa7, 0x99, 0x86, 0xfe, 0x56, 0x39, 0xf9, 0x64, 0x05, 0xea,
-	0xf7, 0x9d, 0x3d, 0xc3, 0xfd, 0x58, 0xc6, 0xa8, 0x09, 0x9d, 0x17, 0x1a, 0x77, 0x44, 0x58, 0x8c,
-	0xd2, 0xca, 0xcd, 0xf4, 0x95, 0x76, 0xe2, 0x82, 0xa6, 0xb9, 0x0f, 0x8b, 0xe7, 0x68, 0xa2, 0xcd,
-	0x1d, 0xf1, 0x01, 0x45, 0x49, 0xb7, 0xa1, 0x11, 0xab, 0x09, 0x6b, 0x62, 0x03, 0xa6, 0xfa, 0xaa,
-	0x50, 0xa5, 0x9a, 0xda, 0x56, 0x8b, 0x45, 0x0c, 0x67, 0xe8, 0x5c, 0x19, 0x3a, 0xee, 0xa9, 0x42,
-	0x55, 0x24, 0x07, 0xfd, 0x09, 0x9a, 0xe7, 0xea, 0xe0, 0x53, 0xc7, 0x4a, 0x1a, 0x30, 0x29, 0xd4,
-	0x41, 0xf8, 0x16, 0xfc, 0x25, 0xfd, 0xad, 0x0a, 0xcb, 0x6f, 0x1c, 0x3e, 0xe4, 0x02, 0x53, 0xd6,
-	0x6f, 0xf3, 0x32, 0x43, 0xfd, 0x93, 0x23, 0xfd, 0xe3, 0x5e, 0x4e, 0xa5, 0xbd, 0x5c, 0x87, 0x9a,
-	0x50, 0x9d, 0x01, 0x8a, 0x7d, 0x69, 0x29, 0x18, 0x45, 0x92, 0x24, 0xfa, 0x57, 0x15, 0x36, 0x0e,
-	0xd1, 0x0a, 0x7d, 0x0b, 0x1e, 0xe8, 0x81, 0xc3, 0x87, 0xc7, 0x86, 0x25, 0xf8, 0x81, 0x61, 0xa2,
-	0x82, 0x36, 0x8f, 0x5c, 0x7e, 0x10, 0x3a, 0x77, 0x7e, 0x6d, 0x07, 0x09, 0xab, 0x6f, 0xd5, 0x98,
-	0xac, 0x22, 0xe6, 0x93, 0x94, 0xf8, 0xd4, 0xf7, 0x94, 0x3b, 0x83, 0x30, 0x02, 0x7f, 0xe9, 0x77,
-	0x3b, 0x07, 0x6d, 0x1e, 0x3a, 0x2f, 0xd7, 0xa4, 0x0d, 0x33, 0x9a, 0xa3, 0x5a, 0xfa, 0x45, 0xe8,
-	0x7a, 0xb8, 0x8b, 0x73, 0x33, 0x9d, 0xcc, 0xcd, 0x06, 0x2c, 0x0e, 0x0c, 0x71, 0xe1, 0x69, 0x6f,
-	0x5d, 0x74, 0xce, 0xf9, 0x25, 0x5a, 0x9d, 0x19, 0x79, 0x9e, 0x26, 0xd3, 0xc7, 0xb0, 0x78, 0x76,
-	0x6d, 0xe9, 0xe7, 0x46, 0xdc, 0x08, 0xef, 0x01, 0xb8, 0x68, 0xf5, 0x7d, 0xd2, 0xa9, 0x2b, 0x9d,
-	0x9f, 0x54, 0x12, 0x14, 0x6a, 0x41, 0x23, 0x16, 0x09, 0xeb, 0xeb, 0x33, 0x68, 0xea, 0xa6, 0x81,
-	0x96, 0xf0, 0xa9, 0xae, 0x50, 0x87, 0xf6, 0x48, 0x34, 0x7b, 0xe0, 0x73, 0xbb, 0xe8, 0x5c, 0xa1,
-	0x93, 0xe4, 0x9e, 0x08, 0xb8, 0x33, 0x07, 0x5b, 0x7f, 0x37, 0xa1, 0x25, 0x93, 0x7c, 0xec, 0x69,
-	0xd8, 0xe3, 0x0e, 0x86, 0x45, 0x4b, 0x9e, 0x42, 0xfd, 0x50, 0xde, 0x4e, 0x34, 0x9f, 0x93, 0x0e,
-	0x2b, 0x80, 0x13, 0xdd, 0xf9, 0xe4, 0x09, 0xad, 0x90, 0xa7, 0xb0, 0x38, 0x2e, 0xeb, 0x92, 0x36,
-	0x0b, 0x80, 0x0b, 0x8b, 0x80, 0x0b, 0xdb, 0xf7, 0x81, 0x4b, 0x77, 0x21, 0x29, 0xea, 0xd2, 0x0a,
-	0xd9, 0x81, 0x66, 0x06, 0x8a, 0x90, 0x55, 0x56, 0x04, 0x4f, 0x32, 0xb6, 0x77, 0xa0, 0x99, 0x81,
-	0x26, 0x64, 0x95, 0x15, 0xc1, 0x95, 0x8c, 0xfc, 0x4b, 0x68, 0x66, 0xa0, 0x09, 0x59, 0x65, 0x45,
-	0x70, 0xa5, 0x5b, 0x10, 0x98, 0xcc, 0x42, 0x2d, 0x81, 0x5b, 0xc8, 0x12, 0xcb, 0xa2, 0x98, 0x6e,
-	0x8b, 0xe5, 0x4c, 0x9f, 0xb4, 0x42, 0x9e, 0xfb, 0x5e, 0x8c, 0x80, 0x45, 0x70, 0x4c, 0x96, 0x58,
-	0x16, 0x6c, 0x14, 0x6a, 0xd8, 0x81, 0x85, 0xb1, 0xd1, 0x9e, 0x2c, 0xb3, 0xbc, 0x51, 0xbf, 0x4c,
-	0x7e, 0x6c, 0x5a, 0x20, 0xcb, 0x2c, 0x6f, 0x7a, 0x28, 0x94, 0x7f, 0x08, 0x73, 0x87, 0x18, 0xf4,
-	0x76, 0x97, 0x10, 0x96, 0x99, 0xf1, 0xbb, 0xff, 0x0b, 0x68, 0xfe, 0x9d, 0x6f, 0xc0, 0x6c, 0xc4,
-	0x9b, 0xcb, 0x3a, 0x13, 0xd0, 0x68, 0x85, 0x6c, 0x43, 0x2d, 0x31, 0xee, 0xcb, 0x8c, 0xa4, 0x87,
-	0xff, 0x92, 0x1b, 0xd9, 0x86, 0xf9, 0x24, 0x58, 0x21, 0x2d, 0x96, 0x83, 0x5d, 0x4a, 0x32, 0xb2,
-	0x24, 0xc7, 0xee, 0xb0, 0x49, 0xb9, 0xc1, 0x00, 0x99, 0xeb, 0xf0, 0x22, 0x1b, 0x67, 0xa2, 0x95,
-	0xcf, 0xab, 0x7e, 0x65, 0x65, 0x26, 0x38, 0xb2, 0xca, 0x8a, 0xa6, 0xba, 0x92, 0x38, 0x7a, 0x30,
-	0x2f, 0x7f, 0xce, 0xd0, 0x08, 0x59, 0x65, 0x45, 0x1f, 0x69, 0x69, 0x79, 0x42, 0xfc, 0x17, 0x11,
-	0xc2, 0x32, 0x1f, 0x53, 0x89, 0xec, 0x2e, 0xd4, 0xc7, 0x7f, 0x13, 0xd2, 0x66, 0xb9, 0xdf, 0x4b,
-	0x89, 0x8e, 0xef, 0xe0, 0x6e, 0x69, 0xc7, 0x27, 0x0f, 0xd8, 0x4d, 0x7f, 0x84, 0x6e, 0x9d, 0x8d,
-	0xf1, 0xd1, 0x0a, 0x79, 0x02, 0xf5, 0x71, 0x38, 0x46, 0xda, 0x2c, 0x17, 0x9f, 0x75, 0xa7, 0x99,
-	0xbf, 0x93, 0x37, 0x74, 0x12, 0xf5, 0x8e, 0x04, 0x40, 0x18, 0xf5, 0x8e, 0x2c, 0x38, 0xea, 0x76,
-	0x59, 0x21, 0x9e, 0xa0, 0x15, 0xf2, 0x1a, 0x5a, 0x79, 0x00, 0x82, 0xac, 0xb1, 0x12, 0x5c, 0x51,
-	0x92, 0xb0, 0x23, 0x58, 0x0d, 0x22, 0x90, 0xcf, 0xe6, 0x25, 0xaa, 0xa6, 0xb8, 0x08, 0x8c, 0xa2,
-	0x5b, 0xd2, 0x9c, 0xeb, 0x41, 0x7d, 0x46, 0x9c, 0x32, 0xd0, 0x2f, 0x60, 0x51, 0xaa, 0x7a, 0xc5,
-	0xb5, 0xb2, 0x32, 0x06, 0xf6, 0x8a, 0x6b, 0x89, 0x0a, 0xde, 0x06, 0x92, 0xf0, 0xe0, 0x14, 0x85,
-	0x63, 0xe8, 0xf9, 0x92, 0xa1, 0xd1, 0x88, 0x47, 0x4a, 0x3f, 0x83, 0x46, 0x1a, 0xb6, 0x92, 0x0e,
-	0x2b, 0x40, 0xb2, 0xdd, 0x1a, 0x8b, 0x89, 0x52, 0xfc, 0x00, 0x96, 0x0f, 0x51, 0xc8, 0xeb, 0x0f,
-	0x6e, 0xd9, 0x73, 0x54, 0x61, 0x70, 0xab, 0xf0, 0x6b, 0x59, 0x62, 0x59, 0x66, 0x5a, 0x21, 0x27,
-	0xd0, 0x0e, 0x1a, 0x71, 0x7a, 0xc6, 0x27, 0x1d, 0x56, 0x00, 0x5f, 0x4a, 0x2e, 0xe5, 0x04, 0xda,
-	0x41, 0x0b, 0xfa, 0x28, 0xda, 0xce, 0x60, 0x39, 0x17, 0x7e, 0x94, 0x28, 0xbb, 0xc7, 0x4a, 0x01,
-	0x0b, 0xad, 0x90, 0x3d, 0x58, 0x4c, 0x41, 0x04, 0xb2, 0xc2, 0xf2, 0x41, 0x43, 0x89, 0x6b, 0x07,
-	0xd0, 0x48, 0x0f, 0xff, 0xa4, 0xc3, 0x0a, 0xf0, 0x40, 0x89, 0x9e, 0x2f, 0x61, 0xe1, 0x4c, 0xa8,
-	0x8e, 0x88, 0x86, 0x64, 0xd2, 0x60, 0xa9, 0xb9, 0xbc, 0xdb, 0x64, 0xe9, 0x11, 0x5b, 0x16, 0xc0,
-	0x63, 0x98, 0x8d, 0x46, 0x23, 0xd2, 0x60, 0xa9, 0xc1, 0xaa, 0xdb, 0x64, 0xe9, 0xb9, 0x89, 0x56,
-	0x76, 0x37, 0xbf, 0x7d, 0x14, 0xcc, 0x64, 0x4c, 0xe7, 0xc3, 0xcd, 0x4b, 0xbf, 0x1c, 0x2e, 0x3c,
-	0x2d, 0x58, 0x3c, 0xba, 0xf4, 0x34, 0x7c, 0xa4, 0x73, 0x07, 0x37, 0xed, 0xcb, 0xc1, 0xa6, 0xb8,
-	0xb6, 0xd1, 0xd5, 0x66, 0xa4, 0xbf, 0x4f, 0xfe, 0x09, 0x00, 0x00, 0xff, 0xff, 0xbb, 0x24, 0x20,
-	0x8a, 0x76, 0x15, 0x00, 0x00,
+	// 1535 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xcc, 0x57, 0xcb, 0x6e, 0xdb, 0x46,
+	0x17, 0x16, 0x7d, 0xfb, 0xed, 0x23, 0x5b, 0x96, 0xc6, 0xb2, 0x2c, 0x29, 0x4e, 0x60, 0x0c, 0xb2,
+	0x90, 0x93, 0xff, 0x1f, 0xff, 0x71, 0x50, 0xa0, 0x08, 0x1c, 0x37, 0xb1, 0x7c, 0x89, 0x13, 0x3b,
+	0x4d, 0x29, 0x07, 0x01, 0x8a, 0xa2, 0x00, 0x45, 0x4d, 0x64, 0xc6, 0x14, 0x87, 0x1d, 0x8e, 0x5c,
+	0xe8, 0x21, 0xba, 0xe9, 0xaa, 0x9b, 0x3e, 0x43, 0xdf, 0xa0, 0xe8, 0x3b, 0x74, 0xd1, 0xd7, 0x29,
+	0x38, 0x24, 0xc5, 0x3b, 0xe1, 0x3a, 0x09, 0xd0, 0xdd, 0xcc, 0x99, 0x73, 0x9f, 0x33, 0x67, 0xce,
+	0x07, 0x2b, 0x3a, 0xe3, 0x54, 0xb3, 0x0d, 0x62, 0x73, 0x26, 0x58, 0xfb, 0xce, 0x90, 0xb1, 0xa1,
+	0x49, 0x77, 0xe4, 0xae, 0x3f, 0x7e, 0xbf, 0x43, 0x47, 0xb6, 0x98, 0xf8, 0x87, 0xcb, 0x23, 0x36,
+	0xa0, 0xa6, 0xe3, 0xed, 0xf0, 0x36, 0x6c, 0x1c, 0x59, 0xd7, 0x06, 0x67, 0xd6, 0x88, 0x5a, 0xe2,
+	0x9b, 0x31, 0xe5, 0x13, 0x95, 0xfe, 0x30, 0xa6, 0x8e, 0x40, 0x15, 0x98, 0x31, 0x06, 0x4d, 0x65,
+	0x4b, 0xe9, 0x2c, 0xa9, 0x33, 0xc6, 0x00, 0x13, 0x68, 0x76, 0x39, 0xd5, 0x04, 0x8d, 0x08, 0x04,
+	0xbc, 0x08, 0xe6, 0x2c, 0x6d, 0x44, 0x7d, 0x6e, 0xb9, 0xc6, 0xfb, 0xd0, 0x7c, 0x6b, 0x0f, 0xb2,
+	0xf9, 0x13, 0xba, 0xa7, 0xf2, 0x33, 0x11, 0xf9, 0x07, 0xd0, 0x3c, 0xa4, 0x26, 0xbd, 0x89, 0x3c,
+	0xfe, 0x45, 0x01, 0xe4, 0x39, 0x77, 0x60, 0x32, 0xfd, 0x2a, 0x60, 0xab, 0xc3, 0x3c, 0xb5, 0xae,
+	0x4f, 0x03, 0x4e, 0x6f, 0x93, 0x65, 0x0c, 0x75, 0x60, 0x89, 0x8f, 0xad, 0x2e, 0xb3, 0xde, 0x1b,
+	0xc3, 0xe6, 0xec, 0x96, 0xd2, 0x29, 0xef, 0x02, 0x51, 0x03, 0x8a, 0x1a, 0x1e, 0x22, 0x02, 0xe5,
+	0xfe, 0xd8, 0x30, 0x07, 0x3e, 0xef, 0x9c, 0xe4, 0x5d, 0x26, 0x07, 0x21, 0x4d, 0x8d, 0x32, 0xe0,
+	0xdf, 0x15, 0x40, 0x87, 0xd4, 0x36, 0xd9, 0xe4, 0xdf, 0xe6, 0x1a, 0xba, 0x0f, 0x2b, 0x7d, 0xcd,
+	0xa1, 0x2a, 0x35, 0xa9, 0xe6, 0xd0, 0xd3, 0x41, 0x73, 0x5e, 0x9a, 0x8d, 0x13, 0xf1, 0x33, 0xa8,
+	0x5f, 0x70, 0x63, 0x38, 0xa4, 0xdc, 0x0b, 0xe3, 0x1f, 0x47, 0x80, 0xbf, 0x82, 0xb5, 0xde, 0xd8,
+	0xb1, 0xa9, 0x35, 0xb8, 0x5d, 0x0a, 0xf0, 0x53, 0xa8, 0x49, 0xc9, 0x58, 0x7d, 0xde, 0x5c, 0x7c,
+	0xdf, 0xbd, 0x01, 0xb7, 0x92, 0x6e, 0x69, 0xfe, 0x04, 0xd6, 0xa4, 0xa4, 0x57, 0xce, 0x2a, 0x75,
+	0x6c, 0x66, 0x39, 0x34, 0xab, 0xe8, 0xd1, 0x26, 0x2c, 0xf1, 0x69, 0x3a, 0x3d, 0x1d, 0x21, 0x01,
+	0x1b, 0xb0, 0xfe, 0x4e, 0x13, 0xfa, 0xa5, 0xbc, 0x91, 0x33, 0x36, 0x74, 0x02, 0x5f, 0x62, 0x62,
+	0x4a, 0x42, 0xcc, 0x3d, 0xed, 0xbb, 0xf6, 0x5f, 0x87, 0x8e, 0x85, 0x84, 0x30, 0x8e, 0xd9, 0x48,
+	0x1c, 0xf8, 0x1c, 0x36, 0xa4, 0xa9, 0x2e, 0xb3, 0x1c, 0x66, 0xd2, 0x84, 0xb1, 0x50, 0x9d, 0x92,
+	0xab, 0x6e, 0x26, 0xaa, 0xee, 0x67, 0x25, 0x78, 0xcd, 0xd2, 0xf7, 0x9e, 0xd0, 0xc4, 0xf8, 0x63,
+	0x14, 0xc6, 0x23, 0x9e, 0x4d, 0x46, 0x7c, 0x1f, 0x16, 0x1c, 0x69, 0x42, 0x96, 0xe4, 0xb4, 0x88,
+	0x7d, 0xb3, 0xfe, 0x19, 0x56, 0xa1, 0x11, 0xf3, 0x89, 0xda, 0x05, 0xfd, 0x28, 0xa2, 0x73, 0xa6,
+	0x40, 0xe7, 0x43, 0x68, 0x65, 0xc4, 0xe9, 0xdf, 0x78, 0xb2, 0xed, 0xfc, 0xa4, 0xc0, 0x9d, 0x08,
+	0x77, 0x97, 0x8d, 0x46, 0x86, 0xe8, 0x5d, 0x6a, 0x9f, 0x2f, 0x31, 0x9b, 0xb0, 0xa4, 0x07, 0x56,
+	0xe4, 0x03, 0x5f, 0x52, 0x43, 0x02, 0x7e, 0x06, 0xcd, 0x57, 0x86, 0x69, 0xca, 0x62, 0x3d, 0xb5,
+	0x1c, 0xa1, 0x59, 0x3a, 0xcd, 0x6b, 0xb9, 0xd9, 0xf7, 0xfc, 0x3d, 0xd4, 0x55, 0x66, 0x9a, 0x7d,
+	0x4d, 0xbf, 0x8a, 0x3d, 0x96, 0xac, 0x84, 0xde, 0xc2, 0x7f, 0xfc, 0x87, 0x02, 0x1b, 0xdd, 0xb1,
+	0x23, 0xd8, 0xe8, 0x90, 0x8d, 0x34, 0xc3, 0x72, 0x13, 0x51, 0xfc, 0x20, 0x8b, 0x8b, 0xff, 0x01,
+	0x54, 0xf5, 0x84, 0x3a, 0xdf, 0x68, 0x8a, 0xee, 0xea, 0xef, 0xbe, 0x7e, 0x7e, 0x7e, 0xe4, 0xe7,
+	0xcd, 0xdb, 0xa0, 0x1d, 0x58, 0x94, 0x5f, 0xa1, 0xce, 0x4c, 0x59, 0x6c, 0x95, 0xdd, 0xb5, 0xb0,
+	0xbb, 0x92, 0x37, 0xfe, 0x91, 0x3a, 0x65, 0xc2, 0xbf, 0x29, 0x70, 0xb7, 0x7b, 0x49, 0xf5, 0xab,
+	0x74, 0x1c, 0x7e, 0x99, 0x6c, 0xc2, 0x92, 0xe1, 0x48, 0xed, 0x5f, 0xbf, 0x92, 0xc1, 0x2c, 0xaa,
+	0x21, 0x01, 0x6d, 0x41, 0x59, 0x2e, 0xdf, 0x69, 0x96, 0xa0, 0x41, 0xf2, 0xa2, 0x24, 0x74, 0x0f,
+	0x40, 0x6e, 0x8f, 0xd9, 0xd8, 0x0a, 0x72, 0x18, 0xa1, 0x20, 0x02, 0xc8, 0x70, 0xba, 0x94, 0x0b,
+	0xe3, 0xbd, 0xa1, 0xcb, 0x8e, 0xa4, 0x0d, 0x26, 0x32, 0xaa, 0x45, 0x35, 0xe3, 0x04, 0x7f, 0x80,
+	0xc6, 0x91, 0xa5, 0xf5, 0x4d, 0xfa, 0x66, 0xdc, 0x37, 0x0d, 0xfd, 0xad, 0x7a, 0xf6, 0xd9, 0x0a,
+	0xd4, 0xed, 0x3b, 0x87, 0x86, 0xf3, 0xa9, 0x8c, 0x61, 0x13, 0x9a, 0xcf, 0xfb, 0x8c, 0x0b, 0xbf,
+	0x18, 0xa5, 0x95, 0x9b, 0xe9, 0x2b, 0xec, 0xc4, 0x39, 0x4d, 0xf3, 0x08, 0x56, 0x2f, 0xa8, 0x49,
+	0x6d, 0xc6, 0xc5, 0x47, 0x14, 0x25, 0xde, 0x83, 0x6a, 0xa8, 0xc6, 0xaf, 0x89, 0x0e, 0xcc, 0x0d,
+	0x34, 0xa1, 0x49, 0x35, 0xe5, 0xdd, 0x3a, 0x09, 0x18, 0x7a, 0x94, 0x5f, 0x1b, 0x3a, 0x3d, 0xd4,
+	0x84, 0xa6, 0x4a, 0x0e, 0xfc, 0x23, 0xd4, 0x2e, 0xb4, 0xe1, 0xe7, 0x8e, 0x15, 0x55, 0x61, 0x56,
+	0x68, 0x43, 0xff, 0x2d, 0xb8, 0x4b, 0xfc, 0xab, 0x02, 0xeb, 0x6f, 0x38, 0x1b, 0x31, 0x41, 0x13,
+	0xd6, 0x6f, 0xf3, 0x32, 0x7d, 0xfd, 0xb3, 0x53, 0xfd, 0x71, 0x2f, 0xe7, 0x92, 0x5e, 0x6e, 0x41,
+	0x59, 0x68, 0x7c, 0x48, 0xc5, 0x91, 0xb4, 0xe4, 0x8d, 0x22, 0x51, 0x12, 0xfe, 0x53, 0x81, 0xce,
+	0x09, 0xb5, 0x7c, 0xdf, 0xbc, 0x07, 0x7a, 0xcc, 0xd9, 0xe8, 0x95, 0x61, 0x09, 0x76, 0x6c, 0x98,
+	0x54, 0xa5, 0x36, 0x0b, 0x5c, 0xde, 0xf6, 0x9d, 0xbb, 0x98, 0xd8, 0x5e, 0xc2, 0x2a, 0xbb, 0x65,
+	0x22, 0xab, 0x88, 0xb8, 0x24, 0x35, 0x3c, 0x75, 0x3d, 0x65, 0x7c, 0xe8, 0x47, 0xe0, 0x2e, 0xdd,
+	0x6e, 0xc7, 0xa9, 0xcd, 0x7c, 0xe7, 0xe5, 0x1a, 0x35, 0x60, 0xa1, 0xcf, 0x35, 0x4b, 0xbf, 0xf4,
+	0x5d, 0xf7, 0x77, 0x61, 0x6e, 0xe6, 0xa3, 0xb9, 0xe9, 0xc0, 0xea, 0xd0, 0x10, 0x97, 0xe3, 0xfe,
+	0x5b, 0x87, 0xf2, 0x0b, 0x76, 0x45, 0xad, 0xe6, 0x82, 0x3c, 0x4f, 0x92, 0xf1, 0x23, 0x58, 0xed,
+	0x4d, 0x2c, 0xfd, 0xc2, 0x08, 0x1b, 0xe1, 0x3d, 0x00, 0x87, 0x5a, 0x03, 0x97, 0x74, 0xee, 0x48,
+	0xe7, 0x67, 0xd5, 0x08, 0x05, 0x5b, 0x50, 0x0d, 0x45, 0xfc, 0xfa, 0xfa, 0x2f, 0xd4, 0x74, 0xd3,
+	0xa0, 0x96, 0x70, 0xa9, 0x8e, 0xd0, 0x46, 0xf6, 0x54, 0x34, 0x7d, 0xe0, 0x72, 0x3b, 0x94, 0x5f,
+	0x53, 0x1e, 0xe5, 0x9e, 0xf1, 0xb8, 0x53, 0x07, 0xbb, 0x7f, 0xd5, 0xa0, 0x2a, 0x93, 0xdc, 0x65,
+	0x9c, 0xfa, 0x05, 0x8b, 0x9e, 0x40, 0xe5, 0x44, 0xde, 0x4c, 0x30, 0x9b, 0xa3, 0x26, 0xc9, 0x81,
+	0x12, 0xed, 0xe5, 0xe8, 0x09, 0x2e, 0xa1, 0x27, 0xb0, 0x1a, 0x97, 0x75, 0x50, 0x83, 0x78, 0xa0,
+	0x85, 0x04, 0xa0, 0x85, 0x1c, 0xb9, 0xa0, 0xa5, 0xbd, 0x12, 0x15, 0x75, 0x70, 0x09, 0xed, 0x43,
+	0x2d, 0x05, 0x43, 0x50, 0x8b, 0xe4, 0x41, 0x93, 0x94, 0xed, 0x7d, 0xa8, 0xa5, 0x60, 0x09, 0x6a,
+	0x91, 0x3c, 0xa8, 0x92, 0x92, 0x7f, 0x01, 0xb5, 0x14, 0x2c, 0x41, 0x2d, 0x92, 0x07, 0x55, 0xda,
+	0x39, 0x81, 0xc9, 0x2c, 0x94, 0x23, 0x98, 0x05, 0xad, 0x91, 0x34, 0x82, 0x69, 0xd7, 0x49, 0xc6,
+	0xe4, 0x89, 0x4b, 0xe8, 0x99, 0xeb, 0xc5, 0x14, 0x54, 0x78, 0xc7, 0x68, 0x8d, 0xa4, 0x81, 0x46,
+	0xae, 0x86, 0x7d, 0x58, 0x89, 0x8d, 0xf5, 0x68, 0x9d, 0x64, 0x8d, 0xf9, 0x45, 0xf2, 0xb1, 0x49,
+	0x01, 0xad, 0x93, 0xac, 0xc9, 0x21, 0x57, 0xfe, 0x01, 0x2c, 0x9d, 0x50, 0xaf, 0xaf, 0x3b, 0x08,
+	0x91, 0xd4, 0x7c, 0xdf, 0xfe, 0x8f, 0x47, 0x73, 0xef, 0xbc, 0x03, 0x8b, 0x01, 0x6f, 0x26, 0xeb,
+	0x82, 0x47, 0xc3, 0x25, 0xb4, 0x07, 0xe5, 0xc8, 0xa8, 0x2f, 0x33, 0x92, 0x1c, 0xfc, 0x0b, 0x6e,
+	0x64, 0x0f, 0x96, 0xa3, 0x40, 0x05, 0xd5, 0x49, 0x06, 0x6e, 0x29, 0xc8, 0xc8, 0x9a, 0x1c, 0xb9,
+	0xfd, 0x06, 0xe5, 0x78, 0xc3, 0x63, 0xa6, 0xc3, 0xab, 0x24, 0xce, 0x84, 0x4b, 0xff, 0x57, 0xdc,
+	0xca, 0x4a, 0x4d, 0x6f, 0xa8, 0x45, 0xf2, 0x26, 0xba, 0x82, 0x38, 0xba, 0xb0, 0x2c, 0x7f, 0x4d,
+	0xdf, 0x08, 0x6a, 0x91, 0xbc, 0x4f, 0xb4, 0xb0, 0x3c, 0x21, 0xfc, 0x87, 0x10, 0x22, 0xa9, 0x4f,
+	0xa9, 0x40, 0xf6, 0x00, 0x2a, 0xf1, 0x9f, 0x04, 0x35, 0x48, 0xe6, 0xd7, 0x52, 0xa0, 0xe3, 0x3b,
+	0xb8, 0x5b, 0xd8, 0xed, 0xd1, 0x36, 0xb9, 0xe9, 0x6f, 0xd0, 0xae, 0x90, 0x18, 0x1f, 0x2e, 0xa1,
+	0xc7, 0x50, 0x89, 0x43, 0x31, 0xd4, 0x20, 0x99, 0xd8, 0xac, 0x3d, 0x4f, 0xdc, 0x9d, 0xbc, 0xa1,
+	0xb3, 0xa0, 0x77, 0x44, 0xc0, 0xc1, 0xb4, 0x77, 0xa4, 0x81, 0x51, 0xbb, 0x4d, 0x72, 0xb1, 0x04,
+	0x2e, 0xa1, 0xd7, 0x50, 0xcf, 0x02, 0x0f, 0x68, 0x93, 0x14, 0x60, 0x8a, 0x82, 0x84, 0x9d, 0x42,
+	0xcb, 0x8b, 0x40, 0x3e, 0x9b, 0x17, 0x54, 0x33, 0xc5, 0xa5, 0x67, 0x94, 0x3a, 0x05, 0xcd, 0xb9,
+	0xe2, 0xd5, 0x67, 0xc0, 0x29, 0x03, 0xfd, 0x02, 0x56, 0xa5, 0xaa, 0x97, 0xac, 0x5f, 0x54, 0xc6,
+	0x40, 0x5e, 0xb2, 0x7e, 0xa4, 0x82, 0xf7, 0x00, 0x45, 0x3c, 0x38, 0xa7, 0x82, 0x1b, 0x7a, 0xb6,
+	0xa4, 0x6f, 0x34, 0xe0, 0x91, 0xd2, 0x4f, 0xa1, 0x9a, 0x84, 0xac, 0xa8, 0x49, 0x72, 0x50, 0x6c,
+	0xbb, 0x4c, 0x42, 0xa2, 0x14, 0x3f, 0x86, 0xf5, 0x13, 0x2a, 0xfc, 0x7f, 0xca, 0xbd, 0xe5, 0x31,
+	0xd7, 0x84, 0xc1, 0xac, 0xdc, 0xaf, 0x65, 0x8d, 0xa4, 0x99, 0x71, 0x09, 0x9d, 0x41, 0xc3, 0x6b,
+	0xc4, 0xc9, 0xf9, 0x1e, 0x35, 0x49, 0x0e, 0x74, 0x29, 0xb8, 0x94, 0x33, 0x68, 0x78, 0x2d, 0xe8,
+	0x93, 0x68, 0xeb, 0xc1, 0x7a, 0x26, 0xf4, 0x28, 0x50, 0x76, 0x8f, 0x14, 0x82, 0x15, 0x5c, 0x42,
+	0x87, 0xb0, 0x9a, 0x80, 0x07, 0x68, 0x83, 0x64, 0x03, 0x86, 0x02, 0xd7, 0x8e, 0xa1, 0x9a, 0x1c,
+	0xfc, 0x51, 0x93, 0xe4, 0x60, 0x81, 0x02, 0x3d, 0x5f, 0xc2, 0x4a, 0x4f, 0x68, 0x5c, 0x04, 0x03,
+	0x32, 0xaa, 0x92, 0xc4, 0x4c, 0xde, 0xae, 0x91, 0xe4, 0x78, 0x2d, 0x0b, 0xe0, 0x11, 0x2c, 0x06,
+	0x63, 0x11, 0xaa, 0x92, 0xc4, 0x50, 0xd5, 0xae, 0x91, 0xe4, 0xcc, 0x84, 0x4b, 0x07, 0x0f, 0xbf,
+	0xdd, 0xf6, 0xe6, 0x31, 0xa2, 0xb3, 0xd1, 0xce, 0x95, 0x5b, 0x0e, 0x36, 0x67, 0x1f, 0xbc, 0xd5,
+	0xff, 0x74, 0xc6, 0xe9, 0x8e, 0x7d, 0x35, 0xdc, 0x11, 0x13, 0x9b, 0x3a, 0xfd, 0x05, 0xe9, 0xeb,
+	0xe3, 0xbf, 0x03, 0x00, 0x00, 0xff, 0xff, 0x6a, 0x48, 0xb4, 0x99, 0x6e, 0x15, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -1799,10 +1798,10 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// KintoKubeCoreServiceClient is the client API for KintoKubeCoreService service.
+// KintoCoreServiceClient is the client API for KintoCoreService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type KintoKubeCoreServiceClient interface {
+type KintoCoreServiceClient interface {
 	GetEnvironment(ctx context.Context, in *EnvironmentQueryRequest, opts ...grpc.CallOption) (*Environment, error)
 	GetEnvironments(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*Environments, error)
 	CreateEnvironment(ctx context.Context, in *CreateEnvironmentRequest, opts ...grpc.CallOption) (*Environment, error)
@@ -1816,160 +1815,160 @@ type KintoKubeCoreServiceClient interface {
 	GetBlock(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (*Block, error)
 	DeleteBlock(ctx context.Context, in *DeleteBlockRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	SuspendBlock(ctx context.Context, in *SuspendBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error)
-	WatchReleasesStatus(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchReleasesStatusClient, error)
+	WatchReleasesStatus(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoCoreService_WatchReleasesStatusClient, error)
 	KillBlockInstance(ctx context.Context, in *KillBlockInstanceRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	AbortRelease(ctx context.Context, in *AbortBlockReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	TagRelease(ctx context.Context, in *TagReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	PromoteRelease(ctx context.Context, in *PromoteReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	GenReleaseConfigFromKintoFile(ctx context.Context, in *GenReleaseConfigFromKintoFileRepoRequest, opts ...grpc.CallOption) (*ReleaseConfig, error)
-	WatchBuildLogs(ctx context.Context, in *WatchBuildLogsRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchBuildLogsClient, error)
+	WatchBuildLogs(ctx context.Context, in *WatchBuildLogsRequest, opts ...grpc.CallOption) (KintoCoreService_WatchBuildLogsClient, error)
 	UpdateBuildStatus(ctx context.Context, in *UpdateBuildStatusRequest, opts ...grpc.CallOption) (*UpdateBuildStatusResponse, error)
 	UpdateBuildCommitSha(ctx context.Context, in *UpdateBuildCommitShaRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	WatchBlocksHealthStatuses(ctx context.Context, in *EnvironmentQueryRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchBlocksHealthStatusesClient, error)
-	WatchJobsStatus(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchJobsStatusClient, error)
-	WatchBlocksMetrics(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchBlocksMetricsClient, error)
-	WatchConsoleLogs(ctx context.Context, in *WatchConsoleLogsRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchConsoleLogsClient, error)
+	WatchBlocksHealthStatuses(ctx context.Context, in *EnvironmentQueryRequest, opts ...grpc.CallOption) (KintoCoreService_WatchBlocksHealthStatusesClient, error)
+	WatchJobsStatus(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoCoreService_WatchJobsStatusClient, error)
+	WatchBlocksMetrics(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoCoreService_WatchBlocksMetricsClient, error)
+	WatchConsoleLogs(ctx context.Context, in *WatchConsoleLogsRequest, opts ...grpc.CallOption) (KintoCoreService_WatchConsoleLogsClient, error)
 	GetKintoConfiguration(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*KintoConfiguration, error)
 	CreateCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	DeleteCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	CheckCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*CheckCustomDomainNameResponse, error)
 	EnablePublicURL(ctx context.Context, in *EnablePublicURLRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	DisablePublicURL(ctx context.Context, in *DisablePublicURLRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	StartTeleport(ctx context.Context, in *TeleportRequest, opts ...grpc.CallOption) (KintoKubeCoreService_StartTeleportClient, error)
+	StartTeleport(ctx context.Context, in *TeleportRequest, opts ...grpc.CallOption) (KintoCoreService_StartTeleportClient, error)
 	SyncTime(ctx context.Context, in *SyncTimeRequest, opts ...grpc.CallOption) (*SyncTimeResponse, error)
 }
 
-type kintoKubeCoreServiceClient struct {
+type kintoCoreServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewKintoKubeCoreServiceClient(cc grpc.ClientConnInterface) KintoKubeCoreServiceClient {
-	return &kintoKubeCoreServiceClient{cc}
+func NewKintoCoreServiceClient(cc grpc.ClientConnInterface) KintoCoreServiceClient {
+	return &kintoCoreServiceClient{cc}
 }
 
-func (c *kintoKubeCoreServiceClient) GetEnvironment(ctx context.Context, in *EnvironmentQueryRequest, opts ...grpc.CallOption) (*Environment, error) {
+func (c *kintoCoreServiceClient) GetEnvironment(ctx context.Context, in *EnvironmentQueryRequest, opts ...grpc.CallOption) (*Environment, error) {
 	out := new(Environment)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/GetEnvironment", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/GetEnvironment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) GetEnvironments(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*Environments, error) {
+func (c *kintoCoreServiceClient) GetEnvironments(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*Environments, error) {
 	out := new(Environments)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/GetEnvironments", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/GetEnvironments", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) CreateEnvironment(ctx context.Context, in *CreateEnvironmentRequest, opts ...grpc.CallOption) (*Environment, error) {
+func (c *kintoCoreServiceClient) CreateEnvironment(ctx context.Context, in *CreateEnvironmentRequest, opts ...grpc.CallOption) (*Environment, error) {
 	out := new(Environment)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/CreateEnvironment", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/CreateEnvironment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) UpdateEnvironment(ctx context.Context, in *UpdateEnvironmentRequest, opts ...grpc.CallOption) (*Environment, error) {
+func (c *kintoCoreServiceClient) UpdateEnvironment(ctx context.Context, in *UpdateEnvironmentRequest, opts ...grpc.CallOption) (*Environment, error) {
 	out := new(Environment)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/UpdateEnvironment", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/UpdateEnvironment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) DeleteEnvironment(ctx context.Context, in *DeleteEnvironmentRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) DeleteEnvironment(ctx context.Context, in *DeleteEnvironmentRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/DeleteEnvironment", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/DeleteEnvironment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) CreateBlock(ctx context.Context, in *CreateBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
+func (c *kintoCoreServiceClient) CreateBlock(ctx context.Context, in *CreateBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
 	out := new(BlockUpdateResponse)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/CreateBlock", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/CreateBlock", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) DeployBlockUpdate(ctx context.Context, in *DeployBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
+func (c *kintoCoreServiceClient) DeployBlockUpdate(ctx context.Context, in *DeployBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
 	out := new(BlockUpdateResponse)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/DeployBlockUpdate", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/DeployBlockUpdate", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) TriggerDeploy(ctx context.Context, in *TriggerDeployRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
+func (c *kintoCoreServiceClient) TriggerDeploy(ctx context.Context, in *TriggerDeployRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
 	out := new(BlockUpdateResponse)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/TriggerDeploy", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/TriggerDeploy", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) RollbackBlock(ctx context.Context, in *RollbackBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
+func (c *kintoCoreServiceClient) RollbackBlock(ctx context.Context, in *RollbackBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
 	out := new(BlockUpdateResponse)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/RollbackBlock", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/RollbackBlock", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) GetBlocks(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (*Blocks, error) {
+func (c *kintoCoreServiceClient) GetBlocks(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (*Blocks, error) {
 	out := new(Blocks)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/GetBlocks", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/GetBlocks", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) GetBlock(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (*Block, error) {
+func (c *kintoCoreServiceClient) GetBlock(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (*Block, error) {
 	out := new(Block)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/GetBlock", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/GetBlock", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) DeleteBlock(ctx context.Context, in *DeleteBlockRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) DeleteBlock(ctx context.Context, in *DeleteBlockRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/DeleteBlock", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/DeleteBlock", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) SuspendBlock(ctx context.Context, in *SuspendBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
+func (c *kintoCoreServiceClient) SuspendBlock(ctx context.Context, in *SuspendBlockRequest, opts ...grpc.CallOption) (*BlockUpdateResponse, error) {
 	out := new(BlockUpdateResponse)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/SuspendBlock", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/SuspendBlock", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) WatchReleasesStatus(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchReleasesStatusClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_KintoKubeCoreService_serviceDesc.Streams[0], "/KintoKubeCoreService/WatchReleasesStatus", opts...)
+func (c *kintoCoreServiceClient) WatchReleasesStatus(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoCoreService_WatchReleasesStatusClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_KintoCoreService_serviceDesc.Streams[0], "/KintoCoreService/WatchReleasesStatus", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &kintoKubeCoreServiceWatchReleasesStatusClient{stream}
+	x := &kintoCoreServiceWatchReleasesStatusClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -1979,16 +1978,16 @@ func (c *kintoKubeCoreServiceClient) WatchReleasesStatus(ctx context.Context, in
 	return x, nil
 }
 
-type KintoKubeCoreService_WatchReleasesStatusClient interface {
+type KintoCoreService_WatchReleasesStatusClient interface {
 	Recv() (*ReleasesStatus, error)
 	grpc.ClientStream
 }
 
-type kintoKubeCoreServiceWatchReleasesStatusClient struct {
+type kintoCoreServiceWatchReleasesStatusClient struct {
 	grpc.ClientStream
 }
 
-func (x *kintoKubeCoreServiceWatchReleasesStatusClient) Recv() (*ReleasesStatus, error) {
+func (x *kintoCoreServiceWatchReleasesStatusClient) Recv() (*ReleasesStatus, error) {
 	m := new(ReleasesStatus)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -1996,57 +1995,57 @@ func (x *kintoKubeCoreServiceWatchReleasesStatusClient) Recv() (*ReleasesStatus,
 	return m, nil
 }
 
-func (c *kintoKubeCoreServiceClient) KillBlockInstance(ctx context.Context, in *KillBlockInstanceRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) KillBlockInstance(ctx context.Context, in *KillBlockInstanceRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/KillBlockInstance", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/KillBlockInstance", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) AbortRelease(ctx context.Context, in *AbortBlockReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) AbortRelease(ctx context.Context, in *AbortBlockReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/AbortRelease", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/AbortRelease", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) TagRelease(ctx context.Context, in *TagReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) TagRelease(ctx context.Context, in *TagReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/TagRelease", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/TagRelease", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) PromoteRelease(ctx context.Context, in *PromoteReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) PromoteRelease(ctx context.Context, in *PromoteReleaseRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/PromoteRelease", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/PromoteRelease", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) GenReleaseConfigFromKintoFile(ctx context.Context, in *GenReleaseConfigFromKintoFileRepoRequest, opts ...grpc.CallOption) (*ReleaseConfig, error) {
+func (c *kintoCoreServiceClient) GenReleaseConfigFromKintoFile(ctx context.Context, in *GenReleaseConfigFromKintoFileRepoRequest, opts ...grpc.CallOption) (*ReleaseConfig, error) {
 	out := new(ReleaseConfig)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/GenReleaseConfigFromKintoFile", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/GenReleaseConfigFromKintoFile", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) WatchBuildLogs(ctx context.Context, in *WatchBuildLogsRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchBuildLogsClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_KintoKubeCoreService_serviceDesc.Streams[1], "/KintoKubeCoreService/WatchBuildLogs", opts...)
+func (c *kintoCoreServiceClient) WatchBuildLogs(ctx context.Context, in *WatchBuildLogsRequest, opts ...grpc.CallOption) (KintoCoreService_WatchBuildLogsClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_KintoCoreService_serviceDesc.Streams[1], "/KintoCoreService/WatchBuildLogs", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &kintoKubeCoreServiceWatchBuildLogsClient{stream}
+	x := &kintoCoreServiceWatchBuildLogsClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -2056,16 +2055,16 @@ func (c *kintoKubeCoreServiceClient) WatchBuildLogs(ctx context.Context, in *Wat
 	return x, nil
 }
 
-type KintoKubeCoreService_WatchBuildLogsClient interface {
+type KintoCoreService_WatchBuildLogsClient interface {
 	Recv() (*Logs, error)
 	grpc.ClientStream
 }
 
-type kintoKubeCoreServiceWatchBuildLogsClient struct {
+type kintoCoreServiceWatchBuildLogsClient struct {
 	grpc.ClientStream
 }
 
-func (x *kintoKubeCoreServiceWatchBuildLogsClient) Recv() (*Logs, error) {
+func (x *kintoCoreServiceWatchBuildLogsClient) Recv() (*Logs, error) {
 	m := new(Logs)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -2073,30 +2072,30 @@ func (x *kintoKubeCoreServiceWatchBuildLogsClient) Recv() (*Logs, error) {
 	return m, nil
 }
 
-func (c *kintoKubeCoreServiceClient) UpdateBuildStatus(ctx context.Context, in *UpdateBuildStatusRequest, opts ...grpc.CallOption) (*UpdateBuildStatusResponse, error) {
+func (c *kintoCoreServiceClient) UpdateBuildStatus(ctx context.Context, in *UpdateBuildStatusRequest, opts ...grpc.CallOption) (*UpdateBuildStatusResponse, error) {
 	out := new(UpdateBuildStatusResponse)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/UpdateBuildStatus", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/UpdateBuildStatus", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) UpdateBuildCommitSha(ctx context.Context, in *UpdateBuildCommitShaRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) UpdateBuildCommitSha(ctx context.Context, in *UpdateBuildCommitShaRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/UpdateBuildCommitSha", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/UpdateBuildCommitSha", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) WatchBlocksHealthStatuses(ctx context.Context, in *EnvironmentQueryRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchBlocksHealthStatusesClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_KintoKubeCoreService_serviceDesc.Streams[2], "/KintoKubeCoreService/WatchBlocksHealthStatuses", opts...)
+func (c *kintoCoreServiceClient) WatchBlocksHealthStatuses(ctx context.Context, in *EnvironmentQueryRequest, opts ...grpc.CallOption) (KintoCoreService_WatchBlocksHealthStatusesClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_KintoCoreService_serviceDesc.Streams[2], "/KintoCoreService/WatchBlocksHealthStatuses", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &kintoKubeCoreServiceWatchBlocksHealthStatusesClient{stream}
+	x := &kintoCoreServiceWatchBlocksHealthStatusesClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -2106,16 +2105,16 @@ func (c *kintoKubeCoreServiceClient) WatchBlocksHealthStatuses(ctx context.Conte
 	return x, nil
 }
 
-type KintoKubeCoreService_WatchBlocksHealthStatusesClient interface {
+type KintoCoreService_WatchBlocksHealthStatusesClient interface {
 	Recv() (*BlockStatuses, error)
 	grpc.ClientStream
 }
 
-type kintoKubeCoreServiceWatchBlocksHealthStatusesClient struct {
+type kintoCoreServiceWatchBlocksHealthStatusesClient struct {
 	grpc.ClientStream
 }
 
-func (x *kintoKubeCoreServiceWatchBlocksHealthStatusesClient) Recv() (*BlockStatuses, error) {
+func (x *kintoCoreServiceWatchBlocksHealthStatusesClient) Recv() (*BlockStatuses, error) {
 	m := new(BlockStatuses)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -2123,12 +2122,12 @@ func (x *kintoKubeCoreServiceWatchBlocksHealthStatusesClient) Recv() (*BlockStat
 	return m, nil
 }
 
-func (c *kintoKubeCoreServiceClient) WatchJobsStatus(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchJobsStatusClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_KintoKubeCoreService_serviceDesc.Streams[3], "/KintoKubeCoreService/WatchJobsStatus", opts...)
+func (c *kintoCoreServiceClient) WatchJobsStatus(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoCoreService_WatchJobsStatusClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_KintoCoreService_serviceDesc.Streams[3], "/KintoCoreService/WatchJobsStatus", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &kintoKubeCoreServiceWatchJobsStatusClient{stream}
+	x := &kintoCoreServiceWatchJobsStatusClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -2138,16 +2137,16 @@ func (c *kintoKubeCoreServiceClient) WatchJobsStatus(ctx context.Context, in *Bl
 	return x, nil
 }
 
-type KintoKubeCoreService_WatchJobsStatusClient interface {
+type KintoCoreService_WatchJobsStatusClient interface {
 	Recv() (*JobStatus, error)
 	grpc.ClientStream
 }
 
-type kintoKubeCoreServiceWatchJobsStatusClient struct {
+type kintoCoreServiceWatchJobsStatusClient struct {
 	grpc.ClientStream
 }
 
-func (x *kintoKubeCoreServiceWatchJobsStatusClient) Recv() (*JobStatus, error) {
+func (x *kintoCoreServiceWatchJobsStatusClient) Recv() (*JobStatus, error) {
 	m := new(JobStatus)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -2155,12 +2154,12 @@ func (x *kintoKubeCoreServiceWatchJobsStatusClient) Recv() (*JobStatus, error) {
 	return m, nil
 }
 
-func (c *kintoKubeCoreServiceClient) WatchBlocksMetrics(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchBlocksMetricsClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_KintoKubeCoreService_serviceDesc.Streams[4], "/KintoKubeCoreService/WatchBlocksMetrics", opts...)
+func (c *kintoCoreServiceClient) WatchBlocksMetrics(ctx context.Context, in *BlockQueryRequest, opts ...grpc.CallOption) (KintoCoreService_WatchBlocksMetricsClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_KintoCoreService_serviceDesc.Streams[4], "/KintoCoreService/WatchBlocksMetrics", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &kintoKubeCoreServiceWatchBlocksMetricsClient{stream}
+	x := &kintoCoreServiceWatchBlocksMetricsClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -2170,16 +2169,16 @@ func (c *kintoKubeCoreServiceClient) WatchBlocksMetrics(ctx context.Context, in 
 	return x, nil
 }
 
-type KintoKubeCoreService_WatchBlocksMetricsClient interface {
+type KintoCoreService_WatchBlocksMetricsClient interface {
 	Recv() (*BlocksMetrics, error)
 	grpc.ClientStream
 }
 
-type kintoKubeCoreServiceWatchBlocksMetricsClient struct {
+type kintoCoreServiceWatchBlocksMetricsClient struct {
 	grpc.ClientStream
 }
 
-func (x *kintoKubeCoreServiceWatchBlocksMetricsClient) Recv() (*BlocksMetrics, error) {
+func (x *kintoCoreServiceWatchBlocksMetricsClient) Recv() (*BlocksMetrics, error) {
 	m := new(BlocksMetrics)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -2187,12 +2186,12 @@ func (x *kintoKubeCoreServiceWatchBlocksMetricsClient) Recv() (*BlocksMetrics, e
 	return m, nil
 }
 
-func (c *kintoKubeCoreServiceClient) WatchConsoleLogs(ctx context.Context, in *WatchConsoleLogsRequest, opts ...grpc.CallOption) (KintoKubeCoreService_WatchConsoleLogsClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_KintoKubeCoreService_serviceDesc.Streams[5], "/KintoKubeCoreService/WatchConsoleLogs", opts...)
+func (c *kintoCoreServiceClient) WatchConsoleLogs(ctx context.Context, in *WatchConsoleLogsRequest, opts ...grpc.CallOption) (KintoCoreService_WatchConsoleLogsClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_KintoCoreService_serviceDesc.Streams[5], "/KintoCoreService/WatchConsoleLogs", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &kintoKubeCoreServiceWatchConsoleLogsClient{stream}
+	x := &kintoCoreServiceWatchConsoleLogsClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -2202,16 +2201,16 @@ func (c *kintoKubeCoreServiceClient) WatchConsoleLogs(ctx context.Context, in *W
 	return x, nil
 }
 
-type KintoKubeCoreService_WatchConsoleLogsClient interface {
+type KintoCoreService_WatchConsoleLogsClient interface {
 	Recv() (*ConsoleLog, error)
 	grpc.ClientStream
 }
 
-type kintoKubeCoreServiceWatchConsoleLogsClient struct {
+type kintoCoreServiceWatchConsoleLogsClient struct {
 	grpc.ClientStream
 }
 
-func (x *kintoKubeCoreServiceWatchConsoleLogsClient) Recv() (*ConsoleLog, error) {
+func (x *kintoCoreServiceWatchConsoleLogsClient) Recv() (*ConsoleLog, error) {
 	m := new(ConsoleLog)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -2219,66 +2218,66 @@ func (x *kintoKubeCoreServiceWatchConsoleLogsClient) Recv() (*ConsoleLog, error)
 	return m, nil
 }
 
-func (c *kintoKubeCoreServiceClient) GetKintoConfiguration(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*KintoConfiguration, error) {
+func (c *kintoCoreServiceClient) GetKintoConfiguration(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*KintoConfiguration, error) {
 	out := new(KintoConfiguration)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/GetKintoConfiguration", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/GetKintoConfiguration", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) CreateCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) CreateCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/CreateCustomDomainName", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/CreateCustomDomainName", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) DeleteCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) DeleteCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/DeleteCustomDomainName", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/DeleteCustomDomainName", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) CheckCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*CheckCustomDomainNameResponse, error) {
+func (c *kintoCoreServiceClient) CheckCustomDomainName(ctx context.Context, in *CustomDomainNameRequest, opts ...grpc.CallOption) (*CheckCustomDomainNameResponse, error) {
 	out := new(CheckCustomDomainNameResponse)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/CheckCustomDomainName", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/CheckCustomDomainName", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) EnablePublicURL(ctx context.Context, in *EnablePublicURLRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) EnablePublicURL(ctx context.Context, in *EnablePublicURLRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/EnablePublicURL", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/EnablePublicURL", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) DisablePublicURL(ctx context.Context, in *DisablePublicURLRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *kintoCoreServiceClient) DisablePublicURL(ctx context.Context, in *DisablePublicURLRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/DisablePublicURL", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/DisablePublicURL", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kintoKubeCoreServiceClient) StartTeleport(ctx context.Context, in *TeleportRequest, opts ...grpc.CallOption) (KintoKubeCoreService_StartTeleportClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_KintoKubeCoreService_serviceDesc.Streams[6], "/KintoKubeCoreService/StartTeleport", opts...)
+func (c *kintoCoreServiceClient) StartTeleport(ctx context.Context, in *TeleportRequest, opts ...grpc.CallOption) (KintoCoreService_StartTeleportClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_KintoCoreService_serviceDesc.Streams[6], "/KintoCoreService/StartTeleport", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &kintoKubeCoreServiceStartTeleportClient{stream}
+	x := &kintoCoreServiceStartTeleportClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -2288,16 +2287,16 @@ func (c *kintoKubeCoreServiceClient) StartTeleport(ctx context.Context, in *Tele
 	return x, nil
 }
 
-type KintoKubeCoreService_StartTeleportClient interface {
+type KintoCoreService_StartTeleportClient interface {
 	Recv() (*TeleportResponse, error)
 	grpc.ClientStream
 }
 
-type kintoKubeCoreServiceStartTeleportClient struct {
+type kintoCoreServiceStartTeleportClient struct {
 	grpc.ClientStream
 }
 
-func (x *kintoKubeCoreServiceStartTeleportClient) Recv() (*TeleportResponse, error) {
+func (x *kintoCoreServiceStartTeleportClient) Recv() (*TeleportResponse, error) {
 	m := new(TeleportResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -2305,17 +2304,17 @@ func (x *kintoKubeCoreServiceStartTeleportClient) Recv() (*TeleportResponse, err
 	return m, nil
 }
 
-func (c *kintoKubeCoreServiceClient) SyncTime(ctx context.Context, in *SyncTimeRequest, opts ...grpc.CallOption) (*SyncTimeResponse, error) {
+func (c *kintoCoreServiceClient) SyncTime(ctx context.Context, in *SyncTimeRequest, opts ...grpc.CallOption) (*SyncTimeResponse, error) {
 	out := new(SyncTimeResponse)
-	err := c.cc.Invoke(ctx, "/KintoKubeCoreService/SyncTime", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/KintoCoreService/SyncTime", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// KintoKubeCoreServiceServer is the server API for KintoKubeCoreService service.
-type KintoKubeCoreServiceServer interface {
+// KintoCoreServiceServer is the server API for KintoCoreService service.
+type KintoCoreServiceServer interface {
 	GetEnvironment(context.Context, *EnvironmentQueryRequest) (*Environment, error)
 	GetEnvironments(context.Context, *empty.Empty) (*Environments, error)
 	CreateEnvironment(context.Context, *CreateEnvironmentRequest) (*Environment, error)
@@ -2329,920 +2328,920 @@ type KintoKubeCoreServiceServer interface {
 	GetBlock(context.Context, *BlockQueryRequest) (*Block, error)
 	DeleteBlock(context.Context, *DeleteBlockRequest) (*empty.Empty, error)
 	SuspendBlock(context.Context, *SuspendBlockRequest) (*BlockUpdateResponse, error)
-	WatchReleasesStatus(*BlockQueryRequest, KintoKubeCoreService_WatchReleasesStatusServer) error
+	WatchReleasesStatus(*BlockQueryRequest, KintoCoreService_WatchReleasesStatusServer) error
 	KillBlockInstance(context.Context, *KillBlockInstanceRequest) (*empty.Empty, error)
 	AbortRelease(context.Context, *AbortBlockReleaseRequest) (*empty.Empty, error)
 	TagRelease(context.Context, *TagReleaseRequest) (*empty.Empty, error)
 	PromoteRelease(context.Context, *PromoteReleaseRequest) (*empty.Empty, error)
 	GenReleaseConfigFromKintoFile(context.Context, *GenReleaseConfigFromKintoFileRepoRequest) (*ReleaseConfig, error)
-	WatchBuildLogs(*WatchBuildLogsRequest, KintoKubeCoreService_WatchBuildLogsServer) error
+	WatchBuildLogs(*WatchBuildLogsRequest, KintoCoreService_WatchBuildLogsServer) error
 	UpdateBuildStatus(context.Context, *UpdateBuildStatusRequest) (*UpdateBuildStatusResponse, error)
 	UpdateBuildCommitSha(context.Context, *UpdateBuildCommitShaRequest) (*empty.Empty, error)
-	WatchBlocksHealthStatuses(*EnvironmentQueryRequest, KintoKubeCoreService_WatchBlocksHealthStatusesServer) error
-	WatchJobsStatus(*BlockQueryRequest, KintoKubeCoreService_WatchJobsStatusServer) error
-	WatchBlocksMetrics(*BlockQueryRequest, KintoKubeCoreService_WatchBlocksMetricsServer) error
-	WatchConsoleLogs(*WatchConsoleLogsRequest, KintoKubeCoreService_WatchConsoleLogsServer) error
+	WatchBlocksHealthStatuses(*EnvironmentQueryRequest, KintoCoreService_WatchBlocksHealthStatusesServer) error
+	WatchJobsStatus(*BlockQueryRequest, KintoCoreService_WatchJobsStatusServer) error
+	WatchBlocksMetrics(*BlockQueryRequest, KintoCoreService_WatchBlocksMetricsServer) error
+	WatchConsoleLogs(*WatchConsoleLogsRequest, KintoCoreService_WatchConsoleLogsServer) error
 	GetKintoConfiguration(context.Context, *empty.Empty) (*KintoConfiguration, error)
 	CreateCustomDomainName(context.Context, *CustomDomainNameRequest) (*empty.Empty, error)
 	DeleteCustomDomainName(context.Context, *CustomDomainNameRequest) (*empty.Empty, error)
 	CheckCustomDomainName(context.Context, *CustomDomainNameRequest) (*CheckCustomDomainNameResponse, error)
 	EnablePublicURL(context.Context, *EnablePublicURLRequest) (*empty.Empty, error)
 	DisablePublicURL(context.Context, *DisablePublicURLRequest) (*empty.Empty, error)
-	StartTeleport(*TeleportRequest, KintoKubeCoreService_StartTeleportServer) error
+	StartTeleport(*TeleportRequest, KintoCoreService_StartTeleportServer) error
 	SyncTime(context.Context, *SyncTimeRequest) (*SyncTimeResponse, error)
 }
 
-// UnimplementedKintoKubeCoreServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedKintoKubeCoreServiceServer struct {
+// UnimplementedKintoCoreServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedKintoCoreServiceServer struct {
 }
 
-func (*UnimplementedKintoKubeCoreServiceServer) GetEnvironment(ctx context.Context, req *EnvironmentQueryRequest) (*Environment, error) {
+func (*UnimplementedKintoCoreServiceServer) GetEnvironment(ctx context.Context, req *EnvironmentQueryRequest) (*Environment, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetEnvironment not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) GetEnvironments(ctx context.Context, req *empty.Empty) (*Environments, error) {
+func (*UnimplementedKintoCoreServiceServer) GetEnvironments(ctx context.Context, req *empty.Empty) (*Environments, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetEnvironments not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) CreateEnvironment(ctx context.Context, req *CreateEnvironmentRequest) (*Environment, error) {
+func (*UnimplementedKintoCoreServiceServer) CreateEnvironment(ctx context.Context, req *CreateEnvironmentRequest) (*Environment, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateEnvironment not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) UpdateEnvironment(ctx context.Context, req *UpdateEnvironmentRequest) (*Environment, error) {
+func (*UnimplementedKintoCoreServiceServer) UpdateEnvironment(ctx context.Context, req *UpdateEnvironmentRequest) (*Environment, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateEnvironment not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) DeleteEnvironment(ctx context.Context, req *DeleteEnvironmentRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) DeleteEnvironment(ctx context.Context, req *DeleteEnvironmentRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteEnvironment not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) CreateBlock(ctx context.Context, req *CreateBlockRequest) (*BlockUpdateResponse, error) {
+func (*UnimplementedKintoCoreServiceServer) CreateBlock(ctx context.Context, req *CreateBlockRequest) (*BlockUpdateResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateBlock not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) DeployBlockUpdate(ctx context.Context, req *DeployBlockRequest) (*BlockUpdateResponse, error) {
+func (*UnimplementedKintoCoreServiceServer) DeployBlockUpdate(ctx context.Context, req *DeployBlockRequest) (*BlockUpdateResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeployBlockUpdate not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) TriggerDeploy(ctx context.Context, req *TriggerDeployRequest) (*BlockUpdateResponse, error) {
+func (*UnimplementedKintoCoreServiceServer) TriggerDeploy(ctx context.Context, req *TriggerDeployRequest) (*BlockUpdateResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TriggerDeploy not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) RollbackBlock(ctx context.Context, req *RollbackBlockRequest) (*BlockUpdateResponse, error) {
+func (*UnimplementedKintoCoreServiceServer) RollbackBlock(ctx context.Context, req *RollbackBlockRequest) (*BlockUpdateResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RollbackBlock not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) GetBlocks(ctx context.Context, req *BlockQueryRequest) (*Blocks, error) {
+func (*UnimplementedKintoCoreServiceServer) GetBlocks(ctx context.Context, req *BlockQueryRequest) (*Blocks, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBlocks not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) GetBlock(ctx context.Context, req *BlockQueryRequest) (*Block, error) {
+func (*UnimplementedKintoCoreServiceServer) GetBlock(ctx context.Context, req *BlockQueryRequest) (*Block, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBlock not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) DeleteBlock(ctx context.Context, req *DeleteBlockRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) DeleteBlock(ctx context.Context, req *DeleteBlockRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteBlock not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) SuspendBlock(ctx context.Context, req *SuspendBlockRequest) (*BlockUpdateResponse, error) {
+func (*UnimplementedKintoCoreServiceServer) SuspendBlock(ctx context.Context, req *SuspendBlockRequest) (*BlockUpdateResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SuspendBlock not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) WatchReleasesStatus(req *BlockQueryRequest, srv KintoKubeCoreService_WatchReleasesStatusServer) error {
+func (*UnimplementedKintoCoreServiceServer) WatchReleasesStatus(req *BlockQueryRequest, srv KintoCoreService_WatchReleasesStatusServer) error {
 	return status.Errorf(codes.Unimplemented, "method WatchReleasesStatus not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) KillBlockInstance(ctx context.Context, req *KillBlockInstanceRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) KillBlockInstance(ctx context.Context, req *KillBlockInstanceRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method KillBlockInstance not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) AbortRelease(ctx context.Context, req *AbortBlockReleaseRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) AbortRelease(ctx context.Context, req *AbortBlockReleaseRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AbortRelease not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) TagRelease(ctx context.Context, req *TagReleaseRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) TagRelease(ctx context.Context, req *TagReleaseRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TagRelease not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) PromoteRelease(ctx context.Context, req *PromoteReleaseRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) PromoteRelease(ctx context.Context, req *PromoteReleaseRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PromoteRelease not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) GenReleaseConfigFromKintoFile(ctx context.Context, req *GenReleaseConfigFromKintoFileRepoRequest) (*ReleaseConfig, error) {
+func (*UnimplementedKintoCoreServiceServer) GenReleaseConfigFromKintoFile(ctx context.Context, req *GenReleaseConfigFromKintoFileRepoRequest) (*ReleaseConfig, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GenReleaseConfigFromKintoFile not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) WatchBuildLogs(req *WatchBuildLogsRequest, srv KintoKubeCoreService_WatchBuildLogsServer) error {
+func (*UnimplementedKintoCoreServiceServer) WatchBuildLogs(req *WatchBuildLogsRequest, srv KintoCoreService_WatchBuildLogsServer) error {
 	return status.Errorf(codes.Unimplemented, "method WatchBuildLogs not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) UpdateBuildStatus(ctx context.Context, req *UpdateBuildStatusRequest) (*UpdateBuildStatusResponse, error) {
+func (*UnimplementedKintoCoreServiceServer) UpdateBuildStatus(ctx context.Context, req *UpdateBuildStatusRequest) (*UpdateBuildStatusResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateBuildStatus not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) UpdateBuildCommitSha(ctx context.Context, req *UpdateBuildCommitShaRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) UpdateBuildCommitSha(ctx context.Context, req *UpdateBuildCommitShaRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateBuildCommitSha not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) WatchBlocksHealthStatuses(req *EnvironmentQueryRequest, srv KintoKubeCoreService_WatchBlocksHealthStatusesServer) error {
+func (*UnimplementedKintoCoreServiceServer) WatchBlocksHealthStatuses(req *EnvironmentQueryRequest, srv KintoCoreService_WatchBlocksHealthStatusesServer) error {
 	return status.Errorf(codes.Unimplemented, "method WatchBlocksHealthStatuses not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) WatchJobsStatus(req *BlockQueryRequest, srv KintoKubeCoreService_WatchJobsStatusServer) error {
+func (*UnimplementedKintoCoreServiceServer) WatchJobsStatus(req *BlockQueryRequest, srv KintoCoreService_WatchJobsStatusServer) error {
 	return status.Errorf(codes.Unimplemented, "method WatchJobsStatus not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) WatchBlocksMetrics(req *BlockQueryRequest, srv KintoKubeCoreService_WatchBlocksMetricsServer) error {
+func (*UnimplementedKintoCoreServiceServer) WatchBlocksMetrics(req *BlockQueryRequest, srv KintoCoreService_WatchBlocksMetricsServer) error {
 	return status.Errorf(codes.Unimplemented, "method WatchBlocksMetrics not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) WatchConsoleLogs(req *WatchConsoleLogsRequest, srv KintoKubeCoreService_WatchConsoleLogsServer) error {
+func (*UnimplementedKintoCoreServiceServer) WatchConsoleLogs(req *WatchConsoleLogsRequest, srv KintoCoreService_WatchConsoleLogsServer) error {
 	return status.Errorf(codes.Unimplemented, "method WatchConsoleLogs not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) GetKintoConfiguration(ctx context.Context, req *empty.Empty) (*KintoConfiguration, error) {
+func (*UnimplementedKintoCoreServiceServer) GetKintoConfiguration(ctx context.Context, req *empty.Empty) (*KintoConfiguration, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetKintoConfiguration not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) CreateCustomDomainName(ctx context.Context, req *CustomDomainNameRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) CreateCustomDomainName(ctx context.Context, req *CustomDomainNameRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateCustomDomainName not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) DeleteCustomDomainName(ctx context.Context, req *CustomDomainNameRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) DeleteCustomDomainName(ctx context.Context, req *CustomDomainNameRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteCustomDomainName not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) CheckCustomDomainName(ctx context.Context, req *CustomDomainNameRequest) (*CheckCustomDomainNameResponse, error) {
+func (*UnimplementedKintoCoreServiceServer) CheckCustomDomainName(ctx context.Context, req *CustomDomainNameRequest) (*CheckCustomDomainNameResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CheckCustomDomainName not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) EnablePublicURL(ctx context.Context, req *EnablePublicURLRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) EnablePublicURL(ctx context.Context, req *EnablePublicURLRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method EnablePublicURL not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) DisablePublicURL(ctx context.Context, req *DisablePublicURLRequest) (*empty.Empty, error) {
+func (*UnimplementedKintoCoreServiceServer) DisablePublicURL(ctx context.Context, req *DisablePublicURLRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DisablePublicURL not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) StartTeleport(req *TeleportRequest, srv KintoKubeCoreService_StartTeleportServer) error {
+func (*UnimplementedKintoCoreServiceServer) StartTeleport(req *TeleportRequest, srv KintoCoreService_StartTeleportServer) error {
 	return status.Errorf(codes.Unimplemented, "method StartTeleport not implemented")
 }
-func (*UnimplementedKintoKubeCoreServiceServer) SyncTime(ctx context.Context, req *SyncTimeRequest) (*SyncTimeResponse, error) {
+func (*UnimplementedKintoCoreServiceServer) SyncTime(ctx context.Context, req *SyncTimeRequest) (*SyncTimeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SyncTime not implemented")
 }
 
-func RegisterKintoKubeCoreServiceServer(s *grpc.Server, srv KintoKubeCoreServiceServer) {
-	s.RegisterService(&_KintoKubeCoreService_serviceDesc, srv)
+func RegisterKintoCoreServiceServer(s *grpc.Server, srv KintoCoreServiceServer) {
+	s.RegisterService(&_KintoCoreService_serviceDesc, srv)
 }
 
-func _KintoKubeCoreService_GetEnvironment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_GetEnvironment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(EnvironmentQueryRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).GetEnvironment(ctx, in)
+		return srv.(KintoCoreServiceServer).GetEnvironment(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/GetEnvironment",
+		FullMethod: "/KintoCoreService/GetEnvironment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).GetEnvironment(ctx, req.(*EnvironmentQueryRequest))
+		return srv.(KintoCoreServiceServer).GetEnvironment(ctx, req.(*EnvironmentQueryRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_GetEnvironments_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_GetEnvironments_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).GetEnvironments(ctx, in)
+		return srv.(KintoCoreServiceServer).GetEnvironments(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/GetEnvironments",
+		FullMethod: "/KintoCoreService/GetEnvironments",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).GetEnvironments(ctx, req.(*empty.Empty))
+		return srv.(KintoCoreServiceServer).GetEnvironments(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_CreateEnvironment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_CreateEnvironment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateEnvironmentRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).CreateEnvironment(ctx, in)
+		return srv.(KintoCoreServiceServer).CreateEnvironment(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/CreateEnvironment",
+		FullMethod: "/KintoCoreService/CreateEnvironment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).CreateEnvironment(ctx, req.(*CreateEnvironmentRequest))
+		return srv.(KintoCoreServiceServer).CreateEnvironment(ctx, req.(*CreateEnvironmentRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_UpdateEnvironment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_UpdateEnvironment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateEnvironmentRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).UpdateEnvironment(ctx, in)
+		return srv.(KintoCoreServiceServer).UpdateEnvironment(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/UpdateEnvironment",
+		FullMethod: "/KintoCoreService/UpdateEnvironment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).UpdateEnvironment(ctx, req.(*UpdateEnvironmentRequest))
+		return srv.(KintoCoreServiceServer).UpdateEnvironment(ctx, req.(*UpdateEnvironmentRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_DeleteEnvironment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_DeleteEnvironment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteEnvironmentRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).DeleteEnvironment(ctx, in)
+		return srv.(KintoCoreServiceServer).DeleteEnvironment(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/DeleteEnvironment",
+		FullMethod: "/KintoCoreService/DeleteEnvironment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).DeleteEnvironment(ctx, req.(*DeleteEnvironmentRequest))
+		return srv.(KintoCoreServiceServer).DeleteEnvironment(ctx, req.(*DeleteEnvironmentRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_CreateBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_CreateBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateBlockRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).CreateBlock(ctx, in)
+		return srv.(KintoCoreServiceServer).CreateBlock(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/CreateBlock",
+		FullMethod: "/KintoCoreService/CreateBlock",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).CreateBlock(ctx, req.(*CreateBlockRequest))
+		return srv.(KintoCoreServiceServer).CreateBlock(ctx, req.(*CreateBlockRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_DeployBlockUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_DeployBlockUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeployBlockRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).DeployBlockUpdate(ctx, in)
+		return srv.(KintoCoreServiceServer).DeployBlockUpdate(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/DeployBlockUpdate",
+		FullMethod: "/KintoCoreService/DeployBlockUpdate",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).DeployBlockUpdate(ctx, req.(*DeployBlockRequest))
+		return srv.(KintoCoreServiceServer).DeployBlockUpdate(ctx, req.(*DeployBlockRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_TriggerDeploy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_TriggerDeploy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(TriggerDeployRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).TriggerDeploy(ctx, in)
+		return srv.(KintoCoreServiceServer).TriggerDeploy(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/TriggerDeploy",
+		FullMethod: "/KintoCoreService/TriggerDeploy",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).TriggerDeploy(ctx, req.(*TriggerDeployRequest))
+		return srv.(KintoCoreServiceServer).TriggerDeploy(ctx, req.(*TriggerDeployRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_RollbackBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_RollbackBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RollbackBlockRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).RollbackBlock(ctx, in)
+		return srv.(KintoCoreServiceServer).RollbackBlock(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/RollbackBlock",
+		FullMethod: "/KintoCoreService/RollbackBlock",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).RollbackBlock(ctx, req.(*RollbackBlockRequest))
+		return srv.(KintoCoreServiceServer).RollbackBlock(ctx, req.(*RollbackBlockRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_GetBlocks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_GetBlocks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BlockQueryRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).GetBlocks(ctx, in)
+		return srv.(KintoCoreServiceServer).GetBlocks(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/GetBlocks",
+		FullMethod: "/KintoCoreService/GetBlocks",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).GetBlocks(ctx, req.(*BlockQueryRequest))
+		return srv.(KintoCoreServiceServer).GetBlocks(ctx, req.(*BlockQueryRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_GetBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_GetBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BlockQueryRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).GetBlock(ctx, in)
+		return srv.(KintoCoreServiceServer).GetBlock(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/GetBlock",
+		FullMethod: "/KintoCoreService/GetBlock",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).GetBlock(ctx, req.(*BlockQueryRequest))
+		return srv.(KintoCoreServiceServer).GetBlock(ctx, req.(*BlockQueryRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_DeleteBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_DeleteBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteBlockRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).DeleteBlock(ctx, in)
+		return srv.(KintoCoreServiceServer).DeleteBlock(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/DeleteBlock",
+		FullMethod: "/KintoCoreService/DeleteBlock",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).DeleteBlock(ctx, req.(*DeleteBlockRequest))
+		return srv.(KintoCoreServiceServer).DeleteBlock(ctx, req.(*DeleteBlockRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_SuspendBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_SuspendBlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SuspendBlockRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).SuspendBlock(ctx, in)
+		return srv.(KintoCoreServiceServer).SuspendBlock(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/SuspendBlock",
+		FullMethod: "/KintoCoreService/SuspendBlock",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).SuspendBlock(ctx, req.(*SuspendBlockRequest))
+		return srv.(KintoCoreServiceServer).SuspendBlock(ctx, req.(*SuspendBlockRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_WatchReleasesStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _KintoCoreService_WatchReleasesStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(BlockQueryRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(KintoKubeCoreServiceServer).WatchReleasesStatus(m, &kintoKubeCoreServiceWatchReleasesStatusServer{stream})
+	return srv.(KintoCoreServiceServer).WatchReleasesStatus(m, &kintoCoreServiceWatchReleasesStatusServer{stream})
 }
 
-type KintoKubeCoreService_WatchReleasesStatusServer interface {
+type KintoCoreService_WatchReleasesStatusServer interface {
 	Send(*ReleasesStatus) error
 	grpc.ServerStream
 }
 
-type kintoKubeCoreServiceWatchReleasesStatusServer struct {
+type kintoCoreServiceWatchReleasesStatusServer struct {
 	grpc.ServerStream
 }
 
-func (x *kintoKubeCoreServiceWatchReleasesStatusServer) Send(m *ReleasesStatus) error {
+func (x *kintoCoreServiceWatchReleasesStatusServer) Send(m *ReleasesStatus) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _KintoKubeCoreService_KillBlockInstance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_KillBlockInstance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(KillBlockInstanceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).KillBlockInstance(ctx, in)
+		return srv.(KintoCoreServiceServer).KillBlockInstance(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/KillBlockInstance",
+		FullMethod: "/KintoCoreService/KillBlockInstance",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).KillBlockInstance(ctx, req.(*KillBlockInstanceRequest))
+		return srv.(KintoCoreServiceServer).KillBlockInstance(ctx, req.(*KillBlockInstanceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_AbortRelease_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_AbortRelease_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AbortBlockReleaseRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).AbortRelease(ctx, in)
+		return srv.(KintoCoreServiceServer).AbortRelease(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/AbortRelease",
+		FullMethod: "/KintoCoreService/AbortRelease",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).AbortRelease(ctx, req.(*AbortBlockReleaseRequest))
+		return srv.(KintoCoreServiceServer).AbortRelease(ctx, req.(*AbortBlockReleaseRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_TagRelease_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_TagRelease_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(TagReleaseRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).TagRelease(ctx, in)
+		return srv.(KintoCoreServiceServer).TagRelease(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/TagRelease",
+		FullMethod: "/KintoCoreService/TagRelease",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).TagRelease(ctx, req.(*TagReleaseRequest))
+		return srv.(KintoCoreServiceServer).TagRelease(ctx, req.(*TagReleaseRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_PromoteRelease_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_PromoteRelease_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PromoteReleaseRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).PromoteRelease(ctx, in)
+		return srv.(KintoCoreServiceServer).PromoteRelease(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/PromoteRelease",
+		FullMethod: "/KintoCoreService/PromoteRelease",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).PromoteRelease(ctx, req.(*PromoteReleaseRequest))
+		return srv.(KintoCoreServiceServer).PromoteRelease(ctx, req.(*PromoteReleaseRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_GenReleaseConfigFromKintoFile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_GenReleaseConfigFromKintoFile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GenReleaseConfigFromKintoFileRepoRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).GenReleaseConfigFromKintoFile(ctx, in)
+		return srv.(KintoCoreServiceServer).GenReleaseConfigFromKintoFile(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/GenReleaseConfigFromKintoFile",
+		FullMethod: "/KintoCoreService/GenReleaseConfigFromKintoFile",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).GenReleaseConfigFromKintoFile(ctx, req.(*GenReleaseConfigFromKintoFileRepoRequest))
+		return srv.(KintoCoreServiceServer).GenReleaseConfigFromKintoFile(ctx, req.(*GenReleaseConfigFromKintoFileRepoRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_WatchBuildLogs_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _KintoCoreService_WatchBuildLogs_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(WatchBuildLogsRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(KintoKubeCoreServiceServer).WatchBuildLogs(m, &kintoKubeCoreServiceWatchBuildLogsServer{stream})
+	return srv.(KintoCoreServiceServer).WatchBuildLogs(m, &kintoCoreServiceWatchBuildLogsServer{stream})
 }
 
-type KintoKubeCoreService_WatchBuildLogsServer interface {
+type KintoCoreService_WatchBuildLogsServer interface {
 	Send(*Logs) error
 	grpc.ServerStream
 }
 
-type kintoKubeCoreServiceWatchBuildLogsServer struct {
+type kintoCoreServiceWatchBuildLogsServer struct {
 	grpc.ServerStream
 }
 
-func (x *kintoKubeCoreServiceWatchBuildLogsServer) Send(m *Logs) error {
+func (x *kintoCoreServiceWatchBuildLogsServer) Send(m *Logs) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _KintoKubeCoreService_UpdateBuildStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_UpdateBuildStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateBuildStatusRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).UpdateBuildStatus(ctx, in)
+		return srv.(KintoCoreServiceServer).UpdateBuildStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/UpdateBuildStatus",
+		FullMethod: "/KintoCoreService/UpdateBuildStatus",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).UpdateBuildStatus(ctx, req.(*UpdateBuildStatusRequest))
+		return srv.(KintoCoreServiceServer).UpdateBuildStatus(ctx, req.(*UpdateBuildStatusRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_UpdateBuildCommitSha_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_UpdateBuildCommitSha_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateBuildCommitShaRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).UpdateBuildCommitSha(ctx, in)
+		return srv.(KintoCoreServiceServer).UpdateBuildCommitSha(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/UpdateBuildCommitSha",
+		FullMethod: "/KintoCoreService/UpdateBuildCommitSha",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).UpdateBuildCommitSha(ctx, req.(*UpdateBuildCommitShaRequest))
+		return srv.(KintoCoreServiceServer).UpdateBuildCommitSha(ctx, req.(*UpdateBuildCommitShaRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_WatchBlocksHealthStatuses_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _KintoCoreService_WatchBlocksHealthStatuses_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(EnvironmentQueryRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(KintoKubeCoreServiceServer).WatchBlocksHealthStatuses(m, &kintoKubeCoreServiceWatchBlocksHealthStatusesServer{stream})
+	return srv.(KintoCoreServiceServer).WatchBlocksHealthStatuses(m, &kintoCoreServiceWatchBlocksHealthStatusesServer{stream})
 }
 
-type KintoKubeCoreService_WatchBlocksHealthStatusesServer interface {
+type KintoCoreService_WatchBlocksHealthStatusesServer interface {
 	Send(*BlockStatuses) error
 	grpc.ServerStream
 }
 
-type kintoKubeCoreServiceWatchBlocksHealthStatusesServer struct {
+type kintoCoreServiceWatchBlocksHealthStatusesServer struct {
 	grpc.ServerStream
 }
 
-func (x *kintoKubeCoreServiceWatchBlocksHealthStatusesServer) Send(m *BlockStatuses) error {
+func (x *kintoCoreServiceWatchBlocksHealthStatusesServer) Send(m *BlockStatuses) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _KintoKubeCoreService_WatchJobsStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _KintoCoreService_WatchJobsStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(BlockQueryRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(KintoKubeCoreServiceServer).WatchJobsStatus(m, &kintoKubeCoreServiceWatchJobsStatusServer{stream})
+	return srv.(KintoCoreServiceServer).WatchJobsStatus(m, &kintoCoreServiceWatchJobsStatusServer{stream})
 }
 
-type KintoKubeCoreService_WatchJobsStatusServer interface {
+type KintoCoreService_WatchJobsStatusServer interface {
 	Send(*JobStatus) error
 	grpc.ServerStream
 }
 
-type kintoKubeCoreServiceWatchJobsStatusServer struct {
+type kintoCoreServiceWatchJobsStatusServer struct {
 	grpc.ServerStream
 }
 
-func (x *kintoKubeCoreServiceWatchJobsStatusServer) Send(m *JobStatus) error {
+func (x *kintoCoreServiceWatchJobsStatusServer) Send(m *JobStatus) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _KintoKubeCoreService_WatchBlocksMetrics_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _KintoCoreService_WatchBlocksMetrics_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(BlockQueryRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(KintoKubeCoreServiceServer).WatchBlocksMetrics(m, &kintoKubeCoreServiceWatchBlocksMetricsServer{stream})
+	return srv.(KintoCoreServiceServer).WatchBlocksMetrics(m, &kintoCoreServiceWatchBlocksMetricsServer{stream})
 }
 
-type KintoKubeCoreService_WatchBlocksMetricsServer interface {
+type KintoCoreService_WatchBlocksMetricsServer interface {
 	Send(*BlocksMetrics) error
 	grpc.ServerStream
 }
 
-type kintoKubeCoreServiceWatchBlocksMetricsServer struct {
+type kintoCoreServiceWatchBlocksMetricsServer struct {
 	grpc.ServerStream
 }
 
-func (x *kintoKubeCoreServiceWatchBlocksMetricsServer) Send(m *BlocksMetrics) error {
+func (x *kintoCoreServiceWatchBlocksMetricsServer) Send(m *BlocksMetrics) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _KintoKubeCoreService_WatchConsoleLogs_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _KintoCoreService_WatchConsoleLogs_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(WatchConsoleLogsRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(KintoKubeCoreServiceServer).WatchConsoleLogs(m, &kintoKubeCoreServiceWatchConsoleLogsServer{stream})
+	return srv.(KintoCoreServiceServer).WatchConsoleLogs(m, &kintoCoreServiceWatchConsoleLogsServer{stream})
 }
 
-type KintoKubeCoreService_WatchConsoleLogsServer interface {
+type KintoCoreService_WatchConsoleLogsServer interface {
 	Send(*ConsoleLog) error
 	grpc.ServerStream
 }
 
-type kintoKubeCoreServiceWatchConsoleLogsServer struct {
+type kintoCoreServiceWatchConsoleLogsServer struct {
 	grpc.ServerStream
 }
 
-func (x *kintoKubeCoreServiceWatchConsoleLogsServer) Send(m *ConsoleLog) error {
+func (x *kintoCoreServiceWatchConsoleLogsServer) Send(m *ConsoleLog) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _KintoKubeCoreService_GetKintoConfiguration_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_GetKintoConfiguration_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).GetKintoConfiguration(ctx, in)
+		return srv.(KintoCoreServiceServer).GetKintoConfiguration(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/GetKintoConfiguration",
+		FullMethod: "/KintoCoreService/GetKintoConfiguration",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).GetKintoConfiguration(ctx, req.(*empty.Empty))
+		return srv.(KintoCoreServiceServer).GetKintoConfiguration(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_CreateCustomDomainName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_CreateCustomDomainName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CustomDomainNameRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).CreateCustomDomainName(ctx, in)
+		return srv.(KintoCoreServiceServer).CreateCustomDomainName(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/CreateCustomDomainName",
+		FullMethod: "/KintoCoreService/CreateCustomDomainName",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).CreateCustomDomainName(ctx, req.(*CustomDomainNameRequest))
+		return srv.(KintoCoreServiceServer).CreateCustomDomainName(ctx, req.(*CustomDomainNameRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_DeleteCustomDomainName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_DeleteCustomDomainName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CustomDomainNameRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).DeleteCustomDomainName(ctx, in)
+		return srv.(KintoCoreServiceServer).DeleteCustomDomainName(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/DeleteCustomDomainName",
+		FullMethod: "/KintoCoreService/DeleteCustomDomainName",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).DeleteCustomDomainName(ctx, req.(*CustomDomainNameRequest))
+		return srv.(KintoCoreServiceServer).DeleteCustomDomainName(ctx, req.(*CustomDomainNameRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_CheckCustomDomainName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_CheckCustomDomainName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CustomDomainNameRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).CheckCustomDomainName(ctx, in)
+		return srv.(KintoCoreServiceServer).CheckCustomDomainName(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/CheckCustomDomainName",
+		FullMethod: "/KintoCoreService/CheckCustomDomainName",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).CheckCustomDomainName(ctx, req.(*CustomDomainNameRequest))
+		return srv.(KintoCoreServiceServer).CheckCustomDomainName(ctx, req.(*CustomDomainNameRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_EnablePublicURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_EnablePublicURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(EnablePublicURLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).EnablePublicURL(ctx, in)
+		return srv.(KintoCoreServiceServer).EnablePublicURL(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/EnablePublicURL",
+		FullMethod: "/KintoCoreService/EnablePublicURL",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).EnablePublicURL(ctx, req.(*EnablePublicURLRequest))
+		return srv.(KintoCoreServiceServer).EnablePublicURL(ctx, req.(*EnablePublicURLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_DisablePublicURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_DisablePublicURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DisablePublicURLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).DisablePublicURL(ctx, in)
+		return srv.(KintoCoreServiceServer).DisablePublicURL(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/DisablePublicURL",
+		FullMethod: "/KintoCoreService/DisablePublicURL",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).DisablePublicURL(ctx, req.(*DisablePublicURLRequest))
+		return srv.(KintoCoreServiceServer).DisablePublicURL(ctx, req.(*DisablePublicURLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _KintoKubeCoreService_StartTeleport_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _KintoCoreService_StartTeleport_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(TeleportRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(KintoKubeCoreServiceServer).StartTeleport(m, &kintoKubeCoreServiceStartTeleportServer{stream})
+	return srv.(KintoCoreServiceServer).StartTeleport(m, &kintoCoreServiceStartTeleportServer{stream})
 }
 
-type KintoKubeCoreService_StartTeleportServer interface {
+type KintoCoreService_StartTeleportServer interface {
 	Send(*TeleportResponse) error
 	grpc.ServerStream
 }
 
-type kintoKubeCoreServiceStartTeleportServer struct {
+type kintoCoreServiceStartTeleportServer struct {
 	grpc.ServerStream
 }
 
-func (x *kintoKubeCoreServiceStartTeleportServer) Send(m *TeleportResponse) error {
+func (x *kintoCoreServiceStartTeleportServer) Send(m *TeleportResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _KintoKubeCoreService_SyncTime_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _KintoCoreService_SyncTime_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SyncTimeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KintoKubeCoreServiceServer).SyncTime(ctx, in)
+		return srv.(KintoCoreServiceServer).SyncTime(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/KintoKubeCoreService/SyncTime",
+		FullMethod: "/KintoCoreService/SyncTime",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KintoKubeCoreServiceServer).SyncTime(ctx, req.(*SyncTimeRequest))
+		return srv.(KintoCoreServiceServer).SyncTime(ctx, req.(*SyncTimeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _KintoKubeCoreService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "KintoKubeCoreService",
-	HandlerType: (*KintoKubeCoreServiceServer)(nil),
+var _KintoCoreService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "KintoCoreService",
+	HandlerType: (*KintoCoreServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetEnvironment",
-			Handler:    _KintoKubeCoreService_GetEnvironment_Handler,
+			Handler:    _KintoCoreService_GetEnvironment_Handler,
 		},
 		{
 			MethodName: "GetEnvironments",
-			Handler:    _KintoKubeCoreService_GetEnvironments_Handler,
+			Handler:    _KintoCoreService_GetEnvironments_Handler,
 		},
 		{
 			MethodName: "CreateEnvironment",
-			Handler:    _KintoKubeCoreService_CreateEnvironment_Handler,
+			Handler:    _KintoCoreService_CreateEnvironment_Handler,
 		},
 		{
 			MethodName: "UpdateEnvironment",
-			Handler:    _KintoKubeCoreService_UpdateEnvironment_Handler,
+			Handler:    _KintoCoreService_UpdateEnvironment_Handler,
 		},
 		{
 			MethodName: "DeleteEnvironment",
-			Handler:    _KintoKubeCoreService_DeleteEnvironment_Handler,
+			Handler:    _KintoCoreService_DeleteEnvironment_Handler,
 		},
 		{
 			MethodName: "CreateBlock",
-			Handler:    _KintoKubeCoreService_CreateBlock_Handler,
+			Handler:    _KintoCoreService_CreateBlock_Handler,
 		},
 		{
 			MethodName: "DeployBlockUpdate",
-			Handler:    _KintoKubeCoreService_DeployBlockUpdate_Handler,
+			Handler:    _KintoCoreService_DeployBlockUpdate_Handler,
 		},
 		{
 			MethodName: "TriggerDeploy",
-			Handler:    _KintoKubeCoreService_TriggerDeploy_Handler,
+			Handler:    _KintoCoreService_TriggerDeploy_Handler,
 		},
 		{
 			MethodName: "RollbackBlock",
-			Handler:    _KintoKubeCoreService_RollbackBlock_Handler,
+			Handler:    _KintoCoreService_RollbackBlock_Handler,
 		},
 		{
 			MethodName: "GetBlocks",
-			Handler:    _KintoKubeCoreService_GetBlocks_Handler,
+			Handler:    _KintoCoreService_GetBlocks_Handler,
 		},
 		{
 			MethodName: "GetBlock",
-			Handler:    _KintoKubeCoreService_GetBlock_Handler,
+			Handler:    _KintoCoreService_GetBlock_Handler,
 		},
 		{
 			MethodName: "DeleteBlock",
-			Handler:    _KintoKubeCoreService_DeleteBlock_Handler,
+			Handler:    _KintoCoreService_DeleteBlock_Handler,
 		},
 		{
 			MethodName: "SuspendBlock",
-			Handler:    _KintoKubeCoreService_SuspendBlock_Handler,
+			Handler:    _KintoCoreService_SuspendBlock_Handler,
 		},
 		{
 			MethodName: "KillBlockInstance",
-			Handler:    _KintoKubeCoreService_KillBlockInstance_Handler,
+			Handler:    _KintoCoreService_KillBlockInstance_Handler,
 		},
 		{
 			MethodName: "AbortRelease",
-			Handler:    _KintoKubeCoreService_AbortRelease_Handler,
+			Handler:    _KintoCoreService_AbortRelease_Handler,
 		},
 		{
 			MethodName: "TagRelease",
-			Handler:    _KintoKubeCoreService_TagRelease_Handler,
+			Handler:    _KintoCoreService_TagRelease_Handler,
 		},
 		{
 			MethodName: "PromoteRelease",
-			Handler:    _KintoKubeCoreService_PromoteRelease_Handler,
+			Handler:    _KintoCoreService_PromoteRelease_Handler,
 		},
 		{
 			MethodName: "GenReleaseConfigFromKintoFile",
-			Handler:    _KintoKubeCoreService_GenReleaseConfigFromKintoFile_Handler,
+			Handler:    _KintoCoreService_GenReleaseConfigFromKintoFile_Handler,
 		},
 		{
 			MethodName: "UpdateBuildStatus",
-			Handler:    _KintoKubeCoreService_UpdateBuildStatus_Handler,
+			Handler:    _KintoCoreService_UpdateBuildStatus_Handler,
 		},
 		{
 			MethodName: "UpdateBuildCommitSha",
-			Handler:    _KintoKubeCoreService_UpdateBuildCommitSha_Handler,
+			Handler:    _KintoCoreService_UpdateBuildCommitSha_Handler,
 		},
 		{
 			MethodName: "GetKintoConfiguration",
-			Handler:    _KintoKubeCoreService_GetKintoConfiguration_Handler,
+			Handler:    _KintoCoreService_GetKintoConfiguration_Handler,
 		},
 		{
 			MethodName: "CreateCustomDomainName",
-			Handler:    _KintoKubeCoreService_CreateCustomDomainName_Handler,
+			Handler:    _KintoCoreService_CreateCustomDomainName_Handler,
 		},
 		{
 			MethodName: "DeleteCustomDomainName",
-			Handler:    _KintoKubeCoreService_DeleteCustomDomainName_Handler,
+			Handler:    _KintoCoreService_DeleteCustomDomainName_Handler,
 		},
 		{
 			MethodName: "CheckCustomDomainName",
-			Handler:    _KintoKubeCoreService_CheckCustomDomainName_Handler,
+			Handler:    _KintoCoreService_CheckCustomDomainName_Handler,
 		},
 		{
 			MethodName: "EnablePublicURL",
-			Handler:    _KintoKubeCoreService_EnablePublicURL_Handler,
+			Handler:    _KintoCoreService_EnablePublicURL_Handler,
 		},
 		{
 			MethodName: "DisablePublicURL",
-			Handler:    _KintoKubeCoreService_DisablePublicURL_Handler,
+			Handler:    _KintoCoreService_DisablePublicURL_Handler,
 		},
 		{
 			MethodName: "SyncTime",
-			Handler:    _KintoKubeCoreService_SyncTime_Handler,
+			Handler:    _KintoCoreService_SyncTime_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
 		{
 			StreamName:    "WatchReleasesStatus",
-			Handler:       _KintoKubeCoreService_WatchReleasesStatus_Handler,
+			Handler:       _KintoCoreService_WatchReleasesStatus_Handler,
 			ServerStreams: true,
 		},
 		{
 			StreamName:    "WatchBuildLogs",
-			Handler:       _KintoKubeCoreService_WatchBuildLogs_Handler,
+			Handler:       _KintoCoreService_WatchBuildLogs_Handler,
 			ServerStreams: true,
 		},
 		{
 			StreamName:    "WatchBlocksHealthStatuses",
-			Handler:       _KintoKubeCoreService_WatchBlocksHealthStatuses_Handler,
+			Handler:       _KintoCoreService_WatchBlocksHealthStatuses_Handler,
 			ServerStreams: true,
 		},
 		{
 			StreamName:    "WatchJobsStatus",
-			Handler:       _KintoKubeCoreService_WatchJobsStatus_Handler,
+			Handler:       _KintoCoreService_WatchJobsStatus_Handler,
 			ServerStreams: true,
 		},
 		{
 			StreamName:    "WatchBlocksMetrics",
-			Handler:       _KintoKubeCoreService_WatchBlocksMetrics_Handler,
+			Handler:       _KintoCoreService_WatchBlocksMetrics_Handler,
 			ServerStreams: true,
 		},
 		{
 			StreamName:    "WatchConsoleLogs",
-			Handler:       _KintoKubeCoreService_WatchConsoleLogs_Handler,
+			Handler:       _KintoCoreService_WatchConsoleLogs_Handler,
 			ServerStreams: true,
 		},
 		{
 			StreamName:    "StartTeleport",
-			Handler:       _KintoKubeCoreService_StartTeleport_Handler,
+			Handler:       _KintoCoreService_StartTeleport_Handler,
 			ServerStreams: true,
 		},
 	},

@@ -19,7 +19,7 @@ type container struct {
 	buildClient build.BuildInterface
 	controller  controller.ControllerInterface
 
-	kintoKubeCoreService *server.KintoKubeCoreService
+	kintoCoreService *server.KintoCoreService
 }
 
 func main() {
@@ -30,7 +30,7 @@ func main() {
 	container := initContainer()
 
 	utilsGrpc.RunServer(config.GrpcPort, config.GrpcWebPort, config.CORSAllowedHost,
-		container.kintoKubeCoreService.RegisterToServer,
+		container.kintoCoreService.RegisterToServer,
 	)
 }
 
@@ -45,7 +45,7 @@ func initContainer() *container {
 			utilsGrpc.CreateConnectionOrDie(config.BuildApiHost, false)))
 
 	container.controller = controller.NewController(container.store, container.buildClient)
-	container.kintoKubeCoreService = server.NewKintoKubeCoreService(container.controller)
+	container.kintoCoreService = server.NewKintoCoreService(container.controller)
 
 	return container
 }

@@ -182,7 +182,7 @@ message SyncTimeResponse {
 }
 
 
-service KintoKubeCoreService {
+service KintoCoreService {
     rpc GetEnvironment (EnvironmentQueryRequest) returns (Environment) {}
     rpc GetEnvironments (google.protobuf.Empty) returns (Environments) {}
     rpc CreateEnvironment (CreateEnvironmentRequest) returns (Environment) {}

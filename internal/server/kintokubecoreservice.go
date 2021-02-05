@@ -17,24 +17,24 @@ import (
 	"google.golang.org/grpc"
 )
 
-type KintoKubeCoreService struct {
+type KintoCoreService struct {
 	controller controller.ControllerInterface
 }
 
-func NewKintoKubeCoreService(
+func NewKintoCoreService(
 	controller controller.ControllerInterface,
-) *KintoKubeCoreService {
+) *KintoCoreService {
 
-	return &KintoKubeCoreService{
+	return &KintoCoreService{
 		controller: controller,
 	}
 }
 
-func (k *KintoKubeCoreService) RegisterToServer(s *grpc.Server) {
-	types.RegisterKintoKubeCoreServiceServer(s, k)
+func (k *KintoCoreService) RegisterToServer(s *grpc.Server) {
+	types.RegisterKintoCoreServiceServer(s, k)
 }
 
-func (k *KintoKubeCoreService) GetEnvironment(
+func (k *KintoCoreService) GetEnvironment(
 	c context.Context, req *types.EnvironmentQueryRequest) (*types.Environment, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -49,7 +49,7 @@ func (k *KintoKubeCoreService) GetEnvironment(
 	return env, nil
 }
 
-func (k *KintoKubeCoreService) GetEnvironments(
+func (k *KintoCoreService) GetEnvironments(
 	c context.Context, empty *empty.Empty) (*types.Environments, error) {
 
 	env, err := k.controller.GetEnvironments()
@@ -61,7 +61,7 @@ func (k *KintoKubeCoreService) GetEnvironments(
 	return env, nil
 }
 
-func (k *KintoKubeCoreService) CreateEnvironment(
+func (k *KintoCoreService) CreateEnvironment(
 	c context.Context, req *types.CreateEnvironmentRequest) (*types.Environment, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -75,7 +75,7 @@ func (k *KintoKubeCoreService) CreateEnvironment(
 	return env, nil
 }
 
-func (k *KintoKubeCoreService) UpdateEnvironment(
+func (k *KintoCoreService) UpdateEnvironment(
 	c context.Context, req *types.UpdateEnvironmentRequest) (*types.Environment, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -90,7 +90,7 @@ func (k *KintoKubeCoreService) UpdateEnvironment(
 	return env, nil
 }
 
-func (k *KintoKubeCoreService) DeleteEnvironment(
+func (k *KintoCoreService) DeleteEnvironment(
 	c context.Context, req *types.DeleteEnvironmentRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -105,7 +105,7 @@ func (k *KintoKubeCoreService) DeleteEnvironment(
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) CreateBlock(
+func (k *KintoCoreService) CreateBlock(
 	c context.Context, req *types.CreateBlockRequest) (*types.BlockUpdateResponse, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -128,7 +128,7 @@ func (k *KintoKubeCoreService) CreateBlock(
 	}, nil
 }
 
-func (k *KintoKubeCoreService) DeployBlockUpdate(
+func (k *KintoCoreService) DeployBlockUpdate(
 	c context.Context, req *types.DeployBlockRequest) (*types.BlockUpdateResponse, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -152,7 +152,7 @@ func (k *KintoKubeCoreService) DeployBlockUpdate(
 	}, nil
 }
 
-func (k *KintoKubeCoreService) TriggerDeploy(
+func (k *KintoCoreService) TriggerDeploy(
 	c context.Context, req *types.TriggerDeployRequest) (*types.BlockUpdateResponse, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -172,7 +172,7 @@ func (k *KintoKubeCoreService) TriggerDeploy(
 	}, nil
 }
 
-func (k *KintoKubeCoreService) RollbackBlock(
+func (k *KintoCoreService) RollbackBlock(
 	c context.Context, req *types.RollbackBlockRequest) (*types.BlockUpdateResponse, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -190,7 +190,7 @@ func (k *KintoKubeCoreService) RollbackBlock(
 	}, nil
 }
 
-func (k *KintoKubeCoreService) GetBlocks(c context.Context, req *types.BlockQueryRequest) (*types.Blocks, error) {
+func (k *KintoCoreService) GetBlocks(c context.Context, req *types.BlockQueryRequest) (*types.Blocks, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -204,7 +204,7 @@ func (k *KintoKubeCoreService) GetBlocks(c context.Context, req *types.BlockQuer
 	return blocks, nil
 }
 
-func (k *KintoKubeCoreService) GetBlock(c context.Context, req *types.BlockQueryRequest) (*types.Block, error) {
+func (k *KintoCoreService) GetBlock(c context.Context, req *types.BlockQueryRequest) (*types.Block, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -218,7 +218,7 @@ func (k *KintoKubeCoreService) GetBlock(c context.Context, req *types.BlockQuery
 	return block, nil
 }
 
-func (k *KintoKubeCoreService) DeleteBlock(c context.Context, req *types.DeleteBlockRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) DeleteBlock(c context.Context, req *types.DeleteBlockRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -232,7 +232,7 @@ func (k *KintoKubeCoreService) DeleteBlock(c context.Context, req *types.DeleteB
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) SuspendBlock(
+func (k *KintoCoreService) SuspendBlock(
 	c context.Context, req *types.SuspendBlockRequest) (*types.BlockUpdateResponse, error) {
 
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
@@ -251,8 +251,8 @@ func (k *KintoKubeCoreService) SuspendBlock(
 	}, nil
 }
 
-func (k *KintoKubeCoreService) WatchBuildLogs(
-	req *types.WatchBuildLogsRequest, stream types.KintoKubeCoreService_WatchBuildLogsServer) error {
+func (k *KintoCoreService) WatchBuildLogs(
+	req *types.WatchBuildLogsRequest, stream types.KintoCoreService_WatchBuildLogsServer) error {
 
 	// TODO: this is a hacky fix until we have a proper refactoring on whole channel system
 	// make(chan *types.Logs) => make(chan *types.Logs, 1)
@@ -280,8 +280,8 @@ func (k *KintoKubeCoreService) WatchBuildLogs(
 	}
 }
 
-func (k *KintoKubeCoreService) WatchConsoleLogs(
-	req *types.WatchConsoleLogsRequest, stream types.KintoKubeCoreService_WatchConsoleLogsServer) error {
+func (k *KintoCoreService) WatchConsoleLogs(
+	req *types.WatchConsoleLogsRequest, stream types.KintoCoreService_WatchConsoleLogsServer) error {
 	logsChan := make(chan *types.ConsoleLog)
 
 	err := k.controller.WatchConsoleLogs(req.BlockName, req.EnvId, stream.Context(), logsChan)
@@ -305,7 +305,7 @@ func (k *KintoKubeCoreService) WatchConsoleLogs(
 	}
 }
 
-func (k *KintoKubeCoreService) UpdateBuildStatus(
+func (k *KintoCoreService) UpdateBuildStatus(
 	c context.Context, req *types.UpdateBuildStatusRequest) (*types.UpdateBuildStatusResponse, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		log.Err(err).Msgf("Error validating UpdateBuildStatusRequest in UpdateBuildStatus")
@@ -323,7 +323,7 @@ func (k *KintoKubeCoreService) UpdateBuildStatus(
 	}, nil
 }
 
-func (k *KintoKubeCoreService) UpdateBuildCommitSha(c context.Context, req *types.UpdateBuildCommitShaRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) UpdateBuildCommitSha(c context.Context, req *types.UpdateBuildCommitShaRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		klog.ErrorWithErr(err, "Error validating UpdateBuildCommitShaRequest in UpdateBuildCommitSha")
 		return nil, err
@@ -337,8 +337,8 @@ func (k *KintoKubeCoreService) UpdateBuildCommitSha(c context.Context, req *type
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) WatchBlocksHealthStatuses(
-	req *types.EnvironmentQueryRequest, stream types.KintoKubeCoreService_WatchBlocksHealthStatusesServer) error {
+func (k *KintoCoreService) WatchBlocksHealthStatuses(
+	req *types.EnvironmentQueryRequest, stream types.KintoCoreService_WatchBlocksHealthStatusesServer) error {
 
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return err
@@ -368,8 +368,8 @@ func (k *KintoKubeCoreService) WatchBlocksHealthStatuses(
 	}
 }
 
-func (k *KintoKubeCoreService) WatchJobsStatus(
-	req *types.BlockQueryRequest, stream types.KintoKubeCoreService_WatchJobsStatusServer) error {
+func (k *KintoCoreService) WatchJobsStatus(
+	req *types.BlockQueryRequest, stream types.KintoCoreService_WatchJobsStatusServer) error {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return err
 	}
@@ -389,8 +389,8 @@ func (k *KintoKubeCoreService) WatchJobsStatus(
 	return nil
 }
 
-func (k *KintoKubeCoreService) WatchBlocksMetrics(
-	req *types.BlockQueryRequest, stream types.KintoKubeCoreService_WatchBlocksMetricsServer) error {
+func (k *KintoCoreService) WatchBlocksMetrics(
+	req *types.BlockQueryRequest, stream types.KintoCoreService_WatchBlocksMetricsServer) error {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return err
 	}
@@ -420,8 +420,8 @@ func (k *KintoKubeCoreService) WatchBlocksMetrics(
 	}
 }
 
-func (k *KintoKubeCoreService) WatchReleasesStatus(
-	req *types.BlockQueryRequest, stream types.KintoKubeCoreService_WatchReleasesStatusServer) error {
+func (k *KintoCoreService) WatchReleasesStatus(
+	req *types.BlockQueryRequest, stream types.KintoCoreService_WatchReleasesStatusServer) error {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return err
 	}
@@ -451,13 +451,13 @@ func (k *KintoKubeCoreService) WatchReleasesStatus(
 	}
 }
 
-func (k *KintoKubeCoreService) GetKintoConfiguration(
+func (k *KintoCoreService) GetKintoConfiguration(
 	c context.Context, empty *empty.Empty) (*types.KintoConfiguration, error) {
 
 	return k.controller.GetKintoConfiguration()
 }
 
-func (k *KintoKubeCoreService) KillBlockInstance(
+func (k *KintoCoreService) KillBlockInstance(
 	c context.Context, req *types.KillBlockInstanceRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
@@ -472,7 +472,7 @@ func (k *KintoKubeCoreService) KillBlockInstance(
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) AbortRelease(c context.Context, req *types.AbortBlockReleaseRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) AbortRelease(c context.Context, req *types.AbortBlockReleaseRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -486,7 +486,7 @@ func (k *KintoKubeCoreService) AbortRelease(c context.Context, req *types.AbortB
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) TagRelease(c context.Context, req *types.TagReleaseRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) TagRelease(c context.Context, req *types.TagReleaseRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -499,7 +499,7 @@ func (k *KintoKubeCoreService) TagRelease(c context.Context, req *types.TagRelea
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) PromoteRelease(c context.Context, req *types.PromoteReleaseRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) PromoteRelease(c context.Context, req *types.PromoteReleaseRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -510,7 +510,7 @@ func (k *KintoKubeCoreService) PromoteRelease(c context.Context, req *types.Prom
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) CreateCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) CreateCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -522,7 +522,7 @@ func (k *KintoKubeCoreService) CreateCustomDomainName(c context.Context, req *ty
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) DeleteCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) DeleteCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -534,7 +534,7 @@ func (k *KintoKubeCoreService) DeleteCustomDomainName(c context.Context, req *ty
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) CheckCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*types.CheckCustomDomainNameResponse, error) {
+func (k *KintoCoreService) CheckCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*types.CheckCustomDomainNameResponse, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -553,7 +553,7 @@ func (k *KintoKubeCoreService) CheckCustomDomainName(c context.Context, req *typ
 	}, nil
 }
 
-func (k *KintoKubeCoreService) EnablePublicURL(c context.Context, req *types.EnablePublicURLRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) EnablePublicURL(c context.Context, req *types.EnablePublicURLRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -565,7 +565,7 @@ func (k *KintoKubeCoreService) EnablePublicURL(c context.Context, req *types.Ena
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) DisablePublicURL(c context.Context, req *types.DisablePublicURLRequest) (*empty.Empty, error) {
+func (k *KintoCoreService) DisablePublicURL(c context.Context, req *types.DisablePublicURLRequest) (*empty.Empty, error) {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return nil, err
 	}
@@ -577,7 +577,7 @@ func (k *KintoKubeCoreService) DisablePublicURL(c context.Context, req *types.Di
 	return &empty.Empty{}, nil
 }
 
-func (k *KintoKubeCoreService) StartTeleport(req *types.TeleportRequest, stream types.KintoKubeCoreService_StartTeleportServer) error {
+func (k *KintoCoreService) StartTeleport(req *types.TeleportRequest, stream types.KintoCoreService_StartTeleportServer) error {
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
 		return err
 	}
@@ -612,7 +612,7 @@ func (k *KintoKubeCoreService) StartTeleport(req *types.TeleportRequest, stream 
 	}
 }
 
-func (k *KintoKubeCoreService) GenReleaseConfigFromKintoFile(
+func (k *KintoCoreService) GenReleaseConfigFromKintoFile(
 	c context.Context, req *types.GenReleaseConfigFromKintoFileRepoRequest) (*types.ReleaseConfig, error) {
 
 	if err := utilsGoGrpc.ValidateGrpcRequest(req); err != nil {
@@ -628,7 +628,7 @@ func (k *KintoKubeCoreService) GenReleaseConfigFromKintoFile(
 	return releaseConfig, nil
 }
 
-func (k *KintoKubeCoreService) SyncTime(ctx context.Context, req *types.SyncTimeRequest) (*types.SyncTimeResponse, error) {
+func (k *KintoCoreService) SyncTime(ctx context.Context, req *types.SyncTimeRequest) (*types.SyncTimeResponse, error) {
 	return &types.SyncTimeResponse{
 		ClientTimestampMs: req.SendTimeMs,
 		ServerTimestampMs: time.Now().UnixNano() / 1e6,

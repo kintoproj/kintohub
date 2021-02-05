@@ -8,17 +8,17 @@ import (
 	"google.golang.org/grpc"
 )
 
-type MockKintoKubeCoreService struct {
+type MockKintoCoreService struct {
 	mock.Mock
 }
 
-func (m *MockKintoKubeCoreService) GetServiceInfo() grpc.ServiceInfo {
+func (m *MockKintoCoreService) GetServiceInfo() grpc.ServiceInfo {
 	server := grpc.NewServer()
-	types.RegisterKintoKubeCoreServiceServer(server, m)
-	return server.GetServiceInfo()["KintoKubeCoreService"]
+	types.RegisterKintoCoreServiceServer(server, m)
+	return server.GetServiceInfo()["KintoCoreService"]
 }
 
-func (m *MockKintoKubeCoreService) GetEnvironment(ctx context.Context, req *types.EnvironmentQueryRequest) (*types.Environment, error) {
+func (m *MockKintoCoreService) GetEnvironment(ctx context.Context, req *types.EnvironmentQueryRequest) (*types.Environment, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -30,7 +30,7 @@ func (m *MockKintoKubeCoreService) GetEnvironment(ctx context.Context, req *type
 	return args.Get(0).(*types.Environment), nil
 }
 
-func (m *MockKintoKubeCoreService) GetEnvironments(ctx context.Context, empty *empty.Empty) (*types.Environments, error) {
+func (m *MockKintoCoreService) GetEnvironments(ctx context.Context, empty *empty.Empty) (*types.Environments, error) {
 	args := m.Called(ctx, empty)
 
 	err := args.Error(1)
@@ -42,7 +42,7 @@ func (m *MockKintoKubeCoreService) GetEnvironments(ctx context.Context, empty *e
 	return args.Get(0).(*types.Environments), nil
 }
 
-func (m *MockKintoKubeCoreService) UpdateEnvironment(ctx context.Context, req *types.UpdateEnvironmentRequest) (*types.Environment, error) {
+func (m *MockKintoCoreService) UpdateEnvironment(ctx context.Context, req *types.UpdateEnvironmentRequest) (*types.Environment, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -54,7 +54,7 @@ func (m *MockKintoKubeCoreService) UpdateEnvironment(ctx context.Context, req *t
 	return args.Get(0).(*types.Environment), nil
 }
 
-func (m *MockKintoKubeCoreService) CreateEnvironment(ctx context.Context, req *types.CreateEnvironmentRequest) (*types.Environment, error) {
+func (m *MockKintoCoreService) CreateEnvironment(ctx context.Context, req *types.CreateEnvironmentRequest) (*types.Environment, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -66,7 +66,7 @@ func (m *MockKintoKubeCoreService) CreateEnvironment(ctx context.Context, req *t
 	return args.Get(0).(*types.Environment), nil
 }
 
-func (m *MockKintoKubeCoreService) DeleteEnvironment(ctx context.Context, req *types.DeleteEnvironmentRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) DeleteEnvironment(ctx context.Context, req *types.DeleteEnvironmentRequest) (*empty.Empty, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -78,7 +78,7 @@ func (m *MockKintoKubeCoreService) DeleteEnvironment(ctx context.Context, req *t
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) CreateBlock(ctx context.Context, req *types.CreateBlockRequest) (*types.BlockUpdateResponse, error) {
+func (m *MockKintoCoreService) CreateBlock(ctx context.Context, req *types.CreateBlockRequest) (*types.BlockUpdateResponse, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -90,7 +90,7 @@ func (m *MockKintoKubeCoreService) CreateBlock(ctx context.Context, req *types.C
 	return args.Get(0).(*types.BlockUpdateResponse), nil
 }
 
-func (m *MockKintoKubeCoreService) TriggerDeploy(
+func (m *MockKintoCoreService) TriggerDeploy(
 	c context.Context, req *types.TriggerDeployRequest) (*types.BlockUpdateResponse, error) {
 	args := m.Called(c, req)
 
@@ -103,7 +103,7 @@ func (m *MockKintoKubeCoreService) TriggerDeploy(
 	return args.Get(0).(*types.BlockUpdateResponse), nil
 }
 
-func (m *MockKintoKubeCoreService) DeployBlockUpdate(ctx context.Context, req *types.DeployBlockRequest) (*types.BlockUpdateResponse, error) {
+func (m *MockKintoCoreService) DeployBlockUpdate(ctx context.Context, req *types.DeployBlockRequest) (*types.BlockUpdateResponse, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -115,7 +115,7 @@ func (m *MockKintoKubeCoreService) DeployBlockUpdate(ctx context.Context, req *t
 	return args.Get(0).(*types.BlockUpdateResponse), nil
 }
 
-func (m *MockKintoKubeCoreService) RollbackBlock(ctx context.Context, req *types.RollbackBlockRequest) (*types.BlockUpdateResponse, error) {
+func (m *MockKintoCoreService) RollbackBlock(ctx context.Context, req *types.RollbackBlockRequest) (*types.BlockUpdateResponse, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -127,7 +127,7 @@ func (m *MockKintoKubeCoreService) RollbackBlock(ctx context.Context, req *types
 	return args.Get(0).(*types.BlockUpdateResponse), nil
 }
 
-func (m *MockKintoKubeCoreService) GetBlocks(ctx context.Context, req *types.BlockQueryRequest) (*types.Blocks, error) {
+func (m *MockKintoCoreService) GetBlocks(ctx context.Context, req *types.BlockQueryRequest) (*types.Blocks, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -139,7 +139,7 @@ func (m *MockKintoKubeCoreService) GetBlocks(ctx context.Context, req *types.Blo
 	return args.Get(0).(*types.Blocks), nil
 }
 
-func (m *MockKintoKubeCoreService) GetBlock(ctx context.Context, req *types.BlockQueryRequest) (*types.Block, error) {
+func (m *MockKintoCoreService) GetBlock(ctx context.Context, req *types.BlockQueryRequest) (*types.Block, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -151,7 +151,7 @@ func (m *MockKintoKubeCoreService) GetBlock(ctx context.Context, req *types.Bloc
 	return args.Get(0).(*types.Block), nil
 }
 
-func (m *MockKintoKubeCoreService) DeleteBlock(ctx context.Context, req *types.DeleteBlockRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) DeleteBlock(ctx context.Context, req *types.DeleteBlockRequest) (*empty.Empty, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -163,17 +163,17 @@ func (m *MockKintoKubeCoreService) DeleteBlock(ctx context.Context, req *types.D
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) WatchReleasesStatus(req *types.BlockQueryRequest, server types.KintoKubeCoreService_WatchReleasesStatusServer) error {
+func (m *MockKintoCoreService) WatchReleasesStatus(req *types.BlockQueryRequest, server types.KintoCoreService_WatchReleasesStatusServer) error {
 	args := m.Called(req, server)
 	return args.Error(0)
 }
 
-func (m *MockKintoKubeCoreService) WatchBuildLogs(req *types.WatchBuildLogsRequest, server types.KintoKubeCoreService_WatchBuildLogsServer) error {
+func (m *MockKintoCoreService) WatchBuildLogs(req *types.WatchBuildLogsRequest, server types.KintoCoreService_WatchBuildLogsServer) error {
 	args := m.Called(req, server)
 	return args.Error(0)
 }
 
-func (m *MockKintoKubeCoreService) UpdateBuildStatus(ctx context.Context, req *types.UpdateBuildStatusRequest) (*types.UpdateBuildStatusResponse, error) {
+func (m *MockKintoCoreService) UpdateBuildStatus(ctx context.Context, req *types.UpdateBuildStatusRequest) (*types.UpdateBuildStatusResponse, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -185,7 +185,7 @@ func (m *MockKintoKubeCoreService) UpdateBuildStatus(ctx context.Context, req *t
 	return args.Get(0).(*types.UpdateBuildStatusResponse), nil
 }
 
-func (m *MockKintoKubeCoreService) UpdateBuildCommitSha(ctx context.Context, req *types.UpdateBuildCommitShaRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) UpdateBuildCommitSha(ctx context.Context, req *types.UpdateBuildCommitShaRequest) (*empty.Empty, error) {
 	args := m.Called(ctx, req)
 	err := args.Error(1)
 	if err != nil {
@@ -194,28 +194,28 @@ func (m *MockKintoKubeCoreService) UpdateBuildCommitSha(ctx context.Context, req
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) WatchBlocksHealthStatuses(req *types.EnvironmentQueryRequest, server types.KintoKubeCoreService_WatchBlocksHealthStatusesServer) error {
+func (m *MockKintoCoreService) WatchBlocksHealthStatuses(req *types.EnvironmentQueryRequest, server types.KintoCoreService_WatchBlocksHealthStatusesServer) error {
 	args := m.Called(req, server)
 	return args.Error(0)
 }
 
-func (m *MockKintoKubeCoreService) WatchJobsStatus(
-	req *types.BlockQueryRequest, stream types.KintoKubeCoreService_WatchJobsStatusServer) error {
+func (m *MockKintoCoreService) WatchJobsStatus(
+	req *types.BlockQueryRequest, stream types.KintoCoreService_WatchJobsStatusServer) error {
 	args := m.Called(req, stream)
 	return args.Error(0)
 }
 
-func (m *MockKintoKubeCoreService) WatchBlocksMetrics(req *types.BlockQueryRequest, server types.KintoKubeCoreService_WatchBlocksMetricsServer) error {
+func (m *MockKintoCoreService) WatchBlocksMetrics(req *types.BlockQueryRequest, server types.KintoCoreService_WatchBlocksMetricsServer) error {
 	args := m.Called(req, server)
 	return args.Error(0)
 }
 
-func (m *MockKintoKubeCoreService) WatchConsoleLogs(req *types.WatchConsoleLogsRequest, server types.KintoKubeCoreService_WatchConsoleLogsServer) error {
+func (m *MockKintoCoreService) WatchConsoleLogs(req *types.WatchConsoleLogsRequest, server types.KintoCoreService_WatchConsoleLogsServer) error {
 	args := m.Called(req, server)
 	return args.Error(0)
 }
 
-func (m *MockKintoKubeCoreService) GetKintoConfiguration(ctx context.Context, req *empty.Empty) (*types.KintoConfiguration, error) {
+func (m *MockKintoCoreService) GetKintoConfiguration(ctx context.Context, req *empty.Empty) (*types.KintoConfiguration, error) {
 	args := m.Called(ctx, req)
 
 	err := args.Error(1)
@@ -227,7 +227,7 @@ func (m *MockKintoKubeCoreService) GetKintoConfiguration(ctx context.Context, re
 	return args.Get(0).(*types.KintoConfiguration), nil
 }
 
-func (m *MockKintoKubeCoreService) AbortRelease(
+func (m *MockKintoCoreService) AbortRelease(
 	ctx context.Context, request *types.AbortBlockReleaseRequest) (*empty.Empty, error) {
 	args := m.Called(ctx, request)
 
@@ -240,7 +240,7 @@ func (m *MockKintoKubeCoreService) AbortRelease(
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) TagRelease(c context.Context, req *types.TagReleaseRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) TagRelease(c context.Context, req *types.TagReleaseRequest) (*empty.Empty, error) {
 	args := m.Called(c, req)
 
 	err := args.Error(1)
@@ -252,7 +252,7 @@ func (m *MockKintoKubeCoreService) TagRelease(c context.Context, req *types.TagR
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) KillBlockInstance(
+func (m *MockKintoCoreService) KillBlockInstance(
 	ctx context.Context, req *types.KillBlockInstanceRequest) (*empty.Empty, error) {
 	args := m.Called(ctx, req)
 
@@ -265,7 +265,7 @@ func (m *MockKintoKubeCoreService) KillBlockInstance(
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) SuspendBlock(
+func (m *MockKintoCoreService) SuspendBlock(
 	c context.Context, req *types.SuspendBlockRequest) (*types.BlockUpdateResponse, error) {
 
 	args := m.Called(c, req)
@@ -279,7 +279,7 @@ func (m *MockKintoKubeCoreService) SuspendBlock(
 	return args.Get(0).(*types.BlockUpdateResponse), nil
 }
 
-func (m *MockKintoKubeCoreService) CreateCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) CreateCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*empty.Empty, error) {
 	args := m.Called(c, req)
 
 	err := args.Error(1)
@@ -291,7 +291,7 @@ func (m *MockKintoKubeCoreService) CreateCustomDomainName(c context.Context, req
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) DeleteCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) DeleteCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*empty.Empty, error) {
 	args := m.Called(c, req)
 
 	err := args.Error(1)
@@ -303,7 +303,7 @@ func (m *MockKintoKubeCoreService) DeleteCustomDomainName(c context.Context, req
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) CheckCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*types.CheckCustomDomainNameResponse, error) {
+func (m *MockKintoCoreService) CheckCustomDomainName(c context.Context, req *types.CustomDomainNameRequest) (*types.CheckCustomDomainNameResponse, error) {
 	args := m.Called(c, req)
 
 	err := args.Error(1)
@@ -315,7 +315,7 @@ func (m *MockKintoKubeCoreService) CheckCustomDomainName(c context.Context, req 
 	return args.Get(0).(*types.CheckCustomDomainNameResponse), nil
 }
 
-func (m *MockKintoKubeCoreService) EnablePublicURL(c context.Context, req *types.EnablePublicURLRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) EnablePublicURL(c context.Context, req *types.EnablePublicURLRequest) (*empty.Empty, error) {
 	args := m.Called(c, req)
 
 	err := args.Error(1)
@@ -327,7 +327,7 @@ func (m *MockKintoKubeCoreService) EnablePublicURL(c context.Context, req *types
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) DisablePublicURL(c context.Context, req *types.DisablePublicURLRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) DisablePublicURL(c context.Context, req *types.DisablePublicURLRequest) (*empty.Empty, error) {
 	args := m.Called(c, req)
 
 	err := args.Error(1)
@@ -339,13 +339,13 @@ func (m *MockKintoKubeCoreService) DisablePublicURL(c context.Context, req *type
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) StartTeleport(req *types.TeleportRequest, server types.KintoKubeCoreService_StartTeleportServer) error {
+func (m *MockKintoCoreService) StartTeleport(req *types.TeleportRequest, server types.KintoCoreService_StartTeleportServer) error {
 	args := m.Called(req, server)
 
 	return args.Error(0)
 }
 
-func (m *MockKintoKubeCoreService) PromoteRelease(c context.Context, req *types.PromoteReleaseRequest) (*empty.Empty, error) {
+func (m *MockKintoCoreService) PromoteRelease(c context.Context, req *types.PromoteReleaseRequest) (*empty.Empty, error) {
 	args := m.Called(c, req)
 
 	err := args.Error(1)
@@ -357,7 +357,7 @@ func (m *MockKintoKubeCoreService) PromoteRelease(c context.Context, req *types.
 	return args.Get(0).(*empty.Empty), nil
 }
 
-func (m *MockKintoKubeCoreService) GenReleaseConfigFromKintoFile(
+func (m *MockKintoCoreService) GenReleaseConfigFromKintoFile(
 	c context.Context, req *types.GenReleaseConfigFromKintoFileRepoRequest) (*types.ReleaseConfig, error) {
 
 	args := m.Called(c, req)
@@ -371,7 +371,7 @@ func (m *MockKintoKubeCoreService) GenReleaseConfigFromKintoFile(
 	return args.Get(0).(*types.ReleaseConfig), nil
 }
 
-func (m *MockKintoKubeCoreService) SyncTime(c context.Context, req *types.SyncTimeRequest) (*types.SyncTimeResponse, error) {
+func (m *MockKintoCoreService) SyncTime(c context.Context, req *types.SyncTimeRequest) (*types.SyncTimeResponse, error) {
 
 	args := m.Called(c, req)
 
