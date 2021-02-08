@@ -7,7 +7,7 @@ require (
 	github.com/golang/protobuf v1.4.0
 	github.com/joho/godotenv v1.3.0
 	github.com/kintohub/utils-go v0.2.3-0.20201030060734-05eca2fbcf60
-	github.com/kintoproj/kinto-core v0.0.0-20210202174155-9c34af7713be
+	github.com/kintoproj/kinto-core v0.0.0-20210205164953-a9f63087cefd
 	github.com/minio/minio-go/v6 v6.0.57
 	golang.org/x/net v0.0.0-20200602114024-627f9648deb9
 	google.golang.org/grpc v1.29.1

@@ -8,7 +8,7 @@ require (
 	github.com/googleapis/gnostic v0.4.0 // indirect
 	github.com/joho/godotenv v1.3.0
 	github.com/kintohub/utils-go v0.2.3-0.20201030060734-05eca2fbcf60
-	github.com/kintoproj/kinto-core v0.0.0-20210202174155-9c34af7713be
+	github.com/kintoproj/kinto-core v0.0.0-20210205164953-a9f63087cefd
 	github.com/r3labs/diff v1.1.0
 	github.com/rs/zerolog v1.18.0
 	github.com/stretchr/testify v1.6.1

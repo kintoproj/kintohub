@@ -469,6 +469,8 @@ github.com/kintohub/utils-go v0.2.3-0.20201030060734-05eca2fbcf60 h1:nVZ7bd8xybH
 github.com/kintohub/utils-go v0.2.3-0.20201030060734-05eca2fbcf60/go.mod h1:Exrfrmvcms4xhtUVag6SJlBOW9edsuMrB0MoTKUREgs=
 github.com/kintoproj/kinto-core v0.0.0-20210202174155-9c34af7713be h1:h3Q6D3wACpaJB+W+BFCXTUYEKjFFzDwPMbKgjMraI8I=
 github.com/kintoproj/kinto-core v0.0.0-20210202174155-9c34af7713be/go.mod h1:YUgp4mMQZhW6IEtvP5rx7ArswnPs0W+P6Fz+nnvBR7M=
+github.com/kintoproj/kinto-core v0.0.0-20210205164953-a9f63087cefd h1:7os//T5UfxBjgxg+Y2mZExFn7/UGpbK5uKl3dtchV24=
+github.com/kintoproj/kinto-core v0.0.0-20210205164953-a9f63087cefd/go.mod h1:YUgp4mMQZhW6IEtvP5rx7ArswnPs0W+P6Fz+nnvBR7M=
 github.com/kisielk/errcheck v1.1.0/go.mod h1:EZBBE59ingxPouuu3KfxchcWSUPOHkagtvWXihfKN4Q=
 github.com/kisielk/errcheck v1.2.0/go.mod h1:/BMXB+zMLi60iA8Vv6Ksmxu/1UDYcXs4uQLJ+jE2L00=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=

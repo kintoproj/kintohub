@@ -10,7 +10,7 @@ import (
 )
 
 type kintoCoreReleaseClient struct {
-	client types.KintoKubeCoreServiceClient
+	client types.KintoCoreServiceClient
 }
 
 type kintoCoreReleaseClientInterface interface {
@@ -36,7 +36,7 @@ func newKintoCoreReleaseClient(kintoCoreHost string, isOverTLS bool) (kintoCoreR
 		return nil, err
 	}
 
-	buildClient := types.NewKintoKubeCoreServiceClient(conn)
+	buildClient := types.NewKintoCoreServiceClient(conn)
 	return &kintoCoreReleaseClient{
 		client: buildClient,
 	}, nil
