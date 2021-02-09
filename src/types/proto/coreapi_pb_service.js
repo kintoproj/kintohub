@@ -6,330 +6,330 @@ var google_protobuf_empty_pb = require("google-protobuf/google/protobuf/empty_pb
 var models_pb = require("./models_pb");
 var grpc = require("@improbable-eng/grpc-web").grpc;
 
-var KintoKubeCoreService = (function () {
-  function KintoKubeCoreService() {}
-  KintoKubeCoreService.serviceName = "KintoKubeCoreService";
-  return KintoKubeCoreService;
+var KintoCoreService = (function () {
+  function KintoCoreService() {}
+  KintoCoreService.serviceName = "KintoCoreService";
+  return KintoCoreService;
 }());
 
-KintoKubeCoreService.GetEnvironment = {
+KintoCoreService.GetEnvironment = {
   methodName: "GetEnvironment",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.EnvironmentQueryRequest,
   responseType: models_pb.Environment
 };
 
-KintoKubeCoreService.GetEnvironments = {
+KintoCoreService.GetEnvironments = {
   methodName: "GetEnvironments",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: google_protobuf_empty_pb.Empty,
   responseType: models_pb.Environments
 };
 
-KintoKubeCoreService.CreateEnvironment = {
+KintoCoreService.CreateEnvironment = {
   methodName: "CreateEnvironment",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.CreateEnvironmentRequest,
   responseType: models_pb.Environment
 };
 
-KintoKubeCoreService.UpdateEnvironment = {
+KintoCoreService.UpdateEnvironment = {
   methodName: "UpdateEnvironment",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.UpdateEnvironmentRequest,
   responseType: models_pb.Environment
 };
 
-KintoKubeCoreService.DeleteEnvironment = {
+KintoCoreService.DeleteEnvironment = {
   methodName: "DeleteEnvironment",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.DeleteEnvironmentRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.CreateBlock = {
+KintoCoreService.CreateBlock = {
   methodName: "CreateBlock",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.CreateBlockRequest,
   responseType: coreapi_pb.BlockUpdateResponse
 };
 
-KintoKubeCoreService.DeployBlockUpdate = {
+KintoCoreService.DeployBlockUpdate = {
   methodName: "DeployBlockUpdate",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.DeployBlockRequest,
   responseType: coreapi_pb.BlockUpdateResponse
 };
 
-KintoKubeCoreService.TriggerDeploy = {
+KintoCoreService.TriggerDeploy = {
   methodName: "TriggerDeploy",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.TriggerDeployRequest,
   responseType: coreapi_pb.BlockUpdateResponse
 };
 
-KintoKubeCoreService.RollbackBlock = {
+KintoCoreService.RollbackBlock = {
   methodName: "RollbackBlock",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.RollbackBlockRequest,
   responseType: coreapi_pb.BlockUpdateResponse
 };
 
-KintoKubeCoreService.GetBlocks = {
+KintoCoreService.GetBlocks = {
   methodName: "GetBlocks",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.BlockQueryRequest,
   responseType: models_pb.Blocks
 };
 
-KintoKubeCoreService.GetBlock = {
+KintoCoreService.GetBlock = {
   methodName: "GetBlock",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.BlockQueryRequest,
   responseType: models_pb.Block
 };
 
-KintoKubeCoreService.DeleteBlock = {
+KintoCoreService.DeleteBlock = {
   methodName: "DeleteBlock",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.DeleteBlockRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.SuspendBlock = {
+KintoCoreService.SuspendBlock = {
   methodName: "SuspendBlock",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.SuspendBlockRequest,
   responseType: coreapi_pb.BlockUpdateResponse
 };
 
-KintoKubeCoreService.WatchReleasesStatus = {
+KintoCoreService.WatchReleasesStatus = {
   methodName: "WatchReleasesStatus",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: true,
   requestType: coreapi_pb.BlockQueryRequest,
   responseType: models_pb.ReleasesStatus
 };
 
-KintoKubeCoreService.KillBlockInstance = {
+KintoCoreService.KillBlockInstance = {
   methodName: "KillBlockInstance",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.KillBlockInstanceRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.AbortRelease = {
+KintoCoreService.AbortRelease = {
   methodName: "AbortRelease",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.AbortBlockReleaseRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.TagRelease = {
+KintoCoreService.TagRelease = {
   methodName: "TagRelease",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.TagReleaseRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.PromoteRelease = {
+KintoCoreService.PromoteRelease = {
   methodName: "PromoteRelease",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.PromoteReleaseRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.GenReleaseConfigFromKintoFile = {
+KintoCoreService.GenReleaseConfigFromKintoFile = {
   methodName: "GenReleaseConfigFromKintoFile",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.GenReleaseConfigFromKintoFileRepoRequest,
   responseType: models_pb.ReleaseConfig
 };
 
-KintoKubeCoreService.WatchBuildLogs = {
+KintoCoreService.WatchBuildLogs = {
   methodName: "WatchBuildLogs",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: true,
   requestType: coreapi_pb.WatchBuildLogsRequest,
   responseType: models_pb.Logs
 };
 
-KintoKubeCoreService.UpdateBuildStatus = {
+KintoCoreService.UpdateBuildStatus = {
   methodName: "UpdateBuildStatus",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.UpdateBuildStatusRequest,
   responseType: coreapi_pb.UpdateBuildStatusResponse
 };
 
-KintoKubeCoreService.UpdateBuildCommitSha = {
+KintoCoreService.UpdateBuildCommitSha = {
   methodName: "UpdateBuildCommitSha",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.UpdateBuildCommitShaRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.WatchBlocksHealthStatuses = {
+KintoCoreService.WatchBlocksHealthStatuses = {
   methodName: "WatchBlocksHealthStatuses",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: true,
   requestType: coreapi_pb.EnvironmentQueryRequest,
   responseType: models_pb.BlockStatuses
 };
 
-KintoKubeCoreService.WatchJobsStatus = {
+KintoCoreService.WatchJobsStatus = {
   methodName: "WatchJobsStatus",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: true,
   requestType: coreapi_pb.BlockQueryRequest,
   responseType: models_pb.JobStatus
 };
 
-KintoKubeCoreService.WatchBlocksMetrics = {
+KintoCoreService.WatchBlocksMetrics = {
   methodName: "WatchBlocksMetrics",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: true,
   requestType: coreapi_pb.BlockQueryRequest,
   responseType: models_pb.BlocksMetrics
 };
 
-KintoKubeCoreService.WatchConsoleLogs = {
+KintoCoreService.WatchConsoleLogs = {
   methodName: "WatchConsoleLogs",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: true,
   requestType: coreapi_pb.WatchConsoleLogsRequest,
   responseType: models_pb.ConsoleLog
 };
 
-KintoKubeCoreService.GetKintoConfiguration = {
+KintoCoreService.GetKintoConfiguration = {
   methodName: "GetKintoConfiguration",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: google_protobuf_empty_pb.Empty,
   responseType: models_pb.KintoConfiguration
 };
 
-KintoKubeCoreService.CreateCustomDomainName = {
+KintoCoreService.CreateCustomDomainName = {
   methodName: "CreateCustomDomainName",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.CustomDomainNameRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.DeleteCustomDomainName = {
+KintoCoreService.DeleteCustomDomainName = {
   methodName: "DeleteCustomDomainName",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.CustomDomainNameRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.CheckCustomDomainName = {
+KintoCoreService.CheckCustomDomainName = {
   methodName: "CheckCustomDomainName",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.CustomDomainNameRequest,
   responseType: coreapi_pb.CheckCustomDomainNameResponse
 };
 
-KintoKubeCoreService.EnablePublicURL = {
+KintoCoreService.EnablePublicURL = {
   methodName: "EnablePublicURL",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.EnablePublicURLRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.DisablePublicURL = {
+KintoCoreService.DisablePublicURL = {
   methodName: "DisablePublicURL",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.DisablePublicURLRequest,
   responseType: google_protobuf_empty_pb.Empty
 };
 
-KintoKubeCoreService.StartTeleport = {
+KintoCoreService.StartTeleport = {
   methodName: "StartTeleport",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: true,
   requestType: coreapi_pb.TeleportRequest,
   responseType: coreapi_pb.TeleportResponse
 };
 
-KintoKubeCoreService.SyncTime = {
+KintoCoreService.SyncTime = {
   methodName: "SyncTime",
-  service: KintoKubeCoreService,
+  service: KintoCoreService,
   requestStream: false,
   responseStream: false,
   requestType: coreapi_pb.SyncTimeRequest,
   responseType: coreapi_pb.SyncTimeResponse
 };
 
-exports.KintoKubeCoreService = KintoKubeCoreService;
+exports.KintoCoreService = KintoCoreService;
 
-function KintoKubeCoreServiceClient(serviceHost, options) {
+function KintoCoreServiceClient(serviceHost, options) {
   this.serviceHost = serviceHost;
   this.options = options || {};
 }
 
-KintoKubeCoreServiceClient.prototype.getEnvironment = function getEnvironment(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.getEnvironment = function getEnvironment(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.GetEnvironment, {
+  var client = grpc.unary(KintoCoreService.GetEnvironment, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -356,11 +356,11 @@ KintoKubeCoreServiceClient.prototype.getEnvironment = function getEnvironment(re
   };
 };
 
-KintoKubeCoreServiceClient.prototype.getEnvironments = function getEnvironments(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.getEnvironments = function getEnvironments(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.GetEnvironments, {
+  var client = grpc.unary(KintoCoreService.GetEnvironments, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -387,11 +387,11 @@ KintoKubeCoreServiceClient.prototype.getEnvironments = function getEnvironments(
   };
 };
 
-KintoKubeCoreServiceClient.prototype.createEnvironment = function createEnvironment(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.createEnvironment = function createEnvironment(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.CreateEnvironment, {
+  var client = grpc.unary(KintoCoreService.CreateEnvironment, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -418,11 +418,11 @@ KintoKubeCoreServiceClient.prototype.createEnvironment = function createEnvironm
   };
 };
 
-KintoKubeCoreServiceClient.prototype.updateEnvironment = function updateEnvironment(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.updateEnvironment = function updateEnvironment(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.UpdateEnvironment, {
+  var client = grpc.unary(KintoCoreService.UpdateEnvironment, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -449,11 +449,11 @@ KintoKubeCoreServiceClient.prototype.updateEnvironment = function updateEnvironm
   };
 };
 
-KintoKubeCoreServiceClient.prototype.deleteEnvironment = function deleteEnvironment(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.deleteEnvironment = function deleteEnvironment(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.DeleteEnvironment, {
+  var client = grpc.unary(KintoCoreService.DeleteEnvironment, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -480,11 +480,11 @@ KintoKubeCoreServiceClient.prototype.deleteEnvironment = function deleteEnvironm
   };
 };
 
-KintoKubeCoreServiceClient.prototype.createBlock = function createBlock(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.createBlock = function createBlock(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.CreateBlock, {
+  var client = grpc.unary(KintoCoreService.CreateBlock, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -511,11 +511,11 @@ KintoKubeCoreServiceClient.prototype.createBlock = function createBlock(requestM
   };
 };
 
-KintoKubeCoreServiceClient.prototype.deployBlockUpdate = function deployBlockUpdate(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.deployBlockUpdate = function deployBlockUpdate(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.DeployBlockUpdate, {
+  var client = grpc.unary(KintoCoreService.DeployBlockUpdate, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -542,11 +542,11 @@ KintoKubeCoreServiceClient.prototype.deployBlockUpdate = function deployBlockUpd
   };
 };
 
-KintoKubeCoreServiceClient.prototype.triggerDeploy = function triggerDeploy(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.triggerDeploy = function triggerDeploy(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.TriggerDeploy, {
+  var client = grpc.unary(KintoCoreService.TriggerDeploy, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -573,11 +573,11 @@ KintoKubeCoreServiceClient.prototype.triggerDeploy = function triggerDeploy(requ
   };
 };
 
-KintoKubeCoreServiceClient.prototype.rollbackBlock = function rollbackBlock(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.rollbackBlock = function rollbackBlock(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.RollbackBlock, {
+  var client = grpc.unary(KintoCoreService.RollbackBlock, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -604,11 +604,11 @@ KintoKubeCoreServiceClient.prototype.rollbackBlock = function rollbackBlock(requ
   };
 };
 
-KintoKubeCoreServiceClient.prototype.getBlocks = function getBlocks(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.getBlocks = function getBlocks(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.GetBlocks, {
+  var client = grpc.unary(KintoCoreService.GetBlocks, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -635,11 +635,11 @@ KintoKubeCoreServiceClient.prototype.getBlocks = function getBlocks(requestMessa
   };
 };
 
-KintoKubeCoreServiceClient.prototype.getBlock = function getBlock(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.getBlock = function getBlock(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.GetBlock, {
+  var client = grpc.unary(KintoCoreService.GetBlock, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -666,11 +666,11 @@ KintoKubeCoreServiceClient.prototype.getBlock = function getBlock(requestMessage
   };
 };
 
-KintoKubeCoreServiceClient.prototype.deleteBlock = function deleteBlock(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.deleteBlock = function deleteBlock(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.DeleteBlock, {
+  var client = grpc.unary(KintoCoreService.DeleteBlock, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -697,11 +697,11 @@ KintoKubeCoreServiceClient.prototype.deleteBlock = function deleteBlock(requestM
   };
 };
 
-KintoKubeCoreServiceClient.prototype.suspendBlock = function suspendBlock(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.suspendBlock = function suspendBlock(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.SuspendBlock, {
+  var client = grpc.unary(KintoCoreService.SuspendBlock, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -728,13 +728,13 @@ KintoKubeCoreServiceClient.prototype.suspendBlock = function suspendBlock(reques
   };
 };
 
-KintoKubeCoreServiceClient.prototype.watchReleasesStatus = function watchReleasesStatus(requestMessage, metadata) {
+KintoCoreServiceClient.prototype.watchReleasesStatus = function watchReleasesStatus(requestMessage, metadata) {
   var listeners = {
     data: [],
     end: [],
     status: []
   };
-  var client = grpc.invoke(KintoKubeCoreService.WatchReleasesStatus, {
+  var client = grpc.invoke(KintoCoreService.WatchReleasesStatus, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -767,11 +767,11 @@ KintoKubeCoreServiceClient.prototype.watchReleasesStatus = function watchRelease
   };
 };
 
-KintoKubeCoreServiceClient.prototype.killBlockInstance = function killBlockInstance(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.killBlockInstance = function killBlockInstance(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.KillBlockInstance, {
+  var client = grpc.unary(KintoCoreService.KillBlockInstance, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -798,11 +798,11 @@ KintoKubeCoreServiceClient.prototype.killBlockInstance = function killBlockInsta
   };
 };
 
-KintoKubeCoreServiceClient.prototype.abortRelease = function abortRelease(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.abortRelease = function abortRelease(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.AbortRelease, {
+  var client = grpc.unary(KintoCoreService.AbortRelease, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -829,11 +829,11 @@ KintoKubeCoreServiceClient.prototype.abortRelease = function abortRelease(reques
   };
 };
 
-KintoKubeCoreServiceClient.prototype.tagRelease = function tagRelease(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.tagRelease = function tagRelease(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.TagRelease, {
+  var client = grpc.unary(KintoCoreService.TagRelease, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -860,11 +860,11 @@ KintoKubeCoreServiceClient.prototype.tagRelease = function tagRelease(requestMes
   };
 };
 
-KintoKubeCoreServiceClient.prototype.promoteRelease = function promoteRelease(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.promoteRelease = function promoteRelease(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.PromoteRelease, {
+  var client = grpc.unary(KintoCoreService.PromoteRelease, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -891,11 +891,11 @@ KintoKubeCoreServiceClient.prototype.promoteRelease = function promoteRelease(re
   };
 };
 
-KintoKubeCoreServiceClient.prototype.genReleaseConfigFromKintoFile = function genReleaseConfigFromKintoFile(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.genReleaseConfigFromKintoFile = function genReleaseConfigFromKintoFile(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.GenReleaseConfigFromKintoFile, {
+  var client = grpc.unary(KintoCoreService.GenReleaseConfigFromKintoFile, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -922,13 +922,13 @@ KintoKubeCoreServiceClient.prototype.genReleaseConfigFromKintoFile = function ge
   };
 };
 
-KintoKubeCoreServiceClient.prototype.watchBuildLogs = function watchBuildLogs(requestMessage, metadata) {
+KintoCoreServiceClient.prototype.watchBuildLogs = function watchBuildLogs(requestMessage, metadata) {
   var listeners = {
     data: [],
     end: [],
     status: []
   };
-  var client = grpc.invoke(KintoKubeCoreService.WatchBuildLogs, {
+  var client = grpc.invoke(KintoCoreService.WatchBuildLogs, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -961,11 +961,11 @@ KintoKubeCoreServiceClient.prototype.watchBuildLogs = function watchBuildLogs(re
   };
 };
 
-KintoKubeCoreServiceClient.prototype.updateBuildStatus = function updateBuildStatus(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.updateBuildStatus = function updateBuildStatus(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.UpdateBuildStatus, {
+  var client = grpc.unary(KintoCoreService.UpdateBuildStatus, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -992,11 +992,11 @@ KintoKubeCoreServiceClient.prototype.updateBuildStatus = function updateBuildSta
   };
 };
 
-KintoKubeCoreServiceClient.prototype.updateBuildCommitSha = function updateBuildCommitSha(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.updateBuildCommitSha = function updateBuildCommitSha(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.UpdateBuildCommitSha, {
+  var client = grpc.unary(KintoCoreService.UpdateBuildCommitSha, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1023,13 +1023,13 @@ KintoKubeCoreServiceClient.prototype.updateBuildCommitSha = function updateBuild
   };
 };
 
-KintoKubeCoreServiceClient.prototype.watchBlocksHealthStatuses = function watchBlocksHealthStatuses(requestMessage, metadata) {
+KintoCoreServiceClient.prototype.watchBlocksHealthStatuses = function watchBlocksHealthStatuses(requestMessage, metadata) {
   var listeners = {
     data: [],
     end: [],
     status: []
   };
-  var client = grpc.invoke(KintoKubeCoreService.WatchBlocksHealthStatuses, {
+  var client = grpc.invoke(KintoCoreService.WatchBlocksHealthStatuses, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1062,13 +1062,13 @@ KintoKubeCoreServiceClient.prototype.watchBlocksHealthStatuses = function watchB
   };
 };
 
-KintoKubeCoreServiceClient.prototype.watchJobsStatus = function watchJobsStatus(requestMessage, metadata) {
+KintoCoreServiceClient.prototype.watchJobsStatus = function watchJobsStatus(requestMessage, metadata) {
   var listeners = {
     data: [],
     end: [],
     status: []
   };
-  var client = grpc.invoke(KintoKubeCoreService.WatchJobsStatus, {
+  var client = grpc.invoke(KintoCoreService.WatchJobsStatus, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1101,13 +1101,13 @@ KintoKubeCoreServiceClient.prototype.watchJobsStatus = function watchJobsStatus(
   };
 };
 
-KintoKubeCoreServiceClient.prototype.watchBlocksMetrics = function watchBlocksMetrics(requestMessage, metadata) {
+KintoCoreServiceClient.prototype.watchBlocksMetrics = function watchBlocksMetrics(requestMessage, metadata) {
   var listeners = {
     data: [],
     end: [],
     status: []
   };
-  var client = grpc.invoke(KintoKubeCoreService.WatchBlocksMetrics, {
+  var client = grpc.invoke(KintoCoreService.WatchBlocksMetrics, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1140,13 +1140,13 @@ KintoKubeCoreServiceClient.prototype.watchBlocksMetrics = function watchBlocksMe
   };
 };
 
-KintoKubeCoreServiceClient.prototype.watchConsoleLogs = function watchConsoleLogs(requestMessage, metadata) {
+KintoCoreServiceClient.prototype.watchConsoleLogs = function watchConsoleLogs(requestMessage, metadata) {
   var listeners = {
     data: [],
     end: [],
     status: []
   };
-  var client = grpc.invoke(KintoKubeCoreService.WatchConsoleLogs, {
+  var client = grpc.invoke(KintoCoreService.WatchConsoleLogs, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1179,11 +1179,11 @@ KintoKubeCoreServiceClient.prototype.watchConsoleLogs = function watchConsoleLog
   };
 };
 
-KintoKubeCoreServiceClient.prototype.getKintoConfiguration = function getKintoConfiguration(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.getKintoConfiguration = function getKintoConfiguration(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.GetKintoConfiguration, {
+  var client = grpc.unary(KintoCoreService.GetKintoConfiguration, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1210,11 +1210,11 @@ KintoKubeCoreServiceClient.prototype.getKintoConfiguration = function getKintoCo
   };
 };
 
-KintoKubeCoreServiceClient.prototype.createCustomDomainName = function createCustomDomainName(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.createCustomDomainName = function createCustomDomainName(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.CreateCustomDomainName, {
+  var client = grpc.unary(KintoCoreService.CreateCustomDomainName, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1241,11 +1241,11 @@ KintoKubeCoreServiceClient.prototype.createCustomDomainName = function createCus
   };
 };
 
-KintoKubeCoreServiceClient.prototype.deleteCustomDomainName = function deleteCustomDomainName(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.deleteCustomDomainName = function deleteCustomDomainName(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.DeleteCustomDomainName, {
+  var client = grpc.unary(KintoCoreService.DeleteCustomDomainName, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1272,11 +1272,11 @@ KintoKubeCoreServiceClient.prototype.deleteCustomDomainName = function deleteCus
   };
 };
 
-KintoKubeCoreServiceClient.prototype.checkCustomDomainName = function checkCustomDomainName(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.checkCustomDomainName = function checkCustomDomainName(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.CheckCustomDomainName, {
+  var client = grpc.unary(KintoCoreService.CheckCustomDomainName, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1303,11 +1303,11 @@ KintoKubeCoreServiceClient.prototype.checkCustomDomainName = function checkCusto
   };
 };
 
-KintoKubeCoreServiceClient.prototype.enablePublicURL = function enablePublicURL(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.enablePublicURL = function enablePublicURL(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.EnablePublicURL, {
+  var client = grpc.unary(KintoCoreService.EnablePublicURL, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1334,11 +1334,11 @@ KintoKubeCoreServiceClient.prototype.enablePublicURL = function enablePublicURL(
   };
 };
 
-KintoKubeCoreServiceClient.prototype.disablePublicURL = function disablePublicURL(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.disablePublicURL = function disablePublicURL(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.DisablePublicURL, {
+  var client = grpc.unary(KintoCoreService.DisablePublicURL, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1365,13 +1365,13 @@ KintoKubeCoreServiceClient.prototype.disablePublicURL = function disablePublicUR
   };
 };
 
-KintoKubeCoreServiceClient.prototype.startTeleport = function startTeleport(requestMessage, metadata) {
+KintoCoreServiceClient.prototype.startTeleport = function startTeleport(requestMessage, metadata) {
   var listeners = {
     data: [],
     end: [],
     status: []
   };
-  var client = grpc.invoke(KintoKubeCoreService.StartTeleport, {
+  var client = grpc.invoke(KintoCoreService.StartTeleport, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1404,11 +1404,11 @@ KintoKubeCoreServiceClient.prototype.startTeleport = function startTeleport(requ
   };
 };
 
-KintoKubeCoreServiceClient.prototype.syncTime = function syncTime(requestMessage, metadata, callback) {
+KintoCoreServiceClient.prototype.syncTime = function syncTime(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(KintoKubeCoreService.SyncTime, {
+  var client = grpc.unary(KintoCoreService.SyncTime, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -1435,5 +1435,5 @@ KintoKubeCoreServiceClient.prototype.syncTime = function syncTime(requestMessage
   };
 };
 
-exports.KintoKubeCoreServiceClient = KintoKubeCoreServiceClient;
+exports.KintoCoreServiceClient = KintoCoreServiceClient;
 

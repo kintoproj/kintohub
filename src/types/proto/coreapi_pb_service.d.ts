@@ -6,348 +6,348 @@ import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty
 import * as models_pb from "./models_pb";
 import {grpc} from "@improbable-eng/grpc-web";
 
-type KintoKubeCoreServiceGetEnvironment = {
+type KintoCoreServiceGetEnvironment = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.EnvironmentQueryRequest;
   readonly responseType: typeof models_pb.Environment;
 };
 
-type KintoKubeCoreServiceGetEnvironments = {
+type KintoCoreServiceGetEnvironments = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof google_protobuf_empty_pb.Empty;
   readonly responseType: typeof models_pb.Environments;
 };
 
-type KintoKubeCoreServiceCreateEnvironment = {
+type KintoCoreServiceCreateEnvironment = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.CreateEnvironmentRequest;
   readonly responseType: typeof models_pb.Environment;
 };
 
-type KintoKubeCoreServiceUpdateEnvironment = {
+type KintoCoreServiceUpdateEnvironment = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.UpdateEnvironmentRequest;
   readonly responseType: typeof models_pb.Environment;
 };
 
-type KintoKubeCoreServiceDeleteEnvironment = {
+type KintoCoreServiceDeleteEnvironment = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.DeleteEnvironmentRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceCreateBlock = {
+type KintoCoreServiceCreateBlock = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.CreateBlockRequest;
   readonly responseType: typeof coreapi_pb.BlockUpdateResponse;
 };
 
-type KintoKubeCoreServiceDeployBlockUpdate = {
+type KintoCoreServiceDeployBlockUpdate = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.DeployBlockRequest;
   readonly responseType: typeof coreapi_pb.BlockUpdateResponse;
 };
 
-type KintoKubeCoreServiceTriggerDeploy = {
+type KintoCoreServiceTriggerDeploy = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.TriggerDeployRequest;
   readonly responseType: typeof coreapi_pb.BlockUpdateResponse;
 };
 
-type KintoKubeCoreServiceRollbackBlock = {
+type KintoCoreServiceRollbackBlock = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.RollbackBlockRequest;
   readonly responseType: typeof coreapi_pb.BlockUpdateResponse;
 };
 
-type KintoKubeCoreServiceGetBlocks = {
+type KintoCoreServiceGetBlocks = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.BlockQueryRequest;
   readonly responseType: typeof models_pb.Blocks;
 };
 
-type KintoKubeCoreServiceGetBlock = {
+type KintoCoreServiceGetBlock = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.BlockQueryRequest;
   readonly responseType: typeof models_pb.Block;
 };
 
-type KintoKubeCoreServiceDeleteBlock = {
+type KintoCoreServiceDeleteBlock = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.DeleteBlockRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceSuspendBlock = {
+type KintoCoreServiceSuspendBlock = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.SuspendBlockRequest;
   readonly responseType: typeof coreapi_pb.BlockUpdateResponse;
 };
 
-type KintoKubeCoreServiceWatchReleasesStatus = {
+type KintoCoreServiceWatchReleasesStatus = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: true;
   readonly requestType: typeof coreapi_pb.BlockQueryRequest;
   readonly responseType: typeof models_pb.ReleasesStatus;
 };
 
-type KintoKubeCoreServiceKillBlockInstance = {
+type KintoCoreServiceKillBlockInstance = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.KillBlockInstanceRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceAbortRelease = {
+type KintoCoreServiceAbortRelease = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.AbortBlockReleaseRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceTagRelease = {
+type KintoCoreServiceTagRelease = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.TagReleaseRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServicePromoteRelease = {
+type KintoCoreServicePromoteRelease = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.PromoteReleaseRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceGenReleaseConfigFromKintoFile = {
+type KintoCoreServiceGenReleaseConfigFromKintoFile = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.GenReleaseConfigFromKintoFileRepoRequest;
   readonly responseType: typeof models_pb.ReleaseConfig;
 };
 
-type KintoKubeCoreServiceWatchBuildLogs = {
+type KintoCoreServiceWatchBuildLogs = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: true;
   readonly requestType: typeof coreapi_pb.WatchBuildLogsRequest;
   readonly responseType: typeof models_pb.Logs;
 };
 
-type KintoKubeCoreServiceUpdateBuildStatus = {
+type KintoCoreServiceUpdateBuildStatus = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.UpdateBuildStatusRequest;
   readonly responseType: typeof coreapi_pb.UpdateBuildStatusResponse;
 };
 
-type KintoKubeCoreServiceUpdateBuildCommitSha = {
+type KintoCoreServiceUpdateBuildCommitSha = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.UpdateBuildCommitShaRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceWatchBlocksHealthStatuses = {
+type KintoCoreServiceWatchBlocksHealthStatuses = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: true;
   readonly requestType: typeof coreapi_pb.EnvironmentQueryRequest;
   readonly responseType: typeof models_pb.BlockStatuses;
 };
 
-type KintoKubeCoreServiceWatchJobsStatus = {
+type KintoCoreServiceWatchJobsStatus = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: true;
   readonly requestType: typeof coreapi_pb.BlockQueryRequest;
   readonly responseType: typeof models_pb.JobStatus;
 };
 
-type KintoKubeCoreServiceWatchBlocksMetrics = {
+type KintoCoreServiceWatchBlocksMetrics = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: true;
   readonly requestType: typeof coreapi_pb.BlockQueryRequest;
   readonly responseType: typeof models_pb.BlocksMetrics;
 };
 
-type KintoKubeCoreServiceWatchConsoleLogs = {
+type KintoCoreServiceWatchConsoleLogs = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: true;
   readonly requestType: typeof coreapi_pb.WatchConsoleLogsRequest;
   readonly responseType: typeof models_pb.ConsoleLog;
 };
 
-type KintoKubeCoreServiceGetKintoConfiguration = {
+type KintoCoreServiceGetKintoConfiguration = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof google_protobuf_empty_pb.Empty;
   readonly responseType: typeof models_pb.KintoConfiguration;
 };
 
-type KintoKubeCoreServiceCreateCustomDomainName = {
+type KintoCoreServiceCreateCustomDomainName = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.CustomDomainNameRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceDeleteCustomDomainName = {
+type KintoCoreServiceDeleteCustomDomainName = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.CustomDomainNameRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceCheckCustomDomainName = {
+type KintoCoreServiceCheckCustomDomainName = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.CustomDomainNameRequest;
   readonly responseType: typeof coreapi_pb.CheckCustomDomainNameResponse;
 };
 
-type KintoKubeCoreServiceEnablePublicURL = {
+type KintoCoreServiceEnablePublicURL = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.EnablePublicURLRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceDisablePublicURL = {
+type KintoCoreServiceDisablePublicURL = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.DisablePublicURLRequest;
   readonly responseType: typeof google_protobuf_empty_pb.Empty;
 };
 
-type KintoKubeCoreServiceStartTeleport = {
+type KintoCoreServiceStartTeleport = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: true;
   readonly requestType: typeof coreapi_pb.TeleportRequest;
   readonly responseType: typeof coreapi_pb.TeleportResponse;
 };
 
-type KintoKubeCoreServiceSyncTime = {
+type KintoCoreServiceSyncTime = {
   readonly methodName: string;
-  readonly service: typeof KintoKubeCoreService;
+  readonly service: typeof KintoCoreService;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof coreapi_pb.SyncTimeRequest;
   readonly responseType: typeof coreapi_pb.SyncTimeResponse;
 };
 
-export class KintoKubeCoreService {
+export class KintoCoreService {
   static readonly serviceName: string;
-  static readonly GetEnvironment: KintoKubeCoreServiceGetEnvironment;
-  static readonly GetEnvironments: KintoKubeCoreServiceGetEnvironments;
-  static readonly CreateEnvironment: KintoKubeCoreServiceCreateEnvironment;
-  static readonly UpdateEnvironment: KintoKubeCoreServiceUpdateEnvironment;
-  static readonly DeleteEnvironment: KintoKubeCoreServiceDeleteEnvironment;
-  static readonly CreateBlock: KintoKubeCoreServiceCreateBlock;
-  static readonly DeployBlockUpdate: KintoKubeCoreServiceDeployBlockUpdate;
-  static readonly TriggerDeploy: KintoKubeCoreServiceTriggerDeploy;
-  static readonly RollbackBlock: KintoKubeCoreServiceRollbackBlock;
-  static readonly GetBlocks: KintoKubeCoreServiceGetBlocks;
-  static readonly GetBlock: KintoKubeCoreServiceGetBlock;
-  static readonly DeleteBlock: KintoKubeCoreServiceDeleteBlock;
-  static readonly SuspendBlock: KintoKubeCoreServiceSuspendBlock;
-  static readonly WatchReleasesStatus: KintoKubeCoreServiceWatchReleasesStatus;
-  static readonly KillBlockInstance: KintoKubeCoreServiceKillBlockInstance;
-  static readonly AbortRelease: KintoKubeCoreServiceAbortRelease;
-  static readonly TagRelease: KintoKubeCoreServiceTagRelease;
-  static readonly PromoteRelease: KintoKubeCoreServicePromoteRelease;
-  static readonly GenReleaseConfigFromKintoFile: KintoKubeCoreServiceGenReleaseConfigFromKintoFile;
-  static readonly WatchBuildLogs: KintoKubeCoreServiceWatchBuildLogs;
-  static readonly UpdateBuildStatus: KintoKubeCoreServiceUpdateBuildStatus;
-  static readonly UpdateBuildCommitSha: KintoKubeCoreServiceUpdateBuildCommitSha;
-  static readonly WatchBlocksHealthStatuses: KintoKubeCoreServiceWatchBlocksHealthStatuses;
-  static readonly WatchJobsStatus: KintoKubeCoreServiceWatchJobsStatus;
-  static readonly WatchBlocksMetrics: KintoKubeCoreServiceWatchBlocksMetrics;
-  static readonly WatchConsoleLogs: KintoKubeCoreServiceWatchConsoleLogs;
-  static readonly GetKintoConfiguration: KintoKubeCoreServiceGetKintoConfiguration;
-  static readonly CreateCustomDomainName: KintoKubeCoreServiceCreateCustomDomainName;
-  static readonly DeleteCustomDomainName: KintoKubeCoreServiceDeleteCustomDomainName;
-  static readonly CheckCustomDomainName: KintoKubeCoreServiceCheckCustomDomainName;
-  static readonly EnablePublicURL: KintoKubeCoreServiceEnablePublicURL;
-  static readonly DisablePublicURL: KintoKubeCoreServiceDisablePublicURL;
-  static readonly StartTeleport: KintoKubeCoreServiceStartTeleport;
-  static readonly SyncTime: KintoKubeCoreServiceSyncTime;
+  static readonly GetEnvironment: KintoCoreServiceGetEnvironment;
+  static readonly GetEnvironments: KintoCoreServiceGetEnvironments;
+  static readonly CreateEnvironment: KintoCoreServiceCreateEnvironment;
+  static readonly UpdateEnvironment: KintoCoreServiceUpdateEnvironment;
+  static readonly DeleteEnvironment: KintoCoreServiceDeleteEnvironment;
+  static readonly CreateBlock: KintoCoreServiceCreateBlock;
+  static readonly DeployBlockUpdate: KintoCoreServiceDeployBlockUpdate;
+  static readonly TriggerDeploy: KintoCoreServiceTriggerDeploy;
+  static readonly RollbackBlock: KintoCoreServiceRollbackBlock;
+  static readonly GetBlocks: KintoCoreServiceGetBlocks;
+  static readonly GetBlock: KintoCoreServiceGetBlock;
+  static readonly DeleteBlock: KintoCoreServiceDeleteBlock;
+  static readonly SuspendBlock: KintoCoreServiceSuspendBlock;
+  static readonly WatchReleasesStatus: KintoCoreServiceWatchReleasesStatus;
+  static readonly KillBlockInstance: KintoCoreServiceKillBlockInstance;
+  static readonly AbortRelease: KintoCoreServiceAbortRelease;
+  static readonly TagRelease: KintoCoreServiceTagRelease;
+  static readonly PromoteRelease: KintoCoreServicePromoteRelease;
+  static readonly GenReleaseConfigFromKintoFile: KintoCoreServiceGenReleaseConfigFromKintoFile;
+  static readonly WatchBuildLogs: KintoCoreServiceWatchBuildLogs;
+  static readonly UpdateBuildStatus: KintoCoreServiceUpdateBuildStatus;
+  static readonly UpdateBuildCommitSha: KintoCoreServiceUpdateBuildCommitSha;
+  static readonly WatchBlocksHealthStatuses: KintoCoreServiceWatchBlocksHealthStatuses;
+  static readonly WatchJobsStatus: KintoCoreServiceWatchJobsStatus;
+  static readonly WatchBlocksMetrics: KintoCoreServiceWatchBlocksMetrics;
+  static readonly WatchConsoleLogs: KintoCoreServiceWatchConsoleLogs;
+  static readonly GetKintoConfiguration: KintoCoreServiceGetKintoConfiguration;
+  static readonly CreateCustomDomainName: KintoCoreServiceCreateCustomDomainName;
+  static readonly DeleteCustomDomainName: KintoCoreServiceDeleteCustomDomainName;
+  static readonly CheckCustomDomainName: KintoCoreServiceCheckCustomDomainName;
+  static readonly EnablePublicURL: KintoCoreServiceEnablePublicURL;
+  static readonly DisablePublicURL: KintoCoreServiceDisablePublicURL;
+  static readonly StartTeleport: KintoCoreServiceStartTeleport;
+  static readonly SyncTime: KintoCoreServiceSyncTime;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
@@ -378,7 +378,7 @@ interface BidirectionalStream<ReqT, ResT> {
   on(type: 'status', handler: (status: Status) => void): BidirectionalStream<ReqT, ResT>;
 }
 
-export class KintoKubeCoreServiceClient {
+export class KintoCoreServiceClient {
   readonly serviceHost: string;
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);

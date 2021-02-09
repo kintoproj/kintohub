@@ -1,5 +1,5 @@
 import {
-  KKCMethod,
+  CoreMethod,
   Stream,
   StreamCallbacks,
   WatchStream,
@@ -22,7 +22,7 @@ export const useGRPCWrapper = () => {
     ref.current = clients;
   }, [clients]);
 
-  return <T, P>(grpc: KKCMethod<T, P>, params: P): Promise<T> => {
+  return <T, P>(grpc: CoreMethod<T, P>, params: P): Promise<T> => {
     const { kkcClient } = ref.current!;
     return new Promise((resolve, reject) => {
       // TODO: remove token
@@ -55,17 +55,17 @@ export const useGRPCStream = <T, P>(
     let stream: Stream;
 
     const onError = async (code: number, message: string) => {
-      if (
-        isPermissionDenied(message) ||
-        isGRPCStreamTimeout(code, message)
-      ) {
+      if (isPermissionDenied(message) || isGRPCStreamTimeout(code, message)) {
         try {
           retryCount += 1;
           if (retryCount >= 3) {
             // TODO: check analytics and see if this really happens a lot
             // if this happens a lot we should not force user to logout
             // but fix the issue first
-            trackError('USE_GRPC_STREAM_TOO_MANY_RETRIES', new Error(`${retryCount} retries.`));
+            trackError(
+              'USE_GRPC_STREAM_TOO_MANY_RETRIES',
+              new Error(`${retryCount} retries.`)
+            );
             return;
           }
           const pStream = stream;

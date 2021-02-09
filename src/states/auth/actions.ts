@@ -8,7 +8,7 @@ import {
 } from 'states/app/actions';
 import { RootState } from 'states/types';
 import { Environment } from 'types/environment';
-import { KintoKubeCoreServiceClient } from 'types/proto/coreapi_pb_service';
+import { KintoCoreServiceClient } from 'types/proto/coreapi_pb_service';
 import { push } from 'connected-react-router';
 import { PATH_CREATE_ENV, PATH_MAINTENANCE } from 'libraries/constants';
 import { getEnvironments } from 'libraries/grpc/environment';
@@ -79,7 +79,7 @@ export const doLogout = (
 ): Promise<void> => {};
 
 export const doSyncTime = (
-  client: KintoKubeCoreServiceClient
+  client: KintoCoreServiceClient
 ): ThunkAction<Promise<void>, RootState, {}, AnyAction> => async (
   dispatch: ThunkDispatch<{}, {}, AnyAction>
 ): Promise<void> => {
@@ -93,12 +93,12 @@ export const doSyncTime = (
  * Get the list of environments before everything else
  */
 export const doInitBackgroundLoad = (
-  kkcClient: KintoKubeCoreServiceClient
+  coreClient: KintoCoreServiceClient
 ): ThunkAction<Promise<void>, RootState, {}, AnyAction> => async (
   dispatch: ThunkDispatch<{}, {}, AnyAction>
 ): Promise<void> => {
   try {
-    const envs = await getEnvironments(kkcClient);
+    const envs = await getEnvironments(coreClient);
     const envList = envs.getItemsList();
     // If no environment, force him to create one
     // FIXME: debug
@@ -109,7 +109,7 @@ export const doInitBackgroundLoad = (
       return;
     }
 
-    const config = await getKintoConfig(kkcClient, '', {});
+    const config = await getKintoConfig(coreClient, '', {});
     dispatch(updateKintoConfig(config!));
 
     dispatch(setInitialLoading(false));
@@ -131,7 +131,7 @@ export const doInitBackgroundLoad = (
  * Should be called after doInitBackgroundLoad. Need to have the environments loaded
  */
 export const doEnvBackgroundLoad = (
-  kkcClient: KintoKubeCoreServiceClient,
+  coreClient: KintoCoreServiceClient,
   envId: string
 ): ThunkAction<Promise<void>, RootState, {}, AnyAction> => async (
   dispatch: ThunkDispatch<{}, {}, AnyAction>,

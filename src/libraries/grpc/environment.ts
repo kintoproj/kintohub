@@ -4,13 +4,13 @@ import {
   EnvironmentQueryRequest,
   UpdateEnvironmentRequest,
 } from 'types/proto/coreapi_pb';
-import { KintoKubeCoreServiceClient } from 'types/proto/coreapi_pb_service';
+import { KintoCoreServiceClient } from 'types/proto/coreapi_pb_service';
 import { Environment, Environments } from 'types/proto/models_pb';
 
-import { invokeGRPC, KKCMethod } from './common';
+import { invokeGRPC, CoreMethod } from './common';
 
 export const getEnvironments = (
-  client: KintoKubeCoreServiceClient
+  client: KintoCoreServiceClient
 ): Promise<Environments> => {
   return new Promise((resolve, reject) => {
     client.getEnvironments(new Empty(), (err, message) => {
@@ -24,7 +24,7 @@ export const getEnvironments = (
 };
 
 export const createEnvironment = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   envName: string
 ): Promise<Environment> => {
   const req = new CreateEnvironmentRequest();
@@ -42,10 +42,10 @@ export const createEnvironment = (
 };
 
 // eslint-disable-next-line max-len
-export const getOrCreateEnvironment: KKCMethod<
+export const getOrCreateEnvironment: CoreMethod<
   Environment,
   { envId: string }
-> = (client: KintoKubeCoreServiceClient, token: string, { envId }) => {
+> = (client: KintoCoreServiceClient, token: string, { envId }) => {
   const req = new EnvironmentQueryRequest();
   req.setId(envId);
 
@@ -57,8 +57,8 @@ export const getOrCreateEnvironment: KKCMethod<
   );
 };
 
-export const deleteEnvironment: KKCMethod<Empty, { envId: string }> = (
-  client: KintoKubeCoreServiceClient,
+export const deleteEnvironment: CoreMethod<Empty, { envId: string }> = (
+  client: KintoCoreServiceClient,
   token: string,
   { envId }
 ) => {
@@ -75,7 +75,7 @@ export const deleteEnvironment: KKCMethod<Empty, { envId: string }> = (
 
 // eslint-disable-next-line max-len
 export const updateEnvironment = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   envId: string,
   envName: string
 ): Promise<Environment> => {

@@ -1,12 +1,12 @@
 import {
-  KintoKubeCoreServiceClient,
+  KintoCoreServiceClient,
   ServiceError,
 } from 'types/proto/coreapi_pb_service';
 import { grpc } from '@improbable-eng/grpc-web';
 
 export interface WatchStream<T, P> {
   (
-    client: KintoKubeCoreServiceClient,
+    client: KintoCoreServiceClient,
     token: string,
     params: P,
     callbacks: StreamCallbacks<T>
@@ -22,15 +22,11 @@ export interface Stream {
   cancel: () => void;
 }
 
-export interface KKCMethod<T, P> {
-  (
-    client: KintoKubeCoreServiceClient,
-    token: string,
-    params: P
-  ): Promise<T | null>;
+export interface CoreMethod<T, P> {
+  (client: KintoCoreServiceClient, token: string, params: P): Promise<T | null>;
 }
 
-export interface KKCNativeCall<T, R> {
+export interface CoreNativeCall<T, R> {
   (
     requestMessage: T,
     metadata: grpc.Metadata,
@@ -39,10 +35,10 @@ export interface KKCNativeCall<T, R> {
 }
 
 export const invokeGRPC = <T, R>(
-  call: KKCNativeCall<T, R>,
+  call: CoreNativeCall<T, R>,
   token: string,
   req: T,
-  context: KintoKubeCoreServiceClient
+  context: KintoCoreServiceClient
 ): Promise<R | null> => {
   const headers = new grpc.Metadata();
   headers.set('Authorization', `Bearer ${token}`);

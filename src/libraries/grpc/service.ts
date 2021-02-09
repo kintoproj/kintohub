@@ -15,10 +15,7 @@ import {
   WatchConsoleLogsRequest,
 } from 'types/proto/coreapi_pb';
 /* eslint-disable max-len */
-import {
-  KintoKubeCoreServiceClient,
-  Status,
-} from 'types/proto/coreapi_pb_service';
+import { KintoCoreServiceClient, Status } from 'types/proto/coreapi_pb_service';
 import {
   Block,
   Blocks,
@@ -35,7 +32,7 @@ import { grpc } from '@improbable-eng/grpc-web';
 
 import {
   invokeGRPC,
-  KKCMethod,
+  CoreMethod,
   Stream,
   StreamCallbacks,
   WatchStream,
@@ -46,8 +43,8 @@ export interface ConsoleLogMessage {
   instanceName: string;
 }
 
-export const getServices: KKCMethod<Blocks, { envId: string }> = (
-  client: KintoKubeCoreServiceClient,
+export const getServices: CoreMethod<Blocks, { envId: string }> = (
+  client: KintoCoreServiceClient,
   token: string,
   { envId }
 ): Promise<Blocks | null> => {
@@ -62,11 +59,11 @@ export const getServices: KKCMethod<Blocks, { envId: string }> = (
   );
 };
 
-export const getService: KKCMethod<
+export const getService: CoreMethod<
   Block,
   { envId: string; serviceName: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { envId, serviceName }
 ): Promise<Block | null> => {
@@ -85,7 +82,7 @@ export const getService: KKCMethod<
   );
 };
 
-export const createService: KKCMethod<
+export const createService: CoreMethod<
   BlockUpdateResponse,
   {
     name: string;
@@ -94,7 +91,7 @@ export const createService: KKCMethod<
     runConfig: RunConfig;
   }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { name, envId, buildConfig, runConfig }
 ) => {
@@ -112,7 +109,7 @@ export const createService: KKCMethod<
   );
 };
 
-export const editService: KKCMethod<
+export const editService: CoreMethod<
   BlockUpdateResponse,
   {
     serviceName: string;
@@ -122,7 +119,7 @@ export const editService: KKCMethod<
     runConfig: RunConfig;
   }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { serviceName, envId, buildConfig, runConfig, releaseId }
 ) => {
@@ -141,14 +138,10 @@ export const editService: KKCMethod<
   );
 };
 
-export const deleteService: KKCMethod<
+export const deleteService: CoreMethod<
   Empty,
   { serviceName: string; envId: string }
-> = (
-  client: KintoKubeCoreServiceClient,
-  token: string,
-  { serviceName, envId }
-) => {
+> = (client: KintoCoreServiceClient, token: string, { serviceName, envId }) => {
   const req = new DeleteBlockRequest();
   req.setName(serviceName);
   req.setEnvid(envId);
@@ -161,10 +154,10 @@ export const deleteService: KKCMethod<
   );
 };
 
-export const restartPod: KKCMethod<
+export const restartPod: CoreMethod<
   Empty,
   { podName: string; envId: string }
-> = (client: KintoKubeCoreServiceClient, token: string, { envId, podName }) => {
+> = (client: KintoCoreServiceClient, token: string, { envId, podName }) => {
   const req = new KillBlockInstanceRequest();
   req.setEnvid(envId);
   req.setId(podName);
@@ -177,11 +170,11 @@ export const restartPod: KKCMethod<
   );
 };
 
-export const enablePublicUrl: KKCMethod<
+export const enablePublicUrl: CoreMethod<
   Empty,
   { serviceName: string; releaseId: string; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { envId, serviceName, releaseId }
 ) => {
@@ -198,14 +191,10 @@ export const enablePublicUrl: KKCMethod<
   );
 };
 
-export const disablePublicUrl: KKCMethod<
+export const disablePublicUrl: CoreMethod<
   Empty,
   { serviceName: string; envId: string }
-> = (
-  client: KintoKubeCoreServiceClient,
-  token: string,
-  { envId, serviceName }
-) => {
+> = (client: KintoCoreServiceClient, token: string, { envId, serviceName }) => {
   const req = new DisablePublicURLRequest();
   req.setEnvid(envId);
   req.setBlockname(serviceName);
@@ -224,14 +213,10 @@ export const disablePublicUrl: KKCMethod<
  * @param token
  * @param { serviceName, envId }
  */
-export const suspendService: KKCMethod<
+export const suspendService: CoreMethod<
   BlockUpdateResponse,
   { serviceName: string; envId: string }
-> = (
-  client: KintoKubeCoreServiceClient,
-  token: string,
-  { envId, serviceName }
-) => {
+> = (client: KintoCoreServiceClient, token: string, { envId, serviceName }) => {
   const req = new SuspendBlockRequest();
   req.setEnvid(envId);
   req.setName(serviceName);
@@ -244,7 +229,7 @@ export const suspendService: KKCMethod<
   );
 };
 
-export const genReleaseConfigFromRepo: KKCMethod<
+export const genReleaseConfigFromRepo: CoreMethod<
   ReleaseConfig,
   {
     envId: string;
@@ -255,7 +240,7 @@ export const genReleaseConfigFromRepo: KKCMethod<
     githubUserToken: string;
   }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { envId, blockType, repo, branch, org, githubUserToken }
 ) => {
@@ -280,7 +265,7 @@ export const watchConsoleLogs: WatchStream<
   ConsoleLogMessage,
   { blockName: string; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { blockName, envId },
   callbacks
@@ -327,7 +312,7 @@ export const watchServiceHealth: WatchStream<
   BlockStatuses,
   { blockName: string | null; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { blockName, envId },
   callbacks: StreamCallbacks<BlockStatuses>
@@ -360,7 +345,7 @@ export const watchMetrics: WatchStream<
   BlocksMetrics,
   { blockName: string | null; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { blockName, envId },
   callbacks: StreamCallbacks<BlocksMetrics>
@@ -396,7 +381,7 @@ export const watchJobStatus: WatchStream<
   JobStatus,
   { blockName: string; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { blockName, envId },
   callbacks: StreamCallbacks<JobStatus>

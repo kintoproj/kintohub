@@ -1,5 +1,5 @@
 import { push } from 'connected-react-router';
-import { KKCMethod } from 'libraries/grpc/common';
+import { CoreMethod } from 'libraries/grpc/common';
 import { getOrCreateEnvironment } from 'libraries/grpc/environment';
 import { deleteService, getServices } from 'libraries/grpc/service';
 import { trackError } from 'libraries/helpers';
@@ -127,7 +127,7 @@ type FecthServicesOption = {
  * @param options
  */
 export const doFetchServices = (
-  grpcWrapper: <T, P>(grpc: KKCMethod<T, P>, params: P) => Promise<T>,
+  grpcWrapper: <T, P>(grpc: CoreMethod<T, P>, params: P) => Promise<T>,
   envId: string,
   options: FecthServicesOption
 ): ThunkAction<Promise<void>, RootState, {}, AnyAction> => async (
@@ -199,7 +199,7 @@ export const doFetchServices = (
 };
 
 export const doDeleteService = (
-  grpcWrapper: <T, P>(grpc: KKCMethod<T, P>, params: P) => Promise<T>,
+  grpcWrapper: <T, P>(grpc: CoreMethod<T, P>, params: P) => Promise<T>,
   envId: string,
   serviceName: string
 ): ThunkAction<Promise<void>, RootState, {}, AnyAction> => async (

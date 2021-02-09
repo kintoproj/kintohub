@@ -1,11 +1,11 @@
-import { KintoKubeCoreServiceClient } from 'types/proto/coreapi_pb_service';
+import { KintoCoreServiceClient } from 'types/proto/coreapi_pb_service';
 import { Empty } from 'google-protobuf/google/protobuf/empty_pb';
 import { KintoConfiguration } from 'types/proto/models_pb';
 import { SyncTimeRequest, SyncTimeResponse } from 'types/proto/coreapi_pb';
-import { invokeGRPC, KKCMethod } from './common';
+import { invokeGRPC, CoreMethod } from './common';
 
-export const getKintoConfig: KKCMethod<KintoConfiguration, {}> = (
-  client: KintoKubeCoreServiceClient
+export const getKintoConfig: CoreMethod<KintoConfiguration, {}> = (
+  client: KintoCoreServiceClient
 ): Promise<KintoConfiguration | null> => {
   return invokeGRPC<Empty, KintoConfiguration>(
     client.getKintoConfiguration,
@@ -15,8 +15,8 @@ export const getKintoConfig: KKCMethod<KintoConfiguration, {}> = (
   );
 };
 
-export const syncTime: KKCMethod<SyncTimeResponse, { sendTimeMs: number }> = (
-  client: KintoKubeCoreServiceClient,
+export const syncTime: CoreMethod<SyncTimeResponse, { sendTimeMs: number }> = (
+  client: KintoCoreServiceClient,
   token,
   { sendTimeMs }
 ): Promise<SyncTimeResponse | null> => {

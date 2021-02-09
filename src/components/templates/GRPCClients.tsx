@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { REACT_APP_SERVER_URL } from 'libraries/envVars';
-import { KintoKubeCoreServiceClient } from 'types/proto/coreapi_pb_service';
+import { KintoCoreServiceClient } from 'types/proto/coreapi_pb_service';
 
 export type GRPCClients = {
-  kkcClient: KintoKubeCoreServiceClient;
+  kkcClient: KintoCoreServiceClient;
 };
 
 const GRPCClientContext = React.createContext<GRPCClients>({
-  kkcClient: new KintoKubeCoreServiceClient(REACT_APP_SERVER_URL),
+  kkcClient: new KintoCoreServiceClient(REACT_APP_SERVER_URL),
 });
 
 type Props = {
@@ -18,7 +18,7 @@ export const GRPCClientsProvider = ({ children }: Props) => {
   return (
     <GRPCClientContext.Provider
       value={{
-        kkcClient: new KintoKubeCoreServiceClient(REACT_APP_SERVER_URL),
+        kkcClient: new KintoCoreServiceClient(REACT_APP_SERVER_URL),
       }}
     >
       {children}

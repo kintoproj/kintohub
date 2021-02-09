@@ -1,5 +1,5 @@
 import {
-  KintoKubeCoreServiceClient,
+  KintoCoreServiceClient,
   Status as PBStatus,
 } from 'types/proto/coreapi_pb_service';
 import {
@@ -22,7 +22,7 @@ import {
   StreamCallbacks,
   Stream,
   WatchStream,
-  KKCMethod,
+  CoreMethod,
   invokeGRPC,
 } from './common';
 
@@ -32,11 +32,11 @@ export type ReleaseStatusMap = {
 };
 
 // eslint-disable-next-line max-len
-export const abortRelease: KKCMethod<
+export const abortRelease: CoreMethod<
   Empty,
   { blockName: string; envId: string; releaseId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { blockName, envId, releaseId }
 ) => {
@@ -54,11 +54,11 @@ export const abortRelease: KKCMethod<
 };
 
 // eslint-disable-next-line max-len
-export const rollbackRelease: KKCMethod<
+export const rollbackRelease: CoreMethod<
   BlockUpdateResponse,
   { envId: string; releaseId: string; serviceName: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { envId, releaseId, serviceName }
 ) => {
@@ -76,11 +76,11 @@ export const rollbackRelease: KKCMethod<
 };
 
 // eslint-disable-next-line max-len
-export const tagRelease: KKCMethod<
+export const tagRelease: CoreMethod<
   Empty,
   { tagName: string; envId: string; releaseId: string; serviceName: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { envId, releaseId, serviceName, tagName }
 ) => {
@@ -99,7 +99,7 @@ export const tagRelease: KKCMethod<
 };
 
 // eslint-disable-next-line max-len
-export const promoteRelease: KKCMethod<
+export const promoteRelease: CoreMethod<
   Empty,
   {
     tagName: string;
@@ -109,7 +109,7 @@ export const promoteRelease: KKCMethod<
     serviceName: string;
   }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { envId, releaseId, serviceName, targetEnvId, tagName }
 ) => {
@@ -131,11 +131,11 @@ export const promoteRelease: KKCMethod<
 // We are not using this anymore as we need to tackle Sixer Game's migration
 // They are blocked coz the naked domain on cloudflare has some issues
 // eslint-disable-next-line max-len
-export const checkCustomDomainName: KKCMethod<
+export const checkCustomDomainName: CoreMethod<
   CheckCustomDomainNameResponse,
   { serviceName: string; cname: string; domainName: string; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { serviceName, cname, domainName, envId }
 ) => {
@@ -154,11 +154,11 @@ export const checkCustomDomainName: KKCMethod<
 };
 
 // eslint-disable-next-line max-len
-export const createCustomDomainName: KKCMethod<
+export const createCustomDomainName: CoreMethod<
   Empty,
   { serviceName: string; cname: string; domainName: string; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { serviceName, cname, domainName, envId }
 ) => {
@@ -177,11 +177,11 @@ export const createCustomDomainName: KKCMethod<
 };
 
 // eslint-disable-next-line max-len
-export const deleteCustomDomainName: KKCMethod<
+export const deleteCustomDomainName: CoreMethod<
   Empty,
   { serviceName: string; cname: string; domainName: string; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { serviceName, cname, domainName, envId }
 ) => {
@@ -204,7 +204,7 @@ export const watchBuildLogs: WatchStream<
   string,
   { releaseId: string; blockName: string; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { releaseId, blockName, envId },
   callbacks: StreamCallbacks<string>
@@ -243,7 +243,7 @@ export const watchReleaseStatus: WatchStream<
   ReleaseStatusMap,
   { blockName: string; envId: string }
 > = (
-  client: KintoKubeCoreServiceClient,
+  client: KintoCoreServiceClient,
   token: string,
   { blockName, envId },
   callbacks: StreamCallbacks<ReleaseStatusMap>
