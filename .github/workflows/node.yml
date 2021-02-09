@@ -1,10 +1,8 @@
-name: Test Build
+name: Node Build
 
 on:
   pull_request:
-    branches:
-      - master
-      - hotfix
+    branches: [ main ]
 
 jobs:
   build:
@@ -13,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [12.x, 14.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -21,7 +19,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn lint
-    - run: yarn build
+    - name: Install Dependencies
+      run: yarn install
+    - name: Linting
+      run: yarn lint
+    - name: Build
+      run: yarn build
       
