@@ -1,4 +1,4 @@
-# Kinto Build Api
+# Kinto Build
 
 > Kinto-build is a GRPC API responsible for creating build/deployment workflows.
 
@@ -6,19 +6,19 @@
 
 * Go version `1.13` or higher
 * Kubernetes version `1.16` or higher if `WORKFLOW_ENGINE` == `argo` 
-  * argo controller version `2.8.1` or higher
+* Argo controller version `2.8.1` or higher
 
 ## Dependencies
 - [kinto-core](https://github.com/kintoproj/kinto-core)
-- [utils-go](https://github.com/kintohub/utils-go) our own reuseable utils functions
+- [utils-go](https://github.com/kintohub/utils-go) our own reusable utils functions
 
 ## Overview
 
 It is called by [kinto-core](https://github.com/kintoproj/kinto-core).   
-The API contracts are store under [there](https://github.com/kintoproj/kinto-core/blob/master/proto/workflowapi.proto).
+The API contracts are store under [there](https://github.com/kintoproj/kinto-core/blob/main/proto/workflowapi.proto).
 
 Kinto-build supports
-- [Argo](https://github.com/argoproj/argo) (current workflow system on KintoHub). Need an access to Kubernetes.
+- [Argo](https://github.com/argoproj/argo)
 
 ## Argo
 

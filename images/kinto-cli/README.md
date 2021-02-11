@@ -11,7 +11,7 @@
 
 ## Dependencies
 - [kinto-core](https://github.com/kintoproj/kinto-core)
-- [utils-go](https://github.com/kintohub/utils-go) our own reuseable utils functions
+- [utils-go](https://github.com/kintohub/utils-go) our own reusable utils functions
 
 ## Development setup
 

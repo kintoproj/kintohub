@@ -6,11 +6,8 @@
 FROM golang:1.13-alpine as kinto-cli
 RUN apk update && apk add --no-cache git
 WORKDIR /app
-ARG GIT_TOKEN
-RUN git config --global url."https://${GIT_TOKEN}@github.com".insteadOf "https://github.com"
 COPY kinto-cli/go.mod .
 COPY kinto-cli/go.sum .
-RUN GOPRIVATE=github.com/kintohub go mod download
 COPY kinto-cli/main.go .
 COPY kinto-cli/cmd ./cmd
 COPY kinto-cli/cmd-dockerfile ./cmd-dockerfile
@@ -22,11 +19,8 @@ RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-w -s" -o kinto-cli
 FROM golang:1.13-alpine as kinto-deploy
 RUN apk update && apk add --no-cache git
 WORKDIR /app
-ARG GIT_TOKEN
-RUN git config --global url."https://${GIT_TOKEN}@github.com".insteadOf "https://github.com"
 COPY kinto-deploy/go.mod .
 COPY kinto-deploy/go.sum .
-RUN GOPRIVATE=github.com/kintohub go mod download
 COPY kinto-deploy/cmd ./cmd
 COPY kinto-deploy/internal ./internal
 RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-w -s" -o kinto-deploy cmd/main.go
