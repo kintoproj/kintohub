@@ -43,7 +43,7 @@ func InitConfig() {
 	BuildApiHost = utilsGoConfig.GetString("BUILD_API_HOST", "kinto-builder:8080")
 
 	CertManagerIssuerEmail = utilsGoConfig.GetStringOrDie("CERT_MANAGER_ISSUER_EMAIL")
-	CertManagerIssuerServer = utilsGoConfig.GetStringOrDie("CERT_MANAGER_ISSUER_SERVER")
+	CertManagerIssuerServer = utilsGoConfig.GetString("CERT_MANAGER_ISSUER_SERVER", "https://acme-staging-v02.api.letsencrypt.org/directory")
 
 	KintoDevProxyEnabled = utilsGoConfig.GetBool("KINTO_DEV_PROXY_ENABLED", true)
 	ProxlessFQDN = utilsGoConfig.GetString("PROXLESS_FQDN", "kinto-proxless.kintohub.svc.cluster.local")

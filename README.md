@@ -10,12 +10,34 @@
 * Kubernetes version `1.16` or higher
 
 ## Dependencies
-- [utils-go](https://github.com/kintohub/utils-go) our own reuseable utils functions
+- [utils-go](https://github.com/kintohub/utils-go) our own reusable utils functions
+
+## Configuration
+
+The following table lists the configurable parameters of the core and their default values.
+
+|            Parameter              |                                  Description                               |                           Default                        | Required |
+|-----------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------|----------|
+| `LOG_LEVEL`                       | Log levels from `verbose` to `panic`                                       | `debug`                                                  |          |
+| `KUBE_CONFIG_PATH`                | Only for local development                                                 |                                                          |          |
+| `GRPC_PORT`                       | GRPC port                                                                  | `8080`                                                   |          |
+| `GRPC_WEB_PORT`                   | GRPC web port                                                              | `8090`                                                   |          |
+| `CORS_ALLOWED_HOST`               | Specify the hosts allowed to call the server                               | `*`                                                      |          |                        
+| `CONSOLE_LOGS_HISTORY_SECONDS`    | Max time in seconds to query the logs                                      | `86400`                                                  |          |
+| `CONSOLE_LOGS_MAX_LINES_ON_START` | Max number of lines to query the logs                                      | `1000`                                                   |          |
+| `METRICS_UPDATE_TICK_SECONDS`     | Refresh frequency in seconds for querying the metrics                      | `5`                                                      |          |
+| `HEALTH_UPDATE_TICK_SECONDS`      | Refresh frequency in seconds for querying the health of the services       | `1`                                                      |          |
+| `KINTO_DOMAIN`                    | Domain/Subdomain used to create external name for api and web app services |                                                          | Yes      |
+| `BUILD_API_HOST`                  | `kinto-builder` api host                                                   | `kinto-builder:8080`                                     |          |
+| `CERT_MANAGER_ISSUER_EMAIL`       | Email used on every certificate for every external service                 |                                                          | Yes      |
+| `CERT_MANAGER_ISSUER_SERVER`      | Let's encrypt server                                                       | `https://acme-staging-v02.api.letsencrypt.org/directory` |          |
+| `KINTO_DEV_PROXY_ENABLED`         | Is kinto-cli allowed to connect                                            | `true`                                                   |          |
+| `PROXLESS_FQDN`                   | Proxless kubernetes FQDN                                                   | `kinto-proxless.kintohub.svc.cluster.local`              |          |
 
 ## Development Setup
 
 Duplicate the `.env.example` file into a `.env` file.  
-Modify the variables if needed.
+Modify the variables if needed. See configuration above for more information.
 
 ```shell script
 $ go run cmd/main.go
@@ -34,7 +56,5 @@ We use [BloomRPC](https://github.com/uw-labs/bloomrpc)
 - The URL should be `localhost:PORT` (port is `GRPC_PORT` found in `.env`)
 
 ## Meta
-
-KintoHub Goons - [@KintoHub](https://twitter.com/kintohub)
 
 https://www.kintohub.com
