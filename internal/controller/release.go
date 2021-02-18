@@ -352,7 +352,7 @@ func submitReleaseWorkflow(
 				buildInterface.DeployCatalogRelease(release.BuildConfig.Repository, block.Name, release.Id, block.EnvId)
 		} else {
 			release.BuildConfig.Image =
-				fmt.Sprintf("%s/%s:%s", block.Id, release.BuildConfig.Repository.Branch, stripeReleaseId(release.Id))
+				fmt.Sprintf("%s:%s", block.Name, stripeReleaseId(release.Id))
 
 			isStaticBuild := release.RunConfig.Type == types.Block_JAMSTACK || release.RunConfig.Type == types.Block_STATIC_SITE
 			buildId, submitWorkflowErr =
