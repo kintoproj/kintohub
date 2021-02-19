@@ -8,6 +8,5 @@ COPY internal ./internal
 RUN GOOS=linux GOARCH=amd64 go build -ldflags="-X 'github.com/kintoproj/kinto-cli/internal/config.Version=${CLI_VERSION}'" -o kinto main.go
 
 FROM alpine
-WORKDIR /app
-COPY --from=builder /app .
-ENTRYPOINT ["/app/kinto"]
+COPY --from=builder /app/kinto /bin
+ENTRYPOINT ["kinto"]
