@@ -11,6 +11,7 @@ const (
 	CliConfigName                = "kinto.yaml"
 	KintoCoreHostKey             = "kintoCoreHost"
 	DefaultTeleportInterfacePort = "R:0.0.0.0"
+	CoreHostResetKey             = "reset"
 	DefaultClientAccessPort      = 5360
 	DefaultClientTeleportPort    = 8080
 	RedisPort                    = 6379
@@ -20,7 +21,7 @@ const (
 	MysqlPort                    = 3306
 )
 
-var DefaultkintoCoreHost = "core.oss.kintohub.net:443"
+var DefaultkintoCoreHost = ""
 var Version = "v0.0.1" //Needs to be a non-const for passing version at build time
 
 func GetKintoCoreHost() string {
