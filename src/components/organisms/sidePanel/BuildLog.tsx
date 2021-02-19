@@ -42,6 +42,9 @@ import { useCurrentReleaseState } from 'components/hooks/ReleaseHook';
 import { useBuffer } from 'components/hooks/BufferHook';
 import { ErrorThemeProvider } from 'components/molecules/ErrorThemeProvider';
 
+const GET_HELP_LINK =
+  'kinto::html::Need Help? <a href="https://github.com/kintoproj/kinto-core/issues" target="_blank">Check our issues page on Github! </a>';
+
 const Container = styled.div`
   height: 100%;
   width: 75vw;
@@ -201,8 +204,7 @@ export default ({ release, service }: Props) => {
                       ?.getHost()}</a>\n\n`
                   : `kinto::html::🔗 Private API access via <a href="http://${service.getName()}" onclick="return false;">http://${service.getName()}</a>\n\n`
               }` +
-              'kinto::html::Need Help? <a href="https://discordapp.com/invite/E2CMjKP" target="_blank">Chat with us on Discord</a>' +
-              '\n\n\n',
+              `${GET_HELP_LINK}\n\n\n`,
           });
         } else if (blockType === Block.Type.JAMSTACK) {
           localDispatch({
@@ -215,8 +217,7 @@ export default ({ release, service }: Props) => {
                 ?.getHost()}" target="_blank">https://${release
                 .getRunconfig()
                 ?.getHost()}</a>\n\n` +
-              'kinto::html::Need Help? <a href="https://discordapp.com/invite/E2CMjKP" target="_blank">Chat with us on Discord</a>' +
-              '\n\n\n',
+              `${GET_HELP_LINK}\n\n\n`,
           });
         } else if (blockType === Block.Type.CATALOG) {
           localDispatch({
@@ -226,8 +227,7 @@ export default ({ release, service }: Props) => {
               `${info('✅ Deployment successful.\n\n')}` +
               '\n\n' +
               'kinto::catalogaccess::\n\n' +
-              'kinto::html::Need Help? <a href="https://discordapp.com/invite/E2CMjKP" target="_blank">Chat with us on Discord</a>' +
-              '\n\n\n',
+              `${GET_HELP_LINK}\n\n\n`,
           });
         } else {
           localDispatch({
@@ -235,9 +235,7 @@ export default ({ release, service }: Props) => {
             log:
               '\n' +
               `${info('✅ Deployment successful.\n\n')}` +
-              '\n\n' +
-              'kinto::html::Need Help? <a href="https://discordapp.com/invite/E2CMjKP" target="_blank">Chat with us on Discord</a>' +
-              '\n\n\n',
+              `\n\n${GET_HELP_LINK}\n\n\n`,
           });
         }
       } else {
@@ -247,18 +245,14 @@ export default ({ release, service }: Props) => {
             '\n\n' +
             `${info('✅ Deployment was successful.\n\n')}` +
             'kinto::outdated::\n\n' +
-            'kinto::html::Need Help? <a href="https://discordapp.com/invite/E2CMjKP" target="_blank">Chat with us on Discord</a>' +
-            '\n\n\n',
+            `${GET_HELP_LINK}\n\n\n`,
         });
       }
     } else if (releaseState === Status.State.FAIL) {
       // Do not append the hint on FE. they are all handled on BE now
       localDispatch({
         type: 'APPEND_INFO',
-        log:
-          '\n' +
-          'kinto::html::Need Help? <a href="https://discordapp.com/invite/E2CMjKP" target="_blank">Chat with us on Discord</a>' +
-          '\n\n\n',
+        log: `\n${GET_HELP_LINK}\n\n\n`,
       });
     } else {
       // should not happen
