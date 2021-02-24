@@ -87,7 +87,7 @@ export default ({
 
   const { envId } = useAuthState();
   const { config, serverTimeOffset } = useAppState();
-  const { navigateToServiceReleasePage } = useServiceNavigate();
+  const { navigateToServiceReleaseLogPage } = useServiceNavigate();
 
   // TODO: the service name is the catalog name for now
   // in the future we may need a subtype for that
@@ -218,7 +218,10 @@ export default ({
               buildConfig,
               runConfig,
             });
-            navigateToServiceReleasePage(resp.getName());
+            navigateToServiceReleaseLogPage(
+              resp.getName(),
+              resp.getReleaseid()
+            );
           } else {
             const resp = await grpcWrapper(editService, {
               serviceName: service.getName(),
@@ -227,7 +230,10 @@ export default ({
               runConfig,
               releaseId: release.getId(),
             });
-            navigateToServiceReleasePage(resp.getName());
+            navigateToServiceReleaseLogPage(
+              resp.getName(),
+              resp.getReleaseid()
+            );
           }
         } catch (error) {
           dispatch(enqueueError('catalog-edit', error));
