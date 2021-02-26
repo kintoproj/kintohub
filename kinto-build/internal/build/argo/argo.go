@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
 	"github.com/argoproj/argo/pkg/client/clientset/versioned"
-	"github.com/argoproj/argo/workflow/util"
+	argoUtil "github.com/argoproj/argo/workflow/util"
 	"github.com/kintohub/utils-go/klog"
 	utilsGoServer "github.com/kintohub/utils-go/server"
 	"github.com/kintoproj/kinto-build/internal/build"
@@ -13,6 +13,7 @@ import (
 	"github.com/minio/minio-go/v6"
 	"golang.org/x/net/context"
 	corev1 "k8s.io/api/core/v1"
+	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/resource"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
@@ -315,14 +316,33 @@ func enrichTemplatesWithNodePoolInfo(templates []v1alpha1.Template, selectorValu
 }
 
 func (c *BuildClient) AbortRelease(ctx context.Context, buildId string) *utilsGoServer.Error {
+	// we check if workflow exists and if it is already finished
+	wf, err := c.argoClient.ArgoprojV1alpha1().Workflows(config.ArgoWorkflowNamespace).Get(buildId, v1.GetOptions{})
+
+	if err != nil {
+		if errors.IsNotFound(err) {
+			klog.Infof("Abort - Workflow not found %s", buildId)
+			return nil
+		} else {
+			klog.ErrorfWithErr(err, "Abort - Error getting workflow %s", buildId)
+			return utilsGoServer.NewInternalErrorWithErr(fmt.Sprintf("Abort - Error getting workflow %s", buildId), err)
+		}
+	}
+
+	// TODO we must send back the status to the core to set the right state in the config map
+	if wf.Status.FinishTime() != nil {
+		klog.Infof("Abort - Workflow %s already finished with status %s", buildId, wf.Status.Phase)
+		return nil
+	}
+
+	// stop workflow
 	// https://github.com/argoproj/argo/blob/release-2.8/workflow/util/util.go#L808-L835
-	err := util.StopWorkflow(
+	err = argoUtil.StopWorkflow(
 		c.argoClient.ArgoprojV1alpha1().Workflows(config.ArgoWorkflowNamespace), nil, buildId, "", "")
 
 	if err != nil {
-		klog.ErrorfWithErr(err, "Error stopping workflow %s.%s", buildId, config.ArgoWorkflowNamespace)
-		return utilsGoServer.NewInternalErrorWithErr(
-			fmt.Sprintf("Error stopping workflow %s.%s", buildId, config.ArgoWorkflowNamespace), err)
+		klog.ErrorfWithErr(err, "Abort - Error stopping workflow %s", buildId)
+		return utilsGoServer.NewInternalErrorWithErr(fmt.Sprintf("Abort - Error stopping workflow %s", buildId), err)
 	}
 
 	return nil
