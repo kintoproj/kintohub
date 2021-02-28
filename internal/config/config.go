@@ -20,6 +20,7 @@ var (
 	MetricsUpdateTickSeconds int
 	HealthUpdateTickSeconds  int
 
+	SSLEnabled              bool
 	CertManagerIssuerEmail  string
 	CertManagerIssuerServer string
 
@@ -42,8 +43,11 @@ func InitConfig() {
 	KintoDomain = utilsGoConfig.GetStringOrDie("KINTO_DOMAIN")
 	BuildApiHost = utilsGoConfig.GetString("BUILD_API_HOST", "kinto-builder:8080")
 
-	CertManagerIssuerEmail = utilsGoConfig.GetStringOrDie("CERT_MANAGER_ISSUER_EMAIL")
-	CertManagerIssuerServer = utilsGoConfig.GetString("CERT_MANAGER_ISSUER_SERVER", "https://acme-staging-v02.api.letsencrypt.org/directory")
+	SSLEnabled = utilsGoConfig.GetBool("SSL_ENABLED", false)
+	if SSLEnabled {
+		CertManagerIssuerEmail = utilsGoConfig.GetStringOrDie("CERT_MANAGER_ISSUER_EMAIL")
+		CertManagerIssuerServer = utilsGoConfig.GetString("CERT_MANAGER_ISSUER_SERVER", "https://acme-staging-v02.api.letsencrypt.org/directory")
+	}
 
 	KintoDevProxyEnabled = utilsGoConfig.GetBool("KINTO_DEV_PROXY_ENABLED", true)
 	ProxlessFQDN = utilsGoConfig.GetString("PROXLESS_FQDN", "kinto-proxless.kintohub.svc.cluster.local")

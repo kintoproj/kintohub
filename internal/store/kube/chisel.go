@@ -269,6 +269,7 @@ func createChiselService(kubeClient kubernetes.Interface, ctx context.Context, e
 		chiselAppName,
 		chiselAppName,
 		"",
+		config.SSLEnabled,
 		defaultServicePort,
 		genChiselHostName(envId),
 	)

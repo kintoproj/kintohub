@@ -28,6 +28,8 @@ const (
 )
 
 func TestKubeStore_EnableAndDisablePublicURL(t *testing.T) {
+	config.SSLEnabled = true
+
 	kubeStore := KubeStore{
 		kubeClient: fakekube.NewSimpleClientset(),
 	}
@@ -93,6 +95,8 @@ func TestKubeStore_EnableAndDisablePublicURL(t *testing.T) {
 }
 
 func TestKubeStore_UpsertAndDeleteCustomDomainNames(t *testing.T) {
+	config.SSLEnabled = true
+
 	kubeStore := KubeStore{
 		kubeClient:     fakekube.NewSimpleClientset(),
 		kubeCertClient: fakecert.NewSimpleClientset(),

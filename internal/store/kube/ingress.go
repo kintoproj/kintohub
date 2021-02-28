@@ -14,6 +14,7 @@ import (
 func upsertIngress(
 	kubeClient kubernetes.Interface,
 	namespace, name, svcName, tlsSecret string,
+	SSLEnabled bool,
 	protocol pkgtypes.RunConfig_Protocol,
 	hosts ...string) (*v1beta1.Ingress, error) {
 
@@ -23,14 +24,14 @@ func upsertIngress(
 		kubeClient.ExtensionsV1beta1().Ingresses(namespace).Get(context.TODO(), name, metav1.GetOptions{})
 
 	if k8serrors.IsNotFound(err) {
-		ingress := genIngressObject(name, svcName, tlsSecret, port, protocol, hosts...)
+		ingress := genIngressObject(name, svcName, tlsSecret, SSLEnabled, port, protocol, hosts...)
 		return kubeClient.ExtensionsV1beta1().Ingresses(namespace).Create(
 			context.TODO(), ingress, metav1.CreateOptions{})
 	} else if err != nil {
 		return nil, err
 	}
 
-	updateIngressObject(svcName, tlsSecret, port, protocol, existingIngress, hosts...)
+	updateIngressObject(svcName, tlsSecret, SSLEnabled, port, protocol, existingIngress, hosts...)
 	return kubeClient.ExtensionsV1beta1().Ingresses(namespace).Update(
 		context.TODO(), existingIngress, metav1.UpdateOptions{})
 }
@@ -49,7 +50,8 @@ func deleteIngress(kubeClient kubernetes.Interface, namespace, name string) erro
 }
 
 func genIngressObject(
-	name, svcName, tlsSecret string, port int32, protocol pkgtypes.RunConfig_Protocol, hosts ...string) *v1beta1.Ingress {
+	name, svcName, tlsSecret string, SSLEnabled bool, port int32,
+	protocol pkgtypes.RunConfig_Protocol, hosts ...string) *v1beta1.Ingress {
 
 	ingress := &v1beta1.Ingress{
 		ObjectMeta: metav1.ObjectMeta{
@@ -62,7 +64,7 @@ func genIngressObject(
 			},
 		},
 		Spec: v1beta1.IngressSpec{
-			TLS:   genTLS(hosts, tlsSecret),
+			TLS:   genTLS(SSLEnabled, hosts, tlsSecret),
 			Rules: genIngressRules(svcName, port, hosts...),
 		},
 	}
@@ -76,10 +78,11 @@ func genIngressObject(
 }
 
 func updateIngressObject(
-	svcName, tlsSecret string, port int32, protocol pkgtypes.RunConfig_Protocol, ingress *v1beta1.Ingress, hosts ...string) {
+	svcName, tlsSecret string, SSLEnabled bool, port int32,
+	protocol pkgtypes.RunConfig_Protocol, ingress *v1beta1.Ingress, hosts ...string) {
 
 	ingress.Spec.Rules = genIngressRules(svcName, port, hosts...)
-	ingress.Spec.TLS = genTLS(hosts, tlsSecret)
+	ingress.Spec.TLS = genTLS(SSLEnabled, hosts, tlsSecret)
 
 	if protocol == pkgtypes.RunConfig_GRPC {
 		ingress.Annotations["nginx.ingress.kubernetes.io/ssl-redirect"] = "true"
@@ -90,9 +93,13 @@ func updateIngressObject(
 	}
 }
 
-// all the ingress will be tls protected
+// if `SSLEnabled` == false, then return empty config
 // if `secretName` is empty, then it will use the default secret from the ingress controller
-func genTLS(hosts []string, tlsSecret string) []v1beta1.IngressTLS {
+func genTLS(SSLEnabled bool, hosts []string, tlsSecret string) []v1beta1.IngressTLS {
+	if !SSLEnabled {
+		return nil
+	}
+
 	tls := v1beta1.IngressTLS{
 		Hosts: hosts,
 	}

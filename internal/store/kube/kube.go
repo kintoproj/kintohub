@@ -57,7 +57,7 @@ func (k *KubeStore) EnablePublicURL(
 	defer klog.LogDuration(time.Now(), "EnablePublicURL")
 
 	// we don't need to provide the "tlsSecret" since it will use the default one from the ingress
-	_, err := upsertIngress(k.kubeClient, envId, blockName, blockName, "", protocol, hosts...)
+	_, err := upsertIngress(k.kubeClient, envId, blockName, blockName, "", config.SSLEnabled, protocol, hosts...)
 
 	if err != nil {
 		return utilsGoServer.NewInternalErrorWithErr(
@@ -90,23 +90,25 @@ func (k *KubeStore) UpsertCustomDomainNames(
 
 	genName := genCustomDomainResourceName(blockName)
 
-	_, err := upsertIssuer(k.kubeCertClient, genName, envId)
+	if config.SSLEnabled {
+		_, err := upsertIssuer(k.kubeCertClient, genName, envId)
 
-	if err != nil {
-		return utilsGoServer.NewInternalErrorWithErr(
-			fmt.Sprintf("error upserting issuer %s.%s", genName, envId),
-			err)
+		if err != nil {
+			return utilsGoServer.NewInternalErrorWithErr(
+				fmt.Sprintf("error upserting issuer %s.%s", genName, envId),
+				err)
+		}
+
+		_, err = upsertCertificate(k.kubeCertClient, genName, envId, domainNames)
+
+		if err != nil {
+			return utilsGoServer.NewInternalErrorWithErr(
+				fmt.Sprintf("error upserting certificate %s.%s", genName, envId),
+				err)
+		}
 	}
 
-	_, err = upsertCertificate(k.kubeCertClient, genName, envId, domainNames)
-
-	if err != nil {
-		return utilsGoServer.NewInternalErrorWithErr(
-			fmt.Sprintf("error upserting certificate %s.%s", genName, envId),
-			err)
-	}
-
-	_, err = upsertIngress(k.kubeClient, envId, genName, blockName, genName, protocol, domainNames...)
+	_, err := upsertIngress(k.kubeClient, envId, genName, blockName, genName, config.SSLEnabled, protocol, domainNames...)
 
 	if err != nil {
 		return utilsGoServer.NewInternalErrorWithErr(
