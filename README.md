@@ -1,4 +1,5 @@
 # Kinto Dashboard
+[![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA)
 
 Kintohub Dashboard is a general purpose, web-based UI for managing your [kinto-core](https://github.com/kintoproj/kinto-core). 
 It allows you to manage your applications deployed by kinto-core with ease.
