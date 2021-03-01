@@ -27,6 +27,7 @@ Visit our [installation guide](https://www.kintohub.com/getting-started/installa
 - [kinto-cli](https://github.com/kintoproj/kinto-cli) - CLI tooling connecting to `kinto-core`.
 - [kinto-helm](https://github.com/kintoproj/kinto-helm) - The Helm Chart repository for installation.
 - [kinto-docs](https://github.com/kintoproj/kinto-docs) - The main documentations hold at [www.kintohub.com](https://www.kintohub.com)
+- [kinto-examples](https://github.com/kintoproj/kinto-examples) - KintoHub example applications
 
 ## Community
 
