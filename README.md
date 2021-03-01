@@ -1,4 +1,5 @@
-# Kinto-Core
+# Kinto Core
+[![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA)
 
 > The core is the main API server called by the dashboard and the cli
 > It is a GRPC server  that interacts with Kubernetes.
