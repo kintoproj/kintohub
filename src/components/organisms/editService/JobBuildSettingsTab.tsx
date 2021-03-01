@@ -132,7 +132,6 @@ export default ({
                 variant="outlined"
                 label="Cron Pattern"
                 name="jobCronPattern"
-                disabled={isPromotedService}
                 helperText={
                   cron.isValidCron(formikProps.values.jobCronPattern)
                     ? cronstrue.toString(formikProps.values.jobCronPattern)
