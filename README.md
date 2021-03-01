@@ -1,4 +1,5 @@
 # Kinto CLI
+[![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA)
 
 Kinto CLI is a command line utility for accessing [kinto-core](https://github.com/kintoproj/kinto-core). Kinto CLI is written in Golang.
 
