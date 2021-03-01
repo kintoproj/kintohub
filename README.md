@@ -1,4 +1,5 @@
 # Kinto Builder
+[![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA)
 
 > Kinto Builder is a mono repository containing all the dependencies related to Building and Deploying services on KintoHub
 
