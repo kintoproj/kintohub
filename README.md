@@ -1,7 +1,7 @@
 # KintoHub
-
+[![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA)
 ![assets/kintohub-og.png](assets/kintohub-og.png)
-## What is Kintohub?
+## What is KintoHub?
 
 KintoHub is an open source build and deployment platform designed with a developer-friendly interface for Kubernetes.
 
@@ -10,16 +10,16 @@ KintoHub is an open source build and deployment platform designed with a develop
 - Generate TLS certificates automatically for supporting HTTPS for your applications    
 - Fullstack - you can deploy websites/APIs/jobs and even databases
 
-## Why Kintohub?
+## Why KintoHub?
 
 - You write the code, and we handle the rest
 - Cloud agnostic and can run on any Kubernetes cluster
 
-## Getting started
+## Getting Started
 
-Visit our [installation guide](https://www.kintohub.com/getting-started/installation)
+Visit our [installation guide](https://www.kintohub.com/getting-started/installation).
 
-## Projects
+## Kinto Projects
 
 - [kinto-core](https://github.com/kintoproj/kinto-core) - The API server for managing resources on kubernetes.
 - [kinto-builder](https://github.com/kintoproj/kinto-core) - Facilitate the build/deploy workflow for `kinto-core`.
@@ -28,7 +28,3 @@ Visit our [installation guide](https://www.kintohub.com/getting-started/installa
 - [kinto-helm](https://github.com/kintoproj/kinto-helm) - The Helm Chart repository for installation.
 - [kinto-docs](https://github.com/kintoproj/kinto-docs) - The main documentations hold at [www.kintohub.com](https://www.kintohub.com).
 - [kinto-examples](https://github.com/kintoproj/kinto-examples) - KintoHub example applications.
-
-## Community
-
-[Slack](https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA)
