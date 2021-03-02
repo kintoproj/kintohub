@@ -109,7 +109,7 @@ func genWorkflowUpdateStatusTemplate(envId, blockName, releaseId, kintoCoreHost 
 }
 
 func genMainWorkflowTemplate() v1alpha1.Template {
-	return v1alpha1.Template{
+	template := v1alpha1.Template{
 		Name: utils.WorkflowMainWorkflowTemplateName,
 		Container: &corev1.Container{
 			Name:            "main",
@@ -117,10 +117,6 @@ func genMainWorkflowTemplate() v1alpha1.Template {
 			ImagePullPolicy: getImagePullPolicy(config.ArgoWorkflowImagePullPolicy),
 			WorkingDir:      workflowWorkingDir,
 			VolumeMounts: []corev1.VolumeMount{
-				{
-					Name:      workflowVolumeName,
-					MountPath: workflowWorkingDir,
-				},
 				// https://github.com/GoogleContainerTools/kaniko/blob/master/examples/pod.yaml
 				{
 					Name:      config.ArgoWorkflowDockerSecret,
@@ -130,6 +126,17 @@ func genMainWorkflowTemplate() v1alpha1.Template {
 			Resources: genWorkflowResource(),
 		},
 	}
+
+	if config.ArgoWorkflowVolumeSize != "" {
+		template.Container.VolumeMounts = append(
+			template.Container.VolumeMounts,
+			corev1.VolumeMount{
+				Name:      workflowVolumeName,
+				MountPath: workflowWorkingDir,
+			})
+	}
+
+	return template
 }
 
 func genWorkflowResource() corev1.ResourceRequirements {
