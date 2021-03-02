@@ -37,6 +37,8 @@ var (
 	ArgoWorkflowVolumeSize         string
 	ArgoWorkflowMemoryLimit        string
 	ArgoWorkflowCPULimit           string
+	ArgoWorkflowMemoryRequest      string
+	ArgoWorkflowCPURequest         string
 )
 
 func LoadConfig() {
@@ -67,7 +69,9 @@ func LoadConfig() {
 	ArgoWorkflowImagePullPolicy = config.GetString("ARGO_WORKFLOW_IMAGE_PULL_POLICY", "IfNotPresent")
 	ArgoWorkflowMainImage = config.GetStringOrDie("ARGO_WORKFLOW_MAIN_IMAGE")
 	ArgoWorkflowCliImage = config.GetStringOrDie("ARGO_WORKFLOW_CLI_IMAGE")
-	ArgoWorkflowVolumeSize = config.GetString("ARGO_WORKFLOW_VOLUME_SIZE", "1Gi")
-	ArgoWorkflowMemoryLimit = config.GetString("ARGO_WORKFLOW_MEMORY_LIMIT", "2Gi")
-	ArgoWorkflowCPULimit = config.GetString("ARGO_WORKFLOW_CPU_LIMIT", "1")
+	ArgoWorkflowVolumeSize = config.GetString("ARGO_WORKFLOW_VOLUME_SIZE", "")
+	ArgoWorkflowMemoryLimit = config.GetString("ARGO_WORKFLOW_MEMORY_LIMIT", "")
+	ArgoWorkflowCPULimit = config.GetString("ARGO_WORKFLOW_CPU_LIMIT", "")
+	ArgoWorkflowMemoryRequest = config.GetString("ARGO_WORKFLOW_MEMORY_REQUEST", "")
+	ArgoWorkflowCPURequest = config.GetString("ARGO_WORKFLOW_CPU_REQUEST", "")
 }

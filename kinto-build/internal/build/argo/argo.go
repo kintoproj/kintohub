@@ -76,8 +76,6 @@ func submitWorkflow(
 	exitHandlerNeeded bool,
 	templates []v1alpha1.Template) (string, *utilsGoServer.Error) {
 
-	volumeSize := resource.MustParse(config.ArgoWorkflowVolumeSize)
-
 	workflowObject := &v1alpha1.Workflow{
 		ObjectMeta: v1.ObjectMeta{
 			GenerateName: name,
@@ -108,14 +106,6 @@ func submitWorkflow(
 						},
 					},
 				},
-				{
-					Name: workflowVolumeName,
-					VolumeSource: corev1.VolumeSource{
-						EmptyDir: &corev1.EmptyDirVolumeSource{
-							SizeLimit: &volumeSize,
-						},
-					},
-				},
 			},
 			ServiceAccountName: config.ArgoWorkflowServiceAccount,
 			NodeSelector:       nil,
@@ -125,6 +115,21 @@ func submitWorkflow(
 			},
 			ActiveDeadlineSeconds: pointer.Int64Ptr(int64(config.WorkflowTimeout)),
 		},
+	}
+
+	if config.ArgoWorkflowVolumeSize != "" {
+		volumeSize := resource.MustParse(config.ArgoWorkflowVolumeSize)
+
+		workflowObject.Spec.Volumes = append(
+			workflowObject.Spec.Volumes,
+			corev1.Volume{
+				Name: workflowVolumeName,
+				VolumeSource: corev1.VolumeSource{
+					EmptyDir: &corev1.EmptyDirVolumeSource{
+						SizeLimit: &volumeSize,
+					},
+				},
+			})
 	}
 
 	if exitHandlerNeeded {
