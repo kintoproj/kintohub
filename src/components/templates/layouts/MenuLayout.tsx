@@ -204,9 +204,9 @@ const DefaultLayout = ({ children, ...rest }: React.PropsWithChildren<{}>) => {
     id: 'menu-popover',
     actions: [
       {
-        label: 'Discord Support',
+        label: 'Slack Support',
         onClick: () => {
-          window.open('https://discordapp.com/invite/jqDHRxD', '_blank');
+          window.open('https://slack.kintohub.com', '_blank');
         },
       },
       {
