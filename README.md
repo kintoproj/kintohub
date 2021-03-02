@@ -1,7 +1,7 @@
-# KintoHub
+![assets/kintohub-og.png](assets/kintohub-og.png)
+
 [![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](http://slack.kintohub.com/)
 
-![assets/kintohub-og.png](assets/kintohub-og.png)
 ## What is KintoHub?
 
 KintoHub is an open source build and deployment platform designed with a developer-friendly interface for Kubernetes.
