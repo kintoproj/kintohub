@@ -60,15 +60,15 @@ func suspendCronJob(kubeClient kubernetes.Interface, blockName, namespace string
 		return nil
 	}
 
-	type patchStringValue struct {
+	type patchBoolValue struct {
 		Op    string `json:"op"`
 		Path  string `json:"path"`
-		Value string `json:"value"`
+		Value bool   `json:"value"`
 	}
-	payload := []patchStringValue{{
+	payload := []patchBoolValue{{
 		Op:    "replace",
 		Path:  "/spec/suspend",
-		Value: "true",
+		Value: true,
 	}}
 
 	payloadBytes, err := json.Marshal(payload)
