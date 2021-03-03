@@ -2,7 +2,7 @@
 
 [![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://slack.kintohub.com)
 
-## What is KintoHub?
+## What is Kintohub?
 
 KintoHub is an open source build and deployment platform designed with a developer-friendly interface for Kubernetes.
 
@@ -11,14 +11,14 @@ KintoHub is an open source build and deployment platform designed with a develop
 - Generate TLS certificates automatically for supporting HTTPS for your applications    
 - Fullstack - you can deploy websites/APIs/jobs and even databases
 
-## Why KintoHub?
+## Why Kintohub?
 
 - You write the code, and we handle the rest
 - Cloud agnostic and can run on any Kubernetes cluster
 
 ## Getting Started
 
-Visit our [installation guide](https://www.kintohub.com/getting-started/installation).
+See our [installation guide](https://www.kintohub.com/getting-started/installation).
 
 ## Kinto Projects
 
