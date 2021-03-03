@@ -1,6 +1,6 @@
 ![assets/kintohub-og.png](assets/kintohub-og.png)
 
-[![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](http://slack.kintohub.com/)
+[![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://slack.kintohub.com)
 
 ## What is KintoHub?
 
