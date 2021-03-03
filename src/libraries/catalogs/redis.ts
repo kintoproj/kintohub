@@ -4,7 +4,7 @@ const CatalogSchemaRedisSQL: CatalogScheme = {
   type: 'Database',
   name: 'Redis',
   key: 'redis',
-  repo: 'https://github.com/kintohub/catalog-redis',
+  repo: 'https://github.com/kintoproj/catalog-redis',
   branch: 'master',
   tabs: [
     {

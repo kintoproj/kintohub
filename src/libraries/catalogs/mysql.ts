@@ -4,7 +4,7 @@ const CatalogSchemaPostgreSQL: CatalogScheme = {
   type: 'Database',
   name: 'MySQL',
   key: 'mysql',
-  repo: 'https://github.com/kintohub/catalog-mysql',
+  repo: 'https://github.com/kintoproj/catalog-mysql',
   branch: 'master',
   tabs: [
     {

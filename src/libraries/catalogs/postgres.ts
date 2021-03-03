@@ -4,7 +4,7 @@ const CatalogSchemaPostgreSQL: CatalogScheme = {
   type: 'Database',
   name: 'PostgreSQL',
   key: 'postgresql',
-  repo: 'https://github.com/kintohub/catalog-postgresql',
+  repo: 'https://github.com/kintoproj/catalog-postgresql',
   branch: 'master',
   tabs: [
     {

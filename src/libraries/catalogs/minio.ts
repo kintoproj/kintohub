@@ -4,7 +4,7 @@ const CatalogSchemaMinio: CatalogScheme = {
   type: 'Storage',
   name: 'Minio',
   key: 'minio',
-  repo: 'https://github.com/kintohub/catalog-minio',
+  repo: 'https://github.com/kintoproj/catalog-minio',
   branch: 'master',
   tabs: [
     {

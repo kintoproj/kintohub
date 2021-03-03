@@ -56,7 +56,7 @@ export default ({
           </Typography>
           <Typography variant="caption" className="sub-title">
             {subTitle}
-          </Typography>Ï
+          </Typography>
         </Grid>
         <Grid item xs={10} md={2} />
         <Grid item xs={2} md={2}>
