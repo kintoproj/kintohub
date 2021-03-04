@@ -81,6 +81,7 @@ func genJobObject(release *types.Release) *batchv1.Job {
 					Labels: types.EnrichLabels(release.Labels, release.Id),
 				},
 				Spec: v1.PodSpec{
+					ImagePullSecrets: genImagePullSecrets(release.ImagePullSecret),
 					Containers: []v1.Container{
 						{
 							Name:      release.BlockName,

@@ -16,16 +16,17 @@ const (
 
 type Release struct {
 	// common fields
-	Id           string            `json:"id"`
-	BlockId      string            `json:"blockId"`
-	BlockName    string            `json:"blockName"`
-	EnvId        string            `json:"envId"`
-	Image        string            `json:"image"`
-	Cpu          string            `json:"cpu"`
-	Memory       string            `json:"memory"`
-	Labels       map[string]string `json:"labels"`
-	EnvVars      map[string]string `json:"envVars"`
-	TimeoutInSec int               `json:"timeout"`
+	Id              string            `json:"id"`
+	BlockId         string            `json:"blockId"`
+	BlockName       string            `json:"blockName"`
+	EnvId           string            `json:"envId"`
+	Image           string            `json:"image"`
+	Cpu             string            `json:"cpu"`
+	Memory          string            `json:"memory"`
+	Labels          map[string]string `json:"labels"`
+	EnvVars         map[string]string `json:"envVars"`
+	TimeoutInSec    int               `json:"timeout"`
+	ImagePullSecret string            `json:"imagePullSecret"`
 
 	// helm chart
 	ChartPath           string `json:"chartPath"`
@@ -66,6 +67,7 @@ func ConvertKintoCoreReleaseToKDRelease(
 			LabelEnvId:           envId,
 			consts.OwnerLabelKey: consts.OwnerLabelValue,
 		},
+		ImagePullSecret: config.ImagePullSecret,
 	}
 
 	if kintoCoreRelease.RunConfig != nil {

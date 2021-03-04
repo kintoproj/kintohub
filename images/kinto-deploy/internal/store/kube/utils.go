@@ -82,3 +82,14 @@ func genEnvVars(envMap map[string]string) []corev1.EnvVar {
 	}
 	return envVars
 }
+
+func genImagePullSecrets(imagePullSecret string) []corev1.LocalObjectReference {
+	if imagePullSecret != "" {
+		return []corev1.LocalObjectReference{
+			{
+				Name: imagePullSecret,
+			},
+		}
+	}
+	return []corev1.LocalObjectReference{}
+}

@@ -14,6 +14,7 @@ var (
 	KubeConfigPath string
 
 	ImageRegistryHost string
+	ImagePullSecret   string
 
 	Namespace   string
 	ReleaseId   string
@@ -28,6 +29,7 @@ func LoadConfig() {
 	KubeConfigPath = os.Getenv("KUBE_CONFIG_PATH")
 
 	ImageRegistryHost = config.GetStringOrDie("IMAGE_REGISTRY_HOST")
+	ImagePullSecret = os.Getenv("IMAGE_PULL_SECRET")
 
 	Namespace = config.GetStringOrDie("NAMESPACE")
 	ReleaseId = os.Getenv("RELEASE_ID")

@@ -37,6 +37,7 @@ func Test_deploymentFullFlow(t *testing.T) {
 					Labels: types.EnrichLabels(release.Labels, release.Id),
 				},
 				Spec: corev1.PodSpec{
+					ImagePullSecrets: []corev1.LocalObjectReference{},
 					Affinity: &corev1.Affinity{
 						PodAntiAffinity: &corev1.PodAntiAffinity{
 							RequiredDuringSchedulingIgnoredDuringExecution: []corev1.PodAffinityTerm{

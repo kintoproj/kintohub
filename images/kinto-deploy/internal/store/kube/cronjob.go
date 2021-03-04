@@ -112,6 +112,7 @@ func genCronJobObject(release *types.Release) *v1beta1.CronJob {
 							Labels: types.EnrichLabels(release.Labels, release.Id),
 						},
 						Spec: v1.PodSpec{
+							ImagePullSecrets: genImagePullSecrets(release.ImagePullSecret),
 							Containers: []v1.Container{
 								{
 									Name:      release.BlockName,

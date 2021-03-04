@@ -140,6 +140,7 @@ func genDeploymentObject(release *types.Release) *appsv1.Deployment {
 					Labels: types.EnrichLabels(release.Labels, release.Id),
 				},
 				Spec: v1.PodSpec{
+					ImagePullSecrets: genImagePullSecrets(release.ImagePullSecret),
 					Affinity: &v1.Affinity{
 						PodAntiAffinity: &v1.PodAntiAffinity{
 							RequiredDuringSchedulingIgnoredDuringExecution: []v1.PodAffinityTerm{

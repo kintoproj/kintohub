@@ -13,4 +13,5 @@ const (
 	envVarGitInitEnabled        = "KINTO_CLI_GIT_INIT_ENABLED"
 	envVarKintoCliDockerEnabled = "KINTO_CLI_DOCKERFILE_ENABLED"
 	envVarBuildSvcEnabled       = "BUILD_SVC_ENABLED"
+	envVarImagePullSecret       = "IMAGE_PULL_SECRET"
 )

@@ -189,6 +189,7 @@ func genBuildAndDeployWorkflow(
 	envVars = append(envVars, genEnvVarsKintoBuildSvc(buildConfig)...)
 
 	envVars = append(envVars, genEnvVarsKintoDeploy(envId, blockName, releaseId, types.Release_DEPLOY)...)
+	envVars = append(envVars, corev1.EnvVar{Name: envVarImagePullSecret, Value: config.ArgoWorkflowDockerSecret})
 
 	template := genMainWorkflowTemplate()
 	template.Container.Env = envVars
@@ -200,6 +201,7 @@ func genDeployOnlyWorkflow(envId, blockName, releaseId string, releaseType types
 	var envVars []corev1.EnvVar
 
 	envVars = append(envVars, genEnvVarsKintoDeploy(envId, blockName, releaseId, releaseType)...)
+	envVars = append(envVars, corev1.EnvVar{Name: envVarImagePullSecret, Value: config.ArgoWorkflowDockerSecret})
 
 	template := genMainWorkflowTemplate()
 	template.Container.Env = envVars
