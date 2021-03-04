@@ -3,6 +3,7 @@ package kube
 import (
 	"context"
 	"fmt"
+	"github.com/kintoproj/kinto-core/internal/config"
 	"time"
 
 	"k8s.io/client-go/kubernetes"
@@ -29,11 +30,15 @@ func (k *KubeStore) GetEnvironment(envId string) (*types.Environment, *utilsGoSe
 		Name: ns.Labels[consts.EnvNameLabelKey],
 	}
 
-	// TODO see how to upsert network policy in a better place - having it here is useful for processing all
-	// the existing namespaces.
 	_, err := upsertNetworkPolicy(k.kubeClient, envId)
 	if err != nil { // we don't return the error since it does not impact the user
 		klog.ErrorfWithErr(err, "error upserting the network policy for namespace %s", envId)
+	}
+
+	// duplicate kinto build docker secret into user namespace
+	_, err = upsertDockerSecret(k.kubeClient, config.KintoBuilderDockerSecret, config.KintoCoreNamespace, envId)
+	if err != nil { // we return an error since it will impact the build
+		return nil, utilsGoServer.NewInternalErrorWithErr("could not upsert docker secret", err)
 	}
 
 	return env, nil

@@ -26,6 +26,9 @@ var (
 
 	KintoDevProxyEnabled bool
 	ProxlessFQDN         string
+
+	KintoCoreNamespace       string
+	KintoBuilderDockerSecret string
 )
 
 func InitConfig() {
@@ -51,4 +54,7 @@ func InitConfig() {
 
 	KintoDevProxyEnabled = utilsGoConfig.GetBool("KINTO_DEV_PROXY_ENABLED", true)
 	ProxlessFQDN = utilsGoConfig.GetString("PROXLESS_FQDN", "kinto-proxless.kintohub.svc.cluster.local")
+
+	KintoCoreNamespace = utilsGoConfig.GetString("KINTO_CORE_NAMESPACE", "kintohub")
+	KintoBuilderDockerSecret = utilsGoConfig.GetString("KINTO_BUILDER_DOCKER_SECRET", "kinto-builder-workflow-docker")
 }
