@@ -99,6 +99,7 @@ func genCronJobObject(release *types.Release) *v1beta1.CronJob {
 		},
 		Spec: v1beta1.CronJobSpec{
 			Schedule:          release.JobSpec.CronPattern,
+			Suspend:           pointer.BoolPtr(false),
 			ConcurrencyPolicy: "Forbid",
 			JobTemplate: v1beta1.JobTemplateSpec{
 				ObjectMeta: metav1.ObjectMeta{
@@ -136,6 +137,7 @@ func genCronJobObject(release *types.Release) *v1beta1.CronJob {
 
 func updateCronJobObject(release *types.Release, cronJob *v1beta1.CronJob) {
 	cronJob.Spec.Schedule = release.JobSpec.CronPattern
+	cronJob.Spec.Suspend = pointer.BoolPtr(false)
 	cronJob.Spec.JobTemplate.Spec.ActiveDeadlineSeconds = pointer.Int64Ptr(int64(release.JobSpec.TimeoutInSec))
 	cronJob.Spec.JobTemplate.Spec.Template.ObjectMeta.Labels = types.EnrichLabels(release.Labels, release.Id)
 	for i := range cronJob.Spec.JobTemplate.Spec.Template.Spec.Containers {

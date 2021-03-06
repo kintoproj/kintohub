@@ -31,6 +31,7 @@ func Test_upsertCronJob(t *testing.T) {
 		},
 		Spec: v1beta1.CronJobSpec{
 			Schedule:          release.JobSpec.CronPattern,
+			Suspend:           pointer.BoolPtr(false),
 			ConcurrencyPolicy: "Forbid",
 			JobTemplate: v1beta1.JobTemplateSpec{
 				ObjectMeta: metav1.ObjectMeta{
