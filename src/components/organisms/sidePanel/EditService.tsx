@@ -542,6 +542,7 @@ export default ({
                   isCreate={isCreate}
                   service={service}
                   release={release}
+                  serviceType={serviceType}
                   isPromotedService={isPromotedService}
                   {...formikProps}
                 />

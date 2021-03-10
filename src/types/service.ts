@@ -5,6 +5,7 @@ import {
   Block,
   BuildConfig,
   JobStatus as JobStatusModel,
+  RunConfig
 } from 'types/proto/models_pb';
 import { Moment } from 'moment';
 
@@ -40,6 +41,7 @@ export interface EditServicePageValues {
   dockerfile: string;
   port: string;
   subfolderPath: string;
+  protocol: ProtocolType;
 
   // only for static websites
   staticOutputPath: string;
@@ -86,6 +88,7 @@ export interface ServiceMetrics {
 export type ServiceStateType = BlockStatus.StateMap[keyof BlockStatus.StateMap];
 export type ServiceType = Block.TypeMap[keyof Block.TypeMap];
 export type LanguageType = BuildConfig.LanguageMap[keyof BuildConfig.LanguageMap];
+export type ProtocolType = RunConfig.ProtocolMap[keyof RunConfig.ProtocolMap];
 
 export type JobStateType = JobStatusModel.StateMap[keyof JobStatusModel.StateMap];
 

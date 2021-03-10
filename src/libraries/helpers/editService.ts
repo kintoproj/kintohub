@@ -8,25 +8,19 @@ import {
   MESSAGE_INVALID_CRON_PATTERN,
   MESSAGE_PORT_MUST_BE_INTEGER,
   MESSAGE_STATIC_OUTPUT_PATH_MUST_BE_RELATIVE,
-  MESSAGE_SUBFOLDER_PATH_MUST_BE_RELATIVE,
+  MESSAGE_SUBFOLDER_PATH_MUST_BE_RELATIVE
 } from 'libraries/constants';
 import { REACT_APP_SLEEP_MODE_TTL_MINUTES } from 'libraries/envVars';
 import { getIndexFromValue, getValueFromIndex, round } from 'libraries/helpers';
 import { KintoConfig } from 'types';
 import CatalogSchema from 'types/catalog';
-import {
-  AutoScaling,
-  Block,
-  BuildConfig,
-  Release,
-  Repository,
-  Resources,
-  RunConfig,
-} from 'types/proto/models_pb';
+import { AutoScaling, Block, BuildConfig, Release, Repository, Resources, RunConfig } from 'types/proto/models_pb';
 import { EditServicePageValues, EnvVar, ServiceType } from 'types/service';
 import * as Yup from 'yup';
 
 import { EnvVarSchema, ServiceNameSchema } from './yup';
+
+
 
 const LanguageSchema = {
   language: Yup.number().required(),
@@ -186,6 +180,7 @@ export const getInitialValuesByType = (
     languageVersion: buildConfig.getLanguageversion() || '',
     subfolderPath: buildConfig.getPathtocode() || '.',
     staticOutputPath: buildConfig.getPathtostaticoutput() || 'public',
+    protocol: runConfig.getProtocol() || RunConfig.Protocol.HTTP,
     envVars:
       runConfig
         .getEnvvarsMap()
@@ -338,6 +333,11 @@ export const generateConfigsFromValuesAndType = (
 
     // set this to 5 minutes first
     runConfig.setSleepmodettlseconds(60 * REACT_APP_SLEEP_MODE_TTL_MINUTES);
+  }
+
+  // only backend API support HTTP/GRPC protocols
+  if (serviceType === Block.Type.BACKEND_API) {
+    runConfig.setProtocol(values.protocol);
   }
 
   guardRunConfig(serviceType, runConfig);
