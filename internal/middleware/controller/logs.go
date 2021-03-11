@@ -7,8 +7,9 @@ import (
 	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
-func (c *Controller) WatchBuildLogs(releaseId, blockName, envId string, ctx context.Context,
-	logsChan chan *types.Logs) *utilsGoServer.Error {
+func (c *ControllerMiddleware) WatchBuildLogs(
+	ctx context.Context, releaseId, blockName, envId string, logsChan chan *types.Logs) *utilsGoServer.Error {
+
 	block, err := c.store.GetBlock(blockName, envId)
 
 	if err != nil {
@@ -37,7 +38,8 @@ func (c *Controller) WatchBuildLogs(releaseId, blockName, envId string, ctx cont
 	return nil
 }
 
-func (c *Controller) WatchConsoleLogs(blockName, envId string, context context.Context,
-	logsChan chan *types.ConsoleLog) *utilsGoServer.Error {
-	return c.store.WatchConsoleLogs(blockName, envId, context, logsChan)
+func (c *ControllerMiddleware) WatchConsoleLogs(
+	ctx context.Context, blockName, envId string, logsChan chan *types.ConsoleLog) *utilsGoServer.Error {
+
+	return c.store.WatchConsoleLogs(blockName, envId, ctx, logsChan)
 }

@@ -3,6 +3,7 @@ package config
 import (
 	_ "github.com/joho/godotenv/autoload"
 	utilsGoConfig "github.com/kintohub/utils-go/config"
+	"os"
 )
 
 var (
@@ -29,6 +30,8 @@ var (
 
 	KintoCoreNamespace       string
 	KintoBuilderDockerSecret string
+
+	KintoCoreSecret string
 )
 
 func InitConfig() {
@@ -57,4 +60,6 @@ func InitConfig() {
 
 	KintoCoreNamespace = utilsGoConfig.GetString("KINTO_CORE_NAMESPACE", "kintohub")
 	KintoBuilderDockerSecret = utilsGoConfig.GetString("KINTO_BUILDER_DOCKER_SECRET", "kinto-builder-workflow-docker")
+
+	KintoCoreSecret = os.Getenv("KINTO_CORE_SECRET")
 }

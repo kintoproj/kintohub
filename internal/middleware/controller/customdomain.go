@@ -1,14 +1,15 @@
 package controller
 
 import (
+	"context"
 	"fmt"
 	utilsGoServer "github.com/kintohub/utils-go/server"
 	"github.com/kintoproj/kinto-core/pkg/types"
 	"github.com/rs/zerolog/log"
 )
 
-func (c *Controller) CreateCustomDomainName(
-	blockName, envId, domainName string, protocol types.RunConfig_Protocol) *utilsGoServer.Error {
+func (c *ControllerMiddleware) CreateCustomDomainName(
+	ctx context.Context, blockName, envId, domainName string, protocol types.RunConfig_Protocol) *utilsGoServer.Error {
 
 	domainNameAlreadyExists, err := c.store.DoesCustomDomainExistInStore(domainName)
 
@@ -78,8 +79,8 @@ func isDomainNameAlreadyCreated(domainName string, domainNames []string) bool {
 	return false
 }
 
-func (c *Controller) DeleteCustomDomainName(
-	blockName, envId, domainName string, protocol types.RunConfig_Protocol) *utilsGoServer.Error {
+func (c *ControllerMiddleware) DeleteCustomDomainName(
+	ctx context.Context, blockName, envId, domainName string, protocol types.RunConfig_Protocol) *utilsGoServer.Error {
 
 	block, err := c.store.GetBlock(blockName, envId)
 
@@ -133,7 +134,7 @@ func removeDomainFromArray(domainName string, domainNames []string) []string {
 	return domainNames[:len(domainNames)-1]
 }
 
-func (c *Controller) CheckCertificateReadiness(blockName, envId string) bool {
+func (c *ControllerMiddleware) CheckCertificateReadiness(ctx context.Context, blockName, envId string) bool {
 	isCertReady, uErr := c.store.CheckCertificateReadiness(blockName, envId)
 
 	if uErr != nil {

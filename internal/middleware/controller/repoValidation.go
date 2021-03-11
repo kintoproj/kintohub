@@ -35,13 +35,13 @@ func isValidRepoUrl(repoUrl string) bool {
 }
 
 func getRepoName(repoUrl string) (string, error) {
-	url, err := url.Parse(repoUrl)
+	u, err := url.Parse(repoUrl)
 
 	if err != nil {
 		return "", err
 	}
 
-	segments := strings.Split(url.Path, "/") // count starts from 1
+	segments := strings.Split(u.Path, "/") // count starts from 1
 	if len(segments) < 3 {
 		return "", fmt.Errorf("URL: %s doesn't contain a second segment", repoUrl)
 	}

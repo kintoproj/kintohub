@@ -7,7 +7,7 @@ import (
 	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
-func (c *Controller) StartTeleport(
+func (c *ControllerMiddleware) StartTeleport(
 	ctx context.Context, envId, blockNameToTeleport string) (*types.TeleportServiceData, *utilsGoServer.Error) {
 
 	if !config.KintoDevProxyEnabled {
@@ -18,6 +18,6 @@ func (c *Controller) StartTeleport(
 	return c.store.StartChiselService(ctx, envId, blockNameToTeleport)
 }
 
-func (c *Controller) StopTeleport(envId, blockNameTeleported string) *utilsGoServer.Error {
+func (c *ControllerMiddleware) StopTeleport(ctx context.Context, envId, blockNameTeleported string) *utilsGoServer.Error {
 	return c.store.StopChiselService(envId, blockNameTeleported)
 }

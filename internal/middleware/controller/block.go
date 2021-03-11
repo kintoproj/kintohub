@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"context"
 	"github.com/google/uuid"
 	utilsGoServer "github.com/kintohub/utils-go/server"
 	"github.com/kintoproj/kinto-core/internal/build"
@@ -10,7 +11,8 @@ import (
 	"strings"
 )
 
-func (c *Controller) CreateBlock(
+func (c *ControllerMiddleware) CreateBlock(
+	ctx context.Context,
 	envId, name string,
 	buildConfig *types.BuildConfig,
 	runConfig *types.RunConfig) (string, string, *utilsGoServer.Error) {
@@ -59,11 +61,11 @@ func (c *Controller) CreateBlock(
 	return lowerCaseName, release.Id, nil
 }
 
-func (c *Controller) GetBlock(name, envId string) (*types.Block, *utilsGoServer.Error) {
+func (c *ControllerMiddleware) GetBlock(ctx context.Context, name, envId string) (*types.Block, *utilsGoServer.Error) {
 	return c.store.GetBlock(name, envId)
 }
 
-func (c *Controller) GetBlocks(envId string) (*types.Blocks, *utilsGoServer.Error) {
+func (c *ControllerMiddleware) GetBlocks(ctx context.Context, envId string) (*types.Blocks, *utilsGoServer.Error) {
 	blocks, err := c.store.GetBlocks(envId)
 
 	if err != nil {
@@ -75,12 +77,13 @@ func (c *Controller) GetBlocks(envId string) (*types.Blocks, *utilsGoServer.Erro
 	}, nil
 }
 
-func (c *Controller) DeployBlockUpdate(
+func (c *ControllerMiddleware) DeployBlockUpdate(
+	ctx context.Context,
 	name, envId, baseReleaseId string,
 	buildConfig *types.BuildConfig,
 	runConfig *types.RunConfig) (string, string, *utilsGoServer.Error) {
 
-	block, err := c.GetBlock(name, envId)
+	block, err := c.GetBlock(ctx, name, envId)
 	if err != nil {
 		return "", "", err
 	}
@@ -106,10 +109,10 @@ func (c *Controller) DeployBlockUpdate(
 	return block.Name, release.Id, nil
 }
 
-func (c *Controller) TriggerDeploy(
-	name, envId string) (string, string, *utilsGoServer.Error) {
+func (c *ControllerMiddleware) TriggerDeploy(
+	ctx context.Context, name, envId string) (string, string, *utilsGoServer.Error) {
 
-	block, err := c.GetBlock(name, envId)
+	block, err := c.GetBlock(ctx, name, envId)
 	if err != nil {
 		return "", "", err
 	}
@@ -168,8 +171,8 @@ func deployBlock(block *types.Block,
 	return block, release, isDeployOnly
 }
 
-func (c *Controller) RollbackBlock(name, envId, releaseId string) (string, string, *utilsGoServer.Error) {
-	block, err := c.GetBlock(name, envId)
+func (c *ControllerMiddleware) RollbackBlock(ctx context.Context, name, envId, releaseId string) (string, string, *utilsGoServer.Error) {
+	block, err := c.GetBlock(ctx, name, envId)
 
 	if err != nil {
 		return "", "", err
@@ -206,8 +209,8 @@ func (c *Controller) RollbackBlock(name, envId, releaseId string) (string, strin
 	return block.Name, release.Id, nil
 }
 
-func (c *Controller) SuspendBlock(name, envId string) (string, string, *utilsGoServer.Error) {
-	block, err := c.GetBlock(name, envId)
+func (c *ControllerMiddleware) SuspendBlock(ctx context.Context, name, envId string) (string, string, *utilsGoServer.Error) {
+	block, err := c.GetBlock(ctx, name, envId)
 
 	if err != nil {
 		return "", "", err
@@ -290,7 +293,7 @@ func isReleaseDeploying(block *types.Block) bool {
 	return false
 }
 
-func (c *Controller) DeleteBlock(name, envId string) *utilsGoServer.Error {
+func (c *ControllerMiddleware) DeleteBlock(ctx context.Context, name, envId string) *utilsGoServer.Error {
 	_, err := c.build.UndeployRelease(name, envId)
 
 	if err != nil {
@@ -313,7 +316,7 @@ func (c *Controller) DeleteBlock(name, envId string) *utilsGoServer.Error {
 	return c.store.DeleteBlock(name, envId)
 }
 
-func (c *Controller) GetBlocksHealthStatus(envId string) (*types.BlockStatuses, *utilsGoServer.Error) {
+func (c *ControllerMiddleware) GetBlocksHealthStatus(ctx context.Context, envId string) (*types.BlockStatuses, *utilsGoServer.Error) {
 
 	blocks, err := c.store.GetBlocks(envId)
 
@@ -354,11 +357,11 @@ func (c *Controller) GetBlocksHealthStatus(envId string) (*types.BlockStatuses, 
 	}, nil
 }
 
-func (c *Controller) KillBlockInstance(id, envId string) *utilsGoServer.Error {
+func (c *ControllerMiddleware) KillBlockInstance(ctx context.Context, id, envId string) *utilsGoServer.Error {
 	return c.store.KillBlockInstance(id, envId)
 }
 
-func (c *Controller) GenReleaseConfigFromKintoFile(
-	org, repo, branch, envId, githubUserToken string, blockType types.Block_Type) (*types.ReleaseConfig, *utilsGoServer.Error) {
+func (c *ControllerMiddleware) GenReleaseConfigFromKintoFile(
+	ctx context.Context, org, repo, branch, envId, githubUserToken string, blockType types.Block_Type) (*types.ReleaseConfig, *utilsGoServer.Error) {
 	return c.build.GenReleaseConfigFromKintoFile(org, repo, branch, envId, githubUserToken, blockType)
 }
