@@ -223,7 +223,7 @@ func (a *AuthMiddleware) WatchConsoleLogs(ctx context.Context, blockName, envId 
 }
 
 func (a *AuthMiddleware) GetKintoConfiguration(ctx context.Context) (*types.KintoConfiguration, error) {
-	return a.GetKintoConfiguration(ctx)
+	return a.Middleware.GetKintoConfiguration(ctx)
 }
 
 func (a *AuthMiddleware) AbortRelease(ctx context.Context, blockName, releaseId, envId string) *utilsGoServer.Error {
