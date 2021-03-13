@@ -14,7 +14,7 @@ export const PATH_AUTH = '/auth';
 export const PATH_APP = '/app';
 
 export const PATH_ENV = `${PATH_APP}/environment`;
-// export const PATH_SERVICES = `${PATH_APP}/services`;
+
 export const PATH_ACCOUNT = `${PATH_APP}/account`;
 export const PATH_BILLING = `${PATH_APP}/billing`;
 

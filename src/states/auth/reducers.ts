@@ -1,16 +1,14 @@
 import { getAuthState } from 'libraries/localstorage';
 import _cloneDeep from 'lodash.clonedeep';
-import {
-  ACTION_UPDATE_KINTO_CONFIG,
-  UpdateKintoConfigAction,
-} from 'states/app/actions';
+import { ACTION_UPDATE_KINTO_CONFIG, UpdateKintoConfigAction } from 'states/app/actions';
 
 import {
+  ACTION_DELETE_ENV,
   ACTION_ENV_LOGIN,
   ACTION_UPDATE_ENV_LIST,
   ACTION_UPDATE_ENV_NAME,
-  ACTION_DELETE_ENV,
-  AuthActionsTypes,
+  ACTION_UPDATE_TOKEN,
+  AuthActionsTypes
 } from './actions';
 import { AuthState } from './types';
 
@@ -57,6 +55,12 @@ export default function systemReducer(
         ...state,
         environments,
       };
+    }
+    case ACTION_UPDATE_TOKEN: {
+      return {
+        ...state,
+        token: action.token,
+      }
     }
     default:
       return state;

@@ -123,3 +123,10 @@ export const trackError = (type: string, error: Error | string) => {
   // eslint-disable-next-line no-console
   console.error(type, error);
 };
+
+
+export const getAuthorizationHeader = (token: string) => {
+  // Now it is secret but not bearer token.
+  // We should have logic around that once we implement different type of auth
+  return token;
+}

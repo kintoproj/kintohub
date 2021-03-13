@@ -4,7 +4,6 @@ import FormikTextField from 'components/atoms/FormikTextField';
 import SolidIconButtonSeparated from 'components/atoms/SolidIconButtonSeparated';
 import { VerticalSpacer } from 'components/atoms/Spacer';
 import { useServiceNavigate } from 'components/hooks/PathHook';
-import { useGRPCClients } from 'components/templates/GRPCClients';
 import { Formik, FormikProps } from 'formik';
 import { EnvNameSchema } from 'libraries/helpers/yup';
 import React, { useEffect, useState } from 'react';
@@ -21,6 +20,7 @@ import { doHidePanel } from 'states/sidePanel/actions';
 import { PATH_MAINTENANCE } from 'libraries/constants';
 import { push } from 'connected-react-router';
 import FullPageLoading from '../molecules/FullPageLoading';
+import { useGRPCWrapper } from '../templates/GRPCWrapper';
 
 const StyledDiv = styled.div`
   position: relative;
@@ -62,7 +62,7 @@ type SignUpValues = {
 };
 
 export default () => {
-  const clients = useGRPCClients();
+  const grpcWrapper = useGRPCWrapper();
 
   const dispatch = useDispatch();
   const { navigateToServices } = useServiceNavigate();
@@ -71,7 +71,7 @@ export default () => {
   useEffect(() => {
     const initLoad = async () => {
       try {
-        const envs = await getEnvironments(clients.kkcClient!);
+        const envs = await grpcWrapper(getEnvironments, {});
         const envList = envs.getItemsList();
         if (envList.length !== 0) {
           navigateToServices({ targetEnvId: envList[0].getId() });
@@ -104,10 +104,9 @@ export default () => {
         const createEnv = async () => {
           props.setSubmitting(true);
           try {
-            const env = await createEnvironment(
-              clients.kkcClient!,
-              props.values.envName
-            );
+            const env = await grpcWrapper(createEnvironment, {
+              envName: props.values.envName,
+            });
 
             // submit the env token
             const envId = env.getId();

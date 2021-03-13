@@ -37,6 +37,7 @@ import {
   StreamCallbacks,
   WatchStream,
 } from './common';
+import { getAuthorizationHeader } from '../helpers';
 
 export interface ConsoleLogMessage {
   message: string;
@@ -72,7 +73,7 @@ export const getService: CoreMethod<
   req.setName(serviceName);
 
   const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
+  headers.set('Authorization', getAuthorizationHeader(token));
 
   return invokeGRPC<BlockQueryRequest, Block>(
     client.getBlock,
@@ -275,7 +276,7 @@ export const watchConsoleLogs: WatchStream<
   req.setEnvid(envId);
 
   const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
+  headers.set('Authorization', getAuthorizationHeader(token));
 
   const stream = client.watchConsoleLogs(req, headers);
   stream.on('data', (message: ConsoleLog) => {
@@ -321,7 +322,7 @@ export const watchServiceHealth: WatchStream<
   req.setId(envId);
 
   const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
+  headers.set('Authorization', getAuthorizationHeader(token));
 
   const stream = client.watchBlocksHealthStatuses(req, headers);
   stream.on('data', (status: BlockStatuses) => {
@@ -358,7 +359,7 @@ export const watchMetrics: WatchStream<
   req.setEnvid(envId);
 
   const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
+  headers.set('Authorization', getAuthorizationHeader(token));
 
   const stream = client.watchBlocksMetrics(req, headers);
   stream.on('data', (metrics: BlocksMetrics) => {
@@ -392,7 +393,7 @@ export const watchJobStatus: WatchStream<
   req.setEnvid(envId);
 
   const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
+  headers.set('Authorization', getAuthorizationHeader(token));
 
   const stream = client.watchJobsStatus(req, headers);
   stream.on('data', (status: JobStatus) => {

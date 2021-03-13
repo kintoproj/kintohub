@@ -12,6 +12,7 @@ import { Redirect, Route, Switch, useLocation } from 'react-router';
 import { TransitionGroup } from 'react-transition-group';
 import EnvironmentApp from 'components/templates/app/EnvironmentApp';
 import CreateFirstEnv from 'components/pages/CreateFirstEnv';
+import LoginPage from '../components/pages/LoginPage';
 
 const Routes = () => {
   const location = useLocation();
@@ -21,6 +22,12 @@ const Routes = () => {
   return (
     <TransitionGroup>
       <Switch location={location}>
+        <Route path="/auth">
+          <LandingLayout>
+            <LoginPage />
+          </LandingLayout>
+        </Route>
+
         <Route path="/app">
           <AuthApp>
             <MenuLayout>

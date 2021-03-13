@@ -6,7 +6,6 @@ import SolidIconButtonSeparated from 'components/atoms/SolidIconButtonSeparated'
 import { VerticalSpacer } from 'components/atoms/Spacer';
 import { useServiceNavigate } from 'components/hooks/PathHook';
 import { useAuthState } from 'components/hooks/ReduxStateHook';
-import { useGRPCClients } from 'components/templates/GRPCClients';
 import { Formik, FormikProps } from 'formik';
 import { EnvNameSchema } from 'libraries/helpers/yup';
 import React, { useEffect } from 'react';
@@ -20,6 +19,7 @@ import { IconButton, Typography } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/CloseRounded';
 import { createEnvironment } from 'libraries/grpc/environment';
 import { bps } from 'theme';
+import { useGRPCWrapper } from '../../templates/GRPCWrapper';
 
 const StyledDiv = styled.div`
   position: relative;
@@ -104,9 +104,9 @@ const renderNameEnv = (props: FormikProps<SignUpValues>, next: Function) => {
 };
 
 export default () => {
-  const clients = useGRPCClients();
-
   const dispatch = useDispatch();
+  const grpcWrapper = useGRPCWrapper();
+
   const { environments } = useAuthState();
   const { navigateToServices } = useServiceNavigate();
 
@@ -129,10 +129,9 @@ export default () => {
         const createEnv = async () => {
           props.setSubmitting(true);
           try {
-            const env = await createEnvironment(
-              clients.kkcClient!,
-              props.values.envName
-            );
+            const env = await grpcWrapper(createEnvironment, {
+              envName: props.values.envName,
+            });
 
             // submit the env token
             const envId = env.getId();

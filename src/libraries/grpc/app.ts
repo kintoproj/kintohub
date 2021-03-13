@@ -5,11 +5,12 @@ import { SyncTimeRequest, SyncTimeResponse } from 'types/proto/coreapi_pb';
 import { invokeGRPC, CoreMethod } from './common';
 
 export const getKintoConfig: CoreMethod<KintoConfiguration, {}> = (
-  client: KintoCoreServiceClient
+  client: KintoCoreServiceClient,
+  token
 ): Promise<KintoConfiguration | null> => {
   return invokeGRPC<Empty, KintoConfiguration>(
     client.getKintoConfiguration,
-    '',
+    token,
     new Empty(),
     client
   );

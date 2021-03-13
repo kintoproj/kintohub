@@ -3,6 +3,7 @@ import {
   ServiceError,
 } from 'types/proto/coreapi_pb_service';
 import { grpc } from '@improbable-eng/grpc-web';
+import { getAuthorizationHeader } from '../helpers';
 
 export interface WatchStream<T, P> {
   (
@@ -41,7 +42,7 @@ export const invokeGRPC = <T, R>(
   context: KintoCoreServiceClient
 ): Promise<R | null> => {
   const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
+  headers.set('Authorization', getAuthorizationHeader(token));
 
   return new Promise((resolve, reject) => {
     call.bind(context)(req, headers, (err, message) => {
@@ -51,11 +52,4 @@ export const invokeGRPC = <T, R>(
       resolve(message);
     });
   });
-};
-
-export const getAuthHeader = (token: string): grpc.Metadata => {
-  const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
-
-  return headers;
 };

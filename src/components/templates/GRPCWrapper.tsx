@@ -8,11 +8,17 @@ import { isGRPCStreamTimeout, isPermissionDenied } from 'libraries/grpc/errors';
 import { trackError } from 'libraries/helpers';
 import { useEffect, useRef } from 'react';
 
+import { useDispatch } from 'react-redux';
+import { push } from 'connected-react-router';
+import { PATH_AUTH } from 'libraries/constants';
+
 import { GRPCClients, useGRPCClients } from './GRPCClients';
+import { useAuthState } from '../hooks/ReduxStateHook';
 
 export const useGRPCWrapper = () => {
   const clients = useGRPCClients();
-
+  const dispatch = useDispatch();
+  const { token } = useAuthState();
   // since passing only the clients won't update the callbacks
   // we pass the ref of the clients and listen to the update
   const ref = useRef<GRPCClients>();
@@ -25,12 +31,16 @@ export const useGRPCWrapper = () => {
   return <T, P>(grpc: CoreMethod<T, P>, params: P): Promise<T> => {
     const { kkcClient } = ref.current!;
     return new Promise((resolve, reject) => {
-      // TODO: remove token
-      grpc(kkcClient!, '', params)
+      grpc(kkcClient!, token!, params)
         .then((res) => {
           resolve(res!);
         })
         .catch((error) => {
+          if (
+            error.message === 'you are not authorized to query this endpoint'
+          ) {
+            dispatch(push(PATH_AUTH));
+          }
           reject(error);
         });
     });
@@ -46,6 +56,7 @@ export const useGRPCStream = <T, P>(
   earlyExit?: () => boolean
 ) => {
   const clients = useGRPCClients();
+  const { token } = useAuthState();
   let retryCount = 0;
 
   useEffect(() => {
@@ -70,8 +81,7 @@ export const useGRPCStream = <T, P>(
           }
           const pStream = stream;
 
-          // TODO: leave token as empty first
-          stream = ws(clients.kkcClient!, '', params, {
+          stream = ws(clients.kkcClient!, token!, params, {
             onData: (msg) => {
               callbacks.onData(msg);
             },
@@ -98,7 +108,7 @@ export const useGRPCStream = <T, P>(
       }
     };
 
-    stream = ws(clients.kkcClient!, '', params, {
+    stream = ws(clients.kkcClient!, token!, params, {
       onData: (message) => {
         callbacks.onData(message);
       },

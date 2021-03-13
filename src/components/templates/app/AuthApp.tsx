@@ -1,10 +1,10 @@
 import { useAppState } from 'components/hooks/ReduxStateHook';
 import FullPageLoading from 'components/molecules/FullPageLoading';
-import { useGRPCClients } from 'components/templates/GRPCClients';
 import AxiosInterceptor from 'libraries/axios';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { doInitBackgroundLoad } from 'states/auth/actions';
+import { useGRPCWrapper } from '../GRPCWrapper';
 
 /**
  * Will check the token from local storage and check if the user is logged in.
@@ -12,12 +12,12 @@ import { doInitBackgroundLoad } from 'states/auth/actions';
  */
 export default ({ children }: React.PropsWithChildren<{}>) => {
   const dispatch = useDispatch();
-  const { kkcClient } = useGRPCClients();
+  const grpcWrapper = useGRPCWrapper();
   const { isInitialLoading } = useAppState();
 
   useEffect(() => {
     // skip loading for maintenance mode
-    dispatch(doInitBackgroundLoad(kkcClient!));
+    dispatch(doInitBackgroundLoad(grpcWrapper));
   }, []);
 
   return isInitialLoading ? (

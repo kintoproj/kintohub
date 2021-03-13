@@ -9,36 +9,32 @@ import { Environment, Environments } from 'types/proto/models_pb';
 
 import { invokeGRPC, CoreMethod } from './common';
 
-export const getEnvironments = (
-  client: KintoCoreServiceClient
-): Promise<Environments> => {
-  return new Promise((resolve, reject) => {
-    client.getEnvironments(new Empty(), (err, message) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      resolve(message!);
-    });
-  });
+export const getEnvironments: CoreMethod<Environments, {}> = (
+  client: KintoCoreServiceClient,
+  token: string
+) => {
+  return invokeGRPC<Empty, Environments>(
+    client.getEnvironments,
+    token,
+    new Empty(),
+    client
+  );
 };
 
-export const createEnvironment = (
+export const createEnvironment: CoreMethod<Environment, { envName: string }> = (
   client: KintoCoreServiceClient,
-  envName: string
-): Promise<Environment> => {
+  token: string,
+  { envName }
+) => {
   const req = new CreateEnvironmentRequest();
   req.setName(envName);
 
-  return new Promise((resolve, reject) => {
-    client.createEnvironment(req, (err, message) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      resolve(message!);
-    });
-  });
+  return invokeGRPC<CreateEnvironmentRequest, Environment>(
+    client.createEnvironment,
+    token,
+    req,
+    client
+  );
 };
 
 // eslint-disable-next-line max-len
@@ -73,22 +69,18 @@ export const deleteEnvironment: CoreMethod<Empty, { envId: string }> = (
   );
 };
 
-// eslint-disable-next-line max-len
-export const updateEnvironment = (
-  client: KintoCoreServiceClient,
-  envId: string,
-  envName: string
-): Promise<Environment> => {
+export const updateEnvironment: CoreMethod<
+  Environment,
+  { envId: string; envName: string }
+> = (client: KintoCoreServiceClient, token: string, { envId, envName }) => {
   const req = new UpdateEnvironmentRequest();
-  req.setId(envId);
   req.setName(envName);
-  return new Promise((resolve, reject) => {
-    client.updateEnvironment(req, (error, message) => {
-      if (error) {
-        reject(error);
-        return;
-      }
-      resolve(message!);
-    });
-  });
+  req.setId(envId);
+
+  return invokeGRPC<CreateEnvironmentRequest, Environment>(
+    client.updateEnvironment,
+    token,
+    req,
+    client
+  );
 };

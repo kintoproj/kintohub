@@ -3,6 +3,7 @@ import axios from 'axios';
 import { RootState } from 'states/types';
 import { AuthState } from 'states/auth/types';
 import { useSelector } from 'react-redux';
+import { getAuthorizationHeader } from './helpers';
 
 const AxiosInterceptor = () => {
   const { token } = useSelector<RootState, AuthState>(
@@ -13,7 +14,7 @@ const AxiosInterceptor = () => {
     axios.interceptors.request.use((config) => {
       if (token) {
         // eslint-disable-next-line no-param-reassign
-        config.headers.Authorization = `Bearer ${token}`;
+        config.headers.Authorization = getAuthorizationHeader(token);
       }
       return config;
     });

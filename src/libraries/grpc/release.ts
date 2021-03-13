@@ -25,6 +25,7 @@ import {
   CoreMethod,
   invokeGRPC,
 } from './common';
+import { getAuthorizationHeader } from '../helpers';
 
 // try not to use this class as it depends on grpc Status
 export type ReleaseStatusMap = {
@@ -215,7 +216,7 @@ export const watchBuildLogs: WatchStream<
   req.setBlockname(blockName);
 
   const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
+  headers.set('Authorization', getAuthorizationHeader(token));
 
   const stream = client.watchBuildLogs(req, headers);
   stream.on('data', (message: Logs) => {
@@ -253,7 +254,7 @@ export const watchReleaseStatus: WatchStream<
   req.setName(blockName);
 
   const headers = new grpc.Metadata();
-  headers.set('Authorization', `Bearer ${token}`);
+  headers.set('Authorization', getAuthorizationHeader(token));
 
   const stream = client.watchReleasesStatus(req, headers);
   stream.on('data', (message: ReleasesStatus) => {

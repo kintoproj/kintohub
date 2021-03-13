@@ -4,7 +4,6 @@ import FormikTextField from 'components/atoms/FormikTextField';
 import { FlexEndRow } from 'components/atoms/Row';
 import SolidIconButton from 'components/atoms/SolidIconButton';
 import { VerticalSpacer } from 'components/atoms/Spacer';
-import { useGRPCClients } from 'components/templates/GRPCClients';
 import { Formik, FormikProps } from 'formik';
 import { updateEnvironment } from 'libraries/grpc/environment';
 import { trackError } from 'libraries/helpers';
@@ -16,6 +15,7 @@ import { Environment } from 'types/environment';
 import * as Yup from 'yup';
 
 import FormHelperText from '@material-ui/core/FormHelperText';
+import { useGRPCWrapper } from '../../templates/GRPCWrapper';
 
 type Props = {
   env: Environment;
@@ -26,7 +26,7 @@ type EnvValues = {
 };
 
 export default ({ env }: Props) => {
-  const clients = useGRPCClients();
+  const grpcWrapper = useGRPCWrapper();
 
   const [error, setError] = useState<string | null>(null);
   const [updated, setUpdated] = useState(false);
@@ -43,7 +43,10 @@ export default ({ env }: Props) => {
       onSubmit={async (values, actions) => {
         setError(null);
         try {
-          await updateEnvironment(clients.kkcClient!, env.envId, values.name);
+          await grpcWrapper(updateEnvironment, {
+            envId: env.envId,
+            envName: values.name,
+          });
           setUpdated(true);
           dispatch(updateEnvName(env.envId, values.name));
           // restore to save button after 1s

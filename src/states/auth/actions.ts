@@ -14,11 +14,13 @@ import { PATH_CREATE_ENV, PATH_MAINTENANCE } from 'libraries/constants';
 import { getEnvironments } from 'libraries/grpc/environment';
 import { getKintoConfig, syncTime } from 'libraries/grpc/app';
 import moment from 'moment';
+import { CoreMethod } from '../../libraries/grpc/common';
 
 export const ACTION_ENV_LOGIN = 'ENV_LOGIN';
 export const ACTION_UPDATE_ENV_LIST = 'UPDATE_ENV_LIST';
 export const ACTION_UPDATE_ENV_NAME = 'UPDATE_ENV_NAME';
 export const ACTION_DELETE_ENV = 'DELETE_ENV';
+export const ACTION_UPDATE_TOKEN = 'UPDATE_TOKEN';
 
 export interface EnvLoginAction {
   type: typeof ACTION_ENV_LOGIN;
@@ -41,6 +43,11 @@ export interface DeleteEnvAction {
   envId: string;
 }
 
+export interface UpdateTokenAction {
+  type: typeof ACTION_UPDATE_TOKEN;
+  token: string;
+}
+
 export const envLogin = (envId: string): EnvLoginAction => {
   return {
     type: ACTION_ENV_LOGIN,
@@ -60,6 +67,13 @@ export const updateEnvName = (
   type: ACTION_UPDATE_ENV_NAME,
   envId,
   envName,
+});
+
+export const updateToken = (
+  token: string
+): UpdateTokenAction => ({
+  type: ACTION_UPDATE_TOKEN,
+  token
 });
 
 export const deleteEnv = (envId: string): DeleteEnvAction => ({
@@ -93,12 +107,12 @@ export const doSyncTime = (
  * Get the list of environments before everything else
  */
 export const doInitBackgroundLoad = (
-  coreClient: KintoCoreServiceClient
+  grpcWrapper: <T, P>(grpc: CoreMethod<T, P>, params: P) => Promise<T>
 ): ThunkAction<Promise<void>, RootState, {}, AnyAction> => async (
   dispatch: ThunkDispatch<{}, {}, AnyAction>
 ): Promise<void> => {
   try {
-    const envs = await getEnvironments(coreClient);
+    const envs = await grpcWrapper(getEnvironments, {});
     const envList = envs.getItemsList();
     // If no environment, force him to create one
     // FIXME: debug
@@ -109,7 +123,7 @@ export const doInitBackgroundLoad = (
       return;
     }
 
-    const config = await getKintoConfig(coreClient, '', {});
+    const config = await grpcWrapper(getKintoConfig, {});
     dispatch(updateKintoConfig(config!));
 
     dispatch(setInitialLoading(false));
@@ -162,4 +176,5 @@ export type AuthActionsTypes =
   | EnvLoginAction
   | UpdateEnvNameAction
   | DeleteEnvAction
-  | UpdateEnvListAction;
+  | UpdateEnvListAction
+  | UpdateTokenAction;
