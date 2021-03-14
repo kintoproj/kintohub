@@ -139,7 +139,7 @@ func NewReleaseCommand() *cobra.Command {
 }
 
 func NewReleaseStatusCommand() *cobra.Command {
-	var kintoCoreHost, envId, blockName, releaseId, status string
+	var kintoCoreHost, envId, blockName, releaseId, status, kintoCoreSecretKey string
 	var kintoCoreOverTls bool
 
 	c := &cobra.Command{
@@ -151,7 +151,8 @@ func NewReleaseStatusCommand() *cobra.Command {
 				os.Exit(1)
 			}
 
-			err := cmd_release.UpdateReleaseStatus(kintoCoreHost, envId, blockName, releaseId, status, kintoCoreOverTls)
+			err := cmd_release.UpdateReleaseStatus(
+				kintoCoreHost, envId, blockName, releaseId, status, kintoCoreOverTls, kintoCoreSecretKey)
 
 			if err != nil {
 				fmt.Printf(chalk.Red.Color("%v"), err)
@@ -169,6 +170,9 @@ func NewReleaseStatusCommand() *cobra.Command {
 		&kintoCoreOverTls, "kintoCoreOverTls", false,
 		"Is Kinto Kube Core API over TLS")
 	c.PersistentFlags().StringVar(
+		&kintoCoreSecretKey, "kintoCoreSecretKey", "",
+		"Kinto Core Secret Key - can be empty if disabled on kinto core")
+	c.PersistentFlags().StringVar(
 		&envId, "envId", "",
 		"Environment Id of the block")
 	c.PersistentFlags().StringVar(
@@ -185,7 +189,7 @@ func NewReleaseStatusCommand() *cobra.Command {
 }
 
 func NewReleaseCommitCommand() *cobra.Command {
-	var kintoCoreHost, envId, blockName, releaseId, commitSha string
+	var kintoCoreHost, envId, blockName, releaseId, commitSha, kintoCoreSecretKey string
 	var kintoCoreOverTls bool
 
 	c := &cobra.Command{
@@ -197,7 +201,8 @@ func NewReleaseCommitCommand() *cobra.Command {
 				os.Exit(1)
 			}
 
-			err := cmd_release.UpdateReleaseCommitSha(kintoCoreHost, envId, blockName, releaseId, commitSha, kintoCoreOverTls)
+			err := cmd_release.UpdateReleaseCommitSha(
+				kintoCoreHost, envId, blockName, releaseId, commitSha, kintoCoreOverTls, kintoCoreSecretKey)
 
 			if err != nil {
 				fmt.Printf(chalk.Red.Color("%v"), err)
@@ -214,6 +219,9 @@ func NewReleaseCommitCommand() *cobra.Command {
 	c.PersistentFlags().BoolVar(
 		&kintoCoreOverTls, "kintoCoreOverTls", false,
 		"Is Kinto Core API over TLS")
+	c.PersistentFlags().StringVar(
+		&kintoCoreSecretKey, "kintoCoreSecretKey", "",
+		"Kinto Core Secret Key - can be empty if disabled on kinto core")
 	c.PersistentFlags().StringVar(
 		&envId, "envId", "",
 		"Environment Id of the block")

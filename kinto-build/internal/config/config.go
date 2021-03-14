@@ -14,8 +14,9 @@ var (
 
 	UserFriendlyBuildLogsEnabled bool
 
-	KintoCoreHostname string
-	KintoCoreOverTls  bool
+	KintoCoreHostname  string
+	KintoCoreOverTls   bool
+	KintoCoreSecretKey string
 
 	ProxlessFQDN string
 
@@ -51,6 +52,7 @@ func LoadConfig() {
 
 	KintoCoreHostname = config.GetStringOrDie("KINTO_CORE_HOST_NAME")
 	KintoCoreOverTls = config.GetBool("KINTO_CORE_OVER_TLS", false)
+	KintoCoreSecretKey = os.Getenv("KINTO_CORE_SECRET")
 
 	ProxlessFQDN = config.GetStringOrDie("PROXLESS_FQDN")
 

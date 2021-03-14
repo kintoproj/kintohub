@@ -156,10 +156,11 @@ func (c *BuildClient) BuildAndDeployRelease(req *types.BuildAndDeployRequest) (*
 	templates := []v1alpha1.Template{
 		genStepsTemplate(true),
 		genBuildAndDeployWorkflow(
-			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, req.BuildConfig, config.KintoCoreOverTls, req.IsStaticBuild),
+			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, req.BuildConfig,
+			config.KintoCoreOverTls, req.IsStaticBuild, config.KintoCoreSecretKey),
 		genOnExitHandlerStepsTemplate(),
 		genWorkflowUpdateStatusTemplate(
-			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, config.KintoCoreOverTls),
+			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, config.KintoCoreOverTls, config.KintoCoreSecretKey),
 	}
 
 	if config.ArgoWorkflowNodePoolLabelValue != "" {
@@ -189,7 +190,7 @@ func (c *BuildClient) DeployRelease(req *types.DeployRequest) (*types.WorkflowRe
 		genDeployOnlyWorkflow(req.Namespace, req.BlockName, req.ReleaseId, types.Release_DEPLOY),
 		genOnExitHandlerStepsTemplate(),
 		genWorkflowUpdateStatusTemplate(
-			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, config.KintoCoreOverTls),
+			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, config.KintoCoreOverTls, config.KintoCoreSecretKey),
 	}
 
 	if config.ArgoWorkflowNodePoolLabelValue != "" {
@@ -217,10 +218,10 @@ func (c *BuildClient) DeployReleaseFromCatalog(req *types.DeployCatalogRequest) 
 	templates := []v1alpha1.Template{
 		genStepsTemplate(true),
 		genDeployCatalogWorkflow(
-			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, req.Repo, config.KintoCoreOverTls),
+			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, req.Repo, config.KintoCoreOverTls, config.KintoCoreSecretKey),
 		genOnExitHandlerStepsTemplate(),
 		genWorkflowUpdateStatusTemplate(
-			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, config.KintoCoreOverTls),
+			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, config.KintoCoreOverTls, config.KintoCoreSecretKey),
 	}
 
 	if config.ArgoWorkflowNodePoolLabelValue != "" {
@@ -250,7 +251,7 @@ func (c *BuildClient) UndeployRelease(req *types.UndeployRequest) (*types.Workfl
 		genDeployOnlyWorkflow(req.Namespace, req.BlockName, "", types.Release_UNDEPLOY),
 		// we are forced to generated the update status template even if `false`. otherwise argo fails
 		genWorkflowUpdateStatusTemplate(
-			req.Namespace, req.BlockName, "", config.KintoCoreHostname, config.KintoCoreOverTls),
+			req.Namespace, req.BlockName, "", config.KintoCoreHostname, config.KintoCoreOverTls, config.KintoCoreSecretKey),
 	}
 
 	if config.ArgoWorkflowNodePoolLabelValue != "" {
@@ -280,7 +281,7 @@ func (c *BuildClient) SuspendRelease(req *types.SuspendRequest) (*types.Workflow
 		genDeployOnlyWorkflow(req.Namespace, req.BlockName, req.ReleaseId, types.Release_SUSPEND),
 		genOnExitHandlerStepsTemplate(),
 		genWorkflowUpdateStatusTemplate(
-			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, config.KintoCoreOverTls),
+			req.Namespace, req.BlockName, req.ReleaseId, config.KintoCoreHostname, config.KintoCoreOverTls, config.KintoCoreSecretKey),
 	}
 
 	if config.ArgoWorkflowNodePoolLabelValue != "" {

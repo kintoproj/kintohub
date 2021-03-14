@@ -7,13 +7,14 @@ import (
 	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
-func UpdateReleaseStatus(kintoCoreHost, envId, blockName, releaseId, status string, kintoCoreOverTls bool) error {
+func UpdateReleaseStatus(
+	kintoCoreHost, envId, blockName, releaseId, status string, kintoCoreOverTls bool, kintoCoreSecretKey string) error {
 	buildStatus, err := convertToBuildStatusRequest(envId, blockName, releaseId, status)
 	if err != nil {
 		return err
 	}
 
-	kintoCoreClient, err := newKintoCoreReleaseClient(kintoCoreHost, kintoCoreOverTls)
+	kintoCoreClient, err := newKintoCoreReleaseClient(kintoCoreHost, kintoCoreOverTls, kintoCoreSecretKey)
 	if err != nil {
 		return err
 	}

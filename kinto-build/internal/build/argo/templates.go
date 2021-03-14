@@ -80,7 +80,8 @@ func genOnExitHandlerStepsTemplate() v1alpha1.Template {
 	}
 }
 
-func genWorkflowUpdateStatusTemplate(envId, blockName, releaseId, kintoCoreHost string, kintoCoreOverTls bool) v1alpha1.Template {
+func genWorkflowUpdateStatusTemplate(
+	envId, blockName, releaseId, kintoCoreHost string, kintoCoreOverTls bool, kintoCoreSecretKey string) v1alpha1.Template {
 	return v1alpha1.Template{
 		Name: utils.WorkflowUpdateReleaseStatusTemplateName,
 		Inputs: v1alpha1.Inputs{
@@ -99,6 +100,7 @@ func genWorkflowUpdateStatusTemplate(envId, blockName, releaseId, kintoCoreHost 
 				"status",
 				fmt.Sprintf("--kintoCoreHost=%s", kintoCoreHost),
 				fmt.Sprintf("--kintoCoreOverTls=%t", kintoCoreOverTls),
+				fmt.Sprintf("--kintoCoreSecretKey=%s", kintoCoreSecretKey),
 				fmt.Sprintf("--envId=%s", envId),
 				fmt.Sprintf("--blockName=%s", blockName),
 				fmt.Sprintf("--releaseId=%s", releaseId),
@@ -172,13 +174,15 @@ func genWorkflowResource() corev1.ResourceRequirements {
 func genBuildAndDeployWorkflow(
 	envId, blockName, releaseId, kintoCoreHost string,
 	buildConfig *types.BuildConfig,
-	kintoCoreOverTls, isStaticBuild bool) v1alpha1.Template {
+	kintoCoreOverTls, isStaticBuild bool,
+	kintoCoreSecretKey string) v1alpha1.Template {
 
 	var envVars []corev1.EnvVar
 
 	envVars = append(envVars, corev1.EnvVar{Name: envVarGitInitEnabled, Value: "true"})
-	envVars = append(envVars,
-		genEnvVarsGitInit(buildConfig.Repository, envId, blockName, releaseId, kintoCoreHost, kintoCoreOverTls)...)
+	envVars = append(
+		envVars,
+		genEnvVarsGitInit(buildConfig.Repository, envId, blockName, releaseId, kintoCoreHost, kintoCoreOverTls, kintoCoreSecretKey)...)
 
 	if buildConfig.Language != types.BuildConfig_DOCKERFILE {
 		envVars = append(envVars, corev1.EnvVar{Name: envVarKintoCliDockerEnabled, Value: "true"})
@@ -210,12 +214,14 @@ func genDeployOnlyWorkflow(envId, blockName, releaseId string, releaseType types
 }
 
 func genDeployCatalogWorkflow(
-	envId, blockName, releaseId, kintoCoreHost string, repo *types.Repository, kintoCoreOverTls bool) v1alpha1.Template {
+	envId, blockName, releaseId, kintoCoreHost string, repo *types.Repository, kintoCoreOverTls bool, kintoCoreSecretKey string) v1alpha1.Template {
 
 	var envVars []corev1.EnvVar
 
 	envVars = append(envVars, corev1.EnvVar{Name: envVarGitInitEnabled, Value: "true"})
-	envVars = append(envVars, genEnvVarsGitInit(repo, envId, blockName, releaseId, kintoCoreHost, kintoCoreOverTls)...)
+	envVars = append(
+		envVars,
+		genEnvVarsGitInit(repo, envId, blockName, releaseId, kintoCoreHost, kintoCoreOverTls, kintoCoreSecretKey)...)
 
 	envVars = append(envVars, genEnvVarsKintoDeploy(envId, blockName, releaseId, types.Release_DEPLOY)...)
 
@@ -226,7 +232,7 @@ func genDeployCatalogWorkflow(
 }
 
 func genEnvVarsGitInit(
-	repo *types.Repository, envId, blockName, releaseId, kintoCoreHost string, kintoCoreOverTls bool) []corev1.EnvVar {
+	repo *types.Repository, envId, blockName, releaseId, kintoCoreHost string, kintoCoreOverTls bool, kintoCoreSecretKey string) []corev1.EnvVar {
 
 	return []corev1.EnvVar{
 		{
@@ -240,6 +246,10 @@ func genEnvVarsGitInit(
 		{
 			Name:  "KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_HOST",
 			Value: kintoCoreHost,
+		},
+		{
+			Name:  "KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_SECRET_KEY",
+			Value: kintoCoreSecretKey,
 		},
 		{
 			Name:  "KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_OVER_TLS",

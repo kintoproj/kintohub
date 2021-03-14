@@ -7,10 +7,12 @@ import (
 	"github.com/kintoproj/kinto-core/pkg/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+	"google.golang.org/grpc/metadata"
 )
 
 type kintoCoreReleaseClient struct {
-	client types.KintoCoreServiceClient
+	client             types.KintoCoreServiceClient
+	kintoCoreSecretKey string
 }
 
 type kintoCoreReleaseClientInterface interface {
@@ -18,7 +20,7 @@ type kintoCoreReleaseClientInterface interface {
 	updateBuildCommitSha(req *types.UpdateBuildCommitShaRequest) error
 }
 
-func newKintoCoreReleaseClient(kintoCoreHost string, isOverTLS bool) (kintoCoreReleaseClientInterface, error) {
+func newKintoCoreReleaseClient(kintoCoreHost string, isOverTLS bool, kintoCoreSecretKey string) (kintoCoreReleaseClientInterface, error) {
 	dialOption := grpc.WithInsecure()
 
 	if isOverTLS {
@@ -38,22 +40,33 @@ func newKintoCoreReleaseClient(kintoCoreHost string, isOverTLS bool) (kintoCoreR
 
 	buildClient := types.NewKintoCoreServiceClient(conn)
 	return &kintoCoreReleaseClient{
-		client: buildClient,
+		client:             buildClient,
+		kintoCoreSecretKey: kintoCoreSecretKey,
 	}, nil
 }
 
-func (r *kintoCoreReleaseClient) updateBuildStatus(buildStatusRequest *types.UpdateBuildStatusRequest) (string, error) {
-	resp, err := r.client.UpdateBuildStatus(context.Background(), buildStatusRequest)
+func (k *kintoCoreReleaseClient) updateBuildStatus(buildStatusRequest *types.UpdateBuildStatusRequest) (string, error) {
+	ctx := k.setAuthorization(context.Background())
+	resp, err := k.client.UpdateBuildStatus(ctx, buildStatusRequest)
 	if err != nil {
 		return "", err
 	}
 	return resp.Id, nil
 }
 
-func (r *kintoCoreReleaseClient) updateBuildCommitSha(req *types.UpdateBuildCommitShaRequest) error {
-	_, err := r.client.UpdateBuildCommitSha(context.Background(), req)
+func (k *kintoCoreReleaseClient) updateBuildCommitSha(req *types.UpdateBuildCommitShaRequest) error {
+	ctx := k.setAuthorization(context.Background())
+	_, err := k.client.UpdateBuildCommitSha(ctx, req)
 	if err != nil {
 		return err
 	}
 	return nil
+}
+
+func (k *kintoCoreReleaseClient) setAuthorization(ctx context.Context) context.Context {
+	if k.kintoCoreSecretKey != "" {
+		return metadata.AppendToOutgoingContext(ctx, "authorization", k.kintoCoreSecretKey)
+	} else {
+		return ctx
+	}
 }

@@ -11,6 +11,7 @@ if [ "$KINTO_CLI_GIT_INIT_ENABLED" == "true" ]; then
   "$KINTO_PATH"/kintocli release commit \
     --kintoCoreHost="$KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_HOST" \
     --kintoCoreOverTls="$KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_OVER_TLS" \
+    --kintoCoreSecretKey="$KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_SECRET_KEY" \
     --envId="$KINTO_CLI_RELEASE_COMMIT_ENV_ID" \
     --blockName="$KINTO_CLI_RELEASE_COMMIT_BLOCK_NAME" \
     --releaseId="$KINTO_CLI_RELEASE_COMMIT_RELEASE_ID" \

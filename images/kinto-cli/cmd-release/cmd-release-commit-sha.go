@@ -5,7 +5,8 @@ import (
 	"github.com/kintoproj/kinto-core/pkg/types"
 )
 
-func UpdateReleaseCommitSha(kintoCoreHost, envId, blockName, releaseId, commitSha string, kintoCoreOverTls bool) error {
+func UpdateReleaseCommitSha(
+	kintoCoreHost, envId, blockName, releaseId, commitSha string, kintoCoreOverTls bool, kintoCoreSecretKey string) error {
 	commitShaRequest := &types.UpdateBuildCommitShaRequest{
 		BlockName: blockName,
 		EnvId:     envId,
@@ -13,7 +14,7 @@ func UpdateReleaseCommitSha(kintoCoreHost, envId, blockName, releaseId, commitSh
 		CommitSha: commitSha,
 	}
 
-	kintoCoreClient, err := newKintoCoreReleaseClient(kintoCoreHost, kintoCoreOverTls)
+	kintoCoreClient, err := newKintoCoreReleaseClient(kintoCoreHost, kintoCoreOverTls, kintoCoreSecretKey)
 	if err != nil {
 		return err
 	}

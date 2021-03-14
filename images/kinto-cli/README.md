@@ -47,23 +47,24 @@ kintocli dockerfile \
 
 ```shell script
 kinto-cli release status \
-  --kintoCoreHost="$KINTO_CORE_HOST" \
-  --kintoCoreOverTls="$IS_KINTO_CORE_OVER_TLS" \
-  --envId="$ENVIRONMENT_ID" \
-  --blockName="$BLOCK_NAME" \
-  --releaseId="$RELEASE_ID" \
-  --status="$STATUS"
+  --kintoCoreHost="$KINTO_CLI_RELEASE_STATUS_KINTO_CORE_HOST" \
+  --kintoCoreOverTls="$KINTO_CLI_RELEASE_STATUS_IS_KINTO_CORE_OVER_TLS" \
+  --kintoCoreSecretKey="$KINTO_CLI_RELEASE_STATUS_KINTO_CORE_SECRET_KEY" \
+  --envId="$KINTO_CLI_RELEASE_STATUS_ENVIRONMENT_ID" \
+  --blockName="$KINTO_CLI_RELEASE_STATUS_BLOCK_NAME" \
+  --releaseId="$KINTO_CLI_RELEASE_STATUS_RELEASE_ID" \
+  --status="$KINTO_CLI_RELEASE_STATUS_STATUS"
 ```
 
 ### Update release commit sha
 
 ```shell script
 kintocli release commit \
-    --kintoCoreHost="$KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_HOST" \
-	--kintoCoreOverTls="$KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_OVER_TLS" \
-	--envId="$KINTO_CLI_RELEASE_COMMIT_ENV_ID" \
-	--blockName="$KINTO_CLI_RELEASE_COMMIT_BLOCK_NAME" \
-	--releaseId="$KINTO_CLI_RELEASE_COMMIT_RELEASE_ID" \
-	--commitSha="$(cat /workspace/.git/`cat /workspace/.git/HEAD | cut -d \  -f 2`)"
+  --kintoCoreHost="$KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_HOST" \
+  --kintoCoreOverTls="$KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_OVER_TLS" \
+  --kintoCoreSecretKey="$KINTO_CLI_RELEASE_COMMIT_KINTO_CORE_SECRET_KEY" \
+  --envId="$KINTO_CLI_RELEASE_COMMIT_ENV_ID" \
+  --blockName="$KINTO_CLI_RELEASE_COMMIT_BLOCK_NAME" \
+  --releaseId="$KINTO_CLI_RELEASE_COMMIT_RELEASE_ID" \
+  --commitSha="$(cat /workspace/.git/`cat /workspace/.git/HEAD | cut -d \  -f 2`)"
 ```
-
