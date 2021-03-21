@@ -118,10 +118,7 @@ func ConvertKintoCoreReleaseToKDRelease(
 		if kintoCoreRelease.RunConfig.Type == kintoCoretypes.Block_STATIC_SITE ||
 			kintoCoreRelease.RunConfig.Type == kintoCoretypes.Block_JAMSTACK {
 
-			deployRelease.Replicas = 2 // HA because running on preemptible nodes
-			deployRelease.Cpu = ""     // no reserved cpu
-			deployRelease.Memory = ""  // no reserved memory
-			deployRelease.Port = 80    // nginx port
+			deployRelease.Port = 80 // nginx port
 
 			// we append the kinto `host` (*.kinto.io) and all the `customDomains`
 			deployRelease.Hosts = append(deployRelease.Hosts, kintoCoreRelease.RunConfig.Host)
