@@ -236,6 +236,13 @@ func populatePromotedBlock(originalBlock *types.Block, targetBlock *types.Block,
 		if latestRelease != nil {
 			klog.Debugf("Found an existing service with a successful release when promoting, copying env vars for release: %s", latestRelease.Id)
 			taggedRelease.RunConfig.EnvVars = latestRelease.RunConfig.EnvVars
+			taggedRelease.RunConfig.Resources = latestRelease.RunConfig.Resources
+			taggedRelease.RunConfig.AutoScaling = latestRelease.RunConfig.AutoScaling
+			taggedRelease.RunConfig.JobSpec = latestRelease.RunConfig.JobSpec
+			taggedRelease.RunConfig.SleepModeEnabled = latestRelease.RunConfig.SleepModeEnabled
+			taggedRelease.RunConfig.SleepModeTTLSeconds = latestRelease.RunConfig.SleepModeTTLSeconds
+			taggedRelease.RunConfig.TimeoutInSec = latestRelease.RunConfig.TimeoutInSec
+			taggedRelease.RunConfig.Port = latestRelease.RunConfig.Port
 		} else {
 			klog.Debugf("Found an existing service when promoting with no successful release, block: %s, env: %s", targetBlock.Name, targetEnvId)
 		}
