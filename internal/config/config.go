@@ -10,6 +10,7 @@ import (
 const (
 	CliConfigName                = "kinto.yaml"
 	KintoCoreHostKey             = "kintoCoreHost"
+	KintoCoreSecretKey           = "kintoCoreSecret"
 	DefaultTeleportInterfacePort = "R:0.0.0.0"
 	CoreHostResetKey             = "reset"
 	DefaultClientAccessPort      = 5360
@@ -21,19 +22,22 @@ const (
 	MysqlPort                    = 3306
 )
 
-var DefaultkintoCoreHost = ""
 var Version = "v0.0.1" //Needs to be a non-const for passing version at build time
 
 func GetKintoCoreHost() string {
-	kintoCoreHost := viper.GetString(KintoCoreHostKey)
-	if kintoCoreHost == "" {
-		return DefaultkintoCoreHost
-	}
-	return kintoCoreHost
+	return viper.GetString(KintoCoreHostKey)
 }
 
 func SetKintoCoreHost(kintoCoreHost string) {
 	viper.Set(KintoCoreHostKey, kintoCoreHost)
+}
+
+func GetKintoCoreSecret() string {
+	return viper.GetString(KintoCoreSecretKey)
+}
+
+func SetKintoCoreSecret(kintoCoreSecret string) {
+	viper.Set(KintoCoreSecretKey, kintoCoreSecret)
 }
 
 func AddConfigPath(path string) {
@@ -73,9 +77,4 @@ func Save() {
 		color.Red.Println("An error occurred: %v", err)
 		os.Exit(1)
 	}
-}
-
-func GetString(string string) string {
-	str := viper.GetString(string)
-	return str
 }

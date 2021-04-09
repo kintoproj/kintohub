@@ -11,6 +11,7 @@ import (
 
 type CliInterface interface {
 	GetHostFlag() string
+	GetSecretFlag() string
 	Execute(controller controller.ControllerInterface)
 }
 
@@ -35,6 +36,11 @@ Documentation is available at https://docs.kintohub.com`,
 
 func (c *Cli) GetHostFlag() string {
 	host := config.GetKintoCoreHost()
+	return host
+}
+
+func (c *Cli) GetSecretFlag() string {
+	host := config.GetKintoCoreSecret()
 	return host
 }
 
@@ -74,18 +80,23 @@ func (c *Cli) Execute(controller controller.ControllerInterface) {
 		os.Exit(1)
 	}
 }
+
 func createInitCommand(controller controller.ControllerInterface) *cobra.Command {
 	initCmd := &cobra.Command{
 		Use:   "init",
-		Short: "Initialize the CLI with a Core Host",
-		Long:  `Create a 'kinto.yaml' file in your home directory and set the core host for the CLI.`,
-		Args:  cobra.ExactArgs(1),
+		Short: "Initialize the CLI with a Core Host (required) and a Core Secret (optional)",
+		Long:  `Create a 'kinto.yaml' file in your home directory and set the core host and secret for the CLI.`,
+		Args:  cobra.MinimumNArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
-			controller.Init(args[0])
+			kintoSecret := ""
+			if len(args) > 1 {
+				kintoSecret = args[1]
+			}
+			controller.Init(args[0], kintoSecret)
 		},
 	}
 	initCmd.SetUsageTemplate(fmt.Sprintf("\nUsage:\nSet new Core Host:\n\t"+
-		"kinto init [host]\n\nUnset Core Host:\n\tkinto init %s\n", config.CoreHostResetKey))
+		"kinto init [host] [secret]\n\nUnset Core Host:\n\tkinto init %s\n", config.CoreHostResetKey))
 	return initCmd
 }
 

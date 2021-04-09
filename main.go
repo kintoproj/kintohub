@@ -8,7 +8,7 @@ import (
 
 func main() {
 	cli := cli.NewCliOrDie()
-	api := api.NewApiOrDie(cli.GetHostFlag())
+	api := api.NewApiOrDie(cli.GetHostFlag(), cli.GetSecretFlag())
 	controller := controller.NewControllerOrDie(api)
 	cli.Execute(controller)
 }

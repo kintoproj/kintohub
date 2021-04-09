@@ -7,7 +7,8 @@ import (
 )
 
 func (a *Api) GetEnvironments() ([]*types.Environment, error) {
-	envs, err := a.client.GetEnvironments(context.Background(), &empty.Empty{})
+	ctx := a.authorizeKintoCore(context.Background())
+	envs, err := a.client.GetEnvironments(ctx, &empty.Empty{})
 	if err != nil {
 		return nil, err
 	}

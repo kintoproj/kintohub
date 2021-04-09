@@ -1,12 +1,14 @@
 package api
 
 import (
+	"context"
 	"crypto/x509"
 	"github.com/kintoproj/kinto-cli/internal/utils"
 	"github.com/kintoproj/kinto-core/pkg/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/keepalive"
+	"google.golang.org/grpc/metadata"
 	"time"
 )
 
@@ -19,14 +21,15 @@ type ApiInterface interface {
 }
 
 type Api struct {
-	client     types.KintoCoreServiceClient
-	kintoCoreHost string
+	client                         types.KintoCoreServiceClient
+	kintoCoreHost, kintoCoreSecret string
 }
 
-func NewApiOrDie(kintoCoreHost string) ApiInterface {
+func NewApiOrDie(kintoCoreHost, kintoCoreSecret string) ApiInterface {
 	return &Api{
-		kintoCoreHost: kintoCoreHost,
-		client:     newKintoCoreServiceClient(kintoCoreHost),
+		kintoCoreHost:   kintoCoreHost,
+		kintoCoreSecret: kintoCoreSecret,
+		client:          newKintoCoreServiceClient(kintoCoreHost),
 	}
 }
 
@@ -51,4 +54,12 @@ func newKintoCoreServiceClient(kintoCoreHost string) types.KintoCoreServiceClien
 		return nil
 	}
 	return types.NewKintoCoreServiceClient(conn)
+}
+
+func (a *Api) authorizeKintoCore(ctx context.Context) context.Context {
+	if a.kintoCoreSecret == "" {
+		return ctx
+	}
+
+	return metadata.AppendToOutgoingContext(ctx, "authorization", a.kintoCoreSecret)
 }

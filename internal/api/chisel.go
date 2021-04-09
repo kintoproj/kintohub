@@ -19,11 +19,11 @@ import (
 // Used for `kinto access` , `kinto env access`, `kinto svs access`
 // Allows to port-forward/access services depending upon their nature of caller parent
 func (a *Api) StartAccess(blocksToForward []RemoteConfig, envId string) {
-
 	// Default time to cancel is 30 minutes for our nginx gateway
 	// TODO: Move to env var / build arg
 	duration := time.Now().Add(time.Minute * 30)
 	ctx, cancel := context.WithDeadline(context.Background(), duration)
+	ctx = a.authorizeKintoCore(ctx)
 	streamResponse, err := a.client.StartTeleport(
 		ctx, &types.TeleportRequest{EnvId: envId})
 	defer cancel()
@@ -40,10 +40,10 @@ func (a *Api) StartAccess(blocksToForward []RemoteConfig, envId string) {
 // Allows to teleport & port-forward services. Once service is teleported (traffic is redirected) while
 // other services are port-forwarded
 func (a *Api) StartTeleport(blocksToForward []RemoteConfig, envId string, blockName string) {
-
 	// Default time to cancel is 30 minutes for our nginx gateway
 	// TODO: Move to env var / build arg
 	ctx, cancel := context.WithDeadline(context.Background(), time.Now().Add(time.Minute*30))
+	ctx = a.authorizeKintoCore(ctx)
 	streamResponse, err := a.client.StartTeleport(
 		ctx, &types.TeleportRequest{EnvId: envId, BlockName: blockName})
 	defer cancel()

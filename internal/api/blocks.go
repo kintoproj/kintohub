@@ -6,7 +6,8 @@ import (
 )
 
 func (a *Api) GetBlocks(envId string) ([]*types.Block, error) {
-	envs, err := a.client.GetBlocks(context.Background(),
+	ctx := a.authorizeKintoCore(context.Background())
+	envs, err := a.client.GetBlocks(ctx,
 		&types.BlockQueryRequest{
 			EnvId: envId,
 		})

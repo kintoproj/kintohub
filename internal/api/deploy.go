@@ -7,7 +7,8 @@ import (
 )
 
 func (a *Api) TriggerDeploy(envId string, blockName string) (*types.BlockUpdateResponse, error) {
-	resp, err := a.client.TriggerDeploy(context.Background(),
+	ctx := a.authorizeKintoCore(context.Background())
+	resp, err := a.client.TriggerDeploy(ctx,
 		&types.TriggerDeployRequest{
 			Name:  blockName,
 			EnvId: envId,

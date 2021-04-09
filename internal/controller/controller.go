@@ -5,7 +5,7 @@ import (
 )
 
 type ControllerInterface interface {
-	Init(kintoCoreHost string)
+	Init(kintoCoreHost, kintoCoreSecret string)
 	EnvironmentAccess(envId ...string)
 	Services(envId ...string)
 	ServiceAccess(envId string, blockId string)

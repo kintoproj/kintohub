@@ -8,15 +8,20 @@ import (
 )
 
 //Set kintoCoreHost for CLI or reset it to default production host.
-func (c *Controller) Init(kintoCoreHost string) {
-
+func (c *Controller) Init(kintoCoreHost, kintoCoreSecret string) {
 	if strings.EqualFold(config.CoreHostResetKey, kintoCoreHost) {
-		config.SetKintoCoreHost(config.DefaultkintoCoreHost)
+		config.SetKintoCoreHost("")
+		config.SetKintoCoreSecret("")
 		config.Save()
-		utils.SuccessMessage("CoreHost unset")
+		utils.SuccessMessage("CoreHost and CoreSecret unset")
 	} else {
 		config.SetKintoCoreHost(kintoCoreHost)
+		config.SetKintoCoreSecret(kintoCoreSecret)
 		config.Save()
-		utils.SuccessMessage(fmt.Sprintf("New CoreHost set as => %s", kintoCoreHost))
+		successMessage := fmt.Sprintf("New CoreHost set as => %s", kintoCoreHost)
+		if kintoCoreSecret != "" {
+			successMessage = fmt.Sprintf("%s and new CoreSecret set.", successMessage)
+		}
+		utils.SuccessMessage(successMessage)
 	}
 }
