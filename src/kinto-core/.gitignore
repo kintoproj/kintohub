@@ -1,0 +1,10 @@
+vendor/*
+coverage.txt
+.env
+/main
+.DS_Store
+.idea
+.vscode
+/cmd/kintoblock/debug
+/air
+/tmp
