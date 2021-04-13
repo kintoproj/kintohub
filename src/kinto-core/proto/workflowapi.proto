@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+option go_package = "github.com/kintoproj/kinto-core/pkg/types";
+
+import "models.proto";
+import "google/protobuf/empty.proto";
+
+message WorkflowLogsRequest {
+    string buildId = 1;
+}
+
+message BuildAndDeployRequest {
+    BuildConfig buildConfig = 1;
+    string blockName = 2;
+    string releaseId = 3;
+    string namespace = 4;
+    bool   isStaticBuild = 5;
+}
+
+message DeployRequest {
+    string blockName = 1;
+    string releaseId = 2;
+    string namespace = 3;
+}
+
+message DeployCatalogRequest {
+    string blockName = 1;
+    string releaseId = 2;
+    string namespace = 3;
+    Repository repo = 4;
+}
+
+message UndeployRequest {
+    string blockName = 1;
+    string namespace = 2;
+}
+
+message SuspendRequest {
+    string blockName = 1;
+    string namespace = 2;
+    string releaseId = 3;
+}
+
+message WorkflowResponse {
+    string id = 1;
+}
+
+message AbortReleaseRequest {
+    string buildId = 1; // TODO: Rename to workflow id one day
+    string envId = 2;
+}
+
+service WorkflowAPIService {
+    rpc BuildAndDeployRelease(BuildAndDeployRequest) returns (WorkflowResponse) {}
+    rpc DeployRelease(DeployRequest) returns (WorkflowResponse) {}
+    rpc DeployReleaseFromCatalog(DeployCatalogRequest) returns (WorkflowResponse) {}
+    rpc UndeployRelease (UndeployRequest) returns (WorkflowResponse) {}
+    rpc SuspendRelease (SuspendRequest) returns (WorkflowResponse) {}
+    rpc AbortRelease (AbortReleaseRequest) returns (google.protobuf.Empty) {}
+
+    rpc GetWorkflowLogs (WorkflowLogsRequest) returns (Logs) {}
+    rpc WatchWorkflowLogs(WorkflowLogsRequest) returns (stream Logs) {}
+}
