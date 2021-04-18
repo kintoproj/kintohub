@@ -1,16 +1,17 @@
-# Kinto-cli
+# Kinto CLI
 
-> CLI responsible for different tasks related to the workflow
-> - cloning the git repo
-> - generating the Dockerfile file when user select `Dockerfile` as language.
-> - calling the kinto core server to update the release status in the configmap 
+Kinto CLI responsible for different tasks related to the workflow.
+
+- Cloning the git repository.
+- Generating the Dockerfile file when user select `Dockerfile` as language.
+- Calling the kinto core server to update the release status in the configmap.
 
 ## Requirements
 
 * Go version `1.13` or higher
 
 ## Dependencies
-- [kinto-core](https://github.com/kintoproj/kinto-core)
+- [kinto-core](../../../kinto-core)
 - [utils-go](https://github.com/kintohub/utils-go) our own reusable utils functions
 
 ## Development setup
@@ -43,7 +44,7 @@ kintocli dockerfile \
   $KINTO_CLI_DOCKERFILE_EXTRA_ARGS
 ```
 
-### Update release status
+### Update Release Status
 
 ```shell script
 kinto-cli release status \
@@ -56,7 +57,7 @@ kinto-cli release status \
   --status="$KINTO_CLI_RELEASE_STATUS_STATUS"
 ```
 
-### Update release commit sha
+### Update Release Commit Sha
 
 ```shell script
 kintocli release commit \
