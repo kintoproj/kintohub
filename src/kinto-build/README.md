@@ -9,12 +9,12 @@ Kinto Build is a gRPC API responsible for creating build or deployment workflows
 * Argo controller version `2.8.1` or higher
 
 ## Dependencies
-- [kinto-core](https://github.com/kintoproj/kintohub/tree/main/src/kinto-core)
+- [kinto-core](../kinto-core)
 - [utils-go](https://github.com/kintohub/utils-go) our own reusable utils functions
 
 ## Overview
 
-It is called by [kinto-core](https://github.com/kintoproj/kintohub/tree/main/src/kinto-core). The API contracts are store under [there](https://github.com/kintoproj/kinto-core/blob/main/proto/workflowapi.proto).
+It is called by [kinto-core](../kinto-core). The API contracts are store under [there](../kinto-core/proto/workflowapi.proto).
 
 Kinto Build supports:
 
@@ -24,8 +24,8 @@ Kinto Build supports:
 
 1) Duplicate the `.env.example` file into a `.env` file.
 2) Modify the variables if needed.
-3) Pay attention to env var `ARGO_WORKFLOW_MAIN_IMAGE` (see [kinto-cli](../images/kinto-cli)).
-4) Pay attention to env var `ARGO_WORKFLOW_CLI_IMAGE` (see [workflow image](../images)).
+3) Pay attention to env var `ARGO_WORKFLOW_MAIN_IMAGE` (see [kinto-cli](./images/kinto-cli)).
+4) Pay attention to env var `ARGO_WORKFLOW_CLI_IMAGE` (see [workflow image](./images)).
 
 ```shell script
 $ go run cmd/main.go
