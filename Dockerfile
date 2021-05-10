@@ -11,16 +11,12 @@ RUN yarn install --prod
 COPY . .
 RUN NODE_ENV=production yarn build
 
-FROM node:12-alpine
-RUN apk update && apk add --no-cache bash git
-RUN yarn global add serve
-WORKDIR /usr/src/app
+FROM nginx:1.18
+
+WORKDIR /usr/share/nginx/html
 COPY --from=0 /usr/src/app/build .
 COPY --from=0 /usr/src/app/scripts/replaceEnvVars.sh .
-EXPOSE 5000
 
-# avoid building everytime
-ARG GITHUB_SHA_ARG
-ENV GITHUB_SHA=$GITHUB_SHA_ARG
+COPY --from=0 /usr/src/app/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-CMD ./replaceEnvVars.sh && serve -s .
+CMD ./replaceEnvVars.sh && nginx -g 'daemon off;'

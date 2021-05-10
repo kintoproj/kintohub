@@ -5,3 +5,5 @@ build
 
 # prevent shipping local development html
 public/index-*.html
+
+.env*
