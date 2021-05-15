@@ -11,7 +11,7 @@ Kinto CLI responsible for different tasks related to the workflow.
 * Go version `1.13` or higher
 
 ## Dependencies
-- [kinto-core](../../../kinto-core)
+- [kinto-core](../../../core)
 - [utils-go](https://github.com/kintohub/utils-go) our own reusable utils functions
 
 ## Development setup

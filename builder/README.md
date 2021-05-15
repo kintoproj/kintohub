@@ -9,12 +9,12 @@ Kinto Build is a gRPC API responsible for creating build or deployment workflows
 * Argo controller version `2.8.1` or higher
 
 ## Dependencies
-- [kinto-core](../kinto-core)
+- [kinto-core](../core)
 - [utils-go](https://github.com/kintohub/utils-go) our own reusable utils functions
 
 ## Overview
 
-It is called by [kinto-core](../kinto-core). The API contracts are store under [there](../kinto-core/proto/workflowapi.proto).
+It is called by [kinto-core](../core). The API contracts are store under [there](../core/proto/workflowapi.proto).
 
 Kinto Build supports:
 
