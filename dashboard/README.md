@@ -84,7 +84,7 @@ cd ../..
 
 ### Storybook
 
-Storybook provides a way to test the component easily. We use StoryBook to test some atoms/molecules especially those are on SidePanel or Popups.
+Storybook provides a way to test the component easily. We use Storybook to test some atoms/molecules especially those are on SidePanel or Popups.
 
 ```bash
 yarn storybook
