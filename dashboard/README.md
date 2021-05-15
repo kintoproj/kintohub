@@ -1,26 +1,23 @@
 # Kinto Dashboard
 [![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://slack.kintohub.com)
 
-Kintohub Dashboard is a general purpose, web-based UI for managing your [kinto-core](https://github.com/kintoproj/kinto-core). 
-It allows you to manage your applications deployed by kinto-core with ease.
-This project is written in typescript with react/redux.
+Kinto Dashboard is a general purpose, web-based UI for managing your [Kinto Core](../core). It allows you to manage your applications deployed by Kinto Core with ease.
 
 ![Kinto-Dashboard](LandingPage.png)
 
 ## Getting Started
 
-You can find the documentation [on the website](https://docs.kintohub.com)
+See documentation in our [website](https://docs.kintohub.com).
 
 ### Prerequisite
 
-Make sure you have a kubernetes cluster and a [kinto-core](https://github.com/kintoproj/kinto-core) is running on it.
+Make sure you have a Kubernetes cluster and a [Kinto Core](../core) is running on it.
 
-### Running locally
+### Running Locally
 
 [comment]: <> (add helm chart/docker image for direct deploy?)
 
-If you have direct access to the kubernetes cluster and kinto-core, 
-you can run the dashboard locally with connecting to the port-forwarded kinto-core  
+If you have direct access to the Kubernetes cluster and Kinto Core, you can run Kinto Dashboard locally with connecting to the port-forwarded Kinto Core:
 
 ```bash
 # port-forward your kinto-core
@@ -36,16 +33,13 @@ yarn
 yarn start
 ```
 
-### Install via kubernetes yaml
+### Install via Kubernetes (yaml)
 
-You can also install the dashboard into kubernetes directly. 
-But we strongly advise not to expose the dashboard to public as it could expose some admin actions that may harmful to your cluster.
-
-[comment]: <> (TODO: add the )
+You can also install Kinto Dashboard into Kubernetes directly. But we strongly advise not to expose the Kinto Dashboard to public as it could expose some admin actions that may harmful to your cluster.
 
 ## Development
 
-### Project structure
+### Project Structure
 
 ```text
 |
@@ -68,7 +62,7 @@ But we strongly advise not to expose the dashboard to public as it could expose 
        
 ```
 
-### Generating types from proto files
+### Generating Types From Proto Files
 
 The `.proto` files of this project is referencing from `kinto-core`. 
 In normal case the `main` branch already contains the latest codes generated from `.proto` files. 
@@ -90,8 +84,7 @@ cd ../..
 
 ### Storybook
 
-Storybook provides a way to test the component easily.
-We use storybook to test some atoms/molecules especially those are on SidePanel or Popups.
+Storybook provides a way to test the component easily. We use StoryBook to test some atoms/molecules especially those are on SidePanel or Popups.
 
 ```bash
 yarn storybook
@@ -99,8 +92,7 @@ yarn storybook
 # visit localhost:9009
 ```
 
-### Environment variables
-
+### Environment Variables
 
 ```bash
 
@@ -110,7 +102,3 @@ yarn storybook
 # second update the script to make sure the env vars get replaced at run time
 ./scripts/replaceEnvVars.sh
 ```
-
-## Contribution
-
-## License
