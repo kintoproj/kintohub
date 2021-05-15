@@ -3,11 +3,11 @@
 
 Kinto Dashboard is a general purpose, web-based UI for managing your [Kinto Core](../core). It allows you to manage your applications deployed by Kinto Core with ease.
 
-![Kinto-Dashboard](LandingPage.png)
+![docs/landing-page.png](landing-page.png)
 
 ## Getting Started
 
-See documentation in our [website](https://docs.kintohub.com).
+See documentation in our [website](https://www.kintohub.com/getting-started/introduction).
 
 ### Prerequisite
 
