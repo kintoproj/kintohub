@@ -1,0 +1,6 @@
+{
+  "src/**/*.{tsx}": [
+    "yarn format",
+    "yarn run lint"
+  ]
+}
