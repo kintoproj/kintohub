@@ -3,8 +3,9 @@ package controller
 import (
 	"context"
 	"fmt"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-core/pkg/types"
+
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	"github.com/rs/zerolog/log"
 )
 

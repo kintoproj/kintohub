@@ -2,13 +2,14 @@ package controller
 
 import (
 	"context"
-	"github.com/google/uuid"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-core/internal/build"
-	"github.com/kintoproj/kinto-core/internal/store"
-	"github.com/kintoproj/kinto-core/pkg/types"
-	"github.com/rs/zerolog/log"
 	"strings"
+
+	"github.com/google/uuid"
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/core/internal/build"
+	"github.com/kintoproj/kintohub/core/internal/store"
+	"github.com/kintoproj/kintohub/core/pkg/types"
+	"github.com/rs/zerolog/log"
 )
 
 func (c *ControllerMiddleware) CreateBlock(

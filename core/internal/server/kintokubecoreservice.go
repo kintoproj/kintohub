@@ -3,17 +3,18 @@ package server
 import (
 	"context"
 	"fmt"
-	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/kintohub/utils-go/klog"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	utilsGoGrpc "github.com/kintohub/utils-go/server/grpc"
-	"github.com/kintoproj/kinto-core/internal/config"
-	"github.com/kintoproj/kinto-core/internal/middleware"
-	"github.com/kintoproj/kinto-core/pkg/types"
-	"github.com/rs/zerolog/log"
-	"google.golang.org/grpc"
 	"net"
 	"time"
+
+	"github.com/golang/protobuf/ptypes/empty"
+	"github.com/kintoproj/go-utils/klog"
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	utilsGoGrpc "github.com/kintoproj/go-utils/server/grpc"
+	"github.com/kintoproj/kintohub/core/internal/config"
+	"github.com/kintoproj/kintohub/core/internal/middleware"
+	"github.com/kintoproj/kintohub/core/pkg/types"
+	"github.com/rs/zerolog/log"
+	"google.golang.org/grpc"
 )
 
 type KintoCoreService struct {

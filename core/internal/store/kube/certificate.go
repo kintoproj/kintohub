@@ -3,12 +3,13 @@ package kube
 import (
 	"context"
 	"fmt"
+
 	certacmev1alpha2 "github.com/jetstack/cert-manager/pkg/apis/acme/v1alpha2"
 	certv1alpha2 "github.com/jetstack/cert-manager/pkg/apis/certmanager/v1alpha2"
 	certmetav1 "github.com/jetstack/cert-manager/pkg/apis/meta/v1"
 	cert "github.com/jetstack/cert-manager/pkg/client/clientset/versioned"
-	"github.com/kintoproj/kinto-core/internal/config"
-	"github.com/kintoproj/kinto-core/pkg/consts"
+	"github.com/kintoproj/kintohub/core/internal/config"
+	"github.com/kintoproj/kintohub/core/pkg/consts"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/utils/pointer"

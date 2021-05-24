@@ -2,8 +2,9 @@ package middleware
 
 import (
 	"context"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-core/pkg/types"
+
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 // This is a wrapper that allows adapter implementations of Middleware be able to be passed in as middleware reference

@@ -1,9 +1,10 @@
 package controller
 
 import (
-	"github.com/kintoproj/kinto-core/pkg/types"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/kintoproj/kintohub/core/pkg/types"
+	"github.com/stretchr/testify/assert"
 )
 
 func Test_getExistingBuildIdIfPossible(t *testing.T) {

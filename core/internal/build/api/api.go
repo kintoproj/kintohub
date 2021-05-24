@@ -1,9 +1,9 @@
 package api
 
 import (
-	"github.com/kintohub/utils-go/github"
-	"github.com/kintoproj/kinto-core/internal/build"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/go-utils/github"
+	"github.com/kintoproj/kintohub/core/internal/build"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 type BuildAPI struct {

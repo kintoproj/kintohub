@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/kintoproj/kinto-core/pkg/types";
+option go_package = "github.com/kintoproj/kintohub/core/pkg/types";
 
 import "models.proto";
 import "google/protobuf/empty.proto";

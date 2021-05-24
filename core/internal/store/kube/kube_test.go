@@ -3,13 +3,15 @@ package kube
 import (
 	"context"
 	"fmt"
+	"testing"
+
 	certacmev1alpha2 "github.com/jetstack/cert-manager/pkg/apis/acme/v1alpha2"
 	certv1alpha2 "github.com/jetstack/cert-manager/pkg/apis/certmanager/v1alpha2"
 	certmetav1 "github.com/jetstack/cert-manager/pkg/apis/meta/v1"
 	fakecert "github.com/jetstack/cert-manager/pkg/client/clientset/versioned/fake"
-	"github.com/kintoproj/kinto-core/internal/config"
-	"github.com/kintoproj/kinto-core/pkg/consts"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/kintohub/core/internal/config"
+	"github.com/kintoproj/kintohub/core/pkg/consts"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	"github.com/stretchr/testify/assert"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/api/extensions/v1beta1"
@@ -17,7 +19,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/intstr"
 	fakekube "k8s.io/client-go/kubernetes/fake"
 	"k8s.io/utils/pointer"
-	"testing"
 )
 
 const (
