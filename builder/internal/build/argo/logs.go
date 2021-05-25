@@ -3,13 +3,14 @@ package argo
 import (
 	"bytes"
 	"context"
-	argoLogs "github.com/argoproj/argo/util/logs"
-	"github.com/kintohub/utils-go/klog"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-build/internal/build/utils"
-	"github.com/kintoproj/kinto-build/internal/config"
-	"github.com/minio/minio-go/v6"
 	"sort"
+
+	argoLogs "github.com/argoproj/argo/util/logs"
+	"github.com/kintoproj/go-utils/klog"
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/builder/internal/build/utils"
+	"github.com/kintoproj/kintohub/builder/internal/config"
+	"github.com/minio/minio-go/v6"
 )
 
 func (c *BuildClient) GetLogs(ctx context.Context, buildId string) ([]byte, *utilsGoServer.Error) {

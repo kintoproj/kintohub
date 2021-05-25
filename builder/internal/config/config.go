@@ -1,9 +1,10 @@
 package config
 
 import (
-	_ "github.com/joho/godotenv/autoload"
-	"github.com/kintohub/utils-go/config"
 	"os"
+
+	_ "github.com/joho/godotenv/autoload"
+	"github.com/kintoproj/go-utils/config"
 )
 
 var (

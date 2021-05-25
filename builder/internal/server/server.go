@@ -2,13 +2,14 @@ package server
 
 import (
 	"fmt"
-	"github.com/kintoproj/kinto-build/internal/build"
-	"github.com/kintoproj/kinto-build/internal/config"
-	"github.com/kintoproj/kinto-core/pkg/types"
-	"google.golang.org/grpc"
-	"k8s.io/klog"
 	"log"
 	"net"
+
+	"github.com/kintoproj/kintohub/builder/internal/build"
+	"github.com/kintoproj/kintohub/builder/internal/config"
+	"github.com/kintoproj/kintohub/core/pkg/types"
+	"google.golang.org/grpc"
+	"k8s.io/klog"
 )
 
 func Run(buildClient build.BuildClientInterface) {

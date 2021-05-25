@@ -2,11 +2,12 @@ package server
 
 import (
 	"context"
+
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/kintohub/utils-go/klog"
-	utilsGoGrpc "github.com/kintohub/utils-go/server/grpc"
-	"github.com/kintoproj/kinto-build/internal/build"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/go-utils/klog"
+	utilsGoGrpc "github.com/kintoproj/go-utils/server/grpc"
+	"github.com/kintoproj/kintohub/builder/internal/build"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 type KintoBuildService struct {
