@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/kintohub/utils-go/klog"
-	"github.com/kintoproj/kinto-build/internal/build/argo"
-	"github.com/kintoproj/kinto-build/internal/config"
-	"github.com/kintoproj/kinto-build/internal/server"
+	"github.com/kintoproj/go-utils/klog"
+	"github.com/kintoproj/kintohub/builder/internal/build/argo"
+	"github.com/kintoproj/kintohub/builder/internal/config"
+	"github.com/kintoproj/kintohub/builder/internal/server"
 )
 
 func main() {

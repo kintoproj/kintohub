@@ -2,15 +2,16 @@ package argo
 
 import (
 	"fmt"
+	"strconv"
+	"strings"
+
 	"github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
-	"github.com/kintoproj/kinto-build/internal/build/utils"
-	"github.com/kintoproj/kinto-build/internal/config"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/kintohub/builder/internal/build/utils"
+	"github.com/kintoproj/kintohub/builder/internal/config"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	"k8s.io/utils/pointer"
-	"strconv"
-	"strings"
 )
 
 func genStepsTemplate(updateStatusStepEnabled bool) v1alpha1.Template {

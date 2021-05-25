@@ -2,14 +2,15 @@ package argo
 
 import (
 	"fmt"
+
 	"github.com/argoproj/argo/pkg/apis/workflow/v1alpha1"
 	"github.com/argoproj/argo/pkg/client/clientset/versioned"
 	argoUtil "github.com/argoproj/argo/workflow/util"
-	"github.com/kintohub/utils-go/klog"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-build/internal/build"
-	"github.com/kintoproj/kinto-build/internal/config"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/go-utils/klog"
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/builder/internal/build"
+	"github.com/kintoproj/kintohub/builder/internal/config"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	"github.com/minio/minio-go/v6"
 	"golang.org/x/net/context"
 	corev1 "k8s.io/api/core/v1"

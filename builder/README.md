@@ -4,17 +4,18 @@ Kinto Build is a gRPC API responsible for creating build or deployment workflows
 
 ## Requirements
 
-* Go version `1.13` or higher
-* Kubernetes version `1.16` or higher if `WORKFLOW_ENGINE` == `argo` 
-* Argo controller version `2.8.1` or higher
+- Go version `1.13` or higher
+- Kubernetes version `1.16` or higher if `WORKFLOW_ENGINE` == `argo`
+- Argo controller version `2.8.1` or higher
 
 ## Dependencies
+
 - [kinto-core](../core)
-- [utils-go](https://github.com/kintohub/utils-go) our own reusable utils functions
+- [go-utils](https://github.com/kintoproj/go-utils) (our own reusable utils)
 
 ## Overview
 
-It is called by [kinto-core](../core). The API contracts are store under [there](../core/proto/workflowapi.proto).
+It is called by [Kinto Core](../core). The API contracts are store under [there](../core/proto/workflowapi.proto).
 
 Kinto Build supports:
 
@@ -22,10 +23,10 @@ Kinto Build supports:
 
 ## Argo
 
-1) Duplicate the `.env.example` file into a `.env` file.
-2) Modify the variables if needed.
-3) Pay attention to env var `ARGO_WORKFLOW_MAIN_IMAGE` (see [kinto-cli](./images/kinto-cli)).
-4) Pay attention to env var `ARGO_WORKFLOW_CLI_IMAGE` (see [workflow image](./images)).
+1. Duplicate the `.env.example` file into a `.env` file.
+2. Modify the variables if needed.
+3. Pay attention to env var `ARGO_WORKFLOW_MAIN_IMAGE` (see [kinto-cli](./images/kinto-cli)).
+4. Pay attention to env var `ARGO_WORKFLOW_CLI_IMAGE` (see [workflow image](./images)).
 
 ```shell script
 $ go run cmd/main.go
