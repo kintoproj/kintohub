@@ -2,10 +2,11 @@ package controller
 
 import (
 	"fmt"
-	"github.com/kintoproj/kinto-cli/internal/api"
-	"github.com/kintoproj/kinto-cli/internal/utils"
-	"github.com/olekukonko/tablewriter"
 	"os"
+
+	"github.com/kintoproj/kintohub/cli/internal/api"
+	"github.com/kintoproj/kintohub/cli/internal/utils"
+	"github.com/olekukonko/tablewriter"
 )
 
 func createTable() *tablewriter.Table {
@@ -59,7 +60,7 @@ func (c *Controller) Services(envId ...string) {
 			return
 		}
 
-		for _, env := range envs{
+		for _, env := range envs {
 			envDetail := api.EnvDetails{EnvName: fmt.Sprintf("%d. %s", serialNumber, env.Name), EnvId: env.Id}
 			envDetails = append(envDetails, envDetail)
 			serialNumber++

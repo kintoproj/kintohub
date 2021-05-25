@@ -3,13 +3,14 @@ package api
 import (
 	"context"
 	"crypto/x509"
-	"github.com/kintoproj/kinto-cli/internal/utils"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"time"
+
+	"github.com/kintoproj/kintohub/cli/internal/utils"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/keepalive"
 	"google.golang.org/grpc/metadata"
-	"time"
 )
 
 type ApiInterface interface {

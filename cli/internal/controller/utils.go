@@ -2,10 +2,11 @@ package controller
 
 import (
 	"fmt"
-	"github.com/kintoproj/kinto-cli/internal/api"
-	"github.com/kintoproj/kinto-cli/internal/config"
-	"github.com/kintoproj/kinto-cli/internal/utils"
-	"github.com/kintoproj/kinto-core/pkg/types"
+
+	"github.com/kintoproj/kintohub/cli/internal/api"
+	"github.com/kintoproj/kintohub/cli/internal/config"
+	"github.com/kintoproj/kintohub/cli/internal/utils"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 //get env from its id
@@ -140,8 +141,8 @@ func (c *Controller) GetBlocksToTeleport(envId string) ([]api.RemoteConfig, stri
 				remote := api.RemoteConfig{
 					FromHost: config.DefaultTeleportInterfacePort, // server listen to all interfaces
 					FromPort: 3000,
-					ToHost: "localhost",
-					ToPort: config.DefaultClientTeleportPort,
+					ToHost:   "localhost",
+					ToPort:   config.DefaultClientTeleportPort,
 					// TODO make it configurable, the user must run their local service on port 8080
 				}
 				blocksToForward = append(blocksToForward, remote)

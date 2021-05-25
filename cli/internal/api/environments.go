@@ -2,8 +2,9 @@ package api
 
 import (
 	"context"
+
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 func (a *Api) GetEnvironments() ([]*types.Environment, error) {

@@ -2,8 +2,9 @@ package api
 
 import (
 	"context"
-	"github.com/kintoproj/kinto-cli/internal/utils"
-	"github.com/kintoproj/kinto-core/pkg/types"
+
+	"github.com/kintoproj/kintohub/cli/internal/utils"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 func (a *Api) TriggerDeploy(envId string, blockName string) (*types.BlockUpdateResponse, error) {

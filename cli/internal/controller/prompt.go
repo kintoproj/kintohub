@@ -2,9 +2,8 @@ package controller
 
 import (
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/kintoproj/kinto-cli/internal/api"
-
-	"github.com/kintoproj/kinto-cli/internal/utils"
+	"github.com/kintoproj/kintohub/cli/internal/api"
+	"github.com/kintoproj/kintohub/cli/internal/utils"
 )
 
 // Contains different types of prompts for the UX.

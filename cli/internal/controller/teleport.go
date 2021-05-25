@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/kintoproj/kinto-cli/internal/utils"
+	"github.com/kintoproj/kintohub/cli/internal/utils"
 )
 
 //allows to teleport a particular service inside an env while port-forwarding the remaining services.

@@ -1,9 +1,10 @@
 package controller
 
 import (
-	"github.com/kintoproj/kinto-cli/internal/utils"
-	"github.com/olekukonko/tablewriter"
 	"os"
+
+	"github.com/kintoproj/kintohub/cli/internal/utils"
+	"github.com/olekukonko/tablewriter"
 )
 
 //Get the list of all environments on which the current local repo is deployed on.
