@@ -2,7 +2,8 @@ package cmd_release
 
 import (
 	"fmt"
-	"github.com/kintoproj/kinto-core/pkg/types"
+
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 func UpdateReleaseCommitSha(

@@ -3,9 +3,10 @@ package cmd_dockerfile
 import (
 	"errors"
 	"fmt"
-	"github.com/kintoproj/kinto-core/pkg/types"
 	"os"
 	"text/template"
+
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 type dockerfile struct {
