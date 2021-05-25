@@ -2,11 +2,12 @@ package cli
 
 import (
 	"fmt"
-	"github.com/kintoproj/kinto-cli/internal/config"
-	"github.com/kintoproj/kinto-cli/internal/controller"
+	"os"
+
+	"github.com/kintoproj/kintohub/cli/internal/config"
+	"github.com/kintoproj/kintohub/cli/internal/controller"
 	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
-	"os"
 )
 
 type CliInterface interface {

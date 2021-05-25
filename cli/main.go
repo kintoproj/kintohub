@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/kintoproj/kinto-cli/internal/api"
-	"github.com/kintoproj/kinto-cli/internal/cli"
-	"github.com/kintoproj/kinto-cli/internal/controller"
+	"github.com/kintoproj/kintohub/cli/internal/api"
+	"github.com/kintoproj/kintohub/cli/internal/cli"
+	"github.com/kintoproj/kintohub/cli/internal/controller"
 )
 
 func main() {

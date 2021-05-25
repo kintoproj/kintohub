@@ -2,13 +2,14 @@ package utils
 
 import (
 	"fmt"
-	"github.com/Terry-Mao/goconf"
-	"github.com/golang/protobuf/ptypes"
-	"github.com/kintoproj/kinto-cli/internal/config"
-	"github.com/kintoproj/kinto-core/pkg/types"
-	"github.com/rs/zerolog/log"
 	"net"
 	"strings"
+
+	"github.com/Terry-Mao/goconf"
+	"github.com/golang/protobuf/ptypes"
+	"github.com/kintoproj/kintohub/cli/internal/config"
+	"github.com/kintoproj/kintohub/core/pkg/types"
+	"github.com/rs/zerolog/log"
 )
 
 //Gets the latest successful release from any service
@@ -74,7 +75,6 @@ func CheckIfPortOpened(port int, terminateOnError bool) bool {
 	return true
 }
 
-
 //check if Local Git Repo exists
 func CheckLocalGitOrDie() {
 	conf := goconf.New()
@@ -135,4 +135,3 @@ func CanPortForwardToRelease(release *types.Release) bool {
 		return false
 	}
 }
-

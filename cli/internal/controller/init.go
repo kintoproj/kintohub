@@ -2,9 +2,10 @@ package controller
 
 import (
 	"fmt"
-	"github.com/kintoproj/kinto-cli/internal/config"
-	"github.com/kintoproj/kinto-cli/internal/utils"
 	"strings"
+
+	"github.com/kintoproj/kintohub/cli/internal/config"
+	"github.com/kintoproj/kintohub/cli/internal/utils"
 )
 
 //Set kintoCoreHost for CLI or reset it to default production host.

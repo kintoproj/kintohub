@@ -1,9 +1,10 @@
 package controller
 
 import (
-	"github.com/kintoproj/kinto-cli/internal/utils"
-	"github.com/olekukonko/tablewriter"
 	"os"
+
+	"github.com/kintoproj/kintohub/cli/internal/utils"
+	"github.com/olekukonko/tablewriter"
 )
 
 //Get list of all available environments in an account

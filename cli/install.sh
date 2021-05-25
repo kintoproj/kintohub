@@ -16,7 +16,7 @@ NEED_SUDO=0
 
 #CLI related values
 OWNER="kintoproj"
-REPO_NAME="kinto-cli"
+REPO_NAME="kintohub"
 CLI_NAME="kinto"  #will be the final name of the CLI command.
 GH="https://github.com"
 
