@@ -1,9 +1,10 @@
 # Kinto CLI
 [![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://slack.kintohub.com)
 
-Kinto CLI is a command line utility for accessing [kinto-core](https://github.com/kintoproj/kinto-core). Kinto CLI is written in Golang.
+Kinto CLI is a command line utility for accessing [Kinto Core](../core).
 
 # Index
+
 - [Kinto CLI](#kinto-cli)
 - [Index](#index)
 - [Installation](#installation)
@@ -69,7 +70,7 @@ Kinto CLI is written in [Golang](https://golang.org/) using the popular package 
 Kinto CLI follows the following structure:
 
 ```
-kinto-cli
+cli
  |── internal
      ├── api
      ├── cli
@@ -92,29 +93,29 @@ Follow the below given instructions to set up the project locally.
 
 1. Clone the repository and `cd` into it:
 
-  ```
-  git clone https://github.com/kintoproj/kintohub
+```
+git clone https://github.com/kintoproj/kintohub
 
-  cd kintohub/src/kinto-cli
-  ```
+cd kintohub/cli
+```
 
 2. Once you have a local copy of KintoHub repository on your machine, you can use an IDE such as [Goland](https://www.jetbrains.com/go/download/) to make working with Golang easier or you can do the setup manually by:
 
-  ```
-  go mod download
-  ```
+```
+go mod download
+```
 
 3. You can build the CLI binary file for your operating system by running the command:
 
-  ```
-  go build
-  ```
+```
+go build
+```
 
 4. And install it to `$GOPATH/go/bin/` by:
 
-  ```
-  go install
-  ```
+```
+go install
+```
 
 # CLI Commands
 
