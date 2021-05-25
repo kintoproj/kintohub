@@ -4,11 +4,12 @@ import (
 	"bufio"
 	"context"
 	"fmt"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-core/internal/config"
-	"github.com/kintoproj/kinto-core/pkg/consts"
 
-	"github.com/kintoproj/kinto-core/pkg/types"
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/core/internal/config"
+	"github.com/kintoproj/kintohub/core/pkg/consts"
+
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	"github.com/rs/zerolog/log"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

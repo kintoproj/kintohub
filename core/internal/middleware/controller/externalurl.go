@@ -2,9 +2,10 @@ package controller
 
 import (
 	"context"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-core/internal/store"
-	"github.com/kintoproj/kinto-core/pkg/types"
+
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/core/internal/store"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 func upsertExternalURL(store store.StoreInterface, blockName, envId string, release *types.Release) *utilsGoServer.Error {

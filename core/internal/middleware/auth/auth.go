@@ -2,9 +2,10 @@ package auth
 
 import (
 	"context"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-core/internal/middleware"
-	"github.com/kintoproj/kinto-core/pkg/types"
+
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/core/internal/middleware"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	"google.golang.org/grpc/metadata"
 )
 

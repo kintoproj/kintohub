@@ -2,12 +2,13 @@ package kube
 
 import (
 	"context"
-	"github.com/kintohub/utils-go/klog"
+	"time"
+
+	"github.com/kintoproj/go-utils/klog"
 	networkingv1 "k8s.io/api/networking/v1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
-	"time"
 )
 
 const (

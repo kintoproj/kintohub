@@ -1,16 +1,16 @@
 package main
 
 import (
-	"github.com/kintohub/utils-go/klog"
-	utilsGrpc "github.com/kintohub/utils-go/server/grpc"
-	"github.com/kintoproj/kinto-core/internal/build/api"
-	"github.com/kintoproj/kinto-core/internal/config"
-	"github.com/kintoproj/kinto-core/internal/middleware"
-	"github.com/kintoproj/kinto-core/internal/middleware/auth"
-	"github.com/kintoproj/kinto-core/internal/middleware/controller"
-	"github.com/kintoproj/kinto-core/internal/server"
-	"github.com/kintoproj/kinto-core/internal/store/kube"
-	pkgTypes "github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/go-utils/klog"
+	utilsGrpc "github.com/kintoproj/go-utils/server/grpc"
+	"github.com/kintoproj/kintohub/core/internal/build/api"
+	"github.com/kintoproj/kintohub/core/internal/config"
+	"github.com/kintoproj/kintohub/core/internal/middleware"
+	"github.com/kintoproj/kintohub/core/internal/middleware/auth"
+	"github.com/kintoproj/kintohub/core/internal/middleware/controller"
+	"github.com/kintoproj/kintohub/core/internal/server"
+	"github.com/kintoproj/kintohub/core/internal/store/kube"
+	pkgTypes "github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 func main() {

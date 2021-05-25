@@ -3,15 +3,16 @@ package kube
 import (
 	"context"
 	"fmt"
-	"github.com/kintoproj/kinto-core/internal/config"
 	"time"
+
+	"github.com/kintoproj/kintohub/core/internal/config"
 
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/kintohub/utils-go/klog"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintoproj/kinto-core/pkg/consts"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/go-utils/klog"
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/kintohub/core/pkg/consts"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

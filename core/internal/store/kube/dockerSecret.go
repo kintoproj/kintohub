@@ -2,13 +2,14 @@ package kube
 
 import (
 	"context"
-	"github.com/kintohub/utils-go/klog"
-	"github.com/kintoproj/kinto-core/pkg/consts"
+	"time"
+
+	"github.com/kintoproj/go-utils/klog"
+	"github.com/kintoproj/kintohub/core/pkg/consts"
 	v1 "k8s.io/api/core/v1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
-	"time"
 )
 
 func upsertDockerSecret(

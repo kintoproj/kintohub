@@ -9,12 +9,12 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	"github.com/google/uuid"
 	"github.com/jinzhu/copier"
-	"github.com/kintohub/utils-go/klog"
-	utilsGoServer "github.com/kintohub/utils-go/server"
-	"github.com/kintohub/utils-go/utils"
-	"github.com/kintoproj/kinto-core/internal/build"
-	"github.com/kintoproj/kinto-core/internal/config"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/go-utils/klog"
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+	"github.com/kintoproj/go-utils/utils"
+	"github.com/kintoproj/kintohub/core/internal/build"
+	"github.com/kintoproj/kintohub/core/internal/config"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	"github.com/rs/zerolog/log"
 )
 

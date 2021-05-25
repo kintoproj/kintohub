@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/kintohub/utils-go/klog"
+	"github.com/kintoproj/go-utils/klog"
 )
 
 func isValidRepoUrl(repoUrl string) bool {

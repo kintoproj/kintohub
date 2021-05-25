@@ -3,10 +3,11 @@ package kube
 import (
 	"errors"
 	"fmt"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"regexp"
+
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	"github.com/rs/zerolog/log"
 	corev1 "k8s.io/api/core/v1"
-	"regexp"
 )
 
 var (

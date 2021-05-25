@@ -2,11 +2,12 @@ package controller
 
 import (
 	"context"
-	"github.com/kintoproj/kinto-core/internal/build"
-	"github.com/kintoproj/kinto-core/internal/middleware"
-	"github.com/kintoproj/kinto-core/internal/store"
 
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/kintohub/core/internal/build"
+	"github.com/kintoproj/kintohub/core/internal/middleware"
+	"github.com/kintoproj/kintohub/core/internal/store"
+
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 type ControllerMiddleware struct {

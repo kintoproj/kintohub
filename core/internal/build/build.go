@@ -2,9 +2,10 @@ package build
 
 import (
 	"context"
-	utilsGoServer "github.com/kintohub/utils-go/server"
 
-	"github.com/kintoproj/kinto-core/pkg/types"
+	utilsGoServer "github.com/kintoproj/go-utils/server"
+
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 type BuildInterface interface {
