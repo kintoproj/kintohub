@@ -5,7 +5,7 @@ COPY go.mod .
 COPY go.sum .
 COPY main.go .
 COPY internal ./internal
-RUN GOOS=linux GOARCH=amd64 go build -ldflags="-X 'github.com/kintoproj/kinto-cli/internal/config.Version=${CLI_VERSION}'" -o kinto main.go
+RUN GOOS=linux GOARCH=amd64 go build -ldflags="-X 'github.com/kintoproj/kintohub/cli/internal/config.Version=${CLI_VERSION}'" -o kinto main.go
 
 FROM alpine
 COPY --from=builder /app/kinto /bin
