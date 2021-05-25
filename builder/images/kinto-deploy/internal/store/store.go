@@ -1,8 +1,9 @@
 package store
 
 import (
-	kintoCoretypes "github.com/kintoproj/kinto-core/pkg/types"
 	"kintoproj/kinto-deploy/internal/types"
+
+	kintoCoretypes "github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 type Interface interface {

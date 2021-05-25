@@ -2,7 +2,8 @@ package kube
 
 import (
 	"context"
-	"github.com/kintoproj/kinto-core/pkg/types"
+
+	"github.com/kintoproj/kintohub/core/pkg/types"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"

@@ -1,10 +1,11 @@
 package kube
 
 import (
+	"testing"
+
 	"github.com/r3labs/diff"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
-	"testing"
 )
 
 func Test_genResourceRequirements(t *testing.T) {

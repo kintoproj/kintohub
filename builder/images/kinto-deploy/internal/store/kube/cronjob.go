@@ -4,6 +4,8 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"kintoproj/kinto-deploy/internal/types"
+
 	batchv1 "k8s.io/api/batch/v1"
 	"k8s.io/api/batch/v1beta1"
 	v1 "k8s.io/api/core/v1"
@@ -12,7 +14,6 @@ import (
 	k8stypes "k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/utils/pointer"
-	"kintoproj/kinto-deploy/internal/types"
 )
 
 func upsertCronJob(kubeClient kubernetes.Interface, release *types.Release) (*v1beta1.CronJob, error) {

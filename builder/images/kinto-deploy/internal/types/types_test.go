@@ -2,13 +2,14 @@ package types
 
 import (
 	"fmt"
-	"github.com/google/uuid"
-	"github.com/kintoproj/kinto-core/pkg/consts"
-	kintoCore "github.com/kintoproj/kinto-core/pkg/types"
-	"github.com/r3labs/diff"
-	"github.com/stretchr/testify/assert"
 	"kintoproj/kinto-deploy/internal/config"
 	"testing"
+
+	"github.com/google/uuid"
+	"github.com/kintoproj/kintohub/core/pkg/consts"
+	kintoCore "github.com/kintoproj/kintohub/core/pkg/types"
+	"github.com/r3labs/diff"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestConvertKintoCoreReleaseToKDRelease(t *testing.T) {

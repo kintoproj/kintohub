@@ -1,13 +1,14 @@
 package config
 
 import (
-	_ "github.com/joho/godotenv/autoload"
-	"github.com/kintohub/utils-go/config"
-	"github.com/kintoproj/kinto-core/pkg/types"
-	"github.com/rs/zerolog"
-	"github.com/rs/zerolog/log"
 	"os"
 	"strings"
+
+	_ "github.com/joho/godotenv/autoload"
+	"github.com/kintoproj/go-utils/config"
+	"github.com/kintoproj/kintohub/core/pkg/types"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 )
 
 var (

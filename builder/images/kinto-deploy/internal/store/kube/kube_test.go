@@ -1,10 +1,11 @@
 package kube
 
 import (
-	"github.com/stretchr/testify/assert"
-	"k8s.io/client-go/kubernetes/fake"
 	"kintoproj/kinto-deploy/internal/types"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
+	"k8s.io/client-go/kubernetes/fake"
 )
 
 var kubeStore = NewStoreClient(fake.NewSimpleClientset(), nil)

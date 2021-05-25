@@ -2,6 +2,9 @@ package kube
 
 import (
 	"context"
+	"kintoproj/kinto-deploy/internal/types"
+	"testing"
+
 	"github.com/r3labs/diff"
 	"github.com/stretchr/testify/assert"
 	batchv1 "k8s.io/api/batch/v1"
@@ -10,8 +13,6 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes/fake"
 	"k8s.io/utils/pointer"
-	"kintoproj/kinto-deploy/internal/types"
-	"testing"
 )
 
 // TODO change this test to be similar to deployment
