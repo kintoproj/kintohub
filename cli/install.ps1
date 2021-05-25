@@ -28,7 +28,7 @@ if ((Get-ExecutionPolicy).ToString() -notin $allowedExecutionPolicy) {
 Write-Output 'Initializing...'
 
 #Variables
-$repoName = "kintoproj/kinto-cli"
+$repoName = "kintoproj/kintohub"
 $releaseName = "cli-kinto-win-amd64.zip"
 $installationPath = $ENV:UserProfile+"\kinto"
 
