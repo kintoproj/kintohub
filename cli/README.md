@@ -67,25 +67,17 @@ Kinto CLI is written in [Golang](https://golang.org/) using the popular package 
 
 ## Project Structure
 
-Kinto CLI follows the following structure:
+Kinto CLI follows the following project structure:
 
 ```
 cli
- |── internal
-     ├── api
-     ├── cli
-     ├── config
-     ├── controller
-     └── utils
-
+ |── internal (houses all the code for the CLI.)
+     ├── api (provides access to different components of the CLI such as `environments`, `services/blocks`, etc.)
+     ├── cli (contains the root file that houses all the command declarations.)
+     ├── config (stores the consts and configs for the CLI.)
+     ├── controller (hosts the business logic for all the functions declared in **cli**.)
+     └── utils (contains the basic utility functions needed by the CLI.)
 ```
-
-- **internal** houses all the code for the CLI.
-  - **api** provides access to different components of the CLI such as `environments`, `services/blocks`, etc.
-  - **cli** contains the root file that houses all the command declarations.
-  - **config** stores the consts and configs for the CLI.
-  - **controller** hosts the business logic for all the functions declared in **cli**.
-  - **utils** contains the basic utility functions needed by the CLI.
 
 ## Local Setup
 
