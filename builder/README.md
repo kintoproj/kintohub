@@ -1,34 +1,37 @@
-# Kinto Build
+# Kinto Builder
+[![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://slack.kintohub.com)
 
-Kinto Build is a gRPC API responsible for creating build or deployment workflows.
+Kinto Builder is a mono repository containing all the dependencies related to Building and Deploying services on KintoHub.
 
-## Requirements
+## Structure
 
-- Go version `1.13` or higher
-- Kubernetes version `1.16` or higher if `WORKFLOW_ENGINE` == `argo`
-- Argo controller version `2.8.1` or higher
+### [kinto-build](./kinto-build)
 
-## Dependencies
+Kinto-build is a gRPC server responsible for creating build/deployment argo workflows.
 
-- [kinto-core](../core)
-- [go-utils](https://github.com/kintoproj/go-utils) (our own reusable utils)
+### [images](./images)
 
-## Overview
+#### [kinto-cli](./images/kinto-cli)
 
-It is called by [Kinto Core](../core). The API contracts are store under [there](../core/proto/workflowapi.proto).
+CLI responsible for different tasks related to the workflow:
 
-Kinto Build supports:
+- cloning the git repository.
+- generating the Dockerfile file when user select `Dockerfile` as language.
+- calling the kinto core server to update the release status in the configmap.
 
-- [Argo](https://github.com/argoproj/argo)
+#### [kinto-deploy](./images/kinto-deploy)
 
-## Argo
+Service responsible for deploying a KintoHub service.
 
-1. Duplicate the `.env.example` file into a `.env` file.
-2. Modify the variables if needed.
-3. Pay attention to env var `ARGO_WORKFLOW_MAIN_IMAGE` (see [kinto-cli](./images/kinto-cli)).
-4. Pay attention to env var `ARGO_WORKFLOW_CLI_IMAGE` (see [workflow image](./images)).
+## How to use it
 
-```shell script
-$ go run cmd/main.go
-{"level":"info","msg":"Successfully started server listening to port 8080","time":"2020-03-24T10:41:59+08:00"}
-```
+Follow instructions in [kinto-build README](./kinto-build/README.md).
+
+### Dockerfiles
+
+- `./images/Dockerfile` => `kintohub/kinto-workflow-main`
+- `./kinto-build/Dockerfile` => `kintohub/kinto-workflow-cli`
+
+## Meta
+
+https://www.kintohub.com
