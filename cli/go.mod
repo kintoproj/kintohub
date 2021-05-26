@@ -1,15 +1,15 @@
 module github.com/kintoproj/kintohub/cli
 
-go 1.16
+go 1.15
 
 require (
-	github.com/AlecAivazis/survey/v2 v2.2.12
+	github.com/AlecAivazis/survey/v2 v2.2.7
 	github.com/Terry-Mao/goconf v0.0.0-20161115082538-13cb73d70c44
 	github.com/briandowns/spinner v1.12.0
-	github.com/golang/protobuf v1.5.2
-	github.com/gookit/color v1.4.2
-	github.com/jpillora/chisel v1.7.6
-	github.com/kintoproj/kintohub/core v0.0.0-20210525075501-1a21d493d335
+	github.com/golang/protobuf v1.4.3
+	github.com/gookit/color v1.3.7
+	github.com/jpillora/chisel v1.7.4
+	github.com/kintoproj/kintohub/core v0.0.0-20210525144500-e998c1f66c77
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/rs/zerolog v1.22.0
