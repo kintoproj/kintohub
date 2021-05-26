@@ -16,7 +16,7 @@ Kinto Deploy retrieves the configmap containing the release information and crea
 ## Dependencies
 
 - [kinto-core](../../../core)
-- [go-utils](https://github.com/kintoproj/go-utils)
+- [go-utils](https://github.com/kintoproj/go-utils) (our own reusable utils)
 
 ## ClusterRole Needed
 
