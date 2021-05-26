@@ -2,10 +2,11 @@ package types
 
 import (
 	"fmt"
-	"github.com/kintoproj/kinto-core/pkg/consts"
-	kintoCoretypes "github.com/kintoproj/kinto-core/pkg/types"
 	"kintoproj/kinto-deploy/internal/config"
 	"strconv"
+
+	"github.com/kintoproj/kintohub/core/pkg/consts"
+	kintoCoretypes "github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 const (

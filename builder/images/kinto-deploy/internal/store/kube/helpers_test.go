@@ -1,8 +1,9 @@
 package kube
 
 import (
-	kintoCoretypes "github.com/kintoproj/kinto-core/pkg/types"
 	"kintoproj/kinto-deploy/internal/types"
+
+	kintoCoretypes "github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 func genDummyRelease() *types.Release {

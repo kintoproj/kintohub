@@ -3,11 +3,12 @@ package kinto
 import (
 	"errors"
 	"fmt"
-	kintoCoretypes "github.com/kintoproj/kinto-core/pkg/types"
-	"github.com/rs/zerolog/log"
 	"kintoproj/kinto-deploy/internal/config"
 	"kintoproj/kinto-deploy/internal/store"
 	"kintoproj/kinto-deploy/internal/types"
+
+	kintoCoretypes "github.com/kintoproj/kintohub/core/pkg/types"
+	"github.com/rs/zerolog/log"
 )
 
 type Controller struct {
