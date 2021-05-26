@@ -2,13 +2,14 @@ package cmd
 
 import (
 	"fmt"
-	cmd_dockerfile "github.com/kintoproj/kinto-cli/cmd-dockerfile"
-	cmd_git "github.com/kintoproj/kinto-cli/cmd-git"
-	cmd_release "github.com/kintoproj/kinto-cli/cmd-release"
-	"github.com/spf13/cobra"
-	"github.com/ttacon/chalk"
 	"os"
 	"strings"
+
+	cmd_dockerfile "github.com/kintoproj/kintohub/cli/cmd-dockerfile"
+	cmd_git "github.com/kintoproj/kintohub/cli/cmd-git"
+	cmd_release "github.com/kintoproj/kintohub/cli/cmd-release"
+	"github.com/spf13/cobra"
+	"github.com/ttacon/chalk"
 )
 
 var (

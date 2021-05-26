@@ -3,8 +3,9 @@ package cmd_release
 import (
 	"errors"
 	"fmt"
+
 	"github.com/golang/protobuf/ptypes"
-	"github.com/kintoproj/kinto-core/pkg/types"
+	"github.com/kintoproj/kintohub/core/pkg/types"
 )
 
 func UpdateReleaseStatus(
