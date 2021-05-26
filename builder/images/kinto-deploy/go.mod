@@ -3,15 +3,14 @@ module kintoproj/kinto-deploy
 go 1.13
 
 require (
-	cloud.google.com/go v0.55.0 // indirect
-	github.com/google/uuid v1.1.1
+	github.com/google/uuid v1.2.0
 	github.com/googleapis/gnostic v0.4.0 // indirect
 	github.com/joho/godotenv v1.3.0
-	github.com/kintohub/utils-go v0.2.3-0.20201030060734-05eca2fbcf60
-	github.com/kintoproj/kinto-core v0.0.0-20210205164953-a9f63087cefd
+	github.com/kintoproj/go-utils v0.2.3
+	github.com/kintoproj/kintohub/core v0.0.0-20210526151439-8051358b765f
 	github.com/r3labs/diff v1.1.0
-	github.com/rs/zerolog v1.18.0
-	github.com/stretchr/testify v1.6.1
+	github.com/rs/zerolog v1.22.0
+	github.com/stretchr/testify v1.7.0
 	github.com/ttacon/chalk v0.0.0-20160626202418-22c06c80ed31
 	helm.sh/helm/v3 v3.2.1
 	k8s.io/api v0.18.0
