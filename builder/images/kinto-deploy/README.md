@@ -10,8 +10,8 @@ Kinto Deploy retrieves the configmap containing the release information and crea
 
 ## Requirements
 
-* Go version `1.13` or higher
-* Kubernetes version `1.16`
+- Go version `1.13` or higher
+- Kubernetes version `1.16`
 
 ## ClusterRole Needed
 
