@@ -2,6 +2,9 @@ package kube
 
 import (
 	"context"
+	"kintoproj/kinto-deploy/internal/types"
+	"time"
+
 	batchv1 "k8s.io/api/batch/v1"
 	v1 "k8s.io/api/core/v1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
@@ -9,8 +12,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/utils/pointer"
-	"kintoproj/kinto-deploy/internal/types"
-	"time"
 )
 
 // job cannot be updated so we delete it if there is one existing

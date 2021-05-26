@@ -2,12 +2,13 @@ package kube
 
 import (
 	"context"
+	"kintoproj/kinto-deploy/internal/types"
+
 	autoscalingv1 "k8s.io/api/autoscaling/v1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/utils/pointer"
-	"kintoproj/kinto-deploy/internal/types"
 )
 
 func upsertHPA(kubeClient kubernetes.Interface, release *types.Release) (*autoscalingv1.HorizontalPodAutoscaler, error) {

@@ -5,15 +5,16 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/rs/zerolog/log"
-	"github.com/ttacon/chalk"
 	"io"
-	corev1 "k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/client-go/kubernetes"
 	"kintoproj/kinto-deploy/internal/types"
 	"kintoproj/kinto-deploy/internal/utils"
 	"strings"
+
+	"github.com/rs/zerolog/log"
+	"github.com/ttacon/chalk"
+	corev1 "k8s.io/api/core/v1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/client-go/kubernetes"
 )
 
 func watchPodsLogsAndStatus(kubeClient kubernetes.Interface, release *types.Release) error {

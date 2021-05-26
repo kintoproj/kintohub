@@ -2,13 +2,14 @@ package kube
 
 import (
 	"context"
+	"kintoproj/kinto-deploy/internal/types"
+	"testing"
+
 	"github.com/stretchr/testify/assert"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"k8s.io/client-go/kubernetes/fake"
-	"kintoproj/kinto-deploy/internal/types"
-	"testing"
 )
 
 func Test_upsertService(t *testing.T) {

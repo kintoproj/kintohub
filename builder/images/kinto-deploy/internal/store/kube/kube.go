@@ -1,16 +1,17 @@
 package kube
 
 import (
-	kintoCoretypes "github.com/kintoproj/kinto-core/pkg/types"
+	"kintoproj/kinto-deploy/internal/store"
+	"kintoproj/kinto-deploy/internal/types"
+	"os"
+
+	kintoCoretypes "github.com/kintoproj/kintohub/core/pkg/types"
 	"github.com/rs/zerolog/log"
 	"helm.sh/helm/v3/pkg/action"
 	"helm.sh/helm/v3/pkg/kube"
 	"k8s.io/client-go/kubernetes"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 	"k8s.io/client-go/tools/clientcmd"
-	"kintoproj/kinto-deploy/internal/store"
-	"kintoproj/kinto-deploy/internal/types"
-	"os"
 )
 
 type Store struct {

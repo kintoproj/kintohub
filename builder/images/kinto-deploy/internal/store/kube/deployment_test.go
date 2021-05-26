@@ -3,7 +3,10 @@ package kube
 import (
 	"context"
 	"fmt"
-	"github.com/kintoproj/kinto-core/pkg/consts"
+	"kintoproj/kinto-deploy/internal/types"
+	"testing"
+
+	"github.com/kintoproj/kintohub/core/pkg/consts"
 	"github.com/stretchr/testify/assert"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
@@ -12,8 +15,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"k8s.io/client-go/kubernetes/fake"
 	"k8s.io/utils/pointer"
-	"kintoproj/kinto-deploy/internal/types"
-	"testing"
 )
 
 func Test_deploymentFullFlow(t *testing.T) {

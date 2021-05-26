@@ -2,12 +2,13 @@ package kube
 
 import (
 	"context"
+	"testing"
+
 	"github.com/stretchr/testify/assert"
 	autoscalingv1 "k8s.io/api/autoscaling/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes/fake"
 	"k8s.io/utils/pointer"
-	"testing"
 )
 
 func Test_upsertHpa(t *testing.T) {

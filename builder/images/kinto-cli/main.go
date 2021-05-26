@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/kintoproj/kinto-cli/cmd"
+	"github.com/kintoproj/kintohub/cli/cmd"
 )
 
 func main() {
