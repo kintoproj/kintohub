@@ -6,8 +6,8 @@ require (
 	github.com/google/uuid v1.2.0
 	github.com/googleapis/gnostic v0.4.0 // indirect
 	github.com/joho/godotenv v1.3.0
-	github.com/kintoproj/go-utils v0.2.3
-	github.com/kintoproj/kintohub/core v0.0.0-20210526151439-8051358b765f
+	github.com/kintoproj/go-utils v0.2.4
+	github.com/kintoproj/kintohub/core v0.0.0
 	github.com/r3labs/diff v1.1.0
 	github.com/rs/zerolog v1.22.0
 	github.com/stretchr/testify v1.7.0
@@ -19,3 +19,5 @@ require (
 	k8s.io/utils v0.0.0-20200324210504-a9aa75ae1b89
 	rsc.io/letsencrypt v0.0.3 // indirect
 )
+
+replace github.com/kintoproj/kintohub/core => ../../../core
