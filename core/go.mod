@@ -13,7 +13,7 @@ require (
 	github.com/jetstack/cert-manager v0.15.0
 	github.com/jinzhu/copier v0.0.0-20190924061706-b57f9002281a
 	github.com/joho/godotenv v1.3.0
-	github.com/kintoproj/go-utils v0.2.3
+	github.com/kintoproj/go-utils v0.2.4
 	github.com/rs/zerolog v1.22.0
 	github.com/stretchr/testify v1.7.0
 	google.golang.org/grpc v1.38.0
