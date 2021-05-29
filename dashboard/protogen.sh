@@ -10,6 +10,6 @@ protoc \
   --plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}" \
   --js_out="import_style=commonjs,binary:${OUT_DIR}" \
   --ts_out="service=grpc-web:${OUT_DIR}" \
-  -Irefs/kinto-core/proto \
-  refs/kinto-core/proto/*.proto
+  -I../core/proto \
+  ../core/proto/*.proto
 

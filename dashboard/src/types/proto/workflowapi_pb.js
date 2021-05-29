@@ -1,4 +1,3 @@
-// source: workflowapi.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -197,15 +196,13 @@ if (goog.DEBUG && !COMPILED) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.WorkflowLogsRequest.prototype.toObject = function(opt_includeInstance) {
@@ -215,8 +212,8 @@ proto.WorkflowLogsRequest.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.WorkflowLogsRequest} msg The msg instance to transform.
  * @return {!Object}
@@ -313,12 +310,9 @@ proto.WorkflowLogsRequest.prototype.getBuildid = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.WorkflowLogsRequest} returns this
- */
+/** @param {string} value */
 proto.WorkflowLogsRequest.prototype.setBuildid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -327,15 +321,13 @@ proto.WorkflowLogsRequest.prototype.setBuildid = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.BuildAndDeployRequest.prototype.toObject = function(opt_includeInstance) {
@@ -345,8 +337,8 @@ proto.BuildAndDeployRequest.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.BuildAndDeployRequest} msg The msg instance to transform.
  * @return {!Object}
@@ -358,7 +350,7 @@ proto.BuildAndDeployRequest.toObject = function(includeInstance, msg) {
     blockname: jspb.Message.getFieldWithDefault(msg, 2, ""),
     releaseid: jspb.Message.getFieldWithDefault(msg, 3, ""),
     namespace: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    isstaticbuild: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
+    isstaticbuild: jspb.Message.getFieldWithDefault(msg, 5, false)
   };
 
   if (includeInstance) {
@@ -494,21 +486,17 @@ proto.BuildAndDeployRequest.prototype.getBuildconfig = function() {
 };
 
 
-/**
- * @param {?proto.BuildConfig|undefined} value
- * @return {!proto.BuildAndDeployRequest} returns this
-*/
+/** @param {?proto.BuildConfig|undefined} value */
 proto.BuildAndDeployRequest.prototype.setBuildconfig = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+  jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.BuildAndDeployRequest} returns this
  */
 proto.BuildAndDeployRequest.prototype.clearBuildconfig = function() {
-  return this.setBuildconfig(undefined);
+  this.setBuildconfig(undefined);
 };
 
 
@@ -530,12 +518,9 @@ proto.BuildAndDeployRequest.prototype.getBlockname = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.BuildAndDeployRequest} returns this
- */
+/** @param {string} value */
 proto.BuildAndDeployRequest.prototype.setBlockname = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -548,12 +533,9 @@ proto.BuildAndDeployRequest.prototype.getReleaseid = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.BuildAndDeployRequest} returns this
- */
+/** @param {string} value */
 proto.BuildAndDeployRequest.prototype.setReleaseid = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -566,30 +548,26 @@ proto.BuildAndDeployRequest.prototype.getNamespace = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.BuildAndDeployRequest} returns this
- */
+/** @param {string} value */
 proto.BuildAndDeployRequest.prototype.setNamespace = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
+  jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
 /**
  * optional bool isStaticBuild = 5;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.BuildAndDeployRequest.prototype.getIsstaticbuild = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 5, false));
 };
 
 
-/**
- * @param {boolean} value
- * @return {!proto.BuildAndDeployRequest} returns this
- */
+/** @param {boolean} value */
 proto.BuildAndDeployRequest.prototype.setIsstaticbuild = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 5, value);
+  jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
 
@@ -598,15 +576,13 @@ proto.BuildAndDeployRequest.prototype.setIsstaticbuild = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.DeployRequest.prototype.toObject = function(opt_includeInstance) {
@@ -616,8 +592,8 @@ proto.DeployRequest.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.DeployRequest} msg The msg instance to transform.
  * @return {!Object}
@@ -738,12 +714,9 @@ proto.DeployRequest.prototype.getBlockname = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.DeployRequest} returns this
- */
+/** @param {string} value */
 proto.DeployRequest.prototype.setBlockname = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -756,12 +729,9 @@ proto.DeployRequest.prototype.getReleaseid = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.DeployRequest} returns this
- */
+/** @param {string} value */
 proto.DeployRequest.prototype.setReleaseid = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -774,12 +744,9 @@ proto.DeployRequest.prototype.getNamespace = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.DeployRequest} returns this
- */
+/** @param {string} value */
 proto.DeployRequest.prototype.setNamespace = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -788,15 +755,13 @@ proto.DeployRequest.prototype.setNamespace = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.DeployCatalogRequest.prototype.toObject = function(opt_includeInstance) {
@@ -806,8 +771,8 @@ proto.DeployCatalogRequest.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.DeployCatalogRequest} msg The msg instance to transform.
  * @return {!Object}
@@ -942,12 +907,9 @@ proto.DeployCatalogRequest.prototype.getBlockname = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.DeployCatalogRequest} returns this
- */
+/** @param {string} value */
 proto.DeployCatalogRequest.prototype.setBlockname = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -960,12 +922,9 @@ proto.DeployCatalogRequest.prototype.getReleaseid = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.DeployCatalogRequest} returns this
- */
+/** @param {string} value */
 proto.DeployCatalogRequest.prototype.setReleaseid = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -978,12 +937,9 @@ proto.DeployCatalogRequest.prototype.getNamespace = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.DeployCatalogRequest} returns this
- */
+/** @param {string} value */
 proto.DeployCatalogRequest.prototype.setNamespace = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -997,21 +953,17 @@ proto.DeployCatalogRequest.prototype.getRepo = function() {
 };
 
 
-/**
- * @param {?proto.Repository|undefined} value
- * @return {!proto.DeployCatalogRequest} returns this
-*/
+/** @param {?proto.Repository|undefined} value */
 proto.DeployCatalogRequest.prototype.setRepo = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.DeployCatalogRequest} returns this
  */
 proto.DeployCatalogRequest.prototype.clearRepo = function() {
-  return this.setRepo(undefined);
+  this.setRepo(undefined);
 };
 
 
@@ -1029,15 +981,13 @@ proto.DeployCatalogRequest.prototype.hasRepo = function() {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.UndeployRequest.prototype.toObject = function(opt_includeInstance) {
@@ -1047,8 +997,8 @@ proto.UndeployRequest.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.UndeployRequest} msg The msg instance to transform.
  * @return {!Object}
@@ -1157,12 +1107,9 @@ proto.UndeployRequest.prototype.getBlockname = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.UndeployRequest} returns this
- */
+/** @param {string} value */
 proto.UndeployRequest.prototype.setBlockname = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1175,12 +1122,9 @@ proto.UndeployRequest.prototype.getNamespace = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.UndeployRequest} returns this
- */
+/** @param {string} value */
 proto.UndeployRequest.prototype.setNamespace = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1189,15 +1133,13 @@ proto.UndeployRequest.prototype.setNamespace = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.SuspendRequest.prototype.toObject = function(opt_includeInstance) {
@@ -1207,8 +1149,8 @@ proto.SuspendRequest.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.SuspendRequest} msg The msg instance to transform.
  * @return {!Object}
@@ -1329,12 +1271,9 @@ proto.SuspendRequest.prototype.getBlockname = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.SuspendRequest} returns this
- */
+/** @param {string} value */
 proto.SuspendRequest.prototype.setBlockname = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1347,12 +1286,9 @@ proto.SuspendRequest.prototype.getNamespace = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.SuspendRequest} returns this
- */
+/** @param {string} value */
 proto.SuspendRequest.prototype.setNamespace = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1365,12 +1301,9 @@ proto.SuspendRequest.prototype.getReleaseid = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.SuspendRequest} returns this
- */
+/** @param {string} value */
 proto.SuspendRequest.prototype.setReleaseid = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -1379,15 +1312,13 @@ proto.SuspendRequest.prototype.setReleaseid = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.WorkflowResponse.prototype.toObject = function(opt_includeInstance) {
@@ -1397,8 +1328,8 @@ proto.WorkflowResponse.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.WorkflowResponse} msg The msg instance to transform.
  * @return {!Object}
@@ -1495,12 +1426,9 @@ proto.WorkflowResponse.prototype.getId = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.WorkflowResponse} returns this
- */
+/** @param {string} value */
 proto.WorkflowResponse.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1509,15 +1437,13 @@ proto.WorkflowResponse.prototype.setId = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.AbortReleaseRequest.prototype.toObject = function(opt_includeInstance) {
@@ -1527,8 +1453,8 @@ proto.AbortReleaseRequest.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.AbortReleaseRequest} msg The msg instance to transform.
  * @return {!Object}
@@ -1637,12 +1563,9 @@ proto.AbortReleaseRequest.prototype.getBuildid = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.AbortReleaseRequest} returns this
- */
+/** @param {string} value */
 proto.AbortReleaseRequest.prototype.setBuildid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1655,12 +1578,9 @@ proto.AbortReleaseRequest.prototype.getEnvid = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.AbortReleaseRequest} returns this
- */
+/** @param {string} value */
 proto.AbortReleaseRequest.prototype.setEnvid = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
