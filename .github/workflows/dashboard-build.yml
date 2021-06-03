@@ -1,0 +1,28 @@
+name: Kinto Dashboard Build
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - ./dashboard/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install Dependencies
+      run: yarn --cwd ./dashboard/ install
+    - name: Linting
+      run: yarn --cwd ./dashboard/ lint
+    - name: Build
+      run: yarn --cwd ./dashboard/ build
