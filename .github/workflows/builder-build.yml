@@ -19,7 +19,7 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
         with:
-          path: './builder/kinto-build'
+          path: 'builder/kinto-build'
 
       - name: Build
         working-directory: kinto-build
@@ -41,7 +41,7 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
         with:
-          path: './builder/images/kinto-deploy'
+          path: 'builder/images/kinto-deploy'
 
       - name: Build
         working-directory: images/kinto-deploy
@@ -63,7 +63,7 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
         with:
-          path: './builder/images/kinto-cli'
+          path: 'builder/images/kinto-cli'
 
       - name: Build
         working-directory: images/kinto-cli
