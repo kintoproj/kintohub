@@ -16,8 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-        with:
-          path: './cli'
+        working-directory: cli
+        
       - name: Set up Go 1.13
         uses: actions/setup-go@v1
         with:
