@@ -5,33 +5,29 @@ Kinto Builder is a mono repository containing all the dependencies related to Bu
 
 ## Structure
 
-### [kinto-build](./kinto-build)
+### [Kinto Build](./kinto-build)
 
-Kinto-build is a gRPC server responsible for creating build/deployment argo workflows.
+Kinto Build is a gRPC server responsible for creating build/deployment argo workflows.
 
-### [images](./images)
+### [Images](./images)
 
-#### [kinto-cli](./images/kinto-cli)
+#### [Kinto CLI](./images/kinto-cli)
 
-CLI responsible for different tasks related to the workflow:
+Kinto CLI responsible for different tasks related to the workflow:
 
-- cloning the git repository.
-- generating the Dockerfile file when user select `Dockerfile` as language.
-- calling the kinto core server to update the release status in the configmap.
+- Cloning the git repository.
+- Generating the Dockerfile file when user select `Dockerfile` as language.
+- Calling the kinto core server to update the release status in the configmap.
 
-#### [kinto-deploy](./images/kinto-deploy)
+#### [Kinto Deploy](./images/kinto-deploy)
 
-Service responsible for deploying a KintoHub service.
+Kinto Deploy is service responsible for deploying a KintoHub service.
 
 ## How to use it
 
-Follow instructions in [kinto-build README](./kinto-build/README.md).
+Follow instructions in [Kinto Build README](./kinto-build/README.md).
 
 ### Dockerfiles
 
 - `./images/Dockerfile` => `kintohub/kinto-workflow-main`
 - `./kinto-build/Dockerfile` => `kintohub/kinto-workflow-cli`
-
-## Meta
-
-https://www.kintohub.com
