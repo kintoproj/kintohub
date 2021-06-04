@@ -17,7 +17,7 @@ Make sure you have a Kubernetes cluster and a [Kinto Core](../core) is running o
 
 [comment]: <> (add helm chart/docker image for direct deploy?)
 
-If you have direct access to the Kubernetes cluster and Kinto Core, you can run Kinto Dashboard locally with connecting to the port-forwarded Kinto Core:
+If you have direct access to the Kubernetes cluster and Kinto Core, then you can run Kinto Dashboard locally with connecting to the port-forwarded Kinto Core:
 
 ```bash
 # port-forward your kinto-core
