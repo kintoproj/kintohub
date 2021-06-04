@@ -2,7 +2,7 @@
 
 [![slack](https://img.shields.io/badge/slack-kintoproj-brightgreen)](https://slack.kintohub.com)
 
-Kinto Core is the main API server called by the dashboard and the CLI. It is a gRPC server that interacts with Kubernetes. It also contains the main types used by all the sub API (build, deploy, etc).
+Kinto Core is the main API server called by the Kinto Dashboard and Kinto CLI. It is a gRPC server that interacts with Kubernetes. It also contains the main types used by all the sub API (build, deploy, etc).
 
 ## Requirements
 
