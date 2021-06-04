@@ -18,11 +18,11 @@ jobs:
 
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
-        with:
-          path: './core'
 
       - name: Build
+        working-directory: core
         run: go build -v ./...
 
       - name: Test
+        working-directory: core
         run: go test -v ./...
