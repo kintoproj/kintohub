@@ -1,0 +1,63 @@
+name: Kinto CLI Build and Release Binaries
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    strategy:
+      matrix:
+        go_version: [1.13.x]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Set up Go 1.13
+        uses: actions/setup-go@v1
+        with:
+          go-version: ${{ matrix.go_version }}
+
+      - name: Set CLI_VERSION
+        run: echo "CLI_VERSION=$(echo ${GITHUB_REF} | rev | cut -d'/' -f 1 | rev )" >> $GITHUB_ENV
+
+      - name: Configure & Build
+        uses: crazy-max/ghaction-xgo@v1
+        with:
+          xgo_version: latest
+          go_version: ${{ matrix.go_version }}
+          dest: build
+          prefix: kinto
+          targets: windows/amd64,linux/amd64,darwin/amd64
+          v: true
+          x: false
+          ldflags: -X "github.com/kintoproj/kinto-cli/internal/config.Version=${{ env.CLI_VERSION }}"
+          working_dir: ./cli
+
+      - name: Rename & compress binaries
+        run: |
+          cd ${{github.workspace}}/build
+          [ -f kinto-linux* ] && mv kinto-linux* kinto && zip -rm cli-kinto-linux-amd64.zip kinto
+          [ -f kinto-darwin* ] && mv kinto-darwin* kinto && zip -rm cli-kinto-mac-amd64.zip kinto
+          [ -f kinto-windows* ] && mv kinto-windows* kinto.exe && zip -rm cli-kinto-win-amd64.zip kinto.exe
+
+      - name: Create release
+        uses: actions/create-release@v1.0.0
+        id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload assets to release
+        uses: glentiki/xbin-release-action@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          assets_path: ./build
