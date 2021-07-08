@@ -25,7 +25,7 @@ Kinto CLI is a command line utility for accessing [Kinto Core](../core).
 ### Requirements:
 
 - Make sure you use bash to run this script
-- `unzip` should be installed. If you don't already have it install it using `sudo apt-get install -y unzip` or similar command depending on your linux distro
+- `unzip` should be installed. If you don't already have it install it using `sudo apt-get install -y unzip` or similar command depending on your Linux distribution
 
 Run the installation script to install Kinto CLI to its default location `usr/local/bin`:
 
