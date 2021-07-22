@@ -3,6 +3,9 @@ name: Kinto Dashboard Docker Build
 on:
   pull_request:
     branches: [ main ]
+    paths:
+      - dashboard/**
+      - core/**
 
 jobs:
   main:

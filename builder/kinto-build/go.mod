@@ -22,4 +22,4 @@ replace k8s.io/client-go => k8s.io/client-go v0.17.0
 
 replace k8s.io/apimachinery => k8s.io/apimachinery v0.17.0
 
-replace github.com/kintoproj/kintohub/core => ../../core
+replace github.com/kintoproj/kintohub/core => ./core

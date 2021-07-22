@@ -3,6 +3,8 @@ name: Kinto Core Docker Build
 on:
   pull_request:
     branches: [ main ]
+    paths:
+      - core/**
 
 jobs:
   main:

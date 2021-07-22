@@ -20,4 +20,4 @@ require (
 	rsc.io/letsencrypt v0.0.3 // indirect
 )
 
-replace github.com/kintoproj/kintohub/core => ../../../core
+replace github.com/kintoproj/kintohub/core => ./core
