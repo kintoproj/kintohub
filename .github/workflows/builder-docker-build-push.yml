@@ -28,7 +28,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: builder/kinto-build
+          context: ./
           file: builder/kinto-build/Dockerfile
           push: true
           tags: ${{ env.TAGS }}
@@ -60,7 +60,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: builder/images/kinto-cli
+          context: ./
           file: builder/images/kinto-cli/Dockerfile
           push: true
           tags: ${{ env.TAGS }}
@@ -92,7 +92,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: builder/images
+          context: ./
           file: builder/images/Dockerfile
           push: true
           tags:  ${{ env.TAGS }}
