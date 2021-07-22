@@ -18,4 +18,4 @@ require (
 	google.golang.org/grpc v1.38.0
 )
 
-replace github.com/kintoproj/kintohub/core => ../core
+replace github.com/kintoproj/kintohub/core => ./core
